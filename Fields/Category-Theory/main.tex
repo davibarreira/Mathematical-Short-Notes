@@ -1,5 +1,5 @@
 %! TeX program = lualatex
-\documentclass[12pt, oneside]{book}
+\documentclass[12pt]{article}
 
 \usepackage[margin=3cm]{geometry}
 \parindent 0in
@@ -10,7 +10,12 @@
 
 \pagestyle{plain}
 \usepackage{pdfpages}
-\usepackage{titlesec}
+
+\usepackage[square,numbers]{natbib}
+\usepackage[pdftex,bookmarks=true,bookmarksopen=false,bookmarksnumbered=true,colorlinks=true,linkcolor=blue]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{enumerate}
 
 %%%% MATH PACKAGES %%%%
 
@@ -20,39 +25,16 @@
 \usepackage{mathtools}
 \usepackage{thmtools} % List of Theorems
 
-%%%%%%%%%%%%%%%%%%%%%%%
-
-\usepackage[square,numbers]{natbib}
-\usepackage[pdftex,bookmarks=true,bookmarksopen=false,bookmarksnumbered=true,colorlinks=true,linkcolor=blue]{hyperref}
-\usepackage[utf8]{inputenc}
-\usepackage{float}
-\usepackage{enumerate}
-
 %%%%%%% JULIA %%%%%%%%%%
 \input{julia_font}
+\input{julia_listings}
 \input{julia_listings}
 \input{julia_listings_unicode}
 
 \lstdefinelanguage{JuliaLocal}{
     language = Julia, % inherit Julia lang. to add keywords
-    morekeywords = [3]{thompson_sampling}, % define more functions
-    morekeywords = [2]{Beta, Distributions}, % define more types and modules
 }
 %%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%% BOOK INFORMATION %%%%%%%%%%
-\newcommand{\authorname}{Name}
-\newcommand{\booktitle}{Title}
-\newcommand{\subtitle}{Subtitle}
-\newcommand{\publisher}{TBD}
-\newcommand{\editionyear}{2021}
-\newcommand{\isbn}{XYZ}   % replace this with your own ISBN
-
-\title{\booktitle}
-\author{\authorname}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%% MATH STYLE  %%%%%%%%%%%%%
 \newtheoremstyle{bfnote}%
@@ -71,26 +53,27 @@
 
 \newtheorem{note}{Note}[section]
 \newtheorem{example}{Example}[section]
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{document}
 
-% \includepdf{cover.pdf}
+\title{Category Theory}
+\author{Davi Sales Barreira}
 
-\frontmatter
-\input{frontmatter/titlepage}
-\input{frontmatter/copyright}
-\include{preface}
+\maketitle
 
 \newpage
 \tableofcontents
 
-%\listoftheorems[onlynamed]
+\newpage
+\listoftheorems[ignoreall,onlynamed={definition},title={List of Definitions}]
+\newpage
+\listoftheorems[ignoreall,onlynamed={theorem,lemma,corollary,proposition},title={List of Theorems}]
 
-\mainmatter
 \newpage
 % INCLUDE NOTEBOOKS HERE %
-\include{./notebooks/Catlab}
+\include{1-Category-Theory}
+% \include{./notebooks/Catlab}
 
 
 \bibliography{ref}
@@ -100,4 +83,3 @@
 \include{appendix}
 
 \end{document}
-

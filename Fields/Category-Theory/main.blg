@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2020/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+A level-1 auxiliary file: 1-Category-Theory.aux
+The style file: plainnat.bst
+A level-1 auxiliary file: appendix.aux
+Database file #1: ref.bib
+Warning--empty publisher in maico2020categoria
+You've used 2 entries,
+            2773 wiz_defined-function locations,
+            604 strings with 5084 characters,
+and the built_in function-call counts, 748 in all, are:
+= -- 54
+> -- 40
+< -- 1
++ -- 14
+- -- 12
+* -- 56
+:= -- 126
+add.period$ -- 7
+call.type$ -- 2
+change.case$ -- 8
+chr.to.int$ -- 2
+cite$ -- 5
+duplicate$ -- 41
+empty$ -- 66
+format.name$ -- 14
+if$ -- 147
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 4
+newline$ -- 19
+num.names$ -- 8
+pop$ -- 27
+preamble$ -- 1
+purify$ -- 8
+quote$ -- 0
+skip$ -- 26
+stack$ -- 0
+substring$ -- 4
+swap$ -- 3
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 12
+warning$ -- 1
+while$ -- 6
+width$ -- 0
+write$ -- 32
+(There was 1 warning)
