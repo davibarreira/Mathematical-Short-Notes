@@ -1,0 +1,86 @@
+%! TeX program = lualatex
+\documentclass[12pt, oneside]{article}
+
+\usepackage{listings}
+% \usepackage{mathtime}
+
+\pagestyle{plain}
+\usepackage{pdfpages}
+\usepackage{titlesec}
+
+%%%% MATH PACKAGES %%%%
+
+\usepackage{amsfonts, amsthm,amsmath,amssymb,mathtools}
+\usepackage{bbm}
+\usepackage{bm}
+\usepackage{mathtools}
+\usepackage{thmtools} % List of Theorems
+
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[square,numbers]{natbib}
+\usepackage[pdftex,bookmarks=true,bookmarksopen=false,bookmarksnumbered=true,colorlinks=true,linkcolor=blue]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{enumerate}
+
+%%%%%%% JULIA %%%%%%%%%%
+\input{../../julia_font}
+\input{../../julia_listings}
+\input{../../julia_listings_unicode}
+
+\lstdefinelanguage{JuliaLocal}{
+    language = Julia, % inherit Julia lang. to add keywords
+}
+
+%%%%%%%% Set \begin{shaded} %%%%%%%%
+\usepackage{framed}
+\colorlet{shadecolor}{gray!15}
+
+%%%%%%%%%% BOOK INFORMATION %%%%%%%%%%
+\newcommand{\authorname}{Davi Sales Barreira}
+\newcommand{\booktitle}{Mathematical Short Notes}
+\newcommand{\subtitle}{(not so short)}
+\newcommand{\publisher}{TBD}
+\newcommand{\editionyear}{2021}
+\newcommand{\isbn}{XYZ}   % replace this with your own ISBN
+
+\title{\booktitle}
+\author{\authorname}
+
+%%%%%%%%%%%% MATH STYLE  %%%%%%%%%%%%%
+\newtheoremstyle{bfnote}%
+  {}{}
+  {}{}
+  {\bfseries}{.}
+  { }{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}
+\theoremstyle{bfnote}
+\newenvironment{prf}[1][Proof]{\textbf{#1.} }{\qed}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{exer}{Exercise}[chapter]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\newtheorem{note}{Note}[chapter]
+\newtheorem{example}{Example}[chapter]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\includepdf{cover.pdf}
+
+\newpage
+\tableofcontents
+
+\listoftheorems[ignoreall,onlynamed={definition},title={List of Definitions}]
+\listoftheorems[ignoreall,onlynamed={theorem,lemma,corollary,proposition},title={List of Theorems}]
+\include{../../notation}
+
+\newpage
+\input{fields/Convergence-Topology/Convergence-Topology.tex}
+\bibliography{ref}
+\bibliographystyle{plainnat}
+
+\end{document}
