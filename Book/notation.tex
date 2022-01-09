@@ -1,0 +1,51 @@
+\chapter*{Notation}
+\addcontentsline{toc}{chapter}{Notation}
+
+The symbol ``$\circledast$'' means that such definition or theorem was
+created by the author, so it should be taken with care.
+
+Unless state otherwise,
+we are always dealing with the probability space $(\Omega, \mathcal F, P)$, where
+$\mathcal F$ is the Borel $\sigma$-algebra.
+
+\begin{itemize}
+	\item $\mathbb N$ represent the natural numbers (the zero not included of course);
+	\item $\mathbb Z$ are the integers, $\mathbb Z_+$ the positive integers which include $0$, and
+	      $\mathbb Z_-$ are the negative integers that inlcude $0$. $\mathbb Z_+^*$ and $\mathbb Z_-^*$ exclude the $0$;
+	\item For a function $f:\mathbb R \to \mathbb R$, $f_+(x) = \max{0,f(x)}$, which explains the choice of notation above.
+	      Note that $f_-(x) = \min{0,f(x)}$;
+	\item $\mathbb Q, \mathbb I, \mathbb R, \mathbb C$ are, respectively, the rationals, irrationals, reals
+	      and complex numbers;
+	\item $(x_n)$ is a sequence of numbers indexed by $n \in \mathbb N$;
+	\item $\mathbb R^{\mathbb N} = \mathbb R \times \mathbb R \times ...$.
+\end{itemize}
+
+\begin{itemize}
+	\item A probability measure $P_\theta$ implies that it comes from a parametric family
+	      $\mathcal P = \{P_\theta : \theta \in \Theta\}$;
+	\item Whenever a probability measure $P_\theta$ has a density with respect
+	      to another measure that dominates it (e.g. Lebesgue), the density function is
+	      usually represented by $p_\theta(x)$;
+	\item $E_\theta [X] = \int_\Omega X(\omega) dP_\theta$;
+	\item $C$ is the space of continuous functions;
+	\item $C^1$ is the space of continuous functions with at least a continuous first derivative;
+	\item $C^{\infty}$ is the space of continuous functions with infinite continuous derivates;
+	\item $C_b$ is the space of continuous and bounded functions,
+	\item $C_0$ is the space of continuous functions that goes to $0$ as $|x| \to +\infty$;
+	\item We use $|\cdot|$ to mean the Euclidean norm, and $||\cdot||$ to mean a more
+	      general norm, e.g. $||\cdot||_{L^p}$ is the $L^p$ norm.
+\end{itemize}
+
+\begin{itemize}
+	\item If two sets $A$ and $B$ are disjoint, then $A\cup B$ is the same as $A+B$;
+	\item If sets are disjoint, then $\cup A_n$ is equivalent to $\sum A_n$.
+	\item $\cup_n$ might be used instead of $\cup_{n \in \mathbb N}$,
+	      when it's clear by the context;
+	\item $A_n \uparrow A$ means $A_1 \subset A_2 \subset ... \subset A_n \subset...$
+	      and $\cup_n A_n =A$;
+	\item $A_n \downarrow A$ means $A_1 \ A_2 \supset ... \supset A_n \supset...$
+	      and $\cap_n A_n =A$;
+	\item $(X,d)$ usually stands for a metric space of metric, unless stated otherwise.
+\end{itemize}
+
+

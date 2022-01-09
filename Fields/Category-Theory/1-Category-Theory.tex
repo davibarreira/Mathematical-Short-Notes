@@ -1,0 +1,64 @@
+Notes mostly based on \citet{maico2020categoria} and
+\citet{bradley2020topology}.
+
+\section{What are Categories?}
+
+The study of Category Theory enables us to view Mathematics from a vantage
+point, and better understand how the areas are connected. For example,
+it might not always be clear which properties are \textit{topological}, and which aren't.
+By looking at the subject from the distance (via Category Theory), we get a
+a glimpse at the connections (and disconnections) between different fields.
+
+
+\begin{definition}[Category]
+	A category $\mathcal C = \langle Ob_{\mathcal C}, Mor_{\mathcal C} \rangle$ is
+	a collection of objects $Ob_\mathcal C$ and morphisms
+	$Mor_\mathcal C$ satisfying the following conditions:
+  \begin{enumerate}[(i)]
+    \item Every morphism $f \in Mor_\mathcal C$ is associated to two objects $X,Y \in Ob_{\mathcal C}$
+      which is represented by $f:X \to Y$ or $X \xrightarrow{\hspace{3mm}f \hspace{3mm}} Y$,
+      where $dom(f) = X$ is called the domain of $f$ and $cod(f)=Y$ is the codomain. Moreover, we define
+      $Mor_\mathcal C (X,Y)$ as 
+      \begin{displaymath}
+        Mor_\mathcal C (X,Y) := \{f \in Mor_\mathcal C \ : \ X \in dom(f), \ Y \in cod(f)\};
+      \end{displaymath}
+    \item For any three objects $X,Y, Z \in Ob_\mathcal C$, there exists a composition operator
+      \begin{displaymath}
+        \circ: Mor_\mathcal C (X,Y)   \times Mor_\mathcal C (Y,Z) \to Mor_\mathcal C (X,Z),
+      \end{displaymath}
+      \item For each object $X \in Ob_\mathcal C$ there exists a morfism $id_X \in Mor_\mathcal C (A,A)$
+        called the identity.
+  \end{enumerate}
+  The composition operator must have the following properties:
+  \begin{enumerate}[(p.1)]
+    \item \textit{Associative}: for every $f \in Mor_\mathcal C (A,B),
+      g \in Mor_\mathcal C (B,C), h \in Mor_\mathcal C (C,D)$ then
+      \begin{displaymath}
+        h \circ (g circ f) = (h \circ g) \circ f.
+      \end{displaymath}
+    \item For any $f \in Mor_\mathcal C (X,Y)$, $g \in Mor_\mathcal C (Y,X)$, 
+      \begin{displaymath}
+        f \circ id_X = f,  \quad id_A \circ g = g.
+      \end{displaymath}
+  \end{enumerate}
+\end{definition}
+
+There are many ways to refers to the set of morphisms $Mor_\mathcal C (X,Y)$, such as
+$\mathcal C(X,Y)$ or $\text{hom}_\mathcal C (X,Y)$. The reason for this is that
+this set is sometimes called hom-set. In this notes, we'll use either $Mor_\mathcal C (X,Y)$
+or $\mathcal C (X,Y)$ when there is no ambiguity.
+
+\begin{definition}[Categorical Isomorphism]
+  Let $\mathcal C$ be a category with $X,Y \in Ob_\mathcal C$ and $f \in Mor_\mathcal C (X,Y)$.
+  \begin{enumerate}[(i)]
+    \item We say that $f$ is \textit{left invertible} if there exists $g \in Mor_\mathcal C (Y,X)$ such
+      that $g \circ f = id_X$;
+    \item We say that $f$ is \textit{right invertible} if there exists $h \in Mor_\mathcal C (Y,X)$ such
+      that $f \circ h = id_Y$;
+    \item We say that $f$ is invertible if it's both left and right invertible.
+  \end{enumerate}
+  When an invertible morphism exists between $X$ and $Y$, we say that they are isomorphic.
+\end{definition}
+Note that when $f$ is invertible, the morphism that inverts $f$ is unique with the left and
+right inverses coinciding, since
+$g \circ id_Y = g \circ f \circ h = id_X \circ h = h$.
