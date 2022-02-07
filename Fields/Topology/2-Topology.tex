@@ -1,0 +1,37 @@
+\section{Basics on Point-Set Topology}
+
+Let's now give a brief overview on some general concepts related
+to point-set topology.
+
+\begin{definition}[Topological Space]
+	$(X,\tau)$ is a topological space where $\tau$ is the collection of open
+	sets in $X$, such that:
+	\begin{enumerate}[(i)]
+		\item $X \in \tau$;
+		\item Se $A_1,...,A_n \in \tau \implies \cap_{i=1}^n A_i \in \tau$;
+		\item Se $A_\alpha \in \tau$ for any $\alpha \in \Lambda \implies \cup_{\alpha \in \Lambda} A_\alpha \in \tau$;
+	\end{enumerate}
+	$\tau$ is the topology of $X$.
+\end{definition}
+
+\begin{definition}[Hausdorff Space]
+    A topological space $(X, \tau)$ is said to be Hausdorf if
+\end{definition}
+
+
+\section{Metric Spaces}
+
+\begin{definition}[Metric]
+	Let $X$ be a space. A function $d:X\times X \to \mathbb [0,+\infty)$ is called a metric if
+	\begin{enumerate}[(i)]
+		\item $d(x,y) = 0 \iff x =y$;
+		\item $d(x,y) = d(y,x)$;
+		\item $d(x,z) \leq d(x,y) + d(y,z)$.
+	\end{enumerate}
+	If $d$ satisfies only (i) and (ii) then it's called a pseudo-metric.
+\end{definition}
+
+\begin{definition}[Metric Space]
+	A metric space is the tuple $(X,d)$, where $d$ is the metric over $X$,
+	e.g. $X=\mathbb R$ and $d(x,y) = |x-y|$.
+\end{definition}

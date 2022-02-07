@@ -1,0 +1,163 @@
+Notes mostly based on the summer course of Interactive Methods for Solving Structured Optimization Problems
+ministered by professor José Yunier Bello Cruz.
+
+\section{Initial Definitions}
+
+We use $H$ to represent Hilbert spaces.
+
+Let's assume that we are working in a topological space $X$ that is Hausdorff.
+\begin{definition}[Standard for Convex Analysis]
+    Let $f: X \to \mathbb R \cup \{+\infty\}$.
+    \begin{enumerate}
+        \item $\text{dom} f:= \{ x \in X : f(x) < +\infty \}$;
+        \item $\text{epi} f:= \{ (x, \xi) \in X \times \mathbb R : f(x) \leq \xi \}$;
+        \item $\text{lev}_{\leq \xi} f:= \{ x \in X : f(x) \leq \xi\}$;
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}[Lower Semi-Continuity]
+  A function $f:X \to \overline{\mathbb R}$ is lower semi-continuous (l.s.c) if
+  \begin{equation}
+    \forall x \in X, \ f(x) \leq
+    \underset{n\to +\infty}{\liminf}f(x_n)
+  \end{equation}
+  \label{def:lsc}
+\end{definition}
+
+It can be shown that $f$ is l.s.c $ \iff \text{epi} f$ is closed in $X \times \mathbb R$.
+
+\begin{definition}[Chebyshev Set]
+    If every point $x \in H$ has exactly one projection onto $C$, then $C$
+    is a Chebyshev set.
+\end{definition}
+
+\begin{theorem}
+    Let $C$ be a nonempty, closed and convex set of $H$. Then, $C$ is Chebyshev set and
+    $\forall x$ and  $p \in H$,
+    \begin{displaymath}
+        p = P_C(x) \iff p \in C \text{ and } \forall y \in C, \langle y-p, x-p \rangle \leq 0.
+    \end{displaymath}
+    
+\end{theorem}
+
+\begin{theorem}
+    Let $C$ be a convex set of $H$. Then, $C$ is closed $\iff$ $C$ is weakly closed.
+\end{theorem}
+
+\begin{proof}
+    $\impliedby)$  We know that every set closed in the weak topology is closed in the strong topology.
+
+    $\implies)$ Take a weakly convergent sequence $(x_n) \subset C$. But,
+    \begin{displaymath}
+        \langle x_n - P_C(x), x - P_C(x) \rangle \leq 0 \rightharpoonup
+        \langle x - P_C(x), x - P_C(x) \rangle \leq 0.
+    \end{displaymath}
+    Since 
+    $\langle x - P_C(x), x - P_C(x) \rangle = \Vert x - P_C(x)\Vert \leq 0 \implies x = P_c(x)$.
+    Thus, $x \in C$.
+
+\end{proof}
+
+\begin{proposition}
+    Let $C$ be a convex set in $H$. Then,
+    \begin{enumerate}
+        \item $\overline C$ is convex;
+        \item $\text{int} C$ is convex.
+    \end{enumerate}
+\end{proposition}
+
+\begin{definition}
+    Let $C$ and $D \subset H$. Then, $C$ and $D$ are separated if there exists
+    $h \in H \setminus \{0\}$ such that
+    \begin{displaymath}
+        \sup_{y \in C} \langle y, h \rangle \leq \inf_{z \in D} \langle z, h \rangle.
+    \end{displaymath}
+\end{definition}
+
+\begin{theorem}
+    Let $C$ be a nonempty convex closed subset of $H$ and $x \in H \setminus C$. Then,
+    $x$ is strongly separated from $C$.
+\end{theorem}
+
+\begin{proof}
+    Take $h := x - P_C(x)$. Then,
+    \begin{displaymath}
+        0 \geq \langle y - P_c(x), x - P_c(x) = \langle y - x + h, h \rangle =
+        \langle y - x, h \rangle  + \Vert h \Vert^2.
+    \end{displaymath}
+    Therefore,
+    \begin{displaymath}
+        \langle y - x, h \rangle \leq - \Vert h \Vert^2 < 0 = \inf \langle D - x, h \rangle.
+    \end{displaymath}
+    Which means that 
+    \begin{displaymath}
+        \sup \langle C - x, h \rangle < \inf \langle D - x, h \rangle,
+    \end{displaymath}
+    where $D = \{x\}$.
+    
+\end{proof}
+
+\begin{corollary}
+    Let $C$ and $D$ be nonempty closed convex sets such that $C \cap D = \varnothing$ and
+    $D$ is bounded. Then, $C$ and $D$ are strongly separated.
+\end{corollary}
+
+\begin{proof}
+    We'll show that $C \setminus D$ is convex and closed. The convexity can be easily verified.
+    For closedness, take a convergent sequence $(z_n) \subset C \setminus D$, with $z_n = x_n - y_n$ where
+    $x_n \in C$ and $y_n \in C$, and assume that $z_n \to z$.
+    Now, since $D$ is bounded, then $(y_n)$ has a weakly convergent
+    subsequence $y_{n_k} \rightharpoonup y \in D$.
+
+    Since $z_n \to z$, then $z_{n_k} \to z$ and
+    $\lim_{k \to \infty} x_{n_k} - y_{n_k} = \lim_{k \to \infty} x_{n_k} - y$.
+    Hence, $\lim_k x_{n_k} = z + y \in C \implies z \in C \setminus D$.
+\end{proof}
+
+\begin{definition}[Convex Function]
+   A function $f:H \to \overline{\mathbb R}$ is convex if it's epigraph is a convex set. 
+   \begin{displaymath}
+       \Gamma (H) :=\{\text{Set of convex function with non empty domain}\}
+   \end{displaymath}
+   Moreover, $f$ is said to be proper if $\text{dom} f \neq \varnothing$, and we define
+   \begin{displaymath}
+       \Gamma_0 (H) :=\{\text{Set of convex, proper and l.s.c functions}\}
+   \end{displaymath}
+   
+\end{definition}
+
+Note that a convex function will always be continuous only in the interior of the domain.
+Hence, the ``l.s.c'' condition in $\Gamma_0$ is not redundant.
+
+\begin{theorem}
+    A function $f$ is convex if and only if for every $x \in \text{dom} f$, and $\alpha \in [0,1]$
+    we have for $y \in \text{dom} f$
+    \begin{displaymath}
+        f(\alpha x + (1-\alpha)y) \leq \alpha f(x) + (1-\alpha)f(y).
+    \end{displaymath}
+    
+\end{theorem}
+
+\begin{theorem}
+    Let $f \in \Gamma_0(H)$ and  $x \in \text{int dom} f$. Then, there exists a continuous
+    affine minorant $h$ of $f$ such that $h(x) = f(x)$.
+    In other words, $\exists u \in H$, for all $y \in H$ such that
+    \begin{displaymath}
+        f(y) \geq f(x) + \langle u, y-x\rangle.
+    \end{displaymath}
+\end{theorem}
+
+\begin{definition}[Subgradient for Convex Functions]
+    \begin{displaymath}
+        \partial f (x):= \{u\in H: f(y)\geq f(x) + \langle u, y-x \rangle, \forall y \in H\}    
+    \end{displaymath}
+    
+\end{definition}
+
+\begin{proposition}
+    Let $f \in \Gamma(H)$. Then, every local minimizer of $f$ is a minimizer.
+\end{proposition}
+
+\begin{proposition}
+    Let $f \in \Gamma_0 (H)$, then $f$ is weakly l.s.c.
+\end{proposition}

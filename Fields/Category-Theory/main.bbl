@@ -1,4 +1,4 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{3}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -9,6 +9,11 @@
 Tai-Danae Bradley, Tyler Bryson, and John Terilla.
 \newblock \emph{Topology: A Categorical Approach}.
 \newblock MIT Press, 2020.
+
+\bibitem[Milewski(2018)]{milewski2018category}
+Bartosz Milewski.
+\newblock \emph{Category theory for programmers}.
+\newblock Blurb, 2018.
 
 \bibitem[Ribeiro(2020)]{maico2020categoria}
 Maico Ribeiro.

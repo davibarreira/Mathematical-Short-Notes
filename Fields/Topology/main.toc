@@ -1,0 +1,8 @@
+\contentsline {section}{\numberline {1}Introduction}{5}{section.1}%
+\contentsline {section}{\numberline {2}Functions, Order and Equivalent Classes}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Functions}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Order and Equivalence Relations}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}A bit of Algebra}{7}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Axiom of Choice and Zorn's Lemma}{8}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Basics on Point-Set Topology}{9}{section.3}%
+\contentsline {section}{\numberline {4}Metric Spaces}{9}{section.4}%

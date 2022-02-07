@@ -1,5 +1,5 @@
-Notes mostly based on \citet{maico2020categoria} and
-\citet{bradley2020topology}.
+Notes mostly based on \citet{maico2020categoria},
+\citet{bradley2020topology} and \citet{milewski2018category}.
 
 \section{What are Categories?}
 
@@ -7,7 +7,14 @@ The study of Category Theory enables us to view Mathematics from a vantage
 point, and better understand how the different areas are connected. For example,
 it might not always be clear which properties are \textit{topological}, and which aren't.
 By looking at the subject from the distance (via Category Theory), we get a
-a glimpse at the connections (and disconnections) between fields.
+a glimpse at the connections (and disconnections) between different fields.
+
+Another very intresting observation about Category Theory is that it's
+becoming very popular in programming. This is highlighted for example
+in the book \citet{milewski2018category}. Thus, in order to help
+the understanding of the subject, I'll be using programming as
+a real world example of application of Category Theory.
+Even more specifically, the example shall be done using Julia.
 
 
 \begin{definition}[Category]
@@ -62,3 +69,8 @@ or $\mathcal C (X,Y)$ when there is no ambiguity.
 Note that when $f$ is invertible, the morphism that inverts $f$ is unique with the left and
 right inverses coinciding, since
 $g \circ id_Y = g \circ f \circ h = id_X \circ h = h$.
+
+\subsection{Programming as Category}
+
+In programming languages such as Julia, we can think of `Types`
+as objects and functions as morphisms.

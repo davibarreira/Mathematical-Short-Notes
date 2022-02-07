@@ -1,0 +1,235 @@
+\section{Introduction}
+
+This chapter draws heavily from \citet{munkres2018elements}.
+
+\section{Functions, Order and Equivalent Classes}
+
+\subsection{Functions}
+
+\begin{definition}[Functions]
+  A function $f$ from a set $X$ to $Y$ is an assignment of an element of $Y$ to each element of $X$,
+  denoted by $f: X \to Y$.
+  The set $X$ is called domain, and $Y$ the codomain. The set $f(X):=\{f(x) :  x \in X\}$ is the
+  image of $f$.
+
+  A partial function from $X$ to $Y$ is a function from a subset $S \subset X$, i.e.
+  a partial function from $X$ is not defined for every element of $X$.
+  This type of object appears very often in Computation Theory, where partial functions
+  usually take the role of a program, and when the program halts, this can be thought
+  as the partial function not being defined for that specific entry of the domain.
+  In this area, it's common to make the distinction of partial functions and complete functions,
+  where the notion of a complete function is what we are calling a function.
+\end{definition}
+
+\begin{definition}[Injective, Surjective, Bijective]
+  A function $f:X \to Y$ is:
+  \begin{enumerate}[(i)]
+    \item Injective  if for any $x_1,x_2 \in X$ with $x_1 \neq x_2$ then $f(x_1) \neq f(x_2)$;
+    \item Surjective (onto) if for every $y \in Y$ there exists $x \in X$ such that $f(x)= y$;
+    \item Bijective (one-to-one) if $f$ is both injective and surjective.
+  \end{enumerate}
+\end{definition}
+
+\begin{definition}[Inverse Image]
+  Let $f$ be a function from $X$ to $Y$. For every subset $B \subset Y$, the
+  inverse image (preimage) of $B$ with respect to $f$ is
+  \begin{equation}
+    f^{-1}(B) := \{x \in X : f(x) \in B\}.
+    \label{eq:invimage}
+  \end{equation}
+\end{definition}
+
+The inverse image has some nice properties that will be useful in many subsequent proofs.
+\begin{proposition}[Properties of Inverse Images]
+  Let $f: X \to Y$ and $\{U_\lambda\}_{\lambda \in \Lambda}$ be a family of subsets of $Y$.
+  We have the following identities:
+  \begin{enumerate}[(i)]
+    \item Union and Intersection:
+      \begin{displaymath}
+        f^{-1}\left(\bigcup_{\lambda \in \Lambda} U_\lambda\right) =
+        \bigcup_{\lambda \in \Lambda} f^{-1}(U_\lambda), \quad
+        f^{-1}\left(\bigcap_{\lambda \in \Lambda} U_\lambda\right) =
+        \bigcap_{\lambda \in \Lambda} f^{-1}(U_\lambda).
+      \end{displaymath}
+    \item Complement:
+      \begin{displaymath}
+        (f^{-1}(U))^c =
+        f^{-1}(U^c).
+      \end{displaymath}
+    \item Set difference and symmetric difference:
+      \begin{align*}
+        f^{-1}(U \setminus V) &=
+        f^{-1}(U) \setminus f^{-1}(V), \\
+        f^{-1}(U \Delta V) &=
+        f^{-1}(U) \Delta f^{-1}(V).
+      \end{align*}
+  \end{enumerate}
+\end{proposition}
+\begin{proof}
+  Just use the definition.
+\end{proof}
+
+\subsection{Order and Equivalence Relations}
+
+\begin{definition}[Relation]
+  A relation on a set $X$ is a set $R \subset A \times A$.
+\end{definition}
+
+This notion of a relation is very common in mathematics, and appears
+implicitly in many concepts.
+
+\begin{definition}[Total Order Relation]
+	A total order relation on a set $X$ is denoted by $<$ with:
+	\begin{enumerate}[(i)]
+		\item If $x,y  \in X$ then either $x<y, x=y$ or $x>y$;
+		\item $x < y, y < z \implies x < z$.
+	\end{enumerate}
+	A tuple $(X, <)$ is called an ordered set.
+\end{definition}
+
+\begin{definition}[Partial Order Relation]
+  An order relation $\prec$ on a set $X$ is called a strict partial order if:
+	\begin{enumerate}[(i)]
+		\item The relation $x \prec x$ is never true;
+		\item If $x \prec y, y \prec z$ then $x \prec z$.
+	\end{enumerate}
+	A tuple $(X, <)$ is called an ordered set.
+\end{definition}
+Note that in the partial order relation, not every element of $X$
+must be comparable.
+
+\begin{definition}[Well-Ordered Set]
+  A set $X$ with a total order relation $<$ is said to be well-ordered
+  if every nonempty subset of $A$ has a smallest element.
+\end{definition}
+
+Note that $\mathbb N$ is well-ordered. $\mathbb N \times \mathbb N$ can
+also be well-ordered if we consider the dictionary order.
+\begin{definition}[Dictionary Order Relation]
+  Let $(A, <_A)$ and $(B, <_B)$ be two ordered sets. For $A \times B$,
+  the dictionary order relation is $<_D$ where for $x=(x_1,x_2) \in A\times B$ and
+  $y = (y_1,y_2) \in A\times B$,
+  we say that $x <_D y$ if $x_1 <_A x_2$, or, if $x_1 = x_2$, then $y_1 <_B y_2$.
+  In words, the dictionary order sorts first by the first order relation and then
+  by the second.
+\end{definition}
+
+\begin{definition}[Equivalence Relation]
+	Let $X$ be a set. The symbol $\sim$ is a set on $X \times X$, where
+	for $x,y \in X$, then $x \sim y$ means that $(x,y) \in \sim$. Hence,
+	we say that $\sim$ is an \textit{equivalence relation} on $X$, if $\sim$ satisfies
+	the following properties:
+	\begin{enumerate}
+		\item \textit{reflexive:} $\forall x \in X, x \sim x$;
+		\item \textit{symmetric:} if $x \sim y$, then $y \sim x$;
+		\item \textit{transitive:} if $x \sim y$ and $y \sim z$, then $x \sim z$.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}[Equivalence Class]
+	Given $x \in X$, the \textit{equivalence class} of $x$ with respect
+	to an \textit{equivalence relation} $\sim$ is
+	\begin{equation}
+		[x]:=\{
+		y \in X: y \sim x
+		\}.
+		\label{eq:eqclass}
+	\end{equation}
+\end{definition}
+
+One very useful property of equivalence classes is that they partition the set in
+which they are defined. For example, consider an equivalent relation $\sim$ on $X$.
+Every element $x \in X$ belongs to the equivalence class $[x]_{\sim}$, and each
+class is either the same of disjoint. We can easily show this, just note that
+\footnote{In the proof below there is a small technical issue where the first
+\textit{iff} should actually be $\exists y \in [x]: y \notin [x']\vee \exists y'
+\in [x']: \notin [x]$. But we omitted this ``or'' condition for brevity, and used
+instead the ``w.g.l'' which stands for ``without loss of generality''.}
+\begin{align*}
+  [x] \neq [x'] \iff \small{\text{w.l.g. }} \exists y \in [x], y \notin [x'] &\iff
+y \not \sim y', \forall y' \in [x'] \\
+&\iff [x] \cap [x'] = \varnothing.
+\end{align*}
+
+\subsection{A bit of Algebra}
+
+\begin{definition}[Ring]
+	A ring is a triple $(R, +, \cdot)$ where $R$ is a set with at least two elements,
+	and that contains two operations called addition ($+$) and multiplication ($\cdot$),
+	where they satisfy the following conditions:
+
+	\textbf{Addition:}
+	\begin{enumerate}[(i)]
+		\item If $x, y \in F$, then $x+y \in F$;
+		\item $x + y = y + x$;
+		\item $(x + y) + z = x + (y + z)$;
+		\item There exists a null element $0 \in F$ such that $0 + x = x$ for every $x \in F$;
+		\item For every $x\in F$ there exists a $-x \in F$ such that $x + (-x) = 0$.
+	\end{enumerate}
+
+	\textbf{Multiplication:}
+	\begin{enumerate}[(i)]
+		\item If $x, y \in F$, then $x\cdot y \in F$;
+		\item $x \cdot y = y \cdot x$;
+		\item $(x \cdot y) \cdot z = x \cdot (y \cdot z)$;
+		\item There exists an identity element $1\in F$ such that $1 \cdot x = x$ for every $x \in F$;
+	\end{enumerate}
+
+	\textbf{A/M}
+	\begin{enumerate}[(i)]
+		\item Multiplication is distributive in terms of addition, i.e.
+		      $x\cdot(y+z) = x \cdot y + x \cdot z$.
+	\end{enumerate}
+	If the commutative property for multiplication is not satisfied, we have a \textit{non-commutative ring}.
+\end{definition}
+
+\begin{definition}[Field]
+	A field is a ring $(F, +, \cdot)$ with the extra condition that
+	every $x \neq 0 \in F$ has  an inverse element $1/x \in F$ such that $x \cdot (1/x) = 1$.
+
+	If we add an order relation to $F$, then $(F, +, \cdot, <)$ is an ordered field.
+\end{definition}
+
+\begin{example}
+	Note that $\mathbb Z$ is a ring, since the usual sum and multiplication
+	satisfies all the properties. Yet, it's not a field, since the inverse
+	elements are not part of $\mathbb Z$. It's easy to show
+	that both $\mathbb Q$ and $\mathbb R$ are fields. More surprisingly,
+	the space $\mathbb Z_{p}$, known as the modulo of $p$ where $p$ is a prime number, is also
+	a field.
+\end{example}
+
+\subsection{Axiom of Choice and Zorn's Lemma}
+
+From \citet{munkres2018elements}.
+Consider the following. We define a set $A$ to be infinite if it is not finite, where
+a set $A$ is finite if there exists a bijection $f:A \to \{1,...,n\}$ for an $n \in \mathbb N$.
+Hence, an infinite set is one where there is no such bijection.
+Now, we wish to prove that there exists a function $f:\mathbb N \to A$ such that
+$f$ as an injective function. The question is then, how do we construct a candidate?
+
+A simple procedure is to consider the following. We pick a $a_1 \in A$ and make
+$f(1) = a_1$. For $f(2)$, we pick an element from $A \setminus \{1\}$. For $f(3)$
+we pick from $A \setminus \{1,2\}$. And so on. It's clear that such function
+would be injective and defined for every element of $\mathbb N$. But we can
+feel that something is off. We are not explicitly constructing our function.
+What is going on here?
+
+This strange procedure of affirming that we could construct such function without
+ever specifying exactly how we select the elements is only possible if we
+consider the ``controversial'' \textbf{Axiom of Choice}.
+
+\begin{definition}[Axiom of Choice]
+  Version from \citet{munkres2018elements}. Given as collection $\mathcal A$
+  of disjoint nonempty sets, there exists a set $C$ such that $C$
+  has one element of each set of $\mathcal A$, i.e. for $A \in \mathcal A$,
+  $C \cap A$ has only one element.
+\end{definition}
+
+The use of the Axiom of Choice leads to the proof of the so called
+Well-ordering theorem, proved by Zermelo in 1904.
+\begin{theorem}[Well-ordering theorem]
+  Every set $A$ has an order relation such that $A$ is well-ordered.
+\end{theorem}
+
+
