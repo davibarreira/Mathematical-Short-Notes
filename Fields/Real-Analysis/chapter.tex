@@ -1,0 +1,79 @@
+%! TeX program = lualatex
+\documentclass[12pt]{article}
+
+\usepackage{listings}
+
+\pagestyle{plain}
+\usepackage{pdfpages}
+\usepackage{titlesec}
+
+%%%% MATH PACKAGES %%%%
+
+\usepackage{amsfonts, amsthm,amsmath,amssymb,mathtools}
+\usepackage{bbm}
+\usepackage{bm}
+\usepackage{thmtools} % List of Theorems
+\usepackage{mathrsfs} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[square,numbers]{natbib}
+\usepackage[pdftex,bookmarks=true,bookmarksopen=false,bookmarksnumbered=true,colorlinks=true,linkcolor=blue]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{enumerate}
+
+%%%%%%% JULIA %%%%%%%%%%
+\input{/home/davibarreira/MEGA/EMAp/Mathematical-Short-Notes/Book/julia_font.tex}
+\input{/home/davibarreira/MEGA/EMAp/Mathematical-Short-Notes/Book/julia_listings.tex}
+
+\lstdefinelanguage{JuliaLocal}{
+    language = Julia, % inherit Julia lang. to add keywords
+}
+
+%%%%%%%% Set \begin{shaded} %%%%%%%%
+\usepackage{framed}
+\colorlet{shadecolor}{gray!15}
+
+%%%%%%%%%%%% MATH STYLE  %%%%%%%%%%%%%
+\newtheoremstyle{bfnote}%
+  {}{}
+  {}{}
+  {\bfseries}{.}
+  { }{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}
+\theoremstyle{bfnote}
+\newenvironment{prf}[1][Proof]{\textbf{#1.} }{\qed}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{exer}{Exercise}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\newtheorem{note}{Note}[section]
+\newtheorem{example}{Example}[section]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+% \date{}
+
+
+\title{Real Analysis}
+\author{Davi Sales Barreira}
+
+\maketitle
+
+\newpage
+\tableofcontents
+
+\listoftheorems[ignoreall,onlynamed={definition},title={List of Definitions}]
+\listoftheorems[ignoreall,onlynamed={theorem,lemma,corollary,proposition},title={List of Theorems}]
+
+% \newpage
+\include{RealAnalysis}
+
+\bibliography{ref}
+\bibliographystyle{plainnat}
+
+\end{document}

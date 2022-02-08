@@ -1,0 +1,40 @@
+Notes based on \citet{craig2018course} and on the Partial Differential Equations
+course ministered by Emanuel Carneiro on 2011 at IMPA.
+
+\section{The Wave Equation}
+
+\subsection{d'Alembert formula}
+
+Consider the following problem:
+\begin{align*}
+  &\partial_t^2 u - \partial^2_x u = 0,\\
+  & u(0,x) = f(x), \quad \partial_t u(0,x) = g(x).
+\end{align*}
+
+To solve this, we'll use a change of coordinates 
+\begin{displaymath}
+  r := x + t, \quad s:= x -t. 
+\end{displaymath}
+
+Now, let's apply the Chain rule for $g(r,s) = (\frac{r-s}{2},\frac{r+s}{2})$,
+\begin{align*}
+  (\partial_r v, \partial_s v) = D(u\circ g)(r,s) = D u(t,x) D g(r,s)
+  &= (\partial_t u, \partial_x u)
+  \begin{pmatrix}
+    \partial_r g_1 & \partial_s g_1 \\
+    \partial_r g_2 & \partial_s g_2
+  \end{pmatrix}\\
+  &= (\partial_t u, \partial_x u)
+  \begin{pmatrix}
+    1/2 & -1/2 \\
+    1/2 & 1/2 
+  \end{pmatrix}\\
+  &=
+  \left(\frac{\partial_t u + \partial_x y}{2}, 
+  \frac{\partial_t u - \partial_x y}{2}\right).
+\end{align*}
+Which implies that $\partial_r = $
+
+
+
+

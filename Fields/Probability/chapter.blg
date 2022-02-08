@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2020/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: chapter.aux
+A level-1 auxiliary file: 1-Probability.aux
+A level-1 auxiliary file: 2-Probability.aux
+A level-1 auxiliary file: 3-Probability.aux
+A level-1 auxiliary file: Extra-Probability.aux
+The style file: plainnat.bst
+Database file #1: ref.bib
+Warning--empty publisher in impaproba
+You've used 5 entries,
+            2773 wiz_defined-function locations,
+            618 strings with 5544 characters,
+and the built_in function-call counts, 1627 in all, are:
+= -- 130
+> -- 72
+< -- 5
++ -- 26
+- -- 21
+* -- 93
+:= -- 263
+add.period$ -- 14
+call.type$ -- 5
+change.case$ -- 20
+chr.to.int$ -- 5
+cite$ -- 11
+duplicate$ -- 93
+empty$ -- 157
+format.name$ -- 30
+if$ -- 335
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 6
+newline$ -- 32
+num.names$ -- 20
+pop$ -- 58
+preamble$ -- 1
+purify$ -- 17
+quote$ -- 0
+skip$ -- 71
+stack$ -- 0
+substring$ -- 10
+swap$ -- 5
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 45
+warning$ -- 1
+while$ -- 15
+width$ -- 0
+write$ -- 64
+(There was 1 warning)

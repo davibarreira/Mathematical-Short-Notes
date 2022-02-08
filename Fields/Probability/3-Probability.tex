@@ -1,0 +1,114 @@
+\newpage
+\section{Expected Value}
+
+\begin{lemma}[Layered Cake Representation]
+	Note that for a r.v $X$ on $(\Omega, \mathcal F, P)$, then
+	\begin{equation}
+		X(\omega) = \int_0^{X(\omega)} 1 dx =
+		\int_\mathbb R \mathbbm 1_{[0,X(\omega)]}(x) dx.
+		\label{eq:cake}
+	\end{equation}
+\end{lemma}
+
+\begin{theorem}[Tail Probability Expectation Identity]
+	Let $X$ be a random variable with finite expectation. Then
+	\begin{equation}
+		E X =
+		\int_0^\infty P(X > x) dx - \int_{-\infty}^0 P(X<x) dx.
+	\end{equation}
+	If $X$ is a positive discrete r.v, then
+	\begin{equation}
+		E X = \displaystyle\sum_{k=0}^{\infty}P(X > k) = \displaystyle\sum_{k=1}^{\infty}P(X\geq k).
+	\end{equation}
+\end{theorem}
+\begin{proof}
+	Let's start by proving for the case where $X\geq 0$.
+	\begin{align*}
+		\mathbbm{1}_{[0,X(\omega)]}(x) =
+		\mathbbm{1}_{\{X(\omega)>x\} \cap \{X(\omega) \geq 0\}}(\omega)
+	\end{align*}
+
+	\begin{align*}
+		E X                    & =
+		\int_\mathbb R \int_\mathbb R
+		\mathbbm{1}_{\{X(\omega)>x\} \cap \{X(\omega) \geq 0\}}(\omega) dx \ d P(\omega) \\
+		{\text{\tiny(Fubini)}} & =
+		\int_\mathbb R \int_\mathbb R
+		\mathbbm{1}_{\{X(\omega)>x\} \cap \{X(\omega) \geq 0\}}(\omega) d P(\omega) \ dx \\
+		                       & =
+		\int_\mathbb R P(\{X(\omega)> x\} \cap \{X(\omega) \geq 0\})dt                   \\
+	\end{align*}
+	Note that $P(\{X(\omega)> x\} \cap \{X(\omega) \geq 0\})=0$ if $x\leq 0$. Hence,
+
+	\begin{align*}
+		E X = \int_0^\infty P(X > x) dx.
+	\end{align*}
+	For the general case where $X$ is not necessarily positive,
+	repeat the same proof for $X^+ = \max{0,X}$ and $X^- = -\min{0,X}$. Thus, obtaining the desired result.
+
+	Finally, for the case of positive discrete random variable,
+	just note that
+	\begin{align*}
+		\int_0^\infty P(X > x) dx & =
+		\int_0^1 P(X > x) dx +
+		\int_1^2 P(X > x) dx +
+		...
+		\int_n^{n+1} P(X > x) dx + ...                          \\
+		                          & = \sum^\infty_{k=0} P(X>k).
+	\end{align*}
+\end{proof}
+
+\begin{corollary}[Tail Probability Expectation Identity for Functions]
+	Let $X$ be a \textit{positive} r.v and $f:\mathbb R_+ \to \mathbb R$ such that $f \in C^1$.
+	Then
+	\begin{equation}
+		E[f(X)] = f(0) + \int_0^\infty f'(t) P(X \geq t) dt
+		\label{eq:tailexpectationfunction}
+	\end{equation}
+\end{corollary}
+
+
+\begin{proof}
+	\begin{align*}
+		Ef(X) =
+		\int_0^\infty f(x) dP_X,
+		\quad f(x) - f(0) = \int_0^x f'(t) dt
+	\end{align*}
+	\begin{align*}
+		\int_0^\infty f(x) dP_X & =
+		\int_0^\infty f(0) +
+		\left(
+		\int_0^x f(x) dt
+		\right) dP_X                \\
+		                        & =
+		f(0) +
+		\int_0^\infty
+		\int_0^x f(x) dt
+		dP_X                        \\
+		                        & =
+		f(0) +
+		\int_\mathbb R \mathbbm{1}_{(0,\infty)}(x)
+		\int_\mathbb R \mathbbm{1}_{(0,x)}(t)
+		dt \ dP_X
+		\\
+	\end{align*}
+	Note that $\mathbbm{1}_{(0,\infty)}(x) = \mathbbm{1}_{(t,\infty)}(x)$, hence
+
+	\begin{align*}
+		E f(X)                 & =
+		f(0) +
+		\int_\mathbb R \mathbbm{1}_{(0,\infty)}(x)
+		\int_\mathbb R \mathbbm{1}_{(t,\infty)}(x) dt \ dP_X
+		\\
+		{\text{\tiny(Fubini)}} & =
+		f(0) +
+		\int_\mathbb R \int_\mathbb R \mathbbm{1}_{(0,\infty)}(x)
+		\mathbbm{1}_{(t,\infty)}(x) dP_X \ dt                                \\
+		                       & =
+		f(0) +
+		\int_\mathbb R P_X(\{x \in (0,\infty)\} \cap \{x \in (t,\infty)\})dt \\
+		                       & =
+		f(0) +
+		\int_\mathbb R P(X > t)dt.
+	\end{align*}
+\end{proof}

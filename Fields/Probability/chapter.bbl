@@ -1,0 +1,35 @@
+\begin{thebibliography}{5}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Chin(2019)]{chin2019new}
+Wooyoung Chin.
+\newblock New simple proofs of the kolmogorov extension theorem and prokhorov's
+  theorem.
+\newblock \emph{arXiv preprint arXiv:1911.12979}, 2019.
+
+\bibitem[Le~Gall(2016)]{le2016brownian}
+Jean-Fran{\c{c}}ois Le~Gall.
+\newblock \emph{Brownian motion, martingales, and stochastic calculus}.
+\newblock Springer, 2016.
+
+\bibitem[Perrone(2018)]{perrone2018categorical}
+Paolo Perrone.
+\newblock Categorical probability and stochastic dominance in metric spaces,
+  2018.
+
+\bibitem[Sokol and R{\o}nn-Nielsen(2013)]{sokol2013advanced}
+Alexander Sokol and Anders R{\o}nn-Nielsen.
+\newblock Advanced probability.
+\newblock \emph{University of Copenhagen: Department of Mathematical Sciences},
+  2013.
+
+\bibitem[Teixeira and Lacoin(2018)]{impaproba}
+Augusto Teixeira and Hubert Lacoin.
+\newblock \emph{Notas de aula: Probabilidade I (Remix)}.
+\newblock 2018.
+
+\end{thebibliography}

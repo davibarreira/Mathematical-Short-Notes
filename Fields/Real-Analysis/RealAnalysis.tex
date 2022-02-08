@@ -1,0 +1,210 @@
+\chapter{Real Analysis}
+
+\section{Number Systems - Real and Complex}
+
+\subsection{Supremum and Infimum}
+
+\begin{definition}[Ordered Set]
+	Let $S$ be a set. An order relation on $S$ is denoted by $<$ with:
+	\begin{enumerate}[(i)]
+		\item If $x,y  \in S$ then either $x<y, x=y$ or $x>y$;
+		\item If $x,y, z \in S$ then $x < y, y < z \implies x < z$.
+	\end{enumerate}
+	A tuple $(S, <)$ is called an ordered set.
+\end{definition}
+
+\begin{definition}[Supremum and Infimum]
+	For an ordered set $(S,<)$, we say that $\alpha$ is the supremum of $E \subset S$
+	($\alpha = \sup_{x \in S} E$) if $\alpha$
+	is the least upper bound of $S$, i.e.
+	\begin{enumerate}[(i)]
+		\item For any $x \in E$, then $x \leq \alpha$;
+		\item If $y < \alpha$ then $y$ is not an upper bound of $E$;
+	\end{enumerate}
+	The Infimum is the analogous definition, but on the other direction.
+\end{definition}
+
+\begin{definition}[Least-upper-bound property]
+	An ordered set $(S,<)$ is said to have the Least-upper-bound property if
+	for any non-empty and bounded set $E \subset S$, then $\sup E$ exists
+	and belongs to $S$.
+\end{definition}
+
+\begin{definition}[Ring]
+	A ring is a triple $(R, +, \cdot)$ where $R$ is a set with at least two elements,
+	and that contains two operations called addition ($+$) and multiplication ($\cdot$),
+	where they satisfy the following conditions:
+
+	\textbf{Addtion:}
+	\begin{enumerate}[(i)]
+		\item If $x, y \in F$, then $x+y \in F$;
+		\item $x + y = y + x$;
+		\item $(x + y) + z = x + (y + z)$;
+		\item There exists a null element $0 \in F$ such that $0 + x = x$ for every $x \in F$;
+		\item For every $x\in F$ there exists a $-x \in F$ such that $x + (-x) = 0$.
+	\end{enumerate}
+
+	\textbf{Multiplication:}
+	\begin{enumerate}[(i)]
+		\item If $x, y \in F$, then $x\cdot y \in F$;
+		\item $x \cdot y = y \cdot x$;
+		\item $(x \cdot y) \cdot z = x \cdot (y \cdot z)$;
+		\item There exists an identity element $1\in F$ such that $1 \cdot x = x$ for every $x \in F$;
+	\end{enumerate}
+
+	\textbf{A/M}
+	\begin{enumerate}[(i)]
+		\item Multiplication is distributive in terms of addition, i.e.
+		      $x\cdot(y+z) = x \cdot y + x \cdot z$.
+	\end{enumerate}
+	If the commutative property for multiplication is not satisfied, we have a \textit{non-commutative ring}.
+\end{definition}
+
+\begin{definition}[Field]
+	A field is a ring $(F, +, \cdot)$ with the extra condition that
+	every $x \neq 0 \in F$ has  an inverse element $1/x \in F$ such that $x \cdot (1/x) = 1$.
+
+	If we add an order relation to $F$, then $(F, +, \cdot, <)$ is an ordered field.
+\end{definition}
+
+\begin{example}
+	Note that $\mathbb Z$ is a ring, since the usual sum and multiplication
+	satisfies all the properties. Yet, it's not a field, since the inverse
+	elements are not part of $\mathbb Z$. It's easy to show
+	that both $\mathbb Q$ and $\mathbb R$ are fields. More surprisingly,
+	the space $\mathbb Z_{p}$, known as the modulo of $p$ where $p$ is a prime number, is also
+	a field.
+\end{example}
+
+\subsection{Sequences and Limits}
+
+We'll construct the Real numbers using Cauchy sequences.
+
+\begin{definition}[Equivalence Relation]
+	Let $X$ be a set. The symbol $\sim$ is a set on $X \times X$, where
+	for $x,y \in X$, then $x \sim y$ means that $(x,y) \in \sim$. Hence,
+	we say that $\sim$ is an \textit{equivalence relation} on $X$, if $\sim$ satisfies
+	the following properties:
+	\begin{enumerate}
+		\item \textit{reflexive:} $\forall x \in X, x \sim x$;
+		\item \textit{symmetric:} if $x \sim y$, then $y \sim x$;
+		\item \textit{transitive:} if $x \sim y$ and $y \sim z$, then $x \sim z$.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}[Equivalence Class]
+	Given $x \in X$, the \textit{equivalence class} of $x$ with respect
+	to an \textit{equivalence relation} $\sim$ is
+	\begin{equation}
+		[x]:=\{
+		y \in X: y \sim x
+		\}.
+		\label{eq:eqclass}
+	\end{equation}
+\end{definition}
+
+\subsection{Topology}
+
+\begin{definition}[Topological Space and Open Sets]
+	$(X,\mathcal T)$ is a topological space where $\mathcal T$ is the collection of \textit{open
+		sets} in $X$, such that:
+	\begin{enumerate}[(i)]
+		\item $X \in \mathcal T$;
+		\item Se $A_1,...,A_n \in \mathcal T \implies \cap_{i=1}^n A_i \in \mathcal T$;
+		\item Se $A_\alpha \in \mathcal T$ for any $\alpha \in \Lambda \implies \cup_{\alpha \in \Lambda} A_\alpha \in \mathcal T$;
+	\end{enumerate}
+	$\mathcal T$ is the topology of $X$.
+\end{definition}
+
+\begin{definition}[Closed Sets]
+	Given a topologial space $(X, \mathcal T)$, we say that a set $F \subset X$ is closed
+	if $F^c \in \mathcal T$.
+\end{definition}
+
+\begin{definition}[Interior and Closure]
+	Let $(X, \mathcal T)$. Take a set $A \subset X$. The interior of $A$ is
+	the union of all open sets that are subsets of $A$, and it's denoted by
+	$A^{\circ}$. The closure of $A$ is the intersection of all closed sets containing
+	$A$, denoted by $\bar A$. E.i.
+	\begin{equation}
+		A^{\circ} := \bigcup_{
+			U \subset A , \ U \in \mathcal T
+		} U,\quad
+		\bar A:= \bigcap_{
+			F \supset A , \ F^c \in \mathcal T
+		} F
+	\end{equation}
+\end{definition}
+
+\begin{definition}[Metric]
+	Let $X$ be a space. A function $d:X\times X \to \mathbb [0,+\infty)$ is called a metric if
+	\begin{enumerate}[(i)]
+		\item $d(x,y) = 0 \iff x =y$;
+		\item $d(x,y) = d(y,x)$;
+		\item $d(x,z) \leq d(x,y) + d(y,z)$.
+	\end{enumerate}
+	If $d$ satisfies only (i) and (ii) then it's called a pseudo-metric.
+\end{definition}
+
+\begin{definition}[Metric Space]
+	A metric space is the tuple $(X,d)$, where $d$ is the metric over $X$,
+	e.g. $X=\mathbb R$ and $d(x,y) = |x-y|$.
+\end{definition}
+
+\begin{definition}[Open Ball]
+	Let $(X,d)$ be a metric space, and $x \in X, r >0$. The open ball is
+	\begin{equation}
+		B_r(x):= \{y \in X: d(y,x) < r\}.
+	\end{equation}
+\end{definition}
+
+\begin{definition}[Open Family Induced by $d$]
+	Let $(X,d)$ be a metric space. $x$ is an interior point of $A\subset X$
+	if there exists an open ball $B_r(x)\subset A$.
+	The set of interior points of $A$ is denoted by $A^\circ$.
+	We can define a family of open sets by defining that
+	$A$ is open if $A = A^\circ$.
+
+	Hence, the open family $\mathcal O$ induced by $d$ is the set
+	\begin{equation}
+		\mathcal O := \{A \in \mathcal O : \exists x\in A, r>0 \text{ such that } B_r(x) \subset A\}.
+	\end{equation}
+
+	Note that in this way,
+	the notion of being an open set is directly related to the metric $d$,
+	since it requires that in every open set there is an open ball inside,
+	which was defined using $d$.
+	One can check that defining an open family this way satisfies the
+	definition \ref{openfamily}.
+\end{definition}
+
+\subsection{Construction of Real}
+
+
+\begin{theorem}[Compactnes + Unique Subsequences]
+	Let $x_n \in K \subset \mathbb R^n$, with $K$ compact.
+	If $\exists x$ such that if a subsequence
+	converges, then it converges to $x$ (i.e.
+	all convergent subsequences have a unique
+	limit point $x$), then $x_n \to x$.
+\end{theorem}
+\begin{proof}
+	Suppose that $x_n \nrightarrow x$. Then, $\exists \varepsilon > 0$ such
+	that for every $N \in \mathbb N$ there exist $n \geq N$ such that
+	$d(x_n , x) \geq \varepsilon$. Now, construct a subsequence
+	$x_{n_k}$ such that $d(x_{n_k},x)\geq \varepsilon$ for every $x_{n_k}$.
+	Since $(x_{n_k}) \subset K$ compact, then there exists a subsequence
+	$x_{n_{k_j}}$ that converges, therefore, $x_{n_{k_j}} \to x$, which
+	is a contradiction, since $d(x_{n_{k_j}},x) \geq \varepsilon$.
+\end{proof}
+
+\subsection{Differentiation}
+
+\begin{theorem}[Mean Value Theorem Inequality]
+  Let $\bm f: [a,b] \to \mathbb R^k$ with $\bm f$ differentiable in $(a,b)$.
+  Then, there exists $c \in (a,b)$ such that
+  \begin{displaymath}
+    \vert \bm f(b) - \bm f(a) \vert \leq (b-a)\vert \bm f'(x) \vert.
+  \end{displaymath}
+  \label{thm:almosttvm}
+\end{theorem}

@@ -1,0 +1,13 @@
+\begin{thebibliography}{1}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Doering and Lopes(2008)]{doering2008equaccoes}
+Claus~Ivo Doering and Artur~O Lopes.
+\newblock \emph{Equa{\c{c}}{\~o}es diferenciais ordin{\'a}rias}.
+\newblock Number 517.2 DOE. 2008.
+
+\end{thebibliography}

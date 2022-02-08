@@ -1,0 +1,76 @@
+\section{Probability in $C[0,1]$}
+
+\begin{definition}[Cylinder]
+	\begin{displaymath}
+		\mathcal A := \{
+		X
+		\}
+	\end{displaymath}
+
+\end{definition}
+
+\begin{shaded}
+	\begin{note}[Ascoli-Arzela]
+		$D \subset C[0,1]$ is compact if and only if
+		\begin{enumerate}[(i)]
+			\item $\exists a \in \mathbb R$ such that $|x_0|<a \forall x \in D$
+			\item $D$ is equicontinuous, i.e. $\forall \varepsilon >0 \exists \delta>0$
+			      such that $|t-s|<\delta \implies |x_t - x_s|<\varepsilon$.
+		\end{enumerate}
+		\begin{definition}[Modulus of Continuity]
+			The modulus of continuity $\omega_x(\delta)$ is
+			\begin{displaymath}
+				\sup_{s,t \in [0,1], |s-t|<\delta} |x_t - x_s|.
+			\end{displaymath}
+			Note that $D$ is equicontinuous $\iff \lim_{\delta \to 0} \sup_{x \in D}\omega_x(\delta) = 0$.
+		\end{definition}
+	\end{note}
+\end{shaded}
+
+
+\section{Gaussians}
+
+This section has some results from \citet{le2016brownian}. It consists of a collection
+of results related to Gaussian Random Variables.
+
+\subsection{1D Gaussian}
+
+\begin{definition}[Standard Gaussian]
+	A probability measure $\mu \in \mathcal P(\mathbb R)$
+	is said to be a \textit{standard Gaussian} (or standard normal)
+	if it's density with respect to Lebesgue measure is
+	\begin{equation}
+		p(x) = \frac{e^{\frac{-x^2}{2}}}{\sqrt{2\pi}}
+		\label{eq:gaussian}
+	\end{equation}
+
+	To prove that this indeed defines a probability distribution, note that
+	\begin{displaymath}
+		\left(\int_{-\infty}^\infty
+		e^{-x^2/2} dx
+		\right)^2 =
+		\int_{-\infty}^\infty
+		\int_{-\infty}^\infty
+		e^{-(x^2+y^2)/2} dx dy
+		=
+		\int_{0}^{2\pi}
+		\int_{0}^\infty
+		e^{-(r^2)/2}r d\theta drd\theta = \sqrt(2\pi).
+	\end{displaymath}
+\end{definition}
+
+\begin{definition}[Gaussian]
+	A probability measure $\mu \in \mathcal P(\mathbb R)$
+	is said to be a \textit{Gaussian}
+	if it's density with respect to Lebesgue measure is
+	\begin{equation}
+		p(x) = \frac{e^{\frac{-(x-a)^2}{2\sigma^2}}}{\sqrt{2\pi}\sigma}
+		\label{eq:gaussian}
+	\end{equation}
+\end{definition}
+
+
+\subsection{Vector of Gaussians}
+
+\subsection{Gaussian Process}
+

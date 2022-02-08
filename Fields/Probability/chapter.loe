@@ -1,0 +1,35 @@
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.1\else \numberline {1.1}Definition\fi \thmtformatoptarg {$\sigma $-Algebra}}{5}{definition.1.1}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.2\else \numberline {1.2}Definition\fi \thmtformatoptarg {Borel $\sigma $-algebra}}{5}{definition.1.2}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.3\else \numberline {1.3}Definition\fi \thmtformatoptarg {Measurable space}}{5}{definition.1.3}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.4\else \numberline {1.4}Definition\fi \thmtformatoptarg {Measure}}{5}{definition.1.4}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.5\else \numberline {1.5}Definition\fi \thmtformatoptarg {Probability Measure}}{5}{definition.1.5}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.6\else \numberline {1.6}Definition\fi \thmtformatoptarg {Probability Space}}{6}{definition.1.6}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.7\else \numberline {1.7}Definition\fi \thmtformatoptarg {Space of Probabilities}}{6}{definition.1.7}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}1.8\else \numberline {1.8}Proposition\fi \thmtformatoptarg {Basic properties of probability measures}}{6}{proposition.1.8}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}1.9\else \numberline {1.9}Proposition\fi }{7}{proposition.1.9}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.10\else \numberline {1.10}Definition\fi \thmtformatoptarg {Random Variable}}{8}{definition.1.10}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.11\else \numberline {1.11}Definition\fi \thmtformatoptarg {Pushforward}}{8}{definition.1.11}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}1.12\else \numberline {1.12}Theorem\fi \thmtformatoptarg {Change of Variable}}{8}{theorem.1.12}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.13\else \numberline {1.13}Definition\fi \thmtformatoptarg {Regular Probability}}{9}{definition.1.13}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}1.14\else \numberline {1.14}Theorem\fi \thmtformatoptarg {Regular Metric Spaces}}{9}{theorem.1.14}%
+\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}1.15\else \numberline {1.15}Corollary\fi }{10}{corollary.1.15}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}1.16\else \numberline {1.16}Theorem\fi }{10}{theorem.1.16}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.17\else \numberline {1.17}Definition\fi \thmtformatoptarg {Weak Convergence for Probability}}{11}{definition.1.17}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.18\else \numberline {1.18}Definition\fi \thmtformatoptarg {Continuity Set}}{11}{definition.1.18}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}1.19\else \numberline {1.19}Theorem\fi \thmtformatoptarg {Theorem of Portmanteau}}{11}{theorem.1.19}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}1.20\else \numberline {1.20}Proposition\fi }{13}{proposition.1.20}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}1.21\else \numberline {1.21}Theorem\fi \thmtformatoptarg {Continuity of Pushforward}}{14}{theorem.1.21}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}1.22\else \numberline {1.22}Lemma\fi }{14}{lemma.1.22}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.23\else \numberline {1.23}Definition\fi \thmtformatoptarg {Tightness}}{15}{definition.1.23}%
+\contentsline {note}{\ifthmt@listswap Note\nobreakspace {}1.1\else \numberline {1.1}Note\fi \thmtformatoptarg {Pre-Compactness}}{15}{note.1.1}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}1.24\else \numberline {1.24}Theorem\fi \thmtformatoptarg {Prokhorov}}{16}{theorem.1.24}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}1.25\else \numberline {1.25}Theorem\fi \thmtformatoptarg {Kolmogorov's Extension Theorem - Simpler Version}}{18}{theorem.1.25}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}2.1\else \numberline {2.1}Definition\fi \thmtformatoptarg {Cylinder}}{19}{definition.2.1}%
+\contentsline {note}{\ifthmt@listswap Note\nobreakspace {}2.1\else \numberline {2.1}Note\fi \thmtformatoptarg {Ascoli-Arzela}}{19}{note.2.1}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}2.2\else \numberline {2.2}Definition\fi \thmtformatoptarg {Modulus of Continuity}}{19}{definition.2.2}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.1\else \numberline {3.1}Definition\fi \thmtformatoptarg {Standard Gaussian}}{19}{definition.3.1}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.2\else \numberline {3.2}Definition\fi \thmtformatoptarg {Gaussian}}{20}{definition.3.2}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}4.1\else \numberline {4.1}Lemma\fi \thmtformatoptarg {Layered Cake Representation}}{21}{lemma.4.1}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}4.2\else \numberline {4.2}Theorem\fi \thmtformatoptarg {Tail Probability Expectation Identity}}{21}{theorem.4.2}%
+\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}4.3\else \numberline {4.3}Corollary\fi \thmtformatoptarg {Tail Probability Expectation Identity for Functions}}{22}{corollary.4.3}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}5.1\else \numberline {5.1}Theorem\fi }{23}{theorem.5.1}%

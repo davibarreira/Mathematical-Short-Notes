@@ -1,0 +1,132 @@
+Notes for the 2021 PhD course of Ordinary Differential Equations
+at FGV/EMAp. The main reference used was \citet{doering2008equaccoes}.
+
+\section{Introduction}
+
+\subsection{Initial Definitions}
+\begin{definition}[ODE]
+  An Ordinary Differential Equation is an expression
+  \begin{displaymath}
+    \frac{d^k x(t)}{dt^k} = x^{(k)}(t) = F(t,x,x',...,x^{(k-1)}),
+  \end{displaymath}
+  where $k,d \in \mathbb N, t \in \mathbb R, x \in \mathbb R^d$ and $F:U\to \mathbb R^d$ is a continuous
+  function defined on an open set $U \subset \mathbb R^{1+d\cdot k}$.
+  We call $k$ the \textit{order} and $d$ the \textit{dimension}.
+\end{definition}
+
+If we take the canonical coordinates of, say, $\mathbb R^n$, then
+\begin{align*}
+  x(t) = (x_1(t), x_2(t),...,x_n(t)),\quad \text{and }
+  f(t,x) = (f_1(t,x), f_2(t,x),...,f_n(t,x))
+\end{align*}
+can instead be written as a system of differential equations
+\begin{align}
+  \begin{cases}
+    x'_1(t) = f_1(t,x_1(t),...,x_n(t)),\\
+    x'_2(t) = f_2(t,x_1(t),...,x_n(t)),\\
+    \ \vdots\\
+    x'_n(t) = f_n(t,x_1(t),...,x_n(t)).\\
+  \end{cases}
+\end{align}
+
+
+\begin{definition}[Solution to ODE]
+  A solution to an ODE $F:U\to \mathbb R^{1+d\cdot k}$ is a function
+  $\gamma : I \to \mathbb R^d$ such that
+  \begin{enumerate}
+    \item $\gamma \in C^k$;
+    \item $I\subset R$ is an open interval such that $\forall t \in I$,
+      $(t,\gamma(t),\gamma'(t),...,\gamma^{(k-1)}(t))\subset U$;
+    \item $\frac{d^k\gamma(t)}{dt^ k} = \gamma^{(k)}(t) = F(t,\gamma'(t),...,\gamma^{(k-1)}(t)), \ \forall t \in I$.
+  \end{enumerate}
+\end{definition}
+
+\subsection{Classification}
+There are many ways in which we can ``classify'' an ODE.
+We say that an ODE is \textit{normal} if we can explicitly write $x'$, 
+i.e. $x' = f(t,x)$. In these notes, we are mainly interested in this type
+of ODE which are easier to work with.
+
+If $x' = f(t,x) = f(x)$, then we say that our equation is \textit{autonomous},
+meaning that is does not depend on time. Although, it can be shown that
+any non-autonomous ODE can be written as an autonomous ODE. Consider that
+$x'(t) = f(x,t)$ and make $X = (t,x)$ with $F(X) = (1, f(t,x))$. Thus,
+\begin{displaymath}
+  X'(u)  = F(X) = (1, f(t(u), x(u))).
+\end{displaymath}
+Note that if $X(u) = (t(u),x(u))$ is a solution to the above ODE, then
+for $t(t_0) =t_0$, we have that $t'(u) = 1 \implies t(u)= u$, hence
+$x'(u) = f(u,x(u))$.
+
+A similar thing can be said about the order of an ODE.
+Every second order (or more) ODE can be transformed into a first order problem.
+Let
+\begin{align*}
+  \begin{cases}
+ y'' = g(t,y,y'), \\
+ y(t_0) = y_0, \\
+ y'(t_0) = y_1.
+  \end{cases},
+\end{align*}
+such that $g:U\subset \mathbb R^3 \to \mathbb R$. Then, define $x_1(t)=y(t)$
+and $x_2(t) = y'(t)$. Hence, we now have a system of first order differential
+equations
+\begin{align*}
+  \begin{cases}
+ x_1' = x_2, \\
+ x_2' = g(t,y,y'), \\
+ x_1(t_0) = y_0, \\
+ x_2(t_0) = y_1.
+  \end{cases}
+\end{align*}
+
+Note that we can do the same procedure if the ODE has a larger order. Thus,
+every ODE can be represented by a first order ODE.
+
+Hence, we can restrict our study to the case of first order autonomous equations.
+
+\section{Existence and Uniqueness}
+
+Let's begin by proving that indeed there exists solutions to Ordinary
+Differential Equations, and that, under stronger assumptions, we
+can even show that such solutions are unique.
+
+\begin{shaded}
+  \textbf{Remember} that we say that a function
+  $f:X\to Y$ between two metric spaces is \textit{Lipschitz} if there exists
+  $C > 0$ such that
+  \begin{displaymath}
+    d_Y (f(x_1), f(x_2)) \leq C d_X(x_1,x_2) ,\quad \forall x_1, x_2 \in X,
+  \end{displaymath}
+  where $C$ is called the Lipschitz constant. Now, an analogous definition
+  are the \textit{locally Lipschitz} functions. We say that the function
+  is locally Lipschitz if for every $x_0 \in X$, there exists an open set $U \in X$
+  and a constant $C_{x_0}>0$ such that
+  \begin{displaymath}
+    d_Y (f(x_1), f(x_2)) \leq C_{x_0} d_X(x_1,x_2) ,\quad \forall x_1, x_2 \in U.
+  \end{displaymath}
+
+  Let $F:\mathbb R^k \to \mathbb R^n \in C^1$. By the Mean Value Inequality,
+  we have that
+  \begin{displaymath}
+    \Vert F(t,x_1)   - F(t,x_2) \Vert \leq \Vert x_1 - x_2 \Vert M.
+  \end{displaymath}
+  
+
+\end{shaded}
+
+\subsection{Picard's Theorem}
+
+Consider that we wish to solve the initial value problem
+\begin{displaymath}
+ x'(t)  = f(t,x), \quad x(t_0) = x_0,
+\end{displaymath}
+where $x: \mathbb R \to \mathbb R^n$, thus, $f:\mathbb R^{n+1} \to \mathbb R^n$.
+Since $x$ is differentiable, then $x(t)$ is a continuous path, hence,
+in the compact set $I = (t_0, T)$, the function is uniformly continuous and
+we can apply the Fundamental Theorem of Calculus to say that
+\begin{displaymath}
+ L_x(t) := x_0 + \int^t_{t_0} x'(s) ds = x(t).
+\end{displaymath}
+
+

@@ -1,0 +1,87 @@
+\subsection{Constructing Stochastic Processes}
+
+In this section we present two important results for the construction
+of stochastic processes, Kolmogorov's exntension theorem
+\footnote{This theorem is sometimes callled Kolmogorov's existence theorem.}, and
+Kolmogorov's continuity theorem.
+
+With these two theorems, we'll be able to construct the continuous Brownian Motion.
+
+\begin{shaded}
+	\begin{definition}[Algebra]
+		A family $\mathcal G \subset 2^{\Omega}$ is an algebra if
+		\begin{enumerate}[(i)]
+			\item $\Omega \in \mathcal G$;
+			\item If $ A \in \mathcal G \implies A^c \in \mathcal G$;
+			\item If $A_1,..., A_n \in \mathcal F \implies \cup^n_{i=1} A_i \in \mathcal G$.
+		\end{enumerate}
+	\end{definition}
+
+	\begin{theorem}[Caratheodory's Extension Theorem]
+		Let $\mathcal G \subset \mathcal 2^\Omega$ be an algebra in $\Omega$,
+		and $\mu :\mathcal G \to \mathbb R_+$.
+		If for $A_1,...,A_n,... \in \mathcal G$ such that
+		$A_i\cap A_j = \varnothing \forall i\neq j$, we have
+		$\mu(\cup_{i \in \mathbb N}A_i) = \sum_{i\in\mathbb N} \mu(A_i)$, i.e.
+		$\mu$ is $\sigma$-additive. Then, there exists an extension
+		$\bar\mu:\sigma(\mathcal G)\to \mathbb R_+$ such that $\bar\mu(A)=\mu(A)$
+		for every $A \in \mathcal G$.
+		Moreover, if $\mu$ is $\sigma$-finite, then $\bar \mu$ is unique.
+		\label{thm:caratheodoryextension}
+	\end{theorem}
+	Hence, when talking about probability measures, the Caratheodory Extension
+	Theorem gives us a unique way to extend measures from algebras to $\sigma$-algebras.
+	Also, if $\mu_1$ and $\mu_2$ are finite measures on $(E,\mathcal E)$. If they
+	agree on $\mathcal G \subset \mathcal E$ where $\mathcal G$ is an algebra,
+	then by Caratheodory's Extension Theorem, $\mu_1 = \mu_2$ on $\mathcal E$.
+	% \citet{baldi2017introduction} refers to this as Caratheodory's criterion.
+\end{shaded}
+
+\begin{definition}[Finite-dimensional distributions]
+	Let $X = (\Omega, \mathcal F, (\mathcal F_t)_{t \in T}, (X_t)_{t \in T}, P)$
+	be a process on $(E,\mathcal B(\mathbb R))$. The set of \textit{finite-dimensional
+		distributions} is the collection of probability measures $X_{\pi \#} P$, where
+	$\pi = (t_1,...,t_n) \subset T^n$ for any $n \in \mathbb N$ with $t_1<...<t_n$,
+	i.e.
+	\begin{gather*}
+		X_\pi            = (X_{t_1},...,X_{t_n}):\Omega \to E \times ... \times E,                             \\
+		X_{\pi \#}P (A)  = P((X_{t_1},...,X_{t_n})^{-1}(A)), \forall A \in \mathcal F_{t_n} \subset \mathcal F.
+	\end{gather*}
+
+\end{definition}
+
+\begin{theorem}[Kolmogorov's Extension Theorem ($\mathbb R^n$)]
+	Let for each $n \in \mathbb N$, and define a probability
+	measure $P_n \in \mathcal P(\mathbb R^n)$ such that
+	the following consistency condition is satisfied
+	\begin{equation}
+		P_{n+1}(A \times \mathbb R) = P_n(A), \ \forall A \in \mathcal B(\mathbb R^n).
+		\label{eq:consistencykolmogorov}
+	\end{equation}
+	Then, there exists a unique probability measure $P$ defined in the
+	infinite product space $(\mathbb R^{\mathbb N},\mathcal B(\mathbb R^\mathbb N)$
+	\footnote{Note that here we are using the fact that $\mathcal B(\mathbb R \times \mathbb R)=
+			\mathcal B(\mathbb R) \otimes \mathcal B(\mathbb R)$, which is true for Borel $\sigma$-algebras
+		on Hausdorff spaces, which is the case of $\mathbb R$.} such that
+	\begin{displaymath}
+		P(A \times \mathbb R \times ...) =  P_n(A)
+	\end{displaymath}
+
+\end{theorem}
+
+\begin{example}[Non-Consistent Probability Family]
+	Consider a family of probability measures
+	as
+	\begin{displaymath}
+		P_n \sim N([n,...,n], I_n).
+	\end{displaymath}
+	Note that this collection of probability measures does not satisfy
+	the consistency condition, since
+	\begin{displaymath}
+		P_{n+1}(A \times \mathbb R) \sim N([n+1,...,n+1],I_n) \neq
+		P_n(A) \sim N([n,...,n], I_n).
+	\end{displaymath}
+
+	Hence, we can see that the consistency condition is specifying
+	that the "past distribution" cannot change with future obsertations.
+\end{example}

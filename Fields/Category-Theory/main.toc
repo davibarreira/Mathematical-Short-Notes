@@ -1,1 +1,4 @@
 \contentsline {section}{\numberline {1}What are Categories?}{5}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Programming as Category}{6}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}What are Sets?}{7}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{7}{subsubsection.1.2.1}%
