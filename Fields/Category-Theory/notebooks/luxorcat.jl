@@ -1,6 +1,7 @@
 ### Helper functions for drawing Hasse Diagrams
 ###
 
+using Librsvg_jll
 using Luxor
 using MathTeXEngine
 using LaTeXStrings
@@ -64,6 +65,36 @@ function morphism(domcod::Point;morphismlabel::AbstractString=L"id",linewidth=1)
         arrowheadlength = 0,
         arrowheadfunction = quiverarrow)
     label(morphismlabel,:N, Point(0,-32), offset=10)
+end
+
+"""
+    savediagram(d::Drawing, output::String)
+Saves the diagram as as pdf.
+Example: 
+
+```julia
+d = Drawing(100,120,:svg)
+origin()
+translate(Point(0,20))
+circle(O, 5,:fill)
+fontsize(12)
+label(L"a",:S, offset=10)
+morphism(O)
+finish()
+
+savediagram(d, "mydiagram.pdf")
+```
+"""
+function savediagram(d::Drawing, output::String)
+    fname = tempname()
+    open(fname,"w") do f
+        write(f, String(copy(d.bufferdata)))
+    end
+    # Convert svg to pdf
+    figurepdf = output
+    rsvg_convert() do cmd
+       run(`$cmd $fname -f pdf -o $figurepdf`)
+    end
 end
 
 ## EXAMPLES
