@@ -11,11 +11,15 @@ a glimpse at the connections (and disconnections) between different fields.
 
 Another very intresting observation about Category Theory is that it's
 becoming very popular in programming. This is highlighted for example
-in the book \citet{milewski2018category}. Thus, in order to help
-the understanding of the subject, I'll be using programming as
-a real world example of application of Category Theory.
-Even more specifically, the example shall be done using Julia.
+in the book \citet{milewski2018category}. In order to help
+the understanding of the subject, I'll be using ``applications''
+of Category Theory, mainly inspired by \citet{fong2019invitation}.
+We'll also do coding examples using `Catlab.jl`, a Julia package
+for applied Category Theory.
 
+\subsection{Basic Definitions and Examples}
+
+Let's start by formally defining a Category and providing some examples.
 
 \begin{definition}[Category]
 	A category $\mathcal C = \langle Ob_{\mathcal C}, Mor_{\mathcal C} \rangle$ is
@@ -53,7 +57,39 @@ Even more specifically, the example shall be done using Julia.
 There are many ways to refers to the set of morphisms $Mor_\mathcal C (X,Y)$, such as
 $\mathcal C(X,Y)$ or $\text{hom}_\mathcal C (X,Y)$. The reason for this is that
 this set is sometimes called hom-set. In this notes, we'll use either $Mor_\mathcal C (X,Y)$
-or $\mathcal C (X,Y)$ when there is no ambiguity.
+or $\mathcal C (X,Y)$ when there is no ambiguity. Also, we'll use $dom_f$ to mean $dom(f)$,
+and similarly for the codomain.
+
+Informally, a Category is just a collection of objects and morphisms (``relations'')
+between such objects, plus the fact that morphisms are compasable and that we always have
+an identity morphism.
+
+It's very common to represent Categories via Hasse Diagrams. In these diagrams, the
+objects are represented as dots, and the morphisms as arrows. Let's show some examples.
+
+\begin{example}[Caterogies $\bm 1$ and $\bm 2$]
+  The Category $\bm 1$ consists of $Ob_{\bm 1} := \{a\}$ and $Mor_{\bm 1} = \{id_a\}$.
+  The diagram for such Category is shown below.
+% https://q.uiver.app/?q=WzAsMixbMSwwLCJhIl0sWzAsMCwiXFxidWxsZXQiXSxbMCwxLCJpZF9hIl1d
+  \begin{tikzcd}
+    \bullet & a
+    \arrow["{id_a}", from=1-2, to=1-1]
+  \end{tikzcd}
+\end{example}
+
+
+\begin{example}[Preorders]
+  A Preorder is defined by a tuple $(P, \leq)$, where $P$ is a set of values, such that
+  \begin{enumerate}[(i)]
+    \item For $a,b \in P$, if $a\leq b$ and $b \leq c$, then $a \leq c$;
+    \item For every $a \in P$, $a \leq a$.
+  \end{enumerate}
+  We can show that actually, this is a Category, which we'll call $\mathfrak P$,
+  where $Ob_\mathfrak P = P$ and each morphism $f$ represents $a \leq b$, where
+  $cod_f = a$ and $dom_f = b$.
+  Let's be more explicit. The set of $\mathbb N$ equiped with the binary relation $\leq$
+  is a Category, represented by the following diagram.
+\end{example}
 
 \begin{definition}[Categorical Isomorphism]
   Let $\mathcal C$ be a category with $X,Y \in Ob_\mathcal C$ and $f \in Mor_\mathcal C (X,Y)$.

@@ -7,45 +7,45 @@ The style file: plainnat.bst
 A level-1 auxiliary file: appendix.aux
 Database file #1: ref.bib
 Warning--empty publisher in maico2020categoria
-You've used 4 entries,
+You've used 5 entries,
             2773 wiz_defined-function locations,
-            619 strings with 5304 characters,
-and the built_in function-call counts, 1431 in all, are:
-= -- 114
-> -- 60
-< -- 3
-+ -- 22
-- -- 18
-* -- 100
-:= -- 233
-add.period$ -- 13
-call.type$ -- 4
-change.case$ -- 15
-chr.to.int$ -- 4
-cite$ -- 9
-duplicate$ -- 81
-empty$ -- 138
-format.name$ -- 22
-if$ -- 290
+            624 strings with 5461 characters,
+and the built_in function-call counts, 1788 in all, are:
+= -- 142
+> -- 81
+< -- 4
++ -- 29
+- -- 24
+* -- 123
+:= -- 290
+add.period$ -- 16
+call.type$ -- 5
+change.case$ -- 19
+chr.to.int$ -- 5
+cite$ -- 11
+duplicate$ -- 101
+empty$ -- 170
+format.name$ -- 31
+if$ -- 365
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 7
-newline$ -- 29
-num.names$ -- 16
-pop$ -- 46
+missing$ -- 9
+newline$ -- 34
+num.names$ -- 20
+pop$ -- 59
 preamble$ -- 1
-purify$ -- 14
+purify$ -- 18
 quote$ -- 0
-skip$ -- 51
+skip$ -- 66
 stack$ -- 0
-substring$ -- 33
-swap$ -- 5
+substring$ -- 35
+swap$ -- 6
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 29
+type$ -- 35
 warning$ -- 1
-while$ -- 14
+while$ -- 17
 width$ -- 0
-write$ -- 57
+write$ -- 69
 (There was 1 warning)
