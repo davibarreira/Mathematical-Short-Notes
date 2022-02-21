@@ -61,10 +61,16 @@ end
 Draws the morphism arrow where dom(f) = cod(f).
 """
 function morphism(domcod::Point;morphismlabel::AbstractString=L"id",linewidth=1)
-    arrow(domcod + Point(-8,-2),domcod + Point(-50,-50), domcod+ Point(50,-50),domcod+Point(8,-2),linewidth=1,
+    adjx = 6
+    adjy = -2
+    loopx = 30
+    loopy = 40
+    labely= 16
+    arrow(domcod + Point(-adjx,adjy),domcod + Point(-loopx,-loopy), domcod+ Point(loopx,-loopy),domcod+Point(adjx,adjy),linewidth=1,
         arrowheadlength = 0,
         arrowheadfunction = quiverarrow)
-    label(morphismlabel,:N, Point(0,-32), offset=10)
+
+    label(morphismlabel,:N, domcod+Point(0,-loopy + labely), offset=10)
 end
 
 """
@@ -96,6 +102,7 @@ function savediagram(d::Drawing, output::String)
        run(`$cmd $fname -f pdf -o $figurepdf`)
     end
 end
+;
 
 ## EXAMPLES
 # d = Drawing(300,300,:svg)
