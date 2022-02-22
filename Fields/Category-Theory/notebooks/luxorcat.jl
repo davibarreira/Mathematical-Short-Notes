@@ -30,11 +30,11 @@ function bbarrow(startpoint, endpoint, linewidth=0.8)
         setline(linewidth)
         c  = Point(0,-r)
         p = c + r*Point(cos(π/4), sin(π/4))
-        line(startpoint-p,endpoint-p,:stroke)
+        line(startpoint-Point(0,p.y),endpoint-p,:stroke)
         
         c  = Point(0,r)
         p = c + r*Point(cos(-π/4), sin(-π/4))
-        line(startpoint-p,endpoint-p,:stroke)
+        line(startpoint-Point(0,p.y),endpoint-p,:stroke)
     end
 end
 
