@@ -5,6 +5,39 @@ using Luxor
 using MathTeXEngine
 using LaTeXStrings
 
+function bbarrow(startpoint, endpoint, linewidth=0.8)
+    r = 7
+    @layer begin
+        shaftangle = anglepoints(startpoint,endpoint)
+        setlinecap("round")
+        translate(endpoint)
+        rotate(shaftangle-π)
+        setline(linewidth)
+        
+        c1  = Point(0,-r)
+        p1 = c1 + r*Point(cos(π/10), sin(π/10))
+        p2 = O
+        
+        move(p1)
+        arc2r(c1,p1,p2,:stroke)
+
+        c2  = Point(0,r)
+        p3 = c2 + r*Point(cos(-π/10), sin(-π/10))
+        arc2r(c2,p2,p3,:stroke)
+    end
+        
+    @layer begin
+        setline(linewidth)
+        c  = Point(0,-r)
+        p = c + r*Point(cos(π/4), sin(π/4))
+        line(startpoint-p,endpoint-p,:stroke)
+        
+        c  = Point(0,r)
+        p = c + r*Point(cos(-π/4), sin(-π/4))
+        line(startpoint-p,endpoint-p,:stroke)
+    end
+end
+
 function quiverarrow(shaftendpoint, endpoint, shaftangle)
     @layer begin
         r = 6

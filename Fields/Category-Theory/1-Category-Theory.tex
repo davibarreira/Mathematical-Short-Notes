@@ -280,7 +280,7 @@ $g \circ id_Y = g \circ f \circ h = id_X \circ h = h$.
 
 \begin{definition}[Functor]
   Let $\mathcal C$ and $\mathcal D$ be two Categories. A functor $F: \mathcal C \Rightarrow \mathcal D$ is
-  a pair of mappings:
+  a pair of mappings with the following properties:
   \begin{enumerate}[(i)]
     \item a mapping between objects
       \begin{displaymath}
@@ -303,6 +303,22 @@ $g \circ id_Y = g \circ f \circ h = id_X \circ h = h$.
             F:Mor_\mathcal C(A,B) \to Mor_\mathcal D (F(B),F(A)),
           \end{displaymath}
           hence for a morphism $f:A \to B$, then $F(f):F(B) \to F(A)$.
+      \end{enumerate}
+    \item Identities morphisms are preserved, i.e. for $A \in Ob_\mathcal C$
+        \begin{displaymath}
+          F(id_A) =  id_{F(A)}.
+        \end{displaymath}
+    \item Compositions are preserved, i.e. for $f \in Mor_\mathcal C(A,B)$
+      and $ g \in Mor_\mathcal C(B,C)$,
+      \begin{enumerate}
+        \item For a \textbf{Covariant Functor},
+          \begin{displaymath}
+            F(f \circ g) = F(f) \circ F(g).
+          \end{displaymath}
+        \item For a \textbf{Contravariant Functor},
+          \begin{displaymath}
+            F(f \circ g) = F(g) \circ F(f).
+          \end{displaymath}
       \end{enumerate}
   \end{enumerate}
   It's common for authors to refer to covariant functors only as functors, i.e.
