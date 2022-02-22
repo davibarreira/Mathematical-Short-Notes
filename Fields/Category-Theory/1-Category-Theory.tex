@@ -30,9 +30,9 @@ with such statements is that, in a purely set-theoretical sense,
 we have to know whether such large collection (``all topological spaces'')
 is indeed a set. We might be tempted to say that's true, but
 it's not so simple. The most known example of a possible failure of such
-statements is Russel's Paradox of whether there is a set of all sets, for
 which the answer is ``no''.
 
+statements is Russel's Paradox of whether there is a set of all sets, for
 Therefore, in order to deal with such issue, we need a way to differentiate
 between a valid set and an arbitrary collection. Here is where the notion of a Universe comes in.
 
@@ -74,6 +74,7 @@ This theory states that:
 \begin{axiom}[Gödel-Bernays]
   Every set is a class, and a class is a set if and only if it belongs to some (other)
   class.
+  \label{axiom:gb}
 \end{axiom}
 
 Note that using the notion of Universes, we can recover Gödel-Bernays theory. For that,
@@ -324,5 +325,63 @@ $g \circ id_Y = g \circ f \circ h = id_X \circ h = h$.
   It's common for authors to refer to covariant functors only as functors, i.e.
   whenever someone say that $F$ is a functor, it might be implied that it's a covariant functor.
   We'll also use this convention whenever it's not ambiguous, and we'll always.
+  Also, we'll sometimes use $FA$ to mean $F(A)$.
 \end{definition}
+
+Again, the use of diagrams may help understand what is going on. The figure below
+illustrates the identity and composition preservation of Functors.
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=1.1\textwidth]{./notebooks/Functor.pdf}
+  \end{center}
+  \caption{Diagrams showcasing the properties of Functors.}
+  \label{fig:Functor}
+\end{figure}
+
+One might realize that functors are acting on Categories in a very similar way as morphisms
+do to objects. Indeed, we can define a functor composition to be
+such that for two functors $F:\mathcal C \Rightarrow \mathcal D$
+and $G:\mathcal D \Rightarrow \mathcal E$, then $G \circ F$ is
+a functor from $\mathcal C$ to $\mathcal E$ where
+\begin{enumerate}
+  \item For any $A \in Ob_\mathcal C$, $G\circ F (A) = G(F(A))$,
+  \item For any $f \in Mor_\mathcal C$, $G\circ F (f) = G(F(f))$.
+\end{enumerate}
+We can also define an identity functor $I:\mathcal C \Rightarrow \mathcal C$,
+where $F(A) = A$ and $F(f) = f$.
+
+Therefore, we might wonder whether there exists a Category of all Categories
+where objects are Categories and morphisms are functors.
+The answer is ``no''. Similar to the set of all sets, it can be proven
+that this Category does not exists. Yet, the Category of all \textit{small Categories}
+does.
+
+Remember, a small Category is one where both morphisms and objects are sets.
+With this, let's prove our first theorem.
+\begin{theorem}[Category of Small Categories]
+  Let $Ob_{\textbf{SmCat}}$ be small Categories and $Mor_{\textbf{SmCat}}$ be functors.
+  This constitutes a Category.
+\end{theorem}
+\begin{proof}
+  To prove this, we'll use the fact that in Gödel-Bernays class set theory, the
+  axiom \ref{axiom:gb} implies what is called a \textit{comprehension scheme}.
+  \begin{proposition}[Comprehension Scheme from \citet{borceux1994handbook}]
+    If $\phi(x_1,...,x_n)$ is a formula that the quantification occurs on set variables, then
+    there exists a class $A$ such that
+    \begin{displaymath}
+      (x_1,...,x_n) \in A \iff \phi(x_1,...,x_n).
+    \end{displaymath}
+  \end{proposition}
+  Note that
+  \begin{displaymath}
+    \mathcal C := \langle Ob_\mathcal C, Mor_\mathcal C \rangle \in \textbf{SmCat} \iff
+    \mathcal C \text{ ``is a Category''}.
+  \end{displaymath}
+  Since every $\mathcal C$ is small, then the formula to check whether $\mathcal C$ is a Category
+  iterates over set variables, i.e. $Ob_\mathcal C$ and $Mor_\mathcal C$.
+  Thus, the Comprehension Scheme proposition guarantees that $\textbf{SmCat}$ exists.
+\end{proof}
+
+
 

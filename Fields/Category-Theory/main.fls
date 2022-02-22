@@ -457,6 +457,11 @@ INPUT ./notebooks/3Catsimple.pdf
 INPUT ./notebooks/NCat.pdf
 INPUT ./notebooks/NCat.pdf
 INPUT ./notebooks/NCat.pdf
+INPUT ./notebooks/Functor.pdf
+INPUT ./notebooks/Functor.pdf
+INPUT ./notebooks/Functor.pdf
+INPUT /home/davibarreira/.texlive2020/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-bold.luc
+INPUT /home/davibarreira/.texlive2020/texmf-var/luatex-cache/generic/fonts/otl/lmroman6-bold.luc
 OUTPUT 2-Category-Theory.aux
 INPUT ./2-Category-Theory.tex
 INPUT ./2-Category-Theory.tex

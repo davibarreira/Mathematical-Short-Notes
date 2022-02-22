@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/Debian)  (format=lualatex 2021.12.23)  22 FEB 2022 16:27
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/Debian)  (format=lualatex 2021.12.23)  22 FEB 2022 18:04
  restricted system commands enabled.
  file:line:error style messages enabled.
 **main.tex
@@ -730,28 +730,28 @@ Package hyperref Info: bookmark level for unknown axiom defaults to 0 on input l
  [6] [7]
 
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
-(Font)              using `U/stmry/m/n' instead on input line 157.
+(Font)              using `U/stmry/m/n' instead on input line 158.
 
-Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 157.
-<./notebooks/1Cat.pdf, id=177, 100.375pt x 80.3pt>
+Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 158.
+<./notebooks/1Cat.pdf, id=183, 100.375pt x 80.3pt>
 File: ./notebooks/1Cat.pdf Graphic file (type pdf)
 <use ./notebooks/1Cat.pdf>
-Package luatex.def Info: ./notebooks/1Cat.pdf  used on input line 162.
+Package luatex.def Info: ./notebooks/1Cat.pdf  used on input line 163.
 (luatex.def)             Requested size: 100.37474pt x 80.29979pt.
-<./notebooks/2Cat.pdf, id=178, 301.125pt x 80.3pt>
+<./notebooks/2Cat.pdf, id=184, 301.125pt x 80.3pt>
 File: ./notebooks/2Cat.pdf Graphic file (type pdf)
 <use ./notebooks/2Cat.pdf>
-Package luatex.def Info: ./notebooks/2Cat.pdf  used on input line 175.
+Package luatex.def Info: ./notebooks/2Cat.pdf  used on input line 176.
 (luatex.def)             Requested size: 301.12425pt x 80.29979pt.
-<./notebooks/2Catsimple.pdf, id=180, 301.125pt x 80.3pt>
+<./notebooks/2Catsimple.pdf, id=186, 301.125pt x 80.3pt>
 File: ./notebooks/2Catsimple.pdf Graphic file (type pdf)
 <use ./notebooks/2Catsimple.pdf>
-Package luatex.def Info: ./notebooks/2Catsimple.pdf  used on input line 186.
+Package luatex.def Info: ./notebooks/2Catsimple.pdf  used on input line 187.
 (luatex.def)             Requested size: 301.12425pt x 80.29979pt.
-<./notebooks/3CatComplete.pdf, id=181, 401.5pt x 150.5625pt>
+<./notebooks/3CatComplete.pdf, id=187, 401.5pt x 150.5625pt>
 File: ./notebooks/3CatComplete.pdf Graphic file (type pdf)
 <use ./notebooks/3CatComplete.pdf>
-Package luatex.def Info: ./notebooks/3CatComplete.pdf  used on input line 198.
+Package luatex.def Info: ./notebooks/3CatComplete.pdf  used on input line 199.
 (luatex.def)             Requested size: 401.49901pt x 150.56212pt.
 [8
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.1'
@@ -760,18 +760,18 @@ warning  (pdf backend): ignoring duplicate destination with the name 'figure.2'
 
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.3'
 <./notebooks/1Cat.pdf><./notebooks/2Cat.pdf><./notebooks/2Catsimple.pdf>]
-<./notebooks/3Catsimple.pdf, id=197, 401.5pt x 100.375pt>
+<./notebooks/3Catsimple.pdf, id=203, 401.5pt x 100.375pt>
 File: ./notebooks/3Catsimple.pdf Graphic file (type pdf)
 <use ./notebooks/3Catsimple.pdf>
-Package luatex.def Info: ./notebooks/3Catsimple.pdf  used on input line 213.
+Package luatex.def Info: ./notebooks/3Catsimple.pdf  used on input line 214.
 (luatex.def)             Requested size: 401.49901pt x 100.37474pt.
-<./notebooks/NCat.pdf, id=198, 602.25pt x 100.375pt>
+<./notebooks/NCat.pdf, id=204, 602.25pt x 100.375pt>
 File: ./notebooks/NCat.pdf Graphic file (type pdf)
 <use ./notebooks/NCat.pdf>
-Package luatex.def Info: ./notebooks/NCat.pdf  used on input line 235.
+Package luatex.def Info: ./notebooks/NCat.pdf  used on input line 236.
 (luatex.def)             Requested size: 602.24852pt x 100.37474pt.
 
-Overfull \hbox (132.4935pt too wide) in paragraph at lines 235--236
+Overfull \hbox (132.4935pt too wide) in paragraph at lines 236--237
  [] 
  []
 
@@ -781,25 +781,40 @@ warning  (pdf backend): ignoring duplicate destination with the name 'figure.4'
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.5'
 <./notebooks/3CatComplete.pdf><./notebooks/3Catsimple.pdf>] [10
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.6'
-<./notebooks/NCat.pdf>]) [11]
+<./notebooks/NCat.pdf>]
+<./notebooks/Functor.pdf, id=227, 602.25pt x 301.125pt>
+File: ./notebooks/Functor.pdf Graphic file (type pdf)
+<use ./notebooks/Functor.pdf>
+Package luatex.def Info: ./notebooks/Functor.pdf  used on input line 336.
+(luatex.def)             Requested size: 516.73338pt x 258.39268pt.
+
+Overfull \hbox (46.97836pt too wide) in paragraph at lines 336--337
+ [] 
+ []
+
+[11] [12
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.7'
+<./notebooks/Functor.pdf>]
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 362.
+) [13]
 \openout2 = 2-Category-Theory.aux
  (./2-Category-Theory.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 21.
 
-[12
+[14
 
 
 
-] [13]
+] [15]
 Overfull \hbox (0.2735pt too wide) in paragraph at lines 133--138
 [][]\TU/lmr/bx/n/12 Def-i-ni-tion 4.10 (Nat-u-ral Num-ber Sys-tem). []\TU/lmr/m/n/12 A nat-u-ral num-ber sys-tem is a triple $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 N; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; s\OT1/cmr/m/n/12 )$
  []
 
-[14]
+[16]
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 198.
-) [15] (./main.bbl) [16
+) [17] (./main.bbl) [18
 
 
 ]
@@ -818,19 +833,19 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 17732 strings out of 478824
+ 17759 strings out of 478824
  100000,794899 words of node,token memory allocated
- 607 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 24 attribute, 59 glue_spec, 24 attribute_list, 4 write nodes
-   avail lists: 2:588,3:282,4:140,5:505,6:50,7:6606,8:42,9:289,10:9,11:372
- 36377 multiletter control sequences out of 65536+600000
- 128 fonts using 32198055 bytes
+ 615 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 26 attribute, 59 glue_spec, 26 attribute_list, 4 write nodes
+   avail lists: 2:586,3:282,4:140,5:505,6:50,7:6606,8:42,9:289,10:9,11:372
+ 36389 multiletter control sequences out of 65536+600000
+ 130 fonts using 32461431 bytes
  86i,12n,89p,9591b,625s stack positions out of 5000i,500n,10000p,200000b,200000s
-</usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman7-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman17-regular.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb>
-Output written on main.pdf (16 pages, 201215 bytes).
+</usr/share/texmf/fonts/opentype/public/lm/lmroman8-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman7-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman17-regular.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb>
+Output written on main.pdf (18 pages, 265801 bytes).
 
-PDF statistics: 383 PDF objects out of 1000 (max. 8388607)
- 321 compressed objects within 4 object streams
- 130 named destinations out of 1000 (max. 131072)
+PDF statistics: 413 PDF objects out of 1000 (max. 8388607)
+ 345 compressed objects within 4 object streams
+ 139 named destinations out of 1000 (max. 131072)
  81 words of extra memory for PDF output out of 10000 (max. 100000000)
 
