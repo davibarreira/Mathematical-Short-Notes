@@ -6,19 +6,19 @@
 \contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}2.4\else \numberline {2.4}Definition\fi }{6}{definition.2.4}%
 \contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}2.5\else \numberline {2.5}Definition\fi \thmtformatoptarg {Category}}{7}{definition.2.5}%
 \contentsline {example}{\ifthmt@listswap Example\nobreakspace {}2.1\else \numberline {2.1}Example\fi \thmtformatoptarg {Category $\bm {1}$}}{8}{example.2.1}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}2.2\else \numberline {2.2}Example\fi \thmtformatoptarg {Category $\bm {2}$}}{8}{example.2.2}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}2.3\else \numberline {2.3}Example\fi \thmtformatoptarg {Preorders}}{8}{example.2.3}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}2.6\else \numberline {2.6}Definition\fi \thmtformatoptarg {Categorical Isomorphism}}{9}{definition.2.6}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.1\else \numberline {3.1}Definition\fi \thmtformatoptarg {Terminal Set}}{10}{definition.3.1}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.2\else \numberline {3.2}Definition\fi \thmtformatoptarg {Element of a Set}}{11}{definition.3.2}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.3\else \numberline {3.3}Definition\fi \thmtformatoptarg {Cartesian Product}}{11}{definition.3.3}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.4\else \numberline {3.4}Definition\fi \thmtformatoptarg {Function set}}{11}{definition.3.4}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.5\else \numberline {3.5}Definition\fi \thmtformatoptarg {Inverse Image}}{11}{definition.3.5}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.6\else \numberline {3.6}Definition\fi \thmtformatoptarg {Injection}}{11}{definition.3.6}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.7\else \numberline {3.7}Definition\fi \thmtformatoptarg {Surjection}}{11}{definition.3.7}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.8\else \numberline {3.8}Definition\fi \thmtformatoptarg {Right inverse}}{12}{definition.3.8}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.9\else \numberline {3.9}Definition\fi \thmtformatoptarg {Subset Classifier}}{12}{definition.3.9}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.10\else \numberline {3.10}Definition\fi \thmtformatoptarg {Natural Number System}}{12}{definition.3.10}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.11\else \numberline {3.11}Definition\fi \thmtformatoptarg {ETCS}}{12}{definition.3.11}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.12\else \numberline {3.12}Definition\fi \thmtformatoptarg {Subset}}{13}{definition.3.12}%
-\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}3.13\else \numberline {3.13}Corollary\fi }{13}{corollary.3.13}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}2.2\else \numberline {2.2}Example\fi \thmtformatoptarg {Category $\bm {2}$ and $\bm {3}$}}{8}{example.2.2}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}2.3\else \numberline {2.3}Example\fi \thmtformatoptarg {Preorders}}{9}{example.2.3}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}2.6\else \numberline {2.6}Definition\fi \thmtformatoptarg {Categorical Isomorphism}}{10}{definition.2.6}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.1\else \numberline {3.1}Definition\fi \thmtformatoptarg {Terminal Set}}{11}{definition.3.1}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.2\else \numberline {3.2}Definition\fi \thmtformatoptarg {Element of a Set}}{12}{definition.3.2}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.3\else \numberline {3.3}Definition\fi \thmtformatoptarg {Cartesian Product}}{12}{definition.3.3}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.4\else \numberline {3.4}Definition\fi \thmtformatoptarg {Function set}}{12}{definition.3.4}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.5\else \numberline {3.5}Definition\fi \thmtformatoptarg {Inverse Image}}{12}{definition.3.5}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.6\else \numberline {3.6}Definition\fi \thmtformatoptarg {Injection}}{12}{definition.3.6}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.7\else \numberline {3.7}Definition\fi \thmtformatoptarg {Surjection}}{12}{definition.3.7}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.8\else \numberline {3.8}Definition\fi \thmtformatoptarg {Right inverse}}{13}{definition.3.8}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.9\else \numberline {3.9}Definition\fi \thmtformatoptarg {Subset Classifier}}{13}{definition.3.9}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.10\else \numberline {3.10}Definition\fi \thmtformatoptarg {Natural Number System}}{13}{definition.3.10}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.11\else \numberline {3.11}Definition\fi \thmtformatoptarg {ETCS}}{13}{definition.3.11}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.12\else \numberline {3.12}Definition\fi \thmtformatoptarg {Subset}}{14}{definition.3.12}%
+\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}3.13\else \numberline {3.13}Corollary\fi }{14}{corollary.3.13}%

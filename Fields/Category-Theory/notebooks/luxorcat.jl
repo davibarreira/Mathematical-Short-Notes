@@ -29,6 +29,13 @@ function anglepoints(pt1::Point, pt2::Point)
     atan(-pt2.y + pt1.y, pt2.x-pt1.x)
 end
 
+# function labelmorphism(l::AbstractString, pos::Symbol, pt::Point; offset=5)
+#     if occursin("⨟", l)
+#         label(l,pos,pt, offset=offset)
+#     else
+#     end
+# end
+
 """
     morphism(dom::Point,cod::Point, morphismlabel=L"f";linewidth=1, offset=8, curve=nothing)
 Draws the morphism arrow between two objects. Set `curve = :N` or `curve = :S` to make

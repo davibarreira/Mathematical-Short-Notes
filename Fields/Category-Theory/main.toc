@@ -3,6 +3,6 @@
 \contentsline {subsection}{\numberline {2.1}Universes, Sets and Classes}{5}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}What is a Category?}{7}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Examples of Categories}{8}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Programming as Category}{9}{subsection.2.4}%
-\contentsline {section}{\numberline {3}What are Sets?}{10}{section.3}%
-\contentsline {subsubsection}{\numberline {3.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{10}{subsubsection.3.0.1}%
+\contentsline {subsection}{\numberline {2.4}Programming as Category}{10}{subsection.2.4}%
+\contentsline {section}{\numberline {3}What are Sets?}{11}{section.3}%
+\contentsline {subsubsection}{\numberline {3.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{11}{subsubsection.3.0.1}%

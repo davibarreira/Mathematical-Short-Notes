@@ -122,7 +122,7 @@ Let's formally define a Category and provide some examples.
     \item \textit{Associative}: for every $f \in Mor_\mathcal C (A,B),
       g \in Mor_\mathcal C (B,C), h \in Mor_\mathcal C (C,D)$ then
       \begin{displaymath}
-        h \circ (g circ f) = (h \circ g) \circ f.
+        h \circ (g \circ f) = (h \circ g) \circ f.
       \end{displaymath}
     \item For any $f \in Mor_\mathcal C (X,Y)$, $g \in Mor_\mathcal C (Y,X)$, 
       \begin{displaymath}
@@ -136,6 +136,11 @@ $\mathcal C(X,Y)$ or $\text{hom}_\mathcal C (X,Y)$. The reason for this is that
 this set is sometimes called hom-set. In this notes, we'll use either $Mor_\mathcal C (X,Y)$
 or $\mathcal C (X,Y)$ when there is no ambiguity. Also, we'll use $dom_f$ to mean $dom(f)$,
 and similarly for the codomain.
+
+Another point about conventions. When talking about composition, it's convenient
+to use the operator $\fatsemi$, which is equivalent to the composition $\circ$,
+but with the inverted order, i.e. $f \fatsemi g = g \circ f$. The convinience
+will become clearer once we introduce Hasse diagrams as a way to represent Categories.
 
 When the class of morphism $Mor_\mathcal C$ is a set, the category $\mathcal C$ is called
 a \textit{locally small Category}. If both $Ob_\mathcal C$ and $Mor_\mathcal C$ are sets,
@@ -161,7 +166,7 @@ objects are represented as dots, and the morphisms as arrows. Let's show some ex
   \end{figure}
 \end{example}
 
-\begin{example}[Category $\bm 2$]
+\begin{example}[Category $\bm 2$ and $\bm 3$]
   The Category $\bm 2$ consists of $Ob_{\bm 2} := \{a, b\}$ and $Mor_{\bm 1} = \{id_a, id_b, f\}$,
   where $f:a \to b$.
   The diagram for such Category is shown below.
@@ -172,11 +177,10 @@ objects are represented as dots, and the morphisms as arrows. Let's show some ex
     \caption{Hasse diagram of Category $\bm 2$.}
     \label{fig:2Cat}
   \end{figure}
-\end{example}
 
 Since we know that identities are always present in Categories, we'll
 omit them from future diagrams when there is no ambiguity. Thus,
-the figure below represents the same diagram as \ref{fig:2Cat}.
+the figure below represents the same diagram as Figure \ref{fig:2Cat}.
 \begin{figure}[H]
   \begin{center}
     \includegraphics{./notebooks/2Catsimple}
@@ -184,6 +188,35 @@ the figure below represents the same diagram as \ref{fig:2Cat}.
   \caption{Hasse diagram of Category $\bm 2$ omitting identity morphisms.}
   \label{fig:2Catsimple}
 \end{figure}
+
+The Category $\bm 3$ has three morphisms besides the identities, given
+by $f$, $g$ and their composition $f \fatsemi g$. The figure below
+illustrates the Category with all it's morphisms.
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics{./notebooks/3CatComplete}
+  \end{center}
+  \caption{Hasse diagram of Category $\bm 3$ showing all morphisms.}
+  \label{fig:3Catcomplete}
+\end{figure}
+
+Drawing all the morphisms can make the diagram become too crowded, specially
+as the number of objects and morphisms grows. Hence, we simplify the
+diagram representation by ommiting not only the identity morphisms, but also
+the compositions. These can always be assumed to exist, since they are a necessery
+condition for every Category.
+Thus, the figure below represents the same diagram as Figure \ref{fig:3Catcomplete}.
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics{./notebooks/3Catsimple}
+  \end{center}
+  \caption{Hasse diagram of Category $\bm 3$ omitting identities and compositions.}
+  \label{fig:3Catsimple}
+\end{figure}
+
+\end{example}
 
 \begin{example}[Preorders]
   A Preorder is defined by a tuple $(P, \leq)$, where $P$ is a set of values, such that
@@ -194,8 +227,16 @@ the figure below represents the same diagram as \ref{fig:2Cat}.
   We can show that actually, this is a Category, which we'll call $\mathfrak P$,
   where $Ob_\mathfrak P = P$ and each morphism $f$ represents $a \leq b$, where
   $cod_f = a$ and $dom_f = b$.
-  Let's be more explicit. The set of $\mathbb N$ equiped with the binary relation $\leq$
-  is a Category, represented by the following diagram.
+  The set of $\mathbb N$ equiped with the binary relation $\leq$
+  is a Preorder Category, represented by the following diagram.
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics{./notebooks/NCat}
+  \end{center}
+  \caption{Hasse diagram of Preorder Category of Natural numbers.}
+  \label{fig:NCat}
+\end{figure}
 \end{example}
 
 \begin{definition}[Categorical Isomorphism]
