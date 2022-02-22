@@ -30,10 +30,11 @@ function anglepoints(pt1::Point, pt2::Point)
 end
 
 """
-    morphism(dom::Point,cod::Point;label::AbstractString=L"f",linewidth=1)
-Draws the morphism arrow between two objects.
+    morphism(dom::Point,cod::Point, morphismlabel=L"f";linewidth=1, offset=8, curve=nothing)
+Draws the morphism arrow between two objects. Set `curve = :N` or `curve = :S` to make
+the morphism curve.
 """
-function morphism(dom::Point,cod::Point, morphismlabel=L"f";linewidth=1, offset=8)
+function morphism(dom::Point,cod::Point, morphismlabel=L"f";linewidth=1, offset=8, curve=0)
     θ  = anglepoints(dom,cod)
     o1 = offset*Point(cos(θ),-sin(θ))
     o2 = offset*Point(-cos(θ),sin(θ))
@@ -41,11 +42,17 @@ function morphism(dom::Point,cod::Point, morphismlabel=L"f";linewidth=1, offset=
     p1 = dom + o1
     p2 = cod + o2
     
-    arrow(p1,p2,linewidth=linewidth, arrowheadlength = 0,
-        arrowheadfunction = quiverarrow)
+    if curve == 0
+        arrow(p1,p2,linewidth=linewidth, arrowheadlength = 0,
+            arrowheadfunction = quiverarrow)
+    else curve
+        pcurve = (p1+p2)/2 + curve*Point(sin(θ), cos(θ))
+        arrow(p1+Point(0,8),pcurve,pcurve,p2+Point(0,8),linewidth=linewidth, arrowheadlength = 0,
+            arrowheadfunction = quiverarrow)
+    end
     
     if  -40 ≤ rad2deg(θ) ≤ 40 || 140 ≤ rad2deg(θ) ≤ 220 || -220 ≤ rad2deg(θ) ≤ -140
-        label(morphismlabel,:N,(p1+p2)/2, offset=5)
+        label(morphismlabel,:N,(p1+p2)/2, offset=5-1.3curve)
     elseif  90 < rad2deg(θ) < 140 || -40 > rad2deg(θ) > -90
         label(morphismlabel,:NE,(p1+p2)/2, offset=5)
     elseif  40 < rad2deg(θ) < 90 || -140 < rad2deg(θ) < -90
