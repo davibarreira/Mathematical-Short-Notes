@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/Debian)  (format=lualatex 2021.12.23)  22 FEB 2022 02:03
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/Debian)  (format=lualatex 2021.12.23)  22 FEB 2022 15:32
  restricted system commands enabled.
  file:line:error style messages enabled.
 **main.tex
@@ -733,22 +733,22 @@ LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
 (Font)              using `U/stmry/m/n' instead on input line 157.
 
 Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 157.
-<./notebooks/1Cat.pdf, id=165, 100.375pt x 80.3pt>
+<./notebooks/1Cat.pdf, id=177, 100.375pt x 80.3pt>
 File: ./notebooks/1Cat.pdf Graphic file (type pdf)
 <use ./notebooks/1Cat.pdf>
 Package luatex.def Info: ./notebooks/1Cat.pdf  used on input line 162.
 (luatex.def)             Requested size: 100.37474pt x 80.29979pt.
-<./notebooks/2Cat.pdf, id=166, 301.125pt x 80.3pt>
+<./notebooks/2Cat.pdf, id=178, 301.125pt x 80.3pt>
 File: ./notebooks/2Cat.pdf Graphic file (type pdf)
 <use ./notebooks/2Cat.pdf>
 Package luatex.def Info: ./notebooks/2Cat.pdf  used on input line 175.
 (luatex.def)             Requested size: 301.12425pt x 80.29979pt.
-<./notebooks/2Catsimple.pdf, id=168, 301.125pt x 80.3pt>
+<./notebooks/2Catsimple.pdf, id=180, 301.125pt x 80.3pt>
 File: ./notebooks/2Catsimple.pdf Graphic file (type pdf)
 <use ./notebooks/2Catsimple.pdf>
 Package luatex.def Info: ./notebooks/2Catsimple.pdf  used on input line 186.
 (luatex.def)             Requested size: 301.12425pt x 80.29979pt.
-<./notebooks/3CatComplete.pdf, id=169, 401.5pt x 150.5625pt>
+<./notebooks/3CatComplete.pdf, id=181, 401.5pt x 150.5625pt>
 File: ./notebooks/3CatComplete.pdf Graphic file (type pdf)
 <use ./notebooks/3CatComplete.pdf>
 Package luatex.def Info: ./notebooks/3CatComplete.pdf  used on input line 198.
@@ -760,12 +760,12 @@ warning  (pdf backend): ignoring duplicate destination with the name 'figure.2'
 
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.3'
 <./notebooks/1Cat.pdf><./notebooks/2Cat.pdf><./notebooks/2Catsimple.pdf>]
-<./notebooks/3Catsimple.pdf, id=185, 401.5pt x 100.375pt>
+<./notebooks/3Catsimple.pdf, id=197, 401.5pt x 100.375pt>
 File: ./notebooks/3Catsimple.pdf Graphic file (type pdf)
 <use ./notebooks/3Catsimple.pdf>
 Package luatex.def Info: ./notebooks/3Catsimple.pdf  used on input line 213.
 (luatex.def)             Requested size: 401.49901pt x 100.37474pt.
-<./notebooks/NCat.pdf, id=186, 602.25pt x 100.375pt>
+<./notebooks/NCat.pdf, id=198, 602.25pt x 100.375pt>
 File: ./notebooks/NCat.pdf Graphic file (type pdf)
 <use ./notebooks/NCat.pdf>
 Package luatex.def Info: ./notebooks/NCat.pdf  used on input line 235.
@@ -779,27 +779,27 @@ Overfull \hbox (132.4935pt too wide) in paragraph at lines 235--236
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.4'
 
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.5'
-<./notebooks/3CatComplete.pdf><./notebooks/3Catsimple.pdf>]) [10
+<./notebooks/3CatComplete.pdf><./notebooks/3Catsimple.pdf>] [10
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.6'
-<./notebooks/NCat.pdf>]
+<./notebooks/NCat.pdf>]) [11]
 \openout2 = 2-Category-Theory.aux
  (./2-Category-Theory.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 21.
 
-[11
+[12
 
 
 
-] [12]
+] [13]
 Overfull \hbox (0.2735pt too wide) in paragraph at lines 133--138
-[][]\TU/lmr/bx/n/12 Def-i-ni-tion 3.10 (Nat-u-ral Num-ber Sys-tem). []\TU/lmr/m/n/12 A nat-u-ral num-ber sys-tem is a triple $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 N; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; s\OT1/cmr/m/n/12 )$
+[][]\TU/lmr/bx/n/12 Def-i-ni-tion 4.10 (Nat-u-ral Num-ber Sys-tem). []\TU/lmr/m/n/12 A nat-u-ral num-ber sys-tem is a triple $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 N; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; s\OT1/cmr/m/n/12 )$
  []
 
-[13]
+[14]
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 198.
-) [14] (./main.bbl) [15
+) [15] (./main.bbl) [16
 
 
 ]
@@ -814,23 +814,23 @@ No file appendix.tex.
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F5A2BFCBC7E933C80241C3A13BF83F73;1648.
+(rerunfilecheck)             Checksum: 7B7260382B6C7E634E5DAAFF01DBF741;2012.
 )
 
 Here is how much of LuaTeX's memory you used:
- 17716 strings out of 478824
+ 17728 strings out of 478824
  100000,794899 words of node,token memory allocated
- 579 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 17 attribute, 59 glue_spec, 17 attribute_list, 4 write nodes
-   avail lists: 2:602,3:282,4:132,5:505,6:47,7:6606,8:42,9:289,10:9,11:372
- 36374 multiletter control sequences out of 65536+600000
+ 595 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 21 attribute, 59 glue_spec, 21 attribute_list, 4 write nodes
+   avail lists: 2:594,3:282,4:140,5:505,6:50,7:6606,8:42,9:289,10:9,11:372
+ 36377 multiletter control sequences out of 65536+600000
  128 fonts using 32198055 bytes
  86i,12n,89p,9591b,625s stack positions out of 5000i,500n,10000p,200000b,200000s
 </usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman7-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman17-regular.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb>
-Output written on main.pdf (15 pages, 195802 bytes).
+Output written on main.pdf (16 pages, 199879 bytes).
 
-PDF statistics: 354 PDF objects out of 1000 (max. 8388607)
- 294 compressed objects within 3 object streams
- 117 named destinations out of 1000 (max. 131072)
- 65 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 378 PDF objects out of 1000 (max. 8388607)
+ 316 compressed objects within 4 object streams
+ 126 named destinations out of 1000 (max. 131072)
+ 81 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -227,8 +227,8 @@ Thus, the figure below represents the same diagram as Figure \ref{fig:3Catcomple
   We can show that actually, this is a Category, which we'll call $\mathfrak P$,
   where $Ob_\mathfrak P = P$ and each morphism $f$ represents $a \leq b$, where
   $cod_f = a$ and $dom_f = b$.
-  The set of $\mathbb N$ equiped with the binary relation $\leq$
-  is a Preorder Category, represented by the following diagram.
+  One example of preorder is the set of $\mathbb N$ equiped with the binary relation $\leq$
+  which is shown in the diagram below.
 
 \begin{figure}[H]
   \begin{center}
@@ -238,6 +238,27 @@ Thus, the figure below represents the same diagram as Figure \ref{fig:3Catcomple
   \label{fig:NCat}
 \end{figure}
 \end{example}
+
+Note that in preorders, there is at most one morphism between each pair of objects.
+Thus, Categories with such property are often referred as \textit{thin Categories}
+or \textit{preorder Category} (in \citet{fong2019invitation}, the authors call this
+a \textit{preorder reflection}).
+
+\subsection{Programming with Category Theory}
+
+One might be surprised to find out that Category Theory,
+although very abstract in nature, has actual applications in the
+``real world''. A very interesting example of this is in programming.
+
+In programming languages such as Julia, we can think of `Types`
+as objects and functions as morphisms.
+
+\subsection{Brief words on isomorphism}
+
+A very important definition in Category Theory is the notion of isomorphism.
+In Set Theory, we say that two sets are isomorphic if there is an invertible
+function between them. Yet, this concept is not restricted to Set Theory
+and can be generalized in Category Theory as follows:
 
 \begin{definition}[Categorical Isomorphism]
   Let $\mathcal C$ be a category with $X,Y \in Ob_\mathcal C$ and $f \in Mor_\mathcal C (X,Y)$.
@@ -254,7 +275,38 @@ Note that when $f$ is invertible, the morphism that inverts $f$ is unique with t
 right inverses coinciding, since
 $g \circ id_Y = g \circ f \circ h = id_X \circ h = h$.
 
-\subsection{Programming as Category}
 
-In programming languages such as Julia, we can think of `Types`
-as objects and functions as morphisms.
+\section{Functors}
+
+\begin{definition}[Functor]
+  Let $\mathcal C$ and $\mathcal D$ be two Categories. A functor $F: \mathcal C \Rightarrow \mathcal D$ is
+  a pair of mappings:
+  \begin{enumerate}[(i)]
+    \item a mapping between objects
+      \begin{displaymath}
+        F:Ob_\mathcal C \to Ob_\mathcal D,
+      \end{displaymath}
+      where for each $A \in Ob_\mathcal C$, $F(A) \in Ob_\mathcal D$.
+    \item a mapping between morphisms
+      \begin{displaymath}
+        F:Mor_\mathcal C \to Mor_\mathcal D,
+      \end{displaymath}
+      where there are two possibilities:
+      \begin{enumerate}
+        \item \textbf{Covariant Functor}, in which
+          \begin{displaymath}
+            F:Mor_\mathcal C(A,B) \to Mor_\mathcal D (F(A),F(B)),
+          \end{displaymath}
+          hence for a morphism $f:A \to B$, then $F(f):F(A) \to F(B)$.
+        \item \textbf{Contravariant Functor}, in which
+          \begin{displaymath}
+            F:Mor_\mathcal C(A,B) \to Mor_\mathcal D (F(B),F(A)),
+          \end{displaymath}
+          hence for a morphism $f:A \to B$, then $F(f):F(B) \to F(A)$.
+      \end{enumerate}
+  \end{enumerate}
+  It's common for authors to refer to covariant functors only as functors, i.e.
+  whenever someone say that $F$ is a functor, it might be implied that it's a covariant functor.
+  We'll also use this convention whenever it's not ambiguous, and we'll always.
+\end{definition}
+
