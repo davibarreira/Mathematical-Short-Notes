@@ -1,6 +1,5 @@
 ### Helper functions for drawing Hasse Diagrams
 ###
-
 using Librsvg_jll
 using Luxor
 using MathTeXEngine
@@ -34,7 +33,7 @@ end
     morphism(dom::Point,cod::Point;label::AbstractString=L"f",linewidth=1)
 Draws the morphism arrow between two objects.
 """
-function morphism(dom::Point,cod::Point;morphismlabel=L"f",linewidth=1, offset=8)
+function morphism(dom::Point,cod::Point, morphismlabel=L"f";linewidth=1, offset=8)
     θ  = anglepoints(dom,cod)
     o1 = offset*Point(cos(θ),-sin(θ))
     o2 = offset*Point(-cos(θ),sin(θ))
@@ -60,7 +59,7 @@ end
     morphism(domcod::Point;label::AbstractString=L"f",linewidth=1)
 Draws the morphism arrow where dom(f) = cod(f).
 """
-function morphism(domcod::Point;morphismlabel::AbstractString=L"id",linewidth=1)
+function morphism(domcod::Point, morphismlabel::AbstractString=L"id"; linewidth=1)
     adjx = 6
     adjy = -2
     loopx = 30

@@ -1,29 +1,106 @@
 Notes mostly based on \citet{maico2020categoria},
-\citet{bradley2020topology} and \citet{milewski2018category}.
+\citet{bradley2020topology}, \citet{borceux1994handbook}.
 
-\section{What are Categories?}
+\section{Why study Category Theory}
 
 The study of Category Theory enables us to view Mathematics from a vantage
 point, and better understand how the different areas are connected. For example,
 it might not always be clear which properties are \textit{topological}, and which aren't.
-By looking at the subject from the distance (via Category Theory), we get a
+By looking at the subject from the distance (via Category Theory), we get
 a glimpse at the connections (and disconnections) between different fields.
 
-Another very intresting observation about Category Theory is that it's
+Another very interesting observation about Category Theory is that it's
 becoming very popular in programming. This is highlighted for example
 in the book \citet{milewski2018category}. In order to help
 the understanding of the subject, I'll be using ``applications''
 of Category Theory, mainly inspired by \citet{fong2019invitation}.
-We'll also do coding examples using `Catlab.jl`, a Julia package
+We'll also do coding examples using Catlab.jl, a Julia package
 for applied Category Theory.
 
-\subsection{Basic Definitions and Examples}
+\section{Categories}
 
-Let's start by formally defining a Category and providing some examples.
+In this section, we formally define what a Category is, and we provide
+some examples.
+
+\subsection{Universes, Sets and Classes}
+
+When working on Category Theory, it's common to find universal
+statements such as ``for all topological spaces...''. The issue
+with such statements is that, in a purely set-theoretical sense,
+we have to know whether such large collection (``all topological spaces'')
+is indeed a set. We might be tempted to say that's true, but
+it's not so simple. The most known example of a possible failure of such
+statements is Russel's Paradox of whether there is a set of all sets, for
+which the answer is ``no''.
+
+Therefore, in order to deal with such issue, we need a way to differentiate
+between a valid set and an arbitrary collection. Here is where the notion of a Universe comes in.
+
+\begin{definition}[Universe]
+  We say that a set $\mathfrak U$ is a universe if\footnote{Definition from \citet{borceux1994handbook}}
+  \begin{enumerate}[(i)]
+    \item $x\in y$ and $ y\in \mathfrak U$, then $x \in \mathfrak U$;
+    \item $I \in \mathfrak U$, and $\forall i \in I, x_i \in \mathfrak U$, then $\cup_{i\in I}x_i \in \mathfrak U$;
+    \item $x \in \mathfrak U$ then $\mathcal P(x) \in \mathfrak U$, where $\mathcal P(x)$ is the power set;
+    \item $x \in \mathfrak U$ and $f:x\to y$ is a surjective function, then $y \in \mathfrak U$;
+    \item $\mathbb N \in \mathfrak U$.
+  \end{enumerate}
+\end{definition}
+
+From this definition, one can prove the following proposition.
+\begin{proposition}
+  \begin{enumerate}[(i)]
+    \item $x \in \mathfrak U$ and $y \subset x$, then $y \in \mathfrak U$;
+    \item $x \in \mathfrak U$ and $y \subset x$, then $\{x,y\} \in \mathfrak U$;
+    \item $x \in \mathfrak U$ and $y \subset x$, then $x\times y \in \mathfrak U$;
+    \item $x \in \mathfrak U$ and $y \subset x$, then $y^x \in \mathfrak U$, where $y^x$ is the set of functions $f:x \to y$.
+  \end{enumerate}
+  \label{prop:universe}
+\end{proposition}
+
+With this definition, we state the axiom of existence universes.
+\begin{axiom}
+  Every set $S$ belongs to some universe $\mathfrak U$.
+\end{axiom}
+
+\begin{definition}
+  For a fixed universe $\mathfrak U$, if a set $S$ is an element of $\mathfrak U$,
+  then $S$ is called a \textit{small set}.
+\end{definition}
+
+Talking about ``small sets'' and ``big set'' might become daunting, so instead, we
+use a different convention which is based on Gödel-Bernays theory of sets and classes.
+This theory states that:
+\begin{axiom}[Gödel-Bernays]
+  Every set is a class, and a class is a set if and only if it belongs to some (other)
+  class.
+\end{axiom}
+
+Note that using the notion of Universes, we can recover Gödel-Bernays theory. For that,
+use the following definition:
+\begin{definition}
+  For a fixed universe $\mathfrak U$, we call $S$ a \textit{set} if it's an element
+  of $\mathfrak U$, and call $S$ a \textit{class} if it's a subset of $\mathfrak U$.
+  A class that is not a set is called a \textit{proper class}.
+\end{definition}
+Since every set is a class, if $S \in \mathfrak U$, then $S$ is a class,
+since $U$ is a set and therefore a class, implying that $S$ belongs to a class.
+On the other direction, if $S$ is a class and $S \in V \subset \mathfrak U$,
+then since $V \subset \mathfrak U$, this means that $S \in \mathfrak U$, thus
+it's a set.
+
+From now on, whenever we say \textit{set} we are implying \textit{small set}
+and whenever we say \textit{class} we are implying either small or big sets,
+following \citet{borceux1994handbook} convention.
+
+
+\subsection{What is a Category?}
+
+Let's formally define a Category and provide some examples.
 
 \begin{definition}[Category]
-	A category $\mathcal C = \langle Ob_{\mathcal C}, Mor_{\mathcal C} \rangle$ is
-	a collection of objects $Ob_\mathcal C$ and morphisms
+	A category $\mathcal C = \langle Ob_{\mathcal C}, Mor_{\mathcal C} \rangle$ consists
+	of a class of objects $Ob_\mathcal C$ and a class of morphisms
 	$Mor_\mathcal C$ satisfying the following conditions:
   \begin{enumerate}[(i)]
     \item Every morphism $f \in Mor_\mathcal C$ is associated to two objects $X,Y \in Ob_{\mathcal C}$
@@ -60,18 +137,53 @@ this set is sometimes called hom-set. In this notes, we'll use either $Mor_\math
 or $\mathcal C (X,Y)$ when there is no ambiguity. Also, we'll use $dom_f$ to mean $dom(f)$,
 and similarly for the codomain.
 
-Informally, a Category is just a collection of objects and morphisms (``relations'')
-between such objects, plus the fact that morphisms are compasable and that we always have
-an identity morphism.
+When the class of morphism $Mor_\mathcal C$ is a set, the category $\mathcal C$ is called
+a \textit{locally small Category}. If both $Ob_\mathcal C$ and $Mor_\mathcal C$ are sets,
+we then have a \textit{small Category}.
+
+Finally, whenever it's not ambiguous, we might drop the subscript and use $Ob$
+to refer to the objects of $\mathcal C$ and $Mor$ to refer to the morphisms of $\mathcal C$.
+
+\subsection{Examples of Categories}
 
 It's very common to represent Categories via Hasse Diagrams. In these diagrams, the
 objects are represented as dots, and the morphisms as arrows. Let's show some examples.
 
-\begin{example}[Caterogies $\bm 1$ and $\bm 2$]
+\begin{example}[Category $\bm 1$]
   The Category $\bm 1$ consists of $Ob_{\bm 1} := \{a\}$ and $Mor_{\bm 1} = \{id_a\}$.
   The diagram for such Category is shown below.
-% https://q.uiver.app/?q=WzAsMixbMSwwLCJhIl0sWzAsMCwiXFxidWxsZXQiXSxbMCwxLCJpZF9hIl1d
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics{./notebooks/1Cat}
+    \end{center}
+    \caption{Hasse diagram of Category $\bm 1$.}
+    \label{fig:1Cat}
+  \end{figure}
 \end{example}
+
+\begin{example}[Category $\bm 2$]
+  The Category $\bm 2$ consists of $Ob_{\bm 2} := \{a, b\}$ and $Mor_{\bm 1} = \{id_a, id_b, f\}$,
+  where $f:a \to b$.
+  The diagram for such Category is shown below.
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics{./notebooks/2Cat}
+    \end{center}
+    \caption{Hasse diagram of Category $\bm 2$.}
+    \label{fig:2Cat}
+  \end{figure}
+\end{example}
+
+Since we know that identities are always present in Categories, we'll
+omit them from future diagrams when there is no ambiguity. Thus,
+the figure below represents the same diagram as \ref{fig:2Cat}.
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics{./notebooks/2Catsimple}
+  \end{center}
+  \caption{Hasse diagram of Category $\bm 2$ omitting identity morphisms.}
+  \label{fig:2Catsimple}
+\end{figure}
 
 
 \begin{example}[Preorders]

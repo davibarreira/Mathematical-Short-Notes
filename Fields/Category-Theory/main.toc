@@ -1,5 +1,8 @@
-\contentsline {section}{\numberline {1}What are Categories?}{5}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Basic Definitions and Examples}{5}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Programming as Category}{7}{subsection.1.2}%
-\contentsline {section}{\numberline {2}What are Sets?}{8}{section.2}%
-\contentsline {subsubsection}{\numberline {2.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{8}{subsubsection.2.0.1}%
+\contentsline {section}{\numberline {1}Why study Category Theory}{5}{section.1}%
+\contentsline {section}{\numberline {2}Categories}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Universes, Sets and Classes}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}What is a Category?}{7}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Examples of Categories}{8}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Programming as Category}{9}{subsection.2.4}%
+\contentsline {section}{\numberline {3}What are Sets?}{10}{section.3}%
+\contentsline {subsubsection}{\numberline {3.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{10}{subsubsection.3.0.1}%

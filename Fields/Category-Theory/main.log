@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/Debian)  (format=lualatex 2021.12.23)  21 FEB 2022 11:44
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/Debian)  (format=lualatex 2021.12.23)  21 FEB 2022 21:46
  restricted system commands enabled.
  file:line:error style messages enabled.
 **main.tex
@@ -528,10 +528,11 @@ Package fontspec Info: Font family 'JuliaMono-Medium(0)' created for font
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
 ) (./julia_listings.tex (./julia_listings_unicode.tex)) (./julia_listings.tex (./julia_listings_unicode.tex)) (./julia_listings_unicode.tex)
-\c@theorem=\count302
-\c@exer=\count303
-\c@note=\count304
-\c@example=\count305
+\c@axiom=\count302
+\c@theorem=\count303
+\c@exer=\count304
+\c@note=\count305
+\c@example=\count306
  (./quiver.sty
 Package: quiver 2021/01/11 quiver
  (/usr/share/texlive/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
@@ -567,14 +568,14 @@ Package: pgfsys 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@yd=\dimen194
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count306
-\c@pgf@countb=\count307
-\c@pgf@countc=\count308
-\c@pgf@countd=\count309
+\c@pgf@counta=\count307
+\c@pgf@countb=\count308
+\c@pgf@countc=\count309
+\c@pgf@countd=\count310
 \t@pgf@toka=\toks45
 \t@pgf@tokb=\toks46
 \t@pgf@tokc=\toks47
-\pgf@sys@id@count=\count310
+\pgf@sys@id@count=\count311
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2020/12/27 v3.1.8b (3.1.8b)
 )
@@ -585,22 +586,22 @@ File: pgfsys-luatex.def 2020/12/27 v3.1.8b (3.1.8b)
 File: pgfsys-common-pdf.def 2020/12/27 v3.1.8b (3.1.8b)
 ))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfsyssoftpath@smallbuffer@items=\count311
-\pgfsyssoftpath@bigbuffer@items=\count312
+\pgfsyssoftpath@smallbuffer@items=\count312
+\pgfsyssoftpath@bigbuffer@items=\count313
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2020/12/27 v3.1.8b (3.1.8b)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen195
-\pgfmath@count=\count313
+\pgfmath@count=\count314
 \pgfmath@box=\box58
 \pgfmath@toks=\toks48
 \pgfmath@stack@operand=\toks49
 \pgfmath@stack@operation=\toks50
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count314
+\c@pgfmathroundto@lastzeros=\count315
 )) (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@picminx=\dimen196
@@ -630,7 +631,7 @@ File: pgfcorescopes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfpic=\box59
 \pgf@hbox=\box60
 \pgf@layerbox@main=\box61
-\pgf@picture@serial@count=\count315
+\pgf@picture@serial@count=\count316
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgflinewidth=\dimen270
@@ -651,8 +652,8 @@ File: pgfcorearrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@max=\dimen275
-\pgf@sys@shading@range@num=\count316
-\pgf@shadingcount=\count317
+\pgf@sys@shading@range@num=\count317
+\pgf@shadingcount=\count318
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
@@ -689,7 +690,7 @@ Package: pgffor 2020/12/27 v3.1.8b (3.1.8b)
 Package: tikz 2020/12/27 v3.1.8b (3.1.8b)
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@plot@mark@count=\count318
+\pgf@plot@mark@count=\count319
 \pgfplotmarksize=\dimen280
 )
 \tikz@lastx=\dimen281
@@ -704,17 +705,17 @@ File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \tikz@figbox@bg=\box65
 \tikz@tempbox=\box66
 \tikz@tempbox@bg=\box67
-\tikztreelevel=\count319
-\tikznumberofchildren=\count320
-\tikznumberofcurrentchild=\count321
-\tikz@fig@count=\count322
+\tikztreelevel=\count320
+\tikznumberofchildren=\count321
+\tikznumberofcurrentchild=\count322
+\tikz@fig@count=\count323
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfmatrixcurrentrow=\count323
-\pgfmatrixcurrentcolumn=\count324
-\pgf@matrix@numberofcolumns=\count325
+\pgfmatrixcurrentrow=\count324
+\pgfmatrixcurrentcolumn=\count325
+\pgf@matrix@numberofcolumns=\count326
 )
-\tikz@expandcount=\count326
+\tikz@expandcount=\count327
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ))) (/usr/share/texlive/texmf-dist/tex/generic/tikz-cd/tikzlibrarycd.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex
@@ -736,7 +737,7 @@ File: tikzlibrarycalc.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfdecoratedinputsegmentcompleteddistance=\dimen295
 \pgfdecoratedinputsegmentremainingdistance=\dimen296
 \pgf@decorate@distancetomove=\dimen297
-\pgf@decorate@repeatstate=\count327
+\pgf@decorate@repeatstate=\count328
 \pgfdecorationsegmentamplitude=\dimen298
 \pgfdecorationsegmentlength=\dimen299
 )
@@ -744,30 +745,30 @@ File: tikzlibrarycalc.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex))) (./main.aux (./1-Category-Theory.aux) (./2-Category-Theory.aux) (./appendix.aux))
 \openout1 = main.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 59.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 59.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 60.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -803,19 +804,19 @@ LaTeX Font Info:    ... okay on input line 59.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count328
+\c@lstlisting=\count329
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count329
+\scratchcounter=\count330
 \scratchdimen=\dimen300
 \scratchbox=\box69
-\nofMPsegments=\count330
-\nofMParguments=\count331
+\nofMPsegments=\count331
+\nofMParguments=\count332
 \everyMPshowfont=\toks53
-\MPscratchCnt=\count332
+\MPscratchCnt=\count333
 \MPscratchDim=\dimen301
-\MPnumerator=\count333
-\makeMPintoPDFobject=\count334
+\MPnumerator=\count334
+\makeMPintoPDFobject=\count335
 \everyMPtoPDFconversion=\toks54
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -829,7 +830,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-Package hyperref Info: Link coloring ON on input line 59.
+Package hyperref Info: Link coloring ON on input line 60.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -837,11 +838,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count335
+\c@section@level=\count336
 )
-LaTeX Info: Redefining \ref on input line 59.
-LaTeX Info: Redefining \pageref on input line 59.
-LaTeX Info: Redefining \nameref on input line 59.
+LaTeX Info: Redefining \ref on input line 60.
+LaTeX Info: Redefining \pageref on input line 60.
+LaTeX Info: Redefining \nameref on input line 60.
  (./main.out) (./main.out)
 \@outlinefile=\write4
 
@@ -852,61 +853,61 @@ Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 
 \symlegacymaths=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 59.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 59.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 59.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 59.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 59.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 59.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 59.
-LaTeX Font Info:    Redeclaring math accent \check on input line 59.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 59.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 59.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 59.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 59.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 59.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 59.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 59.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 59.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 59.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 59.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 59.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 59.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 59.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 59.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 59.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 59.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 60.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 60.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 60.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 60.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 60.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 60.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 60.
+LaTeX Font Info:    Redeclaring math accent \check on input line 60.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 60.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 60.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 60.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 60.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 59.
+(Font)              `operators' in the math version `normal' on input line 60.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 59.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 60.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 59.
+(Font)              `operators' in the math version `bold' on input line 60.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 59.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 60.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 59.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 60.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 59.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 60.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 59.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 60.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 59.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 60.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/JuliaMono-Medium(0)/m/n on input line 59.
+(Font)                  OT1/cmtt/m/n --> TU/JuliaMono-Medium(0)/m/n on input line 60.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 59.
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 60.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 59.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 60.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 59.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 60.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/JuliaMono-Medium(0)/b/n on input line 59.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 65.
+(Font)                  OT1/cmtt/m/n --> TU/JuliaMono-Medium(0)/b/n on input line 60.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 66.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 65.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 66.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -918,33 +919,58 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [2] (./main.loe) [3] (./main.loe) [4]
 \openout2 = 1-Category-Theory.aux
  (./1-Category-Theory.tex
-Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 24.
- [5
-
-]
-Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 70.
-LaTeX Font Info:    Trying to load font information for U+euf on input line 83.
+Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 39.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 40.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)) [6] [7]
+) [5
+
+]
+Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 52.
+Package hyperref Info: bookmark level for unknown axiom defaults to 0 on input line 63.
+ [6]
+Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 152.
+<./notebooks/1Cat.pdf, id=156, 100.375pt x 80.3pt>
+File: ./notebooks/1Cat.pdf Graphic file (type pdf)
+<use ./notebooks/1Cat.pdf>
+Package luatex.def Info: ./notebooks/1Cat.pdf  used on input line 157.
+(luatex.def)             Requested size: 100.37474pt x 80.29979pt.
+ [7]
+<./notebooks/2Cat.pdf, id=168, 301.125pt x 80.3pt>
+File: ./notebooks/2Cat.pdf Graphic file (type pdf)
+<use ./notebooks/2Cat.pdf>
+Package luatex.def Info: ./notebooks/2Cat.pdf  used on input line 170.
+(luatex.def)             Requested size: 301.12425pt x 80.29979pt.
+<./notebooks/2Catsimple.pdf, id=170, 301.125pt x 80.3pt>
+File: ./notebooks/2Catsimple.pdf Graphic file (type pdf)
+<use ./notebooks/2Catsimple.pdf>
+Package luatex.def Info: ./notebooks/2Catsimple.pdf  used on input line 182.
+(luatex.def)             Requested size: 301.12425pt x 80.29979pt.
+ [8
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.1'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.2'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.3'
+<./notebooks/1Cat.pdf><./notebooks/2Cat.pdf><./notebooks/2Catsimple.pdf>]) [9]
 \openout2 = 2-Category-Theory.aux
  (./2-Category-Theory.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 21.
 
-[8
+[10
 
 
 
-] [9]
+] [11]
 Overfull \hbox (0.2735pt too wide) in paragraph at lines 133--138
-[][]\TU/lmr/bx/n/12 Def-i-ni-tion 2.10 (Nat-u-ral Num-ber Sys-tem). []\TU/lmr/m/n/12 A nat-u-ral num-ber sys-tem is a triple $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 N; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; s\OT1/cmr/m/n/12 )$
+[][]\TU/lmr/bx/n/12 Def-i-ni-tion 3.10 (Nat-u-ral Num-ber Sys-tem). []\TU/lmr/m/n/12 A nat-u-ral num-ber sys-tem is a triple $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 N; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; s\OT1/cmr/m/n/12 )$
  []
 
-[10]
+[12]
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 198.
-) [11] (./main.bbl) [12
+) [13] (./main.bbl) [14
 
 
 ]
@@ -956,23 +982,23 @@ No file appendix.tex.
 \openout6 = main.loe
 (./main.aux (./1-Category-Theory.aux) (./2-Category-Theory.aux) (./appendix.aux))
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 56EC6FBB54246EF9C6469F6EF6B2A605;1149.
+(rerunfilecheck)             Checksum: F5A2BFCBC7E933C80241C3A13BF83F73;1648.
 )
 
 Here is how much of LuaTeX's memory you used:
- 28814 strings out of 478824
+ 28927 strings out of 478824
  100000,1144653 words of node,token memory allocated
- 575 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 17 attribute, 59 glue_spec, 17 attribute_list, 5 write nodes
-   avail lists: 2:528,3:281,4:124,5:507,6:44,7:6606,8:47,9:291,10:9,11:372
- 47080 multiletter control sequences out of 65536+600000
- 108 fonts using 30901927 bytes
- 116i,12n,110p,9591b,485s stack positions out of 5000i,500n,10000p,200000b,200000s
-</usr/share/texmf/fonts/opentype/public/lm/lmroman12-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman17-regular.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (12 pages, 148114 bytes).
+ 586 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 18 attribute, 59 glue_spec, 18 attribute_list, 5 write nodes
+   avail lists: 2:602,3:281,4:132,5:507,6:47,7:6608,8:42,9:291,10:9,11:372
+ 47143 multiletter control sequences out of 65536+600000
+ 121 fonts using 31761575 bytes
+ 116i,12n,110p,9591b,625s stack positions out of 5000i,500n,10000p,200000b,200000s
+</usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman7-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman17-regular.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (14 pages, 175849 bytes).
 
-PDF statistics: 259 PDF objects out of 1000 (max. 8388607)
- 218 compressed objects within 3 object streams
- 81 named destinations out of 1000 (max. 131072)
- 56 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 341 PDF objects out of 1000 (max. 8388607)
+ 286 compressed objects within 3 object streams
+ 113 named destinations out of 1000 (max. 131072)
+ 80 words of extra memory for PDF output out of 10000 (max. 100000000)
 
