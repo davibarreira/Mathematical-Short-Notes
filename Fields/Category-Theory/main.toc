@@ -5,6 +5,10 @@
 \contentsline {subsection}{\numberline {2.3}Examples of Categories}{8}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Programming with Category Theory}{10}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Brief words on isomorphism}{10}{subsection.2.5}%
-\contentsline {section}{\numberline {3}Functors}{11}{section.3}%
-\contentsline {section}{\numberline {4}What are Sets?}{14}{section.4}%
-\contentsline {subsubsection}{\numberline {4.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{14}{subsubsection.4.0.1}%
+\contentsline {section}{\numberline {3}Functors}{12}{section.3}%
+\contentsline {subsection}{\numberline {3.1}What is a Functor?}{12}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Category of Small Categories}{13}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Types of Functors}{14}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Subcategories}{15}{subsection.3.4}%
+\contentsline {section}{\numberline {4}What are Sets?}{16}{section.4}%
+\contentsline {subsubsection}{\numberline {4.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{16}{subsubsection.4.0.1}%

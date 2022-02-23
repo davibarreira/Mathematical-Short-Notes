@@ -245,6 +245,13 @@ Thus, Categories with such property are often referred as \textit{thin Categorie
 or \textit{preorder Category} (in \citet{fong2019invitation}, the authors call this
 a \textit{preorder reflection}).
 
+There are many other examples:
+\begin{enumerate}[1.]
+  \item $\bm{Set}$ which is the Category of sets, where the objects are sets and the morphisms are functions between sets.
+  \item $\bm{Top}$ is the Category where topological spaces are the objects and continuous functions are the morphisms.
+\end{enumerate}
+
+
 \subsection{Programming with Category Theory}
 
 One might be surprised to find out that Category Theory,
@@ -264,20 +271,79 @@ and can be generalized in Category Theory as follows:
 \begin{definition}[Categorical Isomorphism]
   Let $\mathcal C$ be a category with $X,Y \in Ob_\mathcal C$ and $f \in Mor_\mathcal C (X,Y)$.
   \begin{enumerate}[(i)]
-    \item We say that $f$ is \textit{left invertible} if there exists $g \in Mor_\mathcal C (Y,X)$ such
-      that $g \circ f = id_X$;
-    \item We say that $f$ is \textit{right invertible} if there exists $h \in Mor_\mathcal C (Y,X)$ such
-      that $f \circ h = id_Y$;
+    \item We say that $f$ is \textit{left invertible} if there exists $f_l \in Mor_\mathcal C (Y,X)$ such
+      that $f_l \circ f = id_X$;
+    \item We say that $f$ is \textit{right invertible} if there exists $f_r \in Mor_\mathcal C (Y,X)$ such
+      that $f \circ f_r = id_Y$;
     \item We say that $f$ is invertible if it's both left and right invertible.
   \end{enumerate}
   When an invertible morphism exists between $X$ and $Y$, we say that they are isomorphic.
 \end{definition}
-Note that when $f$ is invertible, the morphism that inverts $f$ is unique with the left and
-right inverses coinciding, since
-$g \circ id_Y = g \circ f \circ h = id_X \circ h = h$.
+
+\begin{proposition}
+  The following properties on inverses are true:
+  \begin{enumerate}[1.]
+    \item If $f$ is an invertible morphism, then the left and right inverses are the same.
+    \item If $f$ and $g$ are invertible and composable, then $f \circ g$ is also invertible.
+  \end{enumerate}
+\end{proposition}
+\begin{proof}
+1. Let $f$ be invertible with left inverse $f_l$ and right inverse $f_r$. Therefore,
+\begin{displaymath}
+  f_l \circ id_Y = f_l \circ f \circ f_r = id_X \circ f_r = f_r.
+\end{displaymath}
+
+2. Let $f:A\to B$ and $g: B \to C$ be invertible and composable, with $f\circ g: A \to C$.
+There exists the inverses $g^{-1}: C \to B$ and $f^{-1}:B \to A$. Note that
+$f^{-1}\circ g^{-1}:C \to A$, thus
+\begin{align*}
+  (f^{-1} \circ g^{-1}) \circ (g \circ f) =
+  f^{-1} \circ (g^{-1} \circ g) \circ f =
+  (f^{-1} \circ id_B) \circ f =
+  f^{-1} \circ f =
+  id_A.
+\end{align*}
+\begin{align*}
+  (g \circ f) \circ (f^{-1} \circ g^{-1})  =
+  g \circ (f \circ f^{-1}) \circ g^{-1} =
+  g \circ (id_B \circ g^{-1}) =
+  g \circ g^{-1} =
+  id_B.
+\end{align*}
+We conclude that $(g\circ f)^{-1} = f^{-1} \circ g^{-1}$.
+  
+\end{proof}
+Although similar to set isomorphism, categorical isomorphism is in a sense more general,
+and captures our intuition of isomorphism between categories better than the set theoretic case,
+even when we have finite objects.
+
+Consider the following example.
+Let $\mathcal P$ be the category of Posets, where posets $(P,\leq_p)$ are the objects.
+Take two objects $P_1, P_2 \in Ob_\mathcal P$,
+where $P_1:=\{a,b\}$ with $a$ and $b$ \textbf{not} comparable,
+and $P_2:=\{0,1\}$ where indeed $0 \leq 1$. The question is whether $P_1$ is ``actually'' isomorphic
+to $P_2$, and our intuition say that they should not be, since 
+$P_1$ has two incomparable elements while $P_2$ has two comparable elements.
+
+If we use the set theoretic definition, we would conclude that they \textbf{are} isomorphic,
+since there is a bijective function between $P_1$ and $P_2$. 
+Take for example $f:P_1\to P_2$ where $f(a)=0$ and $f(b)=1$.
+So the set theoretic isomorphism does not capture what we want. What about the categorical isomorphism?
+We can prove that this will not be an isomorphism using the categorical definition. Yet,
+in order to prove this, we need to specify what are the morphisms between the posets,
+and to do this, we need to define what are functors.
 
 
 \section{Functors}
+
+Another central definition in Category Theory is that of Functors.
+While morphisms relate objects inside a Category, a Functor
+establishes a relation between Categories, thus, it's one level
+higher in terms of abstraction.
+
+\subsection{What is a Functor?}
+
+Let's formally define a Functor.
 
 \begin{definition}[Functor]
   Let $\mathcal C$ and $\mathcal D$ be two Categories. A functor $F: \mathcal C \Rightarrow \mathcal D$ is
@@ -339,6 +405,8 @@ illustrates the identity and composition preservation of Functors.
   \label{fig:Functor}
 \end{figure}
 
+\subsection{Category of Small Categories}
+
 One might realize that functors are acting on Categories in a very similar way as morphisms
 do to objects. Indeed, we can define a functor composition to be
 such that for two functors $F:\mathcal C \Rightarrow \mathcal D$
@@ -382,6 +450,48 @@ With this, let's prove our first theorem.
   iterates over set variables, i.e. $Ob_\mathcal C$ and $Mor_\mathcal C$.
   Thus, the Comprehension Scheme proposition guarantees that $\textbf{SmCat}$ exists.
 \end{proof}
+
+\subsection{Types of Functors}
+
+Before we go on to provide examples of functors, let's present
+a way to classify different functors.
+
+\begin{definition}[Faithful, Full, Fully Faithful and Embedding]
+  Here we follow \citet{roman2017introduction}.
+  Let $F$ be a functor between categories $\mathcal C$ and $\mathcal D$.
+  \begin{enumerate}[1.]
+    \item $F$ is \textbf{faithful} if for every $A,B \in Ob_\mathcal C$,
+      $F:Mor_\mathcal C(A,B)\to Mor_\mathcal C(FA,FB)$ is injective.
+    \item $F$ is \textbf{full} if for every $A,B \in Ob_\mathcal C$,
+      $F:Mor_\mathcal C(A,B)\to Mor_\mathcal C(FA,FB)$ is surjective.
+    \item $F$ is \textbf{fully faithful} if for every $A,B \in Ob_\mathcal C$,
+      $F:Mor_\mathcal C(A,B)\to Mor_\mathcal C(FA,FB)$ is bijective.
+    \item $F$ is an \textbf{embedding} of $\mathcal C$ in $\mathcal D$ if $F$ is fully faithful
+      and $F:Ob_\mathcal C \to Ob_\mathcal D$ is injective.
+  \end{enumerate}
+ 
+\end{definition}
+
+\subsection{Subcategories}
+
+\begin{definition}[Subcategory]
+  Let $\mathcal D$ be a category. We say that $\mathcal C$
+  is a subcategory of $\mathcal D$ if $Ob_\mathcal C \subset Ob_\mathcal D$ and
+  $Mor_\mathcal C \subset Mor_\mathcal D$, such that $\mathcal D$ is a category.
+
+  If for every $A, B \in Ob_\mathcal D$, we have that $Mor_\mathcal D (A,B) = Mor_\mathcal C(A,B)$,
+  then $\mathcal D$ is a \textit{full subcategory}.
+\end{definition}
+
+From the definition of a functor, one might wonder whether for any
+functor $F:\mathcal C \Rightarrow \mathcal D$,
+the image $F(\mathcal C)$ is a subcategory of $\mathcal D$, i.e.
+if $\langle Ob_{F(\mathcal C)}, Mor_{F(\mathcal C)} \rangle$ is a category where
+\begin{displaymath}
+  Ob_{F(\mathcal C)}:= \{F(A) : A \in Ob_\mathcal C\}, \quad
+  Mor_{F(\mathcal C)}:= \{F(f) : f \in Mor_\mathcal C\}.
+\end{displaymath}
+The answer is no.
 
 
 

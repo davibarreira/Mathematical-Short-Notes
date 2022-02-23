@@ -1,4 +1,4 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{7}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -39,5 +39,10 @@ Maico Ribeiro.
   introdução}.
 \newblock 05 2020.
 \newblock ISBN 9786599039515.
+
+\bibitem[Roman et~al.(2017)]{roman2017introduction}
+Steven Roman et~al.
+\newblock \emph{An Introduction to the Language of Category Theory}, volume~6.
+\newblock Springer, 2017.
 
 \end{thebibliography}
