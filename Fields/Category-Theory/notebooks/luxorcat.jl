@@ -86,8 +86,10 @@ function morphism(dom::Point,cod::Point, morphismlabel=L"f", pos=:N,;linewidth=1
         arrow(p1,p2,linewidth=linewidth, arrowheadlength = 0,
             arrowheadfunction = quiverarrow)
     else curve
-        pcurve = (p1+p2)/2 + curve*Point(sin(θ), cos(θ))
-        arrow(p1+Point(0,8),pcurve,pcurve,p2+Point(0,8),linewidth=linewidth, arrowheadlength = 0,
+        α = 0.65
+        pcurve = α*p1+(1-α)*p2 + curve*Point(sin(θ), cos(θ))
+        pcurve2 = (1-α)*p1+α*p2 + curve*Point(sin(θ), cos(θ))
+        arrow(p1+Point(0,8),pcurve,pcurve2,p2+Point(0,8),linewidth=linewidth, arrowheadlength = 0,
             arrowheadfunction = quiverarrow)
     end
     

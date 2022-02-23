@@ -9,13 +9,13 @@
 \contentsline {example}{\ifthmt@listswap Example\nobreakspace {}2.2\else \numberline {2.2}Example\fi \thmtformatoptarg {Category $\bm {2}$ and $\bm {3}$}}{8}{example.2.2}%
 \contentsline {example}{\ifthmt@listswap Example\nobreakspace {}2.3\else \numberline {2.3}Example\fi \thmtformatoptarg {Preorders}}{9}{example.2.3}%
 \contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}2.6\else \numberline {2.6}Definition\fi \thmtformatoptarg {Categorical Isomorphism}}{10}{definition.2.6}%
-\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}2.7\else \numberline {2.7}Proposition\fi }{11}{proposition.2.7}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}2.8\else \numberline {2.8}Definition\fi \thmtformatoptarg {Monomorphism}}{12}{definition.2.8}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}2.9\else \numberline {2.9}Definition\fi \thmtformatoptarg {Epimorphism}}{12}{definition.2.9}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}2.7\else \numberline {2.7}Proposition\fi }{10}{proposition.2.7}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}2.8\else \numberline {2.8}Definition\fi \thmtformatoptarg {Monomorphism}}{11}{definition.2.8}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}2.9\else \numberline {2.9}Definition\fi \thmtformatoptarg {Epimorphism}}{11}{definition.2.9}%
 \contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}2.10\else \numberline {2.10}Proposition\fi }{12}{proposition.2.10}%
 \contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.1\else \numberline {3.1}Definition\fi \thmtformatoptarg {Functor}}{12}{definition.3.1}%
 \contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}3.2\else \numberline {3.2}Theorem\fi \thmtformatoptarg {Category of Small Categories}}{14}{theorem.3.2}%
-\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}3.3\else \numberline {3.3}Proposition\fi \thmtformatoptarg {Comprehension Scheme from \citet {borceux1994handbook}}}{15}{proposition.3.3}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}3.3\else \numberline {3.3}Proposition\fi \thmtformatoptarg {Comprehension Scheme from \citet {borceux1994handbook}}}{14}{proposition.3.3}%
 \contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.4\else \numberline {3.4}Definition\fi \thmtformatoptarg {Faithful, Full, Fully Faithful and Embedding}}{15}{definition.3.4}%
 \contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.5\else \numberline {3.5}Definition\fi \thmtformatoptarg {Subcategory}}{15}{definition.3.5}%
 \contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}4.1\else \numberline {4.1}Definition\fi \thmtformatoptarg {Terminal Set}}{16}{definition.4.1}%
