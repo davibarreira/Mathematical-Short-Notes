@@ -156,7 +156,7 @@ It's very common to represent Categories via Hasse Diagrams. In these diagrams, 
 objects are represented as dots, and the morphisms as arrows. Let's show some examples.
 
 \begin{example}[Category $\bm 1$]
-  The Category $\bm 1$ consists of $Ob_{\bm 1} := \{a\}$ and $Mor_{\bm 1} = \{id_a\}$.
+  The Category $\bm 1$ consists of $Ob_{\bm 1} := \{A\}$ and $Mor_{\bm 1} = \{id_A\}$.
   The diagram for such Category is shown below.
   \begin{figure}[H]
     \begin{center}
@@ -168,8 +168,8 @@ objects are represented as dots, and the morphisms as arrows. Let's show some ex
 \end{example}
 
 \begin{example}[Category $\bm 2$ and $\bm 3$]
-  The Category $\bm 2$ consists of $Ob_{\bm 2} := \{a, b\}$ and $Mor_{\bm 1} = \{id_a, id_b, f\}$,
-  where $f:a \to b$.
+  The Category $\bm 2$ consists of $Ob_{\bm 2} := \{A, B\}$ and $Mor_{\bm 1} = \{id_A, id_B, f\}$,
+  where $f:A \to B$.
   The diagram for such Category is shown below.
   \begin{figure}[H]
     \begin{center}
@@ -261,7 +261,7 @@ although very abstract in nature, has actual applications in the
 In programming languages such as Julia, we can think of `Types`
 as objects and functions as morphisms.
 
-\subsection{Brief words on isomorphism}
+\subsection{Isomorphism, monomorphism and epimorphism}
 
 A very important definition in Category Theory is the notion of isomorphism.
 In Set Theory, we say that two sets are isomorphic if there is an invertible
@@ -333,13 +333,46 @@ We can prove that this will not be an isomorphism using the categorical definiti
 in order to prove this, we need to specify what are the morphisms between the posets,
 and to do this, we need to define what are functors.
 
+In the same way that set isomorphism is not the same as categorical isomorphism,
+the notions of injectivity and surjectivity are not equivalent to their categorical
+counterparts, which are called monomorphism and epimorphism.
+
+\begin{definition}[Monomorphism]
+  Let $\mathcal C$ be a category and $f \in Mor_\mathcal C(A,B)$. We say that
+  $f$ is a monomorphism (or monic), if
+  \begin{displaymath}
+    g \circ f = h \circ f \implies g = h.  
+  \end{displaymath}
+\end{definition}
+
+\begin{definition}[Epimorphism]
+  Let $\mathcal C$ be a category and $f \in Mor_\mathcal C(A,B)$. We say that
+  $f$ is an epimorphism (or epic), if
+  \begin{displaymath}
+    f \circ g = f \circ h \implies g = h.
+  \end{displaymath}
+\end{definition}
+\textbf{Important!} A morphism $f$ can be both epic and monic, without being
+an isomorphism, which again highlights the difference between this concepts and their
+set-theoretic counterparts.
+
+\begin{proposition}
+  The following properties on monomorphism and epimorphism are true:
+  \begin{enumerate}[1.]
+    \item $f$ left-invertible $\implies$ $f$ is monic. The converse are is not true.
+    \item $f$ right-invertible $\implies$ $f$ is epic. The converse are is not true.
+    \item $f$ invertible $\implies$ $f$ is monic and epic. The converse are is not true.
+    \item $f$ monic and right-invertible $\implies $ $f$ is isomorphism.
+    \item $f$ epic and left-invertible $\implies $ $f$ is isomorphism.
+  \end{enumerate}
+\end{proposition}
 
 \section{Functors}
-
 Another central definition in Category Theory is that of Functors.
 While morphisms relate objects inside a Category, a Functor
 establishes a relation between Categories, thus, it's one level
 higher in terms of abstraction.
+
 
 \subsection{What is a Functor?}
 
