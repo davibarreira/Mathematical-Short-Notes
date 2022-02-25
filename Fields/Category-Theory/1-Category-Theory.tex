@@ -341,7 +341,7 @@ counterparts, which are called monomorphism and epimorphism.
   Let $\mathcal C$ be a category and $f \in Mor_\mathcal C(A,B)$. We say that
   $f$ is a monomorphism (or monic), if
   \begin{displaymath}
-    g \circ f = h \circ f \implies g = h.  
+    f \circ g = f \circ h \implies g = h.  
   \end{displaymath}
 \end{definition}
 
@@ -349,7 +349,7 @@ counterparts, which are called monomorphism and epimorphism.
   Let $\mathcal C$ be a category and $f \in Mor_\mathcal C(A,B)$. We say that
   $f$ is an epimorphism (or epic), if
   \begin{displaymath}
-    f \circ g = f \circ h \implies g = h.
+    g \circ f = h \circ f \implies g = h.
   \end{displaymath}
 \end{definition}
 \textbf{Important!} A morphism $f$ can be both epic and monic, without being
@@ -366,6 +366,93 @@ set-theoretic counterparts.
     \item $f$ epic and left-invertible $\implies $ $f$ is isomorphism.
   \end{enumerate}
 \end{proposition}
+
+\begin{proof}
+1. Note $f:A \to B$ left-invertible implies that there exists a $f_l:B \to A$ such that
+$f_l \circ f = id$. Hence, for a $g:B\to C$ and $h: B \to C$, if
+\begin{displaymath}
+  f \circ g = f \circ h,
+\end{displaymath}
+then we have that
+\begin{displaymath}
+  f_l \circ f \circ g = f_l \circ f \circ h \implies g =h.
+\end{displaymath}
+To show that the converse is false, consider the category $\mathbf{2}$(Figure \ref{fig:2Cat}). Note that
+$f:A\to B$ is monic, since the only morphism that composes with $f$ is
+$id_A$ and $id_B$. Yet, note that $f$ is not left invertible, since there isn't even
+a morphism from $B$ to $A$.
+
+2. Use the same argument, but reversing the order of the compositions.
+For the converse, again consider the same category $\mathbf{2}$. Note that
+$f:A\to B$ is epic, but it's not right invertible.
+
+3. True since invertible means left and right invertible.
+
+4. Since $f:A \to B$ right invertible, then there exists $f_r:B \to A$
+such that $f \circ f_r = id_B$. Thus,
+\begin{displaymath}
+  id_B \circ f = (f \circ f_r) \circ f =
+  f \circ (f_r \circ f) =
+  f \circ id_A \implies f_r \circ f = id_A.
+\end{displaymath}
+5. Same argument.
+\end{proof}
+
+\subsection{Zero, Initial and Terminal Objects}
+
+\begin{definition}[Zero, Initial and Terminal]
+  Let $\mathcal C$ be a category.
+  \begin{enumerate}[1.]
+    \item An object $I \in Ob_\mathcal C$ is \textit{initial} if for every $A \in Ob_\mathcal C$,
+      there is exactly one morphism from $I$ to $A$. Thus, from $I$ to $I$ there is only the identity.
+    \item An object $T \in Ob_\mathcal C$ is \textit{terminal} if for every $A \in Ob_\mathcal C$,
+      there is exactly one morphism from $A$ to $T$. Thus, from $I$ to $I$ there is only the identity.
+    \item An object is \textit{zero} if it's both terminal and initial.
+  \end{enumerate}
+\end{definition}
+
+Note that in the definitions above, we are defining these objects in terms of existence and
+uniqueness of morphisms, which is known in category theory as \textbf{universal constructions}
+(more on this later).
+
+\begin{theorem}
+  Every \textit{initial} object is unique up to an isomorphism, i.e. if in a category there 
+  are two \textit{initial} objects, then they are isomorphic.
+  Similarly, \textit{terminal} objects are unique up to an isomorphism.
+\end{theorem}
+\begin{proof}
+  Let $I_1, I_2$ be initial. Then, there exists only $f:I_1 \to I_2$ and $g:I_2 \to I_1$.
+  But since $g \circ f:I_1 \to I_1$ is a morphism from the initial object $I_1$, it must
+  be equal to $id_{I_1}$. The same for $I_2$, which implies that $f$ and $g$ are inverses,
+  and thus the objects are isomorphic.
+  The same proof works for terminal objects.
+\end{proof}
+
+Without thinking too much, one might guess that, in the category $\mathbf{Set}$,
+the empty set would be a zero object, but that's not true.
+In reality, the empty set is the initial object, since $f:\emptyset \to B$
+is the only function from the empty set to any other set. Why is this valid?
+
+Remember that in set theory, a function from two sets is defined as a binary
+relation such that for every $x \in dom_f$, there is a unique $y \in cod_f$, i.e.
+$f$ is a triple $(A,B,G)$, where $A = dom_f$, $B = cod_f$ and $G \subset A \times B$
+such that $\forall x \in dom_f$, there exists a unique $y \in B$, such that $(x,y) \in G$.
+
+Since $dom_f = \emptyset$, we have that $G \subset \emptyset \times B$, but this
+is actually empty. Why? If $\emptyset \times B$ is not empty, then there exists
+$(a,b) \in \empty \times B$, which is false, since this would imply that
+$a \in \emptyset$, which contradicts the definition of the empty set that says
+that it can have no elements (note that $\emptyset \in \emptyset$ is actually false).
+
+With this, we have that $G = \emptyset$, thus, the only possible function from
+$\emptyset$ to $B$ is $f = (\emptyset, \emptyset, B)$. Which proves that the
+empty set is initial.
+
+But what about terminal? The empty set actually does not have any morphisms
+that arrives on it, since there is no function $f:A \to \emptyset$.
+The terminal sets in $\mathbf{Set}$ are actually all the singletons (sets with only
+one element), since for any $\{a\}$, there will be only one function
+$g: A \to \{a\}$, which is $g(x) = a$.
 
 \section{Functors}
 Another central definition in Category Theory is that of Functors.
