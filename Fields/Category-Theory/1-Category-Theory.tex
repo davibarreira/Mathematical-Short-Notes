@@ -428,8 +428,10 @@ uniqueness of morphisms, which is known in category theory as \textbf{universal 
   The same proof works for terminal objects.
 \end{proof}
 
-Without thinking too much, one might guess that, in the category $\mathbf{Set}$,
-the empty set would be a zero object, but that's not true.
+
+\begin{example}[Terminal and Initial Objects in $\mathbf{Set}$]
+Without thinking too much, one might assumet that in the category $\mathbf{Set}$
+the empty set would be a zero object; but that's not true.
 In reality, the empty set is the initial object, since $f:\emptyset \to B$
 is the only function from the empty set to any other set. Why is this valid?
 
@@ -453,6 +455,105 @@ that arrives on it, since there is no function $f:A \to \emptyset$.
 The terminal sets in $\mathbf{Set}$ are actually all the singletons (sets with only
 one element), since for any $\{a\}$, there will be only one function
 $g: A \to \{a\}$, which is $g(x) = a$.
+\end{example}
+
+Another definition we have is that of a \textit{zero} morphism. The idea here
+is that this morphism must take the elements of an object $A$ to the
+zero element in $B$, for example, a for two vector spaces $\mathbb R^n$ and $\mathbb R^m$,
+the zero linear transformation $z:\mathbb R^n \to \mathbb R^m$ should take every vector
+$n$-dimensional vector to the $\mathbf{0}$ $m$-dimensional vector. In Category
+Theory we do not talk about morphisms according to how they act on the elements, but
+only in the objects. So we cannot define $z$ by saying to which element it maps.
+Yet, there is a way to do this in Category Theory, which gives rise to the \textit{zero} morphism
+definition.
+\begin{definition}[Zero Morphism]
+  Let $\mathcal C$ be a category, and $0$ be a zero object.
+  A morphism $z:A \to B$ is a zero morphism if there exists two morphisms
+  $f:A\to 0$ and $g:0 \to B$, such that
+  \begin{displaymath}
+    z = g \circ f.  
+  \end{displaymath}
+\end{definition}
+See that this makes intuitive sense. In our example, since we wish to take
+$v \in \mathbb R^n$ to $0 \in \mathbb R^m$, we first take all $v$ to the zero object,
+which in the category of vector spaces will be the zero vector space, i.e. $\{0\}$ the space
+where $0 \in \mathbb R$ is the only element. So now all $v$ are $0$. Note that
+every linear transformation from $\{0\}$ to $\mathbb R^m$ must take $0$ to $\mathbf{0} \in \mathbb R^m$,
+otherwise, suppose that $g(0)=\mathbf{v} \neq \mathbf{0}$, hence for a scalar $\alpha$,
+\begin{displaymath}
+  g(0) = g(\alpha0) = \mathbf{v} \neq \alpha \mathbf{v} = \alpha g(0).
+\end{displaymath}
+This is a contradiction, since $g$ is a linear transformation.
+
+\begin{theorem}
+  Let $\mathcal C$ be a catgory with zero object $0$.
+  Then there exists a unique zero morphism between any two objects.
+\end{theorem}
+\begin{proof}
+  Let $A, B \in Ob_\mathcal C$.
+  By the definition of the zero object, there exists a unique 
+  $f:A \to 0$ and $g:0\to B$, thus, $g \circ f$ is a zero morphism
+  by definition and is unique, since there is no other $f$ and $g$ with these respective
+  domain and codamain.
+
+  Moreover, note that if $z:A \to B$ is our zero morphism and $h:B \to C$, then
+  \begin{displaymath}
+    h \circ z = h \circ (g \circ f) = (h \circ g) \circ f.
+  \end{displaymath}
+  But, $l =(h \circ g):0 \to C$, which means that $l \circ f$ is a zero morphism.
+  The same argument works with a composition from the other direction. This means
+  that compositions with zero morphisms return zero morphisms.
+\end{proof}
+
+\subsection{Understanding Duality}
+
+In several fields of Mathematics, one is faced with the informal notion of a dual.
+Mathematicians define a concept, and call them the dual in some sense, for example,
+the dual vector space, the dual of an optimization problem, and many more.
+I always found puzzling what exactly held these things together, i.e.
+what was the underlying principle that made something a dual of another.
+
+Fortunately, Category Theory has a very elegant answer. For a given
+category $\mathcal C$, the dual category is denoted by
+$\mathcal C^{op}$ where are the objects are the same, but the morphisms
+are inverted. This means that $Ob_{\mathcal C} = Ob_{\mathcal C^{op}}$,
+and for every $f\in Mor_\mathcal (A,B)$, we have $f^{op} \in Mor_{\mathcal C^{op}}(B,A)$.
+
+This definition gives rise to a very interesting result (observation), called the
+\textit{Duality Principle}.
+
+\begin{definition}[Dual Property and Dual Statement]
+  We say $p^{op}$ is the dual property for $p$ if for all categories
+  \begin{displaymath}
+    \mathcal C \text{ has }p^{op} \iff
+    \mathcal C^{op} \text{ has }p.
+  \end{displaymath}
+
+  For a statement $s$ about a category $\mathcal C$, the dual statement is the same
+  statement, but with regards to $\mathcal C^{op}$.
+\end{definition}
+For example, ``a category has an initial object if and only if the dual category has a terminal object''.
+In this example, the property of having an initial object is the dual property of having a terminal object,
+since the above statement is true for any category.
+What about the dual statement? The dual for the statement ``the category $\mathcal C$ has an initial object''
+is ``the category $\mathcal C^{op}$ has an initial object''. Note that the dual statement is not always true.
+And here is where we get the duality principle.
+
+\begin{definition}[Duality Principle]
+  If a statement $s$ is true for every Category, then the dual statement is also true for every
+  category.
+\end{definition}
+Let's digest a bit what this principle states. If we can prove that a certain statement is
+true for any arbitrary category, then it's dual will also be true without any effort what so ever.
+\citet{roman2017introduction} gives a nice example of this. We already prove that for any
+category, if an initial object exists, this initial object is unique up to an isomorphism.
+Note that this is a statement that is true for any category, so the duality principle applies,
+i.e. the dual statement is true. And what is the dual statement? That for every $\mathcal C^{op}$
+the initial object is unique up to an isomorphism. But an initial object in $\mathcal C^{op}$
+is a terminal object in $\mathcal C$. So we have, without any effort, that every terminal
+object is unique up to an isomorphism.
+
+
 
 \section{Functors}
 Another central definition in Category Theory is that of Functors.

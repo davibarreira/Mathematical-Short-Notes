@@ -1,0 +1,94 @@
+{
+  "main": {
+    "id": "2cc8c3aed306d337",
+    "type": "split",
+    "children": [
+      {
+        "id": "5416da8275eafc3b",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Obsidian/Manifolds.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3e3943870178cc1b",
+    "type": "split",
+    "children": [
+      {
+        "id": "5f326dda9e97422e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2d78a29f3c1dbfcd",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "e1ccc0f7f1361957",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "cea5909b2ad0c5ff",
+    "type": "split",
+    "children": [
+      {
+        "id": "1185797991b6e679",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7108d5b22d1c5a3f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Obsidian/Manifolds.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "5416da8275eafc3b",
+  "lastOpenFiles": [
+    "Obsidian/Manifolds.md"
+  ]
+}
