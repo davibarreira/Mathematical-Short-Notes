@@ -19,7 +19,7 @@ for applied Category Theory.
 
 \section{Categories}
 
-In this section, we formally define what a Category is, and we provide
+In this section, we formally define what a category is, and we provide
 some examples.
 
 \subsection{Universes, Sets and Classes}
@@ -97,7 +97,7 @@ following \citet{borceux1994handbook} convention.
 
 \subsection{What is a Category?}
 
-Let's formally define a Category and provide some examples.
+Let's formally define a category and provide some examples.
 
 \begin{definition}[Category]
 	A category $\mathcal C = \langle Ob_{\mathcal C}, Mor_{\mathcal C} \rangle$ consists
@@ -141,64 +141,64 @@ and similarly for the codomain.
 Another point about conventions. When talking about composition, it's convenient
 to use the operator $\fatsemi$, which is equivalent to the composition $\circ$,
 but with the inverted order, i.e. $f \fatsemi g = g \circ f$. The convinience
-will become clearer once we introduce Hasse diagrams as a way to represent Categories.
+will become clearer once we introduce Hasse diagrams as a way to represent categories.
 
 When the class of morphism $Mor_\mathcal C$ is a set, the category $\mathcal C$ is called
-a \textit{locally small Category}. If both $Ob_\mathcal C$ and $Mor_\mathcal C$ are sets,
-we then have a \textit{small Category}.
+a \textit{locally small category}. If both $Ob_\mathcal C$ and $Mor_\mathcal C$ are sets,
+we then have a \textit{small category}.
 
 Finally, whenever it's not ambiguous, we might drop the subscript and use $Ob$
 to refer to the objects of $\mathcal C$ and $Mor$ to refer to the morphisms of $\mathcal C$.
 
 \subsection{Examples of Categories}
 
-It's very common to represent Categories via Hasse Diagrams. In these diagrams, the
+It's very common to represent categories via Hasse Diagrams. In these diagrams, the
 objects are represented as dots, and the morphisms as arrows. Let's show some examples.
 
 \begin{example}[Category $\bm 1$]
-  The Category $\bm 1$ consists of $Ob_{\bm 1} := \{A\}$ and $Mor_{\bm 1} = \{id_A\}$.
-  The diagram for such Category is shown below.
+  The category $\bm 1$ consists of $Ob_{\bm 1} := \{A\}$ and $Mor_{\bm 1} = \{id_A\}$.
+  The diagram for such category is shown below.
   \begin{figure}[H]
     \begin{center}
       \includegraphics{./notebooks/1Cat}
     \end{center}
-    \caption{Hasse diagram of Category $\bm 1$.}
+    \caption{Hasse diagram of category $\bm 1$.}
     \label{fig:1Cat}
   \end{figure}
 \end{example}
 
 \begin{example}[Category $\bm 2$ and $\bm 3$]
-  The Category $\bm 2$ consists of $Ob_{\bm 2} := \{A, B\}$ and $Mor_{\bm 1} = \{id_A, id_B, f\}$,
+  The category $\bm 2$ consists of $Ob_{\bm 2} := \{A, B\}$ and $Mor_{\bm 1} = \{id_A, id_B, f\}$,
   where $f:A \to B$.
-  The diagram for such Category is shown below.
+  The diagram for such category is shown below.
   \begin{figure}[H]
     \begin{center}
       \includegraphics{./notebooks/2Cat}
     \end{center}
-    \caption{Hasse diagram of Category $\bm 2$.}
+    \caption{Hasse diagram of category $\bm 2$.}
     \label{fig:2Cat}
   \end{figure}
 
-Since we know that identities are always present in Categories, we'll
+Since we know that identities are always present in categories, we'll
 omit them from future diagrams when there is no ambiguity. Thus,
 the figure below represents the same diagram as Figure \ref{fig:2Cat}.
 \begin{figure}[H]
   \begin{center}
     \includegraphics{./notebooks/2Catsimple}
   \end{center}
-  \caption{Hasse diagram of Category $\bm 2$ omitting identity morphisms.}
+  \caption{Hasse diagram of category $\bm 2$ omitting identity morphisms.}
   \label{fig:2Catsimple}
 \end{figure}
 
-The Category $\bm 3$ has three morphisms besides the identities, given
+The category $\bm 3$ has three morphisms besides the identities, given
 by $f$, $g$ and their composition $f \fatsemi g$. The figure below
-illustrates the Category with all it's morphisms.
+illustrates the category with all it's morphisms.
 
 \begin{figure}[H]
   \begin{center}
     \includegraphics{./notebooks/3CatComplete}
   \end{center}
-  \caption{Hasse diagram of Category $\bm 3$ showing all morphisms.}
+  \caption{Hasse diagram of category $\bm 3$ showing all morphisms.}
   \label{fig:3Catcomplete}
 \end{figure}
 
@@ -206,26 +206,26 @@ Drawing all the morphisms can make the diagram become too crowded, specially
 as the number of objects and morphisms grows. Hence, we simplify the
 diagram representation by ommiting not only the identity morphisms, but also
 the compositions. These can always be assumed to exist, since they are a necessery
-condition for every Category.
+condition for every category.
 Thus, the figure below represents the same diagram as Figure \ref{fig:3Catcomplete}.
 
 \begin{figure}[H]
   \begin{center}
     \includegraphics{./notebooks/3Catsimple}
   \end{center}
-  \caption{Hasse diagram of Category $\bm 3$ omitting identities and compositions.}
+  \caption{Hasse diagram of category $\bm 3$ omitting identities and compositions.}
   \label{fig:3Catsimple}
 \end{figure}
 
 \end{example}
 
 \begin{example}[Preorders]
-  A Preorder is defined by a tuple $(P, \leq)$, where $P$ is a set of values, such that
+  A preorder is defined by a tuple $(P, \leq)$, where $P$ is a set of values, such that
   \begin{enumerate}[(i)]
     \item For $a,b \in P$, if $a\leq b$ and $b \leq c$, then $a \leq c$;
     \item For every $a \in P$, $a \leq a$.
   \end{enumerate}
-  We can show that actually, this is a Category, which we'll call $\mathfrak P$,
+  We can show that actually, this is a category, which we'll call $\mathfrak P$,
   where $Ob_\mathfrak P = P$ and each morphism $f$ represents $a \leq b$, where
   $cod_f = a$ and $dom_f = b$.
   One example of preorder is the set of $\mathbb N$ equiped with the binary relation $\leq$
@@ -235,20 +235,21 @@ Thus, the figure below represents the same diagram as Figure \ref{fig:3Catcomple
   \begin{center}
     \includegraphics{./notebooks/NCat}
   \end{center}
-  \caption{Hasse diagram of Preorder Category of Natural numbers.}
+  \caption{Hasse diagram of preorder category of natural numbers.}
   \label{fig:NCat}
 \end{figure}
 \end{example}
 
 Note that in preorders, there is at most one morphism between each pair of objects.
-Thus, Categories with such property are often referred as \textit{thin Categories}
-or \textit{preorder Category} (in \citet{fong2019invitation}, the authors call this
+Thus, categories with such property are often referred as \textit{thin categories}
+or \textit{preorder category} (in \citet{fong2019invitation}, the authors call this
 a \textit{preorder reflection}).
 
 There are many other examples:
 \begin{enumerate}[1.]
-  \item $\bm{Set}$ which is the Category of sets, where the objects are sets and the morphisms are functions between sets.
-  \item $\bm{Top}$ is the Category where topological spaces are the objects and continuous functions are the morphisms.
+  \item $\bm{Set}$ which is the category of sets, where the objects are sets and the morphisms are functions between sets.
+  \item $\bm{Top}$ is the category where topological spaces are the objects and continuous functions are the morphisms.
+  \item $\bm{Gr}$ is the  .
 \end{enumerate}
 
 
@@ -540,7 +541,7 @@ is ``the category $\mathcal C^{op}$ has an initial object''. Note that the dual 
 And here is where we get the duality principle.
 
 \begin{definition}[Duality Principle]
-  If a statement $s$ is true for every Category, then the dual statement is also true for every
+  If a statement $s$ is true for every category, then the dual statement is also true for every
   category.
 \end{definition}
 Let's digest a bit what this principle states. If we can prove that a certain statement is
@@ -554,11 +555,10 @@ is a terminal object in $\mathcal C$. So we have, without any effort, that every
 object is unique up to an isomorphism.
 
 
-
 \section{Functors}
 Another central definition in Category Theory is that of Functors.
-While morphisms relate objects inside a Category, a Functor
-establishes a relation between Categories, thus, it's one level
+While morphisms relate objects inside a category, a Functor
+establishes a relation between categories, thus, it's one level
 higher in terms of abstraction.
 
 
@@ -567,7 +567,7 @@ higher in terms of abstraction.
 Let's formally define a Functor.
 
 \begin{definition}[Functor]
-  Let $\mathcal C$ and $\mathcal D$ be two Categories. A functor $F: \mathcal C \Rightarrow \mathcal D$ is
+  Let $\mathcal C$ and $\mathcal D$ be two categories. A functor $F: \mathcal C \Rightarrow \mathcal D$ is
   a pair of mappings with the following properties:
   \begin{enumerate}[(i)]
     \item a mapping between objects
@@ -628,7 +628,7 @@ illustrates the identity and composition preservation of Functors.
 
 \subsection{Category of Small Categories}
 
-One might realize that functors are acting on Categories in a very similar way as morphisms
+One might realize that functors are acting on categories in a very similar way as morphisms
 do to objects. Indeed, we can define a functor composition to be
 such that for two functors $F:\mathcal C \Rightarrow \mathcal D$
 and $G:\mathcal D \Rightarrow \mathcal E$, then $G \circ F$ is
@@ -640,17 +640,17 @@ a functor from $\mathcal C$ to $\mathcal E$ where
 We can also define an identity functor $I:\mathcal C \Rightarrow \mathcal C$,
 where $F(A) = A$ and $F(f) = f$.
 
-Therefore, we might wonder whether there exists a Category of all Categories
-where objects are Categories and morphisms are functors.
+Therefore, we might wonder whether there exists a category of all categories
+where objects are categories and morphisms are functors.
 The answer is ``no''. Similar to the set of all sets, it can be proven
-that this Category does not exists. Yet, the Category of all \textit{small Categories}
+that this category does not exists. Yet, the category of all \textit{small categories}
 does.
 
-Remember, a small Category is one where both morphisms and objects are sets.
+Remember, a small category is one where both morphisms and objects are sets.
 With this, let's prove our first theorem.
 \begin{theorem}[Category of Small Categories]
-  Let $Ob_{\textbf{SmCat}}$ be small Categories and $Mor_{\textbf{SmCat}}$ be functors.
-  This constitutes a Category.
+  Let $Ob_{\textbf{SmCat}}$ be small categories and $Mor_{\textbf{SmCat}}$ be functors.
+  This constitutes a category.
 \end{theorem}
 \begin{proof}
   To prove this, we'll use the fact that in Gödel-Bernays class set theory, the
@@ -665,9 +665,9 @@ With this, let's prove our first theorem.
   Note that
   \begin{displaymath}
     \mathcal C := \langle Ob_\mathcal C, Mor_\mathcal C \rangle \in \textbf{SmCat} \iff
-    \mathcal C \text{ ``is a Category''}.
+    \mathcal C \text{ ``is a category''}.
   \end{displaymath}
-  Since every $\mathcal C$ is small, then the formula to check whether $\mathcal C$ is a Category
+  Since every $\mathcal C$ is small, then the formula to check whether $\mathcal C$ is a category
   iterates over set variables, i.e. $Ob_\mathcal C$ and $Mor_\mathcal C$.
   Thus, the Comprehension Scheme proposition guarantees that $\textbf{SmCat}$ exists.
 \end{proof}
@@ -714,6 +714,11 @@ if $\langle Ob_{F(\mathcal C)}, Mor_{F(\mathcal C)} \rangle$ is a category where
 \end{displaymath}
 The answer is no.
 
+\subsection{Natural Transformations}
 
-\section{Free Categories and $\mathcal C$-Sets}
+One might ponder whether we can construct a category
+as objects. 
+
+\subsection{Free Categories and $\mathcal C$-Sets}
+
 

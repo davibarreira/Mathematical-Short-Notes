@@ -12,6 +12,7 @@
 \contentsline {subsection}{\numberline {3.2}Category of Small Categories}{18}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Types of Functors}{19}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Subcategories}{19}{subsection.3.4}%
-\contentsline {section}{\numberline {4}Free Categories and $\mathcal C$-Sets}{20}{section.4}%
-\contentsline {section}{\numberline {5}What are Sets?}{21}{section.5}%
-\contentsline {subsubsection}{\numberline {5.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{21}{subsubsection.5.0.1}%
+\contentsline {subsection}{\numberline {3.5}Natural Transformations}{20}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Free Categories and $\mathcal C$-Sets}{20}{subsection.3.6}%
+\contentsline {section}{\numberline {4}What are Sets?}{21}{section.4}%
+\contentsline {subsubsection}{\numberline {4.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{21}{subsubsection.4.0.1}%
