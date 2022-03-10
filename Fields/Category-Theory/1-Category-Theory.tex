@@ -4,18 +4,19 @@ Notes mostly based on \citet{maico2020categoria},
 \section{Why study Category Theory}
 
 The study of Category Theory enables us to view Mathematics from a vantage
-point, and better understand how the different areas are connected. For example,
-it might not always be clear which properties are \textit{topological}, and which aren't.
+point, and better understand how the different areas are connected.
 By looking at the subject from the distance (via Category Theory), we get
 a glimpse at the connections (and disconnections) between different fields.
 
-Another very interesting observation about Category Theory is that it's
-becoming very popular in programming. This is highlighted for example
-in the book \citet{milewski2018category}. In order to help
-the understanding of the subject, I'll be using ``applications''
-of Category Theory, mainly inspired by \citet{fong2019invitation}.
-We'll also do coding examples using Catlab.jl, a Julia package
-for applied Category Theory.
+Another interesting observation about Category Theory is that it's
+breaking the theoretical barrier and it's starting to be applied
+in real world applications. One prominent example is in programming,
+as highlighted by the book \citet{milewski2018category}.
+The book by \citet{fong2019invitation} also focus on the application
+side of Category Theory.
+
+For those interested in applying Category Theory, Julia has a very
+prominent package called Catlab.jl, which will be shown in these notes.
 
 \section{Categories}
 
@@ -127,7 +128,7 @@ Let's formally define a category and provide some examples.
       \end{displaymath}
     \item For any $f \in Mor_\mathcal C (X,Y)$, $g \in Mor_\mathcal C (Y,X)$, 
       \begin{displaymath}
-        f \circ id_X = f,  \quad id_A \circ g = g.
+        f \circ id_X = f,  \quad id_Y \circ g = g.
       \end{displaymath}
   \end{enumerate}
 \end{definition}
@@ -245,11 +246,52 @@ Thus, categories with such property are often referred as \textit{thin categorie
 or \textit{preorder category} (in \citet{fong2019invitation}, the authors call this
 a \textit{preorder reflection}).
 
+\begin{example}[Monoids]
+  A monoid is a triple $(M, \oplus, e_M)$ where $\oplus:M\times M \to M$ is a binary operation
+  and $e_M$ the neutral element, such that:
+  \begin{enumerate}
+    \item $a \oplus (b \oplus c) = (a \oplus b) \oplus c$
+    \item $a \oplus e_M = e_M \oplus a = a$.
+  \end{enumerate}
+  Note that $(\mathbb N \cup\{ 0\}, +, 0)$ is a monoid.
+
+  Moreover, each single monoid can be defined as a category itself. For
+  monoid $(M, \oplus, e_M)$, define a category $\mathcal C$
+  such that $Ob_\mathcal C := \{M\}$, and the set of morphisms
+  are the elements of $M$, i.e.
+  $Mor_\mathcal C := \{a \in M\}$. Finally, we define the composition
+  operartion as $a \circ b := a \oplus b$
+  Thus, $(\mathbb N \cup \{0\}, +, 0)$ is the category illustrated in
+  Figure \ref{fig:NMonoid}.
+
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics{./notebooks/NMonoid}
+    \end{center}
+    \caption{Hasse diagram of monoid category of natural numbers.}
+    \label{fig:NMonoid}
+  \end{figure}
+  
+\end{example}
+
 There are many other examples:
 \begin{enumerate}[1.]
   \item $\bm{Set}$ which is the category of sets, where the objects are sets and the morphisms are functions between sets.
   \item $\bm{Top}$ is the category where topological spaces are the objects and continuous functions are the morphisms.
-  \item $\bm{Gr}$ is the  .
+  \item $\bm{Vec}_\mathbb F$ is the category where vector spaces over field $\mathbb F$ are the objects,
+    and linear transformations are the morphisms.
+  \item $\bm{Gr}$ is the category of directed graphs, where $Ob_{\bm{Gr}} := \{\text{Vertex}, \text{Arrow}\}$,
+    and the morphisms are
+    \begin{displaymath}
+      Mor_{\bm{Gr}} := \{
+        src,
+        tgt,
+        id_{\text{Vertex}},
+        id_{\text{Arrow}}
+      \}
+    \end{displaymath}
+    where $src:\text{Arrow} \to \text{Vertex}$ returns the source vertex for each arrow and
+    $tgt:\text{Arrow} \to \text{Vertex}$ returns the target vertex.
 \end{enumerate}
 
 
@@ -714,11 +756,135 @@ if $\langle Ob_{F(\mathcal C)}, Mor_{F(\mathcal C)} \rangle$ is a category where
 \end{displaymath}
 The answer is no.
 
-\subsection{Natural Transformations}
-
-One might ponder whether we can construct a category
-as objects. 
-
 \subsection{Free Categories and $\mathcal C$-Sets}
 
+\section{Natural Transformations}
 
+Similar to how morphisms define relations between objects in a category, natural transformations
+define relations between functors.
+The term ``natural'' in natural transformations was coined by Eilenberg and MacLane (the founders
+of Category Theory) due to the fact that these transformations were developed with the
+aim of explaining why some constructions in Mathematics were ``natural'' while others
+were not.
+
+
+\subsection{Defining Natural Transformations}
+
+Similar to functors, the formal definition of natural transformations
+are somewhat obscure at first sight, by as we dig a bit, we see that the is
+some intuition behind it that makes it easier to understand it.
+
+\begin{definition}[Natural Transformations]
+  Let $\mathcal C$ and $\mathcal D$ be categories, and let $F,G:\mathcal C \to \mathcal D$ be functors.
+  A natural transformation $\alpha: F \Rightarrow G$ is such that:
+  \begin{enumerate}[(i)]
+    \item For all $A \in \mathcal C$, there exists $\alpha_A :F(A) \to G(A)$ that is
+      a morphism in $\mathcal D$, i.e $\alpha_A \in Mor_\mathcal D (F(A), G(A))$;
+    \item (Naturality) For all $f \in Mor_\mathcal C (A,B)$, then
+      \begin{displaymath}
+        F(f)\fatsemi \alpha_B = \alpha_A \fatsemi G(f).
+      \end{displaymath}
+
+    Remember that for a morphism $f:A \to B$, we have that $F(f):F(A)\to F(B)$ and $G(f):G(A) \to G(B)$.
+    Since $\alpha_A: F(A) \to G(A)$ and $\alpha_B : F(B) \to G(B)$, then $F(f)$ composes
+    with $\alpha_B$ and $G(f)$ composes with $\alpha_A$, and our definition above works.
+  \end{enumerate}
+  \label{def:NaturalTransformation}
+\end{definition}
+
+Another way to represent property (ii) in the definition of natural transformations
+is to affirm that the diagram below.
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics{./notebooks/NaturalTransformation.pdf}
+  \end{center}
+  \caption{Commutative diagram of a natural transformation highlighting the commutative property of the definition.}
+  \label{fig:NaturalTransformation}
+\end{figure}
+
+From the definition, the natural transformation $\alpha$ is a transformation between functors
+that is in some sense associative, i.e. the order does not matter, we can apply $\alpha$
+to $FA$ and then apply $Gf$, or we can apply $Ff$ to $FA$ an then apply the natural transformation. Both
+return the same result.
+
+\subsection{The Category of Functors}
+
+The natural transformation is also ideal for defining a category of functors.
+
+\begin{definition}
+  For categories $\mathcal C$ and $\mathcal D$, then $\mathcal D^{\mathcal C}$ is the category
+  of functors from $\mathcal C$ to $\mathcal D$ where the morphisms are natural transformations,
+  i.e.
+  \begin{displaymath}
+    Ob_{\mathcal D^{\mathcal C}} :={\text{Functors from } \mathcal C \text{ to } \mathcal D}
+  \end{displaymath}
+  \begin{displaymath}
+    Mor_{\mathcal D^{\mathcal C}}(F,G) :={\text{Natural Transformations from } 
+    F \text{ to } G}.
+  \end{displaymath}
+\end{definition}
+
+Let's prove that the definition above is indeed a category.
+For that, we need to define a way to compose natural transformations that
+is associative, and we also need to define an identity morphism.
+
+\begin{proposition}
+  In the category $\mathcal D^{\mathcal C}$, define the composition of two natural
+  transformations $\alpha:F\to G$ and $\beta:G\to H$ as
+  \begin{displaymath}
+    \forall c \in \mathcal C \alpha_c \fatsemi \beta_c = (\alpha \fatsemi \beta)_c.
+  \end{displaymath}
+  Then, using this definition, $\alpha \fatsemi \beta$ is indeed a normal transformation
+  from $F \to H$, and this composition is associative.
+\end{proposition}
+\begin{proof}
+  First, since
+  $\alpha_c \in Mor_\mathcal D (F(c),G(c))$,
+  $\beta_c \in Mor_\mathcal D (G(c),H(c))$,
+  $\gamma_c \in Mor_\mathcal D (H(c),J(c))$,
+  then
+  \begin{align*}
+    \alpha \fatsemi (\beta \fatsemi \gamma) \iff 
+    \forall c \in \mathcal C, \alpha_c \fatsemi (\beta \fatsemi \gamma)_c &=
+    \alpha_c \fatsemi (\beta_c \fatsemi \gamma_c)\\&=
+    (\alpha_c \fatsemi \beta_c) \fatsemi \gamma_c \\&= 
+    (\alpha_c \fatsemi \beta_c) \fatsemi \gamma_c \\&= 
+    (\alpha \fatsemi \beta)_c \fatsemi \gamma_c
+    \iff (\alpha \fatsemi \beta) \fatsemi \gamma
+  \end{align*}
+  
+  
+\end{proof}
+
+\begin{example}[Natural Transformations in Sets]
+  Consider the categories $\bm 1$ and $\bm{Set}$.
+  Since $\bm 1$ has only one object $1$ and one morphisms $id_1$, then each functor
+  $F:\bm 1 \to \bm{Set}$ is completely defined by $F(1) = S$, where $S$ is a set, and,
+  by the definition of a functor, $F(id_1) = id_S$. This means that every functor
+  can be indexed by the set to which it takes the object of $\bm 1$, e.g. $F_A$ is the
+  functor that $F(1)$ is equal to set $A$. Note that, in a sense, every functor
+  $F_A$ is the ``same'' as the set $A$ itself. In a strange way, by going a level higher
+  in abstraction we ended up going inside the category $\bm{Set}$.
+
+  Next, we want to define a natural transformation $\alpha: F_A \to F_B$.
+  By definition, there are two criteria to satisfy. First, for every object $1 \in Ob_{\bm 1}$ we have
+  $\alpha_1:F_A(1) \to F_B(1)$ such that $\alpha_1 \in Mor_{\bm{Set}}(F_A(1),F_B(1))$.
+  Since the only object in $\bm 1$ is $1$, we only need to worry about $\alpha_1$.
+  Secondly, we need that for every $f \in Mor_{\bm 1} (1,1)$, it's true that
+  \begin{displaymath}
+    F_A(f) \fatsemi \alpha_1 = \alpha_1 \fatsemi F_B(f).
+  \end{displaymath}
+  Again, since the only morphism in $\bm 1$ is $id_1$, we only need to worry that
+  \begin{displaymath}
+    F_A(id_1) \fatsemi \alpha_1 = \alpha_1 \fatsemi F_B(id_1).
+  \end{displaymath}
+
+  Note that $F_A(id_1) = id_A$ and $F_B(id_1) = id_B$, and by the definition
+  of identity, we have that for $g \in Mor(A,B)$, $id_A \fatsemi g = g \fatsemi id_B$.
+  Therefore, the second condition is trivially satisfied. We just need to worry
+  about the first condition.
+
+  Note that if we 
+  
+\end{example}

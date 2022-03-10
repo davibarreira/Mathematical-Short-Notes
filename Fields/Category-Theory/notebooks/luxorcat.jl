@@ -74,7 +74,7 @@ end
 Draws the morphism arrow between two objects. Set `curve = :N` or `curve = :S` to make
 the morphism curve.
 """
-function morphism(dom::Point,cod::Point, morphismlabel=L"f", pos=:N,;linewidth=1, offset=8, curve=0)
+function morphism(dom::Point,cod::Point, morphismlabel=L"f"; pos=:N, linewidth=1, offset=8, curve=0)
     θ  = anglepoints(dom,cod)
     o1 = offset*Point(cos(θ),-sin(θ))
     o2 = offset*Point(-cos(θ),sin(θ))
@@ -109,20 +109,33 @@ function morphism(dom::Point,cod::Point, morphismlabel=L"f", pos=:N,;linewidth=1
 end
 
 """
-    morphism(domcod::Point;label::AbstractString=L"f",linewidth=1)
+    morphism(domcod::Point, morphismlabel::AbstractString=L"id";
+        loopx = 30, loopy = 40,labelyoffset = 10, arrowhead=true, line_width=1)
 Draws the morphism arrow where dom(f) = cod(f).
 """
-function morphism(domcod::Point, morphismlabel::AbstractString=L"id"; linewidth=1)
+function morphism(domcod::Point, morphismlabel::AbstractString=L"id";
+    loopx = 30, loopy = 40,labelyoffset = 10, arrowhead=true, line_width=1)
     adjx = 6
     adjy = -2
-    loopx = 30
-    loopy = 40
-    labely= 16
-    arrow(domcod + Point(-adjx,adjy),domcod + Point(-loopx,-loopy), domcod+ Point(loopx,-loopy),domcod+Point(adjx,adjy),linewidth=1,
-        arrowheadlength = 0,
-        arrowheadfunction = quiverarrow)
+    # loopx = 30
+    # loopy = 40
+    # labely= 16
+    if arrowhead
+        arrow(domcod + Point(-adjx,adjy),domcod + Point(-loopx,-loopy),
+            domcod+ Point(loopx,-loopy),
+            domcod+Point(adjx,adjy),
+            linewidth=line_width,
+            arrowheadlength = 0,
+            arrowheadfunction = quiverarrow)
+    else
+        arrow(domcod + Point(-adjx,adjy),domcod + Point(-loopx,-loopy),
+            domcod+ Point(loopx,-loopy),
+            domcod+Point(adjx,adjy),
+            linewidth=line_width,
+            arrowheadlength = 0)
+    end
 
-    label(morphismlabel,:N, domcod+Point(0,-loopy + labely), offset=10)
+    label(morphismlabel,:N, domcod+Point(-0.8,-loopy + 14), offset=labelyoffset)
 end
 
 """
