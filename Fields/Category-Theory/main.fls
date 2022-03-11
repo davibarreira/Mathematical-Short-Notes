@@ -460,6 +460,12 @@ INPUT ./notebooks/NCat.pdf
 INPUT ./notebooks/NMonoid.pdf
 INPUT ./notebooks/NMonoid.pdf
 INPUT ./notebooks/NMonoid.pdf
+INPUT ./notebooks/Span.pdf
+INPUT ./notebooks/Span.pdf
+INPUT ./notebooks/Span.pdf
+INPUT ./notebooks/CategoricalProduct.pdf
+INPUT ./notebooks/CategoricalProduct.pdf
+INPUT ./notebooks/CategoricalProduct.pdf
 INPUT ./notebooks/Functor.pdf
 INPUT ./notebooks/Functor.pdf
 INPUT ./notebooks/Functor.pdf

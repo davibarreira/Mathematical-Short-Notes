@@ -8,14 +8,14 @@
 \contentsline {subsection}{\numberline {2.6}Zero, Initial and Terminal Objects}{14}{subsection.2.6}%
 \contentsline {subsection}{\numberline {2.7}Categorical Product}{16}{subsection.2.7}%
 \contentsline {subsection}{\numberline {2.8}Understanding Duality}{16}{subsection.2.8}%
-\contentsline {section}{\numberline {3}Functors}{17}{section.3}%
-\contentsline {subsection}{\numberline {3.1}What is a Functor?}{17}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Category of Small Categories}{19}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Types of Functors}{20}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Subcategories}{20}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Free Categories and $\mathcal C$-Sets}{21}{subsection.3.5}%
-\contentsline {section}{\numberline {4}Natural Transformations}{21}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Defining Natural Transformations}{21}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}The Category of Functors}{22}{subsection.4.2}%
-\contentsline {section}{\numberline {5}What are Sets?}{25}{section.5}%
-\contentsline {subsubsection}{\numberline {5.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{25}{subsubsection.5.0.1}%
+\contentsline {section}{\numberline {3}Functors}{19}{section.3}%
+\contentsline {subsection}{\numberline {3.1}What is a Functor?}{19}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Category of Small Categories}{20}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Types of Functors}{21}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Subcategories}{22}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Free Categories and $\mathcal C$-Sets}{22}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Natural Transformations}{22}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Defining Natural Transformations}{22}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}The Category of Functors}{23}{subsection.4.2}%
+\contentsline {section}{\numberline {5}What are Sets?}{26}{section.5}%
+\contentsline {subsubsection}{\numberline {5.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{26}{subsubsection.5.0.1}%

@@ -554,10 +554,20 @@ In set theory, we are used to the notion of a cartesian product. Similarly
 to how we did for isomorphism, the idea of a product can be generalized via
 Category Theory. Here is how it's done.
 
-\begin{definition}[Categorical Product]
-  Let $A,B$ be objects ina  category $\mathcal C$.
+\begin{definition}[Span]
+  Let $A,B$ be objects in a  category $\mathcal C$. A span
+  on $A$ and $B$ is a triple $(Z,f,g)$ where $f:Z\to A$ and
+  $g:Z\to B$ are morphisms in $\mathcal C$. This is
+  shown in figure \ref{fig:Span}.
 \end{definition}
 
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics{./notebooks/Span.pdf}
+  \end{center}
+  \caption{Diagrams showcasing a span between $A$ and $B$.}
+  \label{fig:Span}
+\end{figure}
 
 \subsection{Understanding Duality}
 
@@ -607,6 +617,61 @@ the initial object is unique up to an isomorphism. But an initial object in $\ma
 is a terminal object in $\mathcal C$. So we have, without any effort, that every terminal
 object is unique up to an isomorphism.
 
+\begin{definition}[Categorical Product]
+  Let $A,B$ be objects in a  category $\mathcal C$. A span $(A\times B, \pi_1, \pi_2)$
+  is called a product between $A$ and $B$ if for every span $(Z, f, g)$ of $A$ and $B$,
+  there exists a unique morphism $h_{f,g}:Z \to A \times B$ such that
+  $h_{f,g} \fatsemi \pi_1 = f$ and $h_{f,g} \fatsemi \pi_2 = g$. That is the same
+  as saying that the diagram \ref{fig:Product} commutes.
+\end{definition}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics{./notebooks/CategoricalProduct.pdf}
+  \end{center}
+  \caption{Diagrams showcasing the categorical product. Note that the dashed line
+  is intended to highlight that the morphism $h_{f,g}$ is uniquely induced by $f$ and $g$.}
+  \label{fig:Product}
+\end{figure}
+
+Note that this definition of a product is a \textbf{universal construction}, since
+it's done via existence and uniqueness.
+Another important aspect to note is that not every pair of objects in a category might have a
+product associated.
+
+\begin{theorem}
+  For a category $\mathcal C$, a pair of objects $A$ and $B$ can have more than one
+  product construction, but if this is the case, then both these constructions will be
+  isomorphic.
+\end{theorem}
+
+\begin{proposition}[Categorical Product vs Set Product]
+  The categorical product generalizes the Cartesian product in set theory.
+\end{proposition}
+\begin{proof}
+  Consider the span $(X\times Y, \pi_1,\pi_2)$ where $\pi_1(x,y) = x$ and $\pi_2(x,y) = y$.
+  Thus, for any span $(Z, f, g)$ of $A$ and $B$, make $h_{f,g}(z) = (f(z), g(z)) \in X \times Y$.
+  This is how the Cartesian product works.
+
+  Let's drop the subscript in $h_{f,g}$.
+  Now we have to show that $h$ is a unique morphism,
+  and that $h \fatsemi \pi_1 = f$ and $h \fatsemi \pi_2 = g$.
+
+  The second condition is trivially true, just note that
+  \begin{displaymath}
+    \forall z \in Z, \ \pi_1(h(z)) = \pi_1((f(z), g(z))) = f(z) \implies
+    h \fatsemi \pi_1 = f,
+  \end{displaymath}
+  and the same argument works for $\pi_2$ and $g$.
+
+  For uniqueness, consider $h':Z\to X\times Y$ such that
+  $h' \fatsemi \pi_1 = f$, and $h' \fatsemi \pi_2 = g$.
+  If $h' \neq h$, then there is a $z \in Z$,
+  such that $h(z) = (f(z), g(z)) \neq h'(z)$. Bu then,
+  $\pi_1(h'(z)) \neq f(z)$ or $\pi_2(h'(z)) \neq g(z)$, which
+  is a contradiction.
+
+\end{proof}
 
 \section{Functors}
 Another central definition in Category Theory is that of Functors.
