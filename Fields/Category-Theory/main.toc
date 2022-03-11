@@ -6,7 +6,8 @@
 \contentsline {subsection}{\numberline {2.4}Programming with Category Theory}{12}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Isomorphism, monomorphism and epimorphism}{12}{subsection.2.5}%
 \contentsline {subsection}{\numberline {2.6}Zero, Initial and Terminal Objects}{14}{subsection.2.6}%
-\contentsline {subsection}{\numberline {2.7}Understanding Duality}{16}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.7}Categorical Product}{16}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Understanding Duality}{16}{subsection.2.8}%
 \contentsline {section}{\numberline {3}Functors}{17}{section.3}%
 \contentsline {subsection}{\numberline {3.1}What is a Functor?}{17}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Category of Small Categories}{19}{subsection.3.2}%
@@ -16,5 +17,5 @@
 \contentsline {section}{\numberline {4}Natural Transformations}{21}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Defining Natural Transformations}{21}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}The Category of Functors}{22}{subsection.4.2}%
-\contentsline {section}{\numberline {5}What are Sets?}{24}{section.5}%
-\contentsline {subsubsection}{\numberline {5.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{24}{subsubsection.5.0.1}%
+\contentsline {section}{\numberline {5}What are Sets?}{25}{section.5}%
+\contentsline {subsubsection}{\numberline {5.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{25}{subsubsection.5.0.1}%

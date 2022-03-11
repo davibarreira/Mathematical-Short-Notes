@@ -133,7 +133,7 @@ Let's formally define a category and provide some examples.
   \end{enumerate}
 \end{definition}
 
-There are many ways to refers to the set of morphisms $Mor_\mathcal C (X,Y)$, such as
+There are many ways to refers to the class of morphisms $Mor_\mathcal C (X,Y)$, such as
 $\mathcal C(X,Y)$ or $\text{hom}_\mathcal C (X,Y)$. The reason for this is that
 this set is sometimes called hom-set. In this notes, we'll use either $Mor_\mathcal C (X,Y)$
 or $\mathcal C (X,Y)$ when there is no ambiguity. Also, we'll use $dom_f$ to mean $dom(f)$,
@@ -548,6 +548,17 @@ This is a contradiction, since $g$ is a linear transformation.
   that compositions with zero morphisms return zero morphisms.
 \end{proof}
 
+\subsection{Categorical Product}
+
+In set theory, we are used to the notion of a cartesian product. Similarly
+to how we did for isomorphism, the idea of a product can be generalized via
+Category Theory. Here is how it's done.
+
+\begin{definition}[Categorical Product]
+  Let $A,B$ be objects ina  category $\mathcal C$.
+\end{definition}
+
+
 \subsection{Understanding Duality}
 
 In several fields of Mathematics, one is faced with the informal notion of a dual.
@@ -833,7 +844,7 @@ is associative, and we also need to define an identity morphism.
   In the category $\mathcal D^{\mathcal C}$, define the composition of two natural
   transformations $\alpha:F\to G$ and $\beta:G\to H$ as
   \begin{displaymath}
-    \forall c \in \mathcal C \alpha_c \fatsemi \beta_c = (\alpha \fatsemi \beta)_c.
+    \forall c \in \mathcal C, \ \alpha_c \fatsemi \beta_c = (\alpha \fatsemi \beta)_c.
   \end{displaymath}
   Then, using this definition, $\alpha \fatsemi \beta$ is indeed a normal transformation
   from $F \to H$, and this composition is associative.
@@ -851,40 +862,73 @@ is associative, and we also need to define an identity morphism.
     (\alpha_c \fatsemi \beta_c) \fatsemi \gamma_c \\&= 
     (\alpha_c \fatsemi \beta_c) \fatsemi \gamma_c \\&= 
     (\alpha \fatsemi \beta)_c \fatsemi \gamma_c
-    \iff (\alpha \fatsemi \beta) \fatsemi \gamma
+    \iff (\alpha \fatsemi \beta) \fatsemi \gamma.
   \end{align*}
-  
-  
+  We proved the associative part. Now, we need to show that such $\alpha \fatsemi \beta$
+  is a natural transformation from $F$ to $H$. Take $f:c\to c' \in Mor_\mathcal C$.
+  Consider $(\alpha \fatsemi \beta)_{c}:F(c) \to H(c)$, and
+  $(\alpha\fatsemi \beta)_{c'}:F(c') \to H(c')$. Note that
+  \begin{displaymath}
+    F(f) \fatsemi \alpha_{c'} = \alpha_{c} \fatsemi G(f), \quad
+    G(f) \fatsemi \beta_{c'} = \beta_{c} \fatsemi H(f).
+  \end{displaymath}
+
+  Therefore, we have
+  \begin{align*}
+    F(f) \fatsemi (\alpha\fatsemi \beta)_{c'} =
+    (F(f) \fatsemi \alpha_{c'}) \fatsemi \beta_{c'} &=
+    (\alpha_c \fatsemi G(f)) \fatsemi \beta_{c'} \\&=
+    \alpha_c \fatsemi (G(f) \fatsemi \beta_{c'}) \\&=
+    \alpha_c \fatsemi \beta_c \fatsemi H(f)\\&=
+    (\alpha \fatsemi \beta)_c \fatsemi H(f).
+  \end{align*}
 \end{proof}
 
 \begin{example}[Natural Transformations in Sets]
-  Consider the categories $\bm 1$ and $\bm{Set}$.
-  Since $\bm 1$ has only one object $1$ and one morphisms $id_1$, then each functor
+  Consider the categories $\bm 1$ and $\bm{Set}$. We wish to
+  construct the category $\bm{Set}^{\bm 1}$, i.e. of functors from $\bm 1$
+  to $\bm{Set}$. Since $\bm 1$ has only one object $1$ and one morphisms $id_1$, then each functor
   $F:\bm 1 \to \bm{Set}$ is completely defined by $F(1) = S$, where $S$ is a set, and,
   by the definition of a functor, $F(id_1) = id_S$. This means that every functor
   can be indexed by the set to which it takes the object of $\bm 1$, e.g. $F_A$ is the
-  functor that $F(1)$ is equal to set $A$. Note that, in a sense, every functor
-  $F_A$ is the ``same'' as the set $A$ itself. In a strange way, by going a level higher
-  in abstraction we ended up going inside the category $\bm{Set}$.
+  functor that $F(1)$ is equal to set $A$.
 
   Next, we want to define a natural transformation $\alpha: F_A \to F_B$.
-  By definition, there are two criteria to satisfy. First, for every object $1 \in Ob_{\bm 1}$ we have
+  By definition, there are two criteria to satisfy. First,
+  for every object $1 \in Ob_{\bm 1}$ we have
   $\alpha_1:F_A(1) \to F_B(1)$ such that $\alpha_1 \in Mor_{\bm{Set}}(F_A(1),F_B(1))$.
-  Since the only object in $\bm 1$ is $1$, we only need to worry about $\alpha_1$.
-  Secondly, we need that for every $f \in Mor_{\bm 1} (1,1)$, it's true that
+  Since the only object in $\bm 1$ is $1$, we only need to define $\alpha_1$ to fully define $\alpha$.
+  Since $\alpha_1$ must be a morphism of $\bm{Set}$, then $\alpha_1$ is a function
+  from $A$ to $B$.
+
+  Secondly, for every $f \in Mor_{\bm 1} (1,1)$, it's required that
   \begin{displaymath}
     F_A(f) \fatsemi \alpha_1 = \alpha_1 \fatsemi F_B(f).
   \end{displaymath}
-  Again, since the only morphism in $\bm 1$ is $id_1$, we only need to worry that
+  Again, since the only morphism in $\bm 1$ is $id_1$, we only need to prove that
   \begin{displaymath}
     F_A(id_1) \fatsemi \alpha_1 = \alpha_1 \fatsemi F_B(id_1).
   \end{displaymath}
 
   Note that $F_A(id_1) = id_A$ and $F_B(id_1) = id_B$, and by the definition
-  of identity, we have that for $g \in Mor(A,B)$, $id_A \fatsemi g = g \fatsemi id_B$.
-  Therefore, the second condition is trivially satisfied. We just need to worry
-  about the first condition.
+  of the identity, we have that for $g \in Mor(A,B)$, $id_A \fatsemi g = g \fatsemi id_B$.
+  Hence, the second condition is trivially satisfied.
 
-  Note that if we 
+  With this, we conclude that the natural transformations from
+  functors $F_A$ to $F_B$ are, in a sense, isomorphic to functions from sets
+  $A$ to $B$.
   
+  Considering the category $\bm{SmCat}$ of small categories, we can actually prove
+  that $\bm{Set}$ and $\bm{Set}^{\bm 1}$ are isomorphic.
+
+  Consider the functor
+  $I:\bm{Set}^{\bm 1} \to \bm{Set}$ where $I(F_A) = A \in \bm{Set}$ and
+  for any natural transformation $\alpha^{(f)}$ where $\alpha^{(f)}_1 = f$, we have
+  $I(\alpha^{(f)}) = f$. Also, define $I^{-1}(A) = F_A$ and
+  $I^{-1}(f) = \alpha_f$.
+  Thus, $I$ defines an isomorphism between the two categories.
+
+  This is only a sketch proof, since we would still need to prove that such
+  functor $I$ exists and is well-defined.
+
 \end{example}

@@ -41,6 +41,7 @@ end
 function quiverarrow(shaftendpoint, endpoint, shaftangle)
     @layer begin
         r = 6
+        setdash("solid")
         setlinecap("round")
         translate(endpoint)
         rotate(shaftangle-π)
