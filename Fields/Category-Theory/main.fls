@@ -415,6 +415,9 @@ INPUT ./main.loe
 INPUT ./main.loe
 INPUT ./main.loe
 INPUT ./main.loe
+INPUT ./main.loe
+INPUT ./main.loe
+INPUT /home/davibarreira/.texlive2020/texmf-var/luatex-cache/generic/fonts/otl/lmromandemi10-regular.luc
 OUTPUT 1-Category-Theory.aux
 INPUT ./1-Category-Theory.tex
 INPUT ./1-Category-Theory.tex
@@ -438,7 +441,6 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/stmaryrd/stmary5.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr5.tfm
 INPUT /home/davibarreira/.texlive2020/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-italic.luc
-INPUT /home/davibarreira/.texlive2020/texmf-var/luatex-cache/generic/fonts/otl/lmromandemi10-regular.luc
 INPUT ./notebooks/1Cat.pdf
 INPUT ./notebooks/1Cat.pdf
 INPUT ./notebooks/1Cat.pdf
@@ -466,6 +468,12 @@ INPUT ./notebooks/Span.pdf
 INPUT ./notebooks/CategoricalProduct.pdf
 INPUT ./notebooks/CategoricalProduct.pdf
 INPUT ./notebooks/CategoricalProduct.pdf
+INPUT ./notebooks/Cospan.pdf
+INPUT ./notebooks/Cospan.pdf
+INPUT ./notebooks/Cospan.pdf
+INPUT ./notebooks/CategoricalCoproduct.pdf
+INPUT ./notebooks/CategoricalCoproduct.pdf
+INPUT ./notebooks/CategoricalCoproduct.pdf
 INPUT ./notebooks/Functor.pdf
 INPUT ./notebooks/Functor.pdf
 INPUT ./notebooks/Functor.pdf

@@ -1,7 +1,7 @@
 Notes mostly based on \citet{maico2020categoria},
 \citet{bradley2020topology}, \citet{borceux1994handbook}.
 
-\section{Why study Category Theory}
+\section{Preface}
 
 The study of Category Theory enables us to view Mathematics from a vantage
 point, and better understand how the different areas are connected.
@@ -17,6 +17,16 @@ side of Category Theory.
 
 For those interested in applying Category Theory, Julia has a very
 prominent package called Catlab.jl, which will be shown in these notes.
+
+These notes are intended to serve as a quick introduction to people interested
+in applying Category Theory. Thus, instead of focusing on proving theorems
+or presenting a plethora of examples in mathematics, the goal is to rigorously
+(and quickly) introduce the field together with some intuition and useful examples.
+
+The notes start by introducing the \textbf{big 5} of Category Theory, namely,
+categories, functors, natural transformations, limits/colimits and adjoints.
+After that, we focus on some applications of Category Theory,
+mainly it's application to data structures / data bases.
 
 \section{Categories}
 
@@ -276,14 +286,14 @@ a \textit{preorder reflection}).
 
 There are many other examples:
 \begin{enumerate}[1.]
-  \item $\bm{Set}$ which is the category of sets, where the objects are sets and the morphisms are functions between sets.
-  \item $\bm{Top}$ is the category where topological spaces are the objects and continuous functions are the morphisms.
-  \item $\bm{Vec}_\mathbb F$ is the category where vector spaces over field $\mathbb F$ are the objects,
+  \item $\mathbf{Set}$ which is the category of sets, where the objects are sets and the morphisms are functions between sets.
+  \item $\mathbf{Top}$ is the category where topological spaces are the objects and continuous functions are the morphisms.
+  \item $\mathbf{Vec}_\mathbb F$ is the category where vector spaces over field $\mathbb F$ are the objects,
     and linear transformations are the morphisms.
-  \item $\bm{Gr}$ is the category of directed graphs, where $Ob_{\bm{Gr}} := \{\text{Vertex}, \text{Arrow}\}$,
+  \item $\mathbf{Gr}$ is the category of directed graphs, where $Ob_{\mathbf{Gr}} := \{\text{Vertex}, \text{Arrow}\}$,
     and the morphisms are
     \begin{displaymath}
-      Mor_{\bm{Gr}} := \{
+      Mor_{\mathbf{Gr}} := \{
         src,
         tgt,
         id_{\text{Vertex}},
@@ -548,27 +558,6 @@ This is a contradiction, since $g$ is a linear transformation.
   that compositions with zero morphisms return zero morphisms.
 \end{proof}
 
-\subsection{Categorical Product}
-
-In set theory, we are used to the notion of a cartesian product. Similarly
-to how we did for isomorphism, the idea of a product can be generalized via
-Category Theory. Here is how it's done.
-
-\begin{definition}[Span]
-  Let $A,B$ be objects in a  category $\mathcal C$. A span
-  on $A$ and $B$ is a triple $(Z,f,g)$ where $f:Z\to A$ and
-  $g:Z\to B$ are morphisms in $\mathcal C$. This is
-  shown in figure \ref{fig:Span}.
-\end{definition}
-
-\begin{figure}[H]
-  \begin{center}
-    \includegraphics{./notebooks/Span.pdf}
-  \end{center}
-  \caption{Diagrams showcasing a span between $A$ and $B$.}
-  \label{fig:Span}
-\end{figure}
-
 \subsection{Understanding Duality}
 
 In several fields of Mathematics, one is faced with the informal notion of a dual.
@@ -595,6 +584,7 @@ This definition gives rise to a very interesting result (observation), called th
 
   For a statement $s$ about a category $\mathcal C$, the dual statement is the same
   statement, but with regards to $\mathcal C^{op}$.
+  \label{def:DualProperty}
 \end{definition}
 For example, ``a category has an initial object if and only if the dual category has a terminal object''.
 In this example, the property of having an initial object is the dual property of having a terminal object,
@@ -616,6 +606,27 @@ i.e. the dual statement is true. And what is the dual statement? That for every 
 the initial object is unique up to an isomorphism. But an initial object in $\mathcal C^{op}$
 is a terminal object in $\mathcal C$. So we have, without any effort, that every terminal
 object is unique up to an isomorphism.
+
+\subsection{Categorical Product and Coproduct}
+
+In set theory, we are used to the notion of a Cartesian product. Similarly
+to how we did for isomorphism, the idea of a product can be generalized via
+Category Theory. Here is how it's done.
+
+\begin{definition}[Span]
+  Let $A,B$ be objects in a  category $\mathcal C$. A span
+  on $A$ and $B$ is a triple $(Z,f,g)$ where $f:Z\to A$ and
+  $g:Z\to B$ are morphisms in $\mathcal C$. This is
+  shown in figure \ref{fig:Span}.
+\end{definition}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics{./notebooks/Span.pdf}
+  \end{center}
+  \caption{Diagrams showcasing a span between $A$ and $B$.}
+  \label{fig:Span}
+\end{figure}
 
 \begin{definition}[Categorical Product]
   Let $A,B$ be objects in a  category $\mathcal C$. A span $(A\times B, \pi_1, \pi_2)$
@@ -672,6 +683,80 @@ product associated.
   is a contradiction.
 
 \end{proof}
+
+From the definition of a product, it's easy to think of possible dual constructions
+by just inverting the arrows (morphisms).
+
+\begin{definition}[Cospan]
+  Let $A,B$ be objects in a  category $\mathcal C$. A cospan
+  on $A$ and $B$ is a triple $(Z,f,g)$ where $f:A\to Z$ and
+  $g:B\to Z$ are morphisms in $\mathcal C$. This is
+  shown in Figure \ref{fig:Cospan}.
+\end{definition}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics{./notebooks/Cospan.pdf}
+  \end{center}
+  \caption{Diagrams showcasing a cospan between $A$ and $B$.}
+  \label{fig:Cospan}
+\end{figure}
+
+\begin{definition}[Categorical Coproduct]
+  Let $A,B$ be objects in a  category $\mathcal C$. A cospan $(A + B, i_1, i_2)$
+  is called a product between $A$ and $B$ if for every span $(Z, f, g)$ of $A$ and $B$,
+  there exists a unique morphism $h_{f,g}:Z \to A \times B$ such that
+  $i_1 \fatsemi h_{f,g} = f$ and $i_2 \fatsemi h_{f,g} = g$. That is the same
+  as saying that the diagram \ref{fig:Coproduct} commutes.
+\end{definition}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics{./notebooks/CategoricalCoproduct.pdf}
+  \end{center}
+  \caption{Diagrams showcasing the categorical coproduct. Note that the dashed line
+  is intended to highlight that the morphism $h_{f,g}$ is uniquely induced by $f$ and $g$.}
+  \label{fig:Coproduct}
+\end{figure}
+
+While the categorical product was constructed to generalize the Cartesian set product,
+the coproduct was constructed in Category Theory, so the question is
+``to what does the coproduct corresponds in set theory?''. The answer is the
+disjoint union! It's not a coincidence that we used ``$+$'' to symbolize it.
+
+The idea of a product construction induced the notion of a product object
+$A \times B$. Yet, this construction also induces another definition, of the
+so called (co)product morphism.
+
+\begin{definition}[Product and Coproduct Morphism]
+  Let $A, B, C, D \in Ob_\mathcal C$,
+  $(A\times B, \pi^{A,B}_1, \pi^{A,B}_2)$ and
+  $(C\times D, \pi^{C,D}_1, \pi^{C,D}_2)$ two products in the category $\mathcal C$,
+  $f:A\to C$ and $g:B \to D$ two morphisms in $\mathcal C$. Hence, the
+  morphism induced by $\pi_1^{A,B} \fatsemi f$ and $\pi_2^{A,B} \fatsemi g$ is
+  called product morphism and denoted by $f \times g$, where
+  \begin{displaymath}
+    f \times g := (\pi_1^{A,B} \fatsemi f, \pi_2^{A,B} \fatsemi g): A\times B \to C \times D.
+  \end{displaymath}
+\end{definition}
+
+\begin{theorem}
+  The product morphism $f\times g$ is the only morphism in $Mor_\mathcal C (A\times B, C \times D)$
+  such that
+  \begin{displaymath}
+    \pi_1^{C,D} \circ (f\times g) = f \circ \pi_1^{A,B}, \quad
+    \pi_2^{C,D} \circ (f\times g) = g \circ \pi_2^{A,B}.
+  \end{displaymath}
+\end{theorem}
+
+The coproduct morphism follows the same definition, but with coproducts.
+
+Finally, one might be wondering what is an actual example of a product morphisms.
+For sets, it's the intuitive object, e.g. for two functions $f:A \to B$
+and $g:C \to D$, the product morphism $f\times g:A\times B \to C \times D$
+is just $(f\times g) (x,y) = (f(x), g(y))$.
+
+\subsection{Pullback, Pushout and Equalizers}
 
 \section{Functors}
 Another central definition in Category Theory is that of Functors.
@@ -832,6 +917,36 @@ if $\langle Ob_{F(\mathcal C)}, Mor_{F(\mathcal C)} \rangle$ is a category where
 \end{displaymath}
 The answer is no.
 
+\subsection{Relevant Examples of Functors}
+
+Now that we know what a functor is, let's showcase some relevant examples
+that might be useful to someone applying Category Theory to another field.
+
+\begin{example}[Power Set Functor]
+  The power set functor $\mathcal P : \mathbf{Set} \to \mathbf{Set}$ takes a
+  set to it's power set and a function $f:A\to B$ to the image function
+  $Im f : \mathcal P(A) \to \mathcal P(B)$, i.e. for a subset $S \subset A$
+  in the domain, returns $f(S) := \{ f(x) \ : x \in S\}$.
+
+  Another even more relevant example is the \textit{contravariante} power set
+  functor $F : \mathbf{Set} \to \mathbf{Set}$ that takes $A$ to $\mathcal P(A)$
+  and $f$ to the inverse image $f^{-1}$.
+\end{example}
+
+\begin{example}[Identity Functor]
+  This does what one might expect from the name. The identity
+  functor is $1_\mathcal C : \mathcal C \to \mathcal C$, such that
+  $1_\mathcal C (A) = A \in Ob_\mathcal C$ and
+  $1_\mathcal C (f) = f \in Mor_\mathcal C$.
+\end{example}
+
+\begin{example}[Inclusion Functor]
+  For a subcategory $\mathcal S$ of $\mathcal C$, the inclusion
+  functor is $I_\mathcal C : \mathcal S \to \mathcal C$, such that
+  $I_\mathcal C (A \in Ob_\mathcal S) = A \in Ob_\mathcal C$ and
+  $I_\mathcal C (f \in Mor_\mathcal S) = f \in Mor_\mathcal C$.
+\end{example}
+
 \subsection{Free Categories and $\mathcal C$-Sets}
 
 \section{Natural Transformations}
@@ -950,10 +1065,10 @@ is associative, and we also need to define an identity morphism.
 \end{proof}
 
 \begin{example}[Natural Transformations in Sets]
-  Consider the categories $\bm 1$ and $\bm{Set}$. We wish to
-  construct the category $\bm{Set}^{\bm 1}$, i.e. of functors from $\bm 1$
-  to $\bm{Set}$. Since $\bm 1$ has only one object $1$ and one morphisms $id_1$, then each functor
-  $F:\bm 1 \to \bm{Set}$ is completely defined by $F(1) = S$, where $S$ is a set, and,
+  Consider the categories $\bm 1$ and $\mathbf{Set}$. We wish to
+  construct the category $\mathbf{Set}^{\bm 1}$, i.e. of functors from $\bm 1$
+  to $\mathbf{Set}$. Since $\bm 1$ has only one object $1$ and one morphisms $id_1$, then each functor
+  $F:\bm 1 \to \mathbf{Set}$ is completely defined by $F(1) = S$, where $S$ is a set, and,
   by the definition of a functor, $F(id_1) = id_S$. This means that every functor
   can be indexed by the set to which it takes the object of $\bm 1$, e.g. $F_A$ is the
   functor that $F(1)$ is equal to set $A$.
@@ -961,9 +1076,9 @@ is associative, and we also need to define an identity morphism.
   Next, we want to define a natural transformation $\alpha: F_A \to F_B$.
   By definition, there are two criteria to satisfy. First,
   for every object $1 \in Ob_{\bm 1}$ we have
-  $\alpha_1:F_A(1) \to F_B(1)$ such that $\alpha_1 \in Mor_{\bm{Set}}(F_A(1),F_B(1))$.
+  $\alpha_1:F_A(1) \to F_B(1)$ such that $\alpha_1 \in Mor_{\mathbf{Set}}(F_A(1),F_B(1))$.
   Since the only object in $\bm 1$ is $1$, we only need to define $\alpha_1$ to fully define $\alpha$.
-  Since $\alpha_1$ must be a morphism of $\bm{Set}$, then $\alpha_1$ is a function
+  Since $\alpha_1$ must be a morphism of $\mathbf{Set}$, then $\alpha_1$ is a function
   from $A$ to $B$.
 
   Secondly, for every $f \in Mor_{\bm 1} (1,1)$, it's required that
@@ -983,11 +1098,11 @@ is associative, and we also need to define an identity morphism.
   functors $F_A$ to $F_B$ are, in a sense, isomorphic to functions from sets
   $A$ to $B$.
   
-  Considering the category $\bm{SmCat}$ of small categories, we can actually prove
-  that $\bm{Set}$ and $\bm{Set}^{\bm 1}$ are isomorphic.
+  Considering the category $\mathbf{SmCat}$ of small categories, we can actually prove
+  that $\mathbf{Set}$ and $\mathbf{Set}^{\bm 1}$ are isomorphic.
 
   Consider the functor
-  $I:\bm{Set}^{\bm 1} \to \bm{Set}$ where $I(F_A) = A \in \bm{Set}$ and
+  $I:\mathbf{Set}^{\bm 1} \to \mathbf{Set}$ where $I(F_A) = A \in \mathbf{Set}$ and
   for any natural transformation $\alpha^{(f)}$ where $\alpha^{(f)}_1 = f$, we have
   $I(\alpha^{(f)}) = f$. Also, define $I^{-1}(A) = F_A$ and
   $I^{-1}(f) = \alpha_f$.
@@ -997,3 +1112,7 @@ is associative, and we also need to define an identity morphism.
   functor $I$ exists and is well-defined.
 
 \end{example}
+
+\section{Limits, Colimits and Adjoints}
+
+
