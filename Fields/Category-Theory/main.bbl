@@ -1,4 +1,4 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{8}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -44,5 +44,10 @@ Maico Ribeiro.
 Steven Roman et~al.
 \newblock \emph{An Introduction to the Language of Category Theory}, volume~6.
 \newblock Springer, 2017.
+
+\bibitem[Spivak(2014)]{spivak2014category}
+David~I Spivak.
+\newblock \emph{Category theory for the sciences}.
+\newblock MIT Press, 2014.
 
 \end{thebibliography}

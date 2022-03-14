@@ -1,5 +1,7 @@
 Notes mostly based on \citet{maico2020categoria},
 \citet{bradley2020topology}, \citet{borceux1994handbook}.
+Whenever $\circledast$ is present, this indicates an original idea from the author,
+thus, it should be taken with a grain of salt.
 
 \section{Preface}
 
@@ -331,6 +333,7 @@ and can be generalized in Category Theory as follows:
     \item We say that $f$ is invertible if it's both left and right invertible.
   \end{enumerate}
   When an invertible morphism exists between $X$ and $Y$, we say that they are isomorphic.
+  \label{def:CategoricalIsomorphism}
 \end{definition}
 
 \begin{proposition}
@@ -756,9 +759,13 @@ For sets, it's the intuitive object, e.g. for two functions $f:A \to B$
 and $g:C \to D$, the product morphism $f\times g:A\times B \to C \times D$
 is just $(f\times g) (x,y) = (f(x), g(y))$.
 
+\subsection{Cartesian Categories}
+
 \subsection{Pullback, Pushout and Equalizers}
 
 \section{Functors}
+
+\textbf{FUNCTORS PRESERVE ISOMORPHISMS? CHECK,WRITE ABOUT}
 Another central definition in Category Theory is that of Functors.
 While morphisms relate objects inside a category, a Functor
 establishes a relation between categories, thus, it's one level
@@ -947,7 +954,6 @@ that might be useful to someone applying Category Theory to another field.
   $I_\mathcal C (f \in Mor_\mathcal S) = f \in Mor_\mathcal C$.
 \end{example}
 
-\subsection{Free Categories and $\mathcal C$-Sets}
 
 \section{Natural Transformations}
 
@@ -1064,6 +1070,22 @@ is associative, and we also need to define an identity morphism.
   \end{align*}
 \end{proof}
 
+Since natural transformations are morphisms between functors in this category of functors,
+we can now ponder what would an isomorphism between natural transformations look like.
+Remember the definition of a categorical isomorphism \ref{def:CategoricalIsomorphism}.
+With such definition, we can prove the following result.
+
+\begin{theorem}[Natural Isomorphism \citep{spivak2014category}]
+  Let $\mathcal C$ and $\mathcal D$ be categories, and $F,G:\mathcal C \to \mathcal D$ functors.
+  A natural transformation $\alpha : F \to G$ is an isomorphism in $\mathcal D^\mathcal C$
+  if and only if $\alpha_c: F(c) \to G(c)$ is an isomorphism in $\mathcal D$ for every
+  $c \in Ob_\mathcal C$.
+\end{theorem}
+\begin{proof}
+  Check proposition 5.3.2.12 from \citet{spivak2014category}.
+\end{proof}
+
+
 \begin{example}[Natural Transformations in Sets]
   Consider the categories $\bm 1$ and $\mathbf{Set}$. We wish to
   construct the category $\mathbf{Set}^{\bm 1}$, i.e. of functors from $\bm 1$
@@ -1113,6 +1135,231 @@ is associative, and we also need to define an identity morphism.
 
 \end{example}
 
+
+
+
 \section{Limits, Colimits and Adjoints}
 
+\section{Applied Category Theory}
 
+Now that some of the basics of Category Theory has been introduced, we can more
+easily talk about some actual applications. Still, when trying to apply a categorical
+view to a subject, we need to formalize concepts into categories, functors, natural
+transformations and so on, in order to be able to incorporate the results from Category Theory.
+
+We begin this section by formalizing some of the tools that we have been using informally,
+which are the diagrams.
+This helps us clarify the connection between graphs and categories.
+Next, we define what are schemas, presentations, $\mathcal C$-sets, free categories
+and preorder reflections.
+
+The rest of the section focuses on showing how these concepts are used to
+model data structures/databases, which can very
+elegantly be understood in Category Theory, and which help us deal with the very
+common issue of data migration.
+
+\subsection{Formalizing Diagrams}
+
+We've drawn many diagrams representing either categories or portions of categories. Up
+until now, this has been done in a informal way. Yet, it's possible to define such diagrams rigorously.
+One of the reasons that formal diagrams are useful is that they allow us to talk about portions
+of some category $\mathcal C$ in a rigorous manner.
+
+\begin{definition}[Diagram]
+  An $\mathcal I$-diagram (or just diagram) $D$ of a category $\mathcal C$ is a functor
+  $D: \mathcal I \Rightarrow \mathcal C$, where $\mathcal I$ is called the index category.
+\end{definition}
+
+The definition above is pretty much a ``placeholder'', i.e. any functor can be seen as
+a diagram since there is no conditions placed on the index category.
+
+\begin{definition}[Commutative Diagram]
+  A diagram $D:\mathcal I \to \mathcal C$ is said to be commutative if 
+  for every path starting at $D(A)$ and ending at $D(B)$, the result is the same,
+  where $A, B \in Ob_\mathcal I$. Here, a path is 
+\end{definition}
+
+\begin{shaded}
+  \textbf{Aesthetic differences when drawing diagrams.}
+  If you've picked up any book on Category Theory, you'll note that almost every
+  drawing of a diagram uses the label of a node instead of the black circle
+  as we've done here. This is just a matter of aesthetics, yet, authors
+  sometimes draw the black circles when they want to emphasize the
+  ``directed graph'' nature of the diagram, i.e. they want to highlight
+  that this diagram can be seen as a directed graph.
+
+  Therefore, the choice of how to draw these diagram comes down to
+  aesthetic preferences. In these notes, we've opted for drawing the
+  black dots.
+\end{shaded}
+
+\subsection{Underlying Graphs}
+
+Our definition of diagrams was in no way ``visual'', i.e. when we draw
+diagrams, we are actually drawing graphs. Therefore, we have to formalize how
+we relate graphs and categories.
+For that, we'll use both the
+category of graphs $\mathbf{Gr}$, the category of small categories
+$\mathbf{SmCat}$ and some others, which will be introduced.
+
+The idea here is to show that we can define a functor
+$G$ that takes categories and returns graphs in $Ob_\mathbf{Gr}$.
+Similarly, we want to know if and when we can use graphs to generate categories.
+As we shall see, this can indeed be done, but will be left for the following section.
+
+Remember, a graph $G$ is an object of $\mathbf{Gr}$ and it
+consists of a quadruple $(V, A, src, tgt)$. In $\mathbf{Gr}$, morphisms
+between categories are graph homomorphisms.
+
+\begin{definition}[Graph Homomorphism \citep{spivak2014category}]
+  For two graphs $G=(V, A, src, tgt)$ and $G' = (V', A', src', tgt')$,
+  a graph homomorphism is a function
+  $f:G \to G'$
+\end{definition}
+
+Another important definition
+is the idea of paths.
+
+
+\begin{definition}[Underlying Graph of a Category]
+  Every small category $\mathcal C$ has an underlying graph which consists of
+  \begin{displaymath}
+  G(\mathcal C) := \begin{cases}
+    \text{Vertices} = Ob_\mathcal C \\
+    \text{Arrows} = Mor_\mathcal C \\
+    \text{Source} = \{dom(f)  : f \in Mor_\mathcal C\} \\
+    \text{Target} = \{cod(f)  : f \in Mor_\mathcal C\}.
+    \end{cases}
+  \end{displaymath}
+  Moreover, we can actually define a functor $G : \mathbf{SmCat} \to \mathbf{Gr}$,
+  where $G(\mathcal C) \in Ob_{\mathbf{Gr}}$. Remember that functor in the 
+  category of small categories are composable, hence, for any 
+  functor $F:\mathcal C \to \mathcal D$, we can do
+  $G(F):G(\mathcal C) \to G(\mathcal D)$, which is a graph homomorphism.
+\end{definition}
+
+Note that we restricted our underlying graph to small categories so that
+the vertices and arrows in the graph are actually sets.
+
+\subsection{Generating Categories from Graphs}
+
+We showed in the previous section how we can take a small category and turn it
+into a graph. But what about the other way around? Can we take a graph and turn it
+into a category? More so, can any small category be generated from a graph?
+As we'll see, the answer to the last question is a no. Yet, there is a
+something very similar to a graph that indeed can generate every small category,
+and these are what we call a schema. We leave the discussion of schemas to the next section.
+
+\begin{definition}[Paths \citep{spivak2014category}]
+  Let $G:=(V, A, src, tgt)$ be a graph. A \textit{path} of graph $G$
+  is an ordered list of arrows indexed by the starting vertex, e.g. $(a_1,..., a_n)_v$,
+  such that $src(a_i) = tgt(a_{i+1})$ for $i \in\{1,...,n-1\}$.
+  The length of the path is equal to the
+  number of arrows in the list. The empty path $()_v$ is a path of length 0 starting at vertex $v$.
+  We use $Path^{(n)}_G$ to represent the set of paths with length $n$
+  and $Path_G$ to be the set of all paths in $G$. Thus, $Path^{(0)}_G$ is equal to the set of vertices
+  in the graph.
+
+  We can define functions $\overline{src}, \overline{tgt}:Path_G \to V$,
+  which do the same thing that the source and target functions do in arrows,
+  but applied to paths.
+
+  Lastly, one can concatenate paths via $++$, such that
+  for $p = (a_1,...,a_n)$ and $q = (b_1=a_n,...,b_m)$, then
+  \begin{displaymath}
+    p ++ q = (a_1,...,a_n=b_1, b_2,...,b_m).
+  \end{displaymath}
+\end{definition}
+
+\begin{definition}[Path Functor]
+  Given a graph $G:=(V, A, src, tgt)$, we can construct a new graph
+  \begin{displaymath}
+    Path(G) := (V, Path_G, \overline{src}, \overline{tgt}),
+  \end{displaymath}
+  which we'll called the path graph version of $G$.
+  Moreover, we can actually define a functor $Path : \mathbf{Gr} \to \mathbf{Gr}$,
+  which takes graphs to their path graphs, i.e. $Path(G) \in \mathbf {Gr}$ and
+  graph homomorphisms $f:G \to G'$ to $Path(f):Path(G)\to Path(G')$.
+\end{definition}
+
+An example of a graph an it's path graph is again the graph in figure \ref{fig:2Catsimple}
+and \ref{fig:2Cat}, respectively. As we can see, the path graph contains an arrow for each
+morphism in the $\mathbf{2}$ category, which is the one represented in these diagrams.
+Thus, for any path graph $Path(G) \in Ob_\mathbf{Gr}$, we can define a category
+$\mathcal C(Path(G))$ by assigning vertices to objects,
+making $Mor_{\mathcal C(Path(G))}(v_1,v_2)$ equal to the set of paths such that
+$\overline{src}(Path(G)) = v_1$ and $\overline{tgt}(Path(G)) = v_2$, and sending
+the empty paths $()_v$ each to the identity morphism.
+
+Since we can define a path graph for each graph $G$, we can then create a functor
+that sends a graph $G$ to the category generated by the path graph of $G$. This
+functor is what we call the \textit{free category functor}.
+
+\begin{definition}[Free Category]
+  Let $G:=(V, A, src, tgt)$ be a graph and $\mathcal C$ a small category. The
+  free category functor $Free:\mathbf{Gr} \to \mathcal C$ is such that for
+  $G \in Ob_{\mathbf{Gr}}$, $Free(G) \in Ob_{\mathcal C}$ sends $G$ to the
+  category $\mathcal G$ constructed from $Path(G)$.
+  The category $\mathcal G$ is constructed by making $V = Ob_\mathcal G$,
+  $Mor_{\mathcal C(Path(G))}(v_1,v_2)$ equal to the set of paths such that
+  $\overline{src}(Path(G)) = v_1$ and $\overline{tgt}(Path(G)) = v_2$, and sending
+  the empty paths $()_v$ each to the identity morphism.
+\end{definition}
+
+For example,
+consider the graph (diagram) in the figure \ref{fig:Square}. How can we complete this graph
+in order to make it a category?
+% First, we consider every vertex an object of the category and
+% every arrow a morphism. Next, we could add loops in all vertices in order to
+% define the identity morphisms. We are still missing the compositions $f \fatsemi h$
+% and $$
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics{./notebooks/SquareGraph.pdf}
+  \end{center}
+  \caption{Example of ambiguous generated category from graph.}
+  \label{fig:Square}
+\end{figure}
+
+
+When drawing diagrams (graphs) to represent categories, we sometimes need to explicitly
+state that some composition of morphisms are equivalent. This can be formalized
+in what is called by \citet{spivak2014category} as \textit{path equivalence declaration}.
+
+\subsection{Generating Categories from Schemas}
+
+\subsection{$\mathcal C$-Sets, Schemas, Presentations and Instances}
+
+A very important tool for applications of Category Theory is the
+concept of $\mathcal C$-Sets, which is a functor $I:\mathcal C \to \mathbf{Set}$,
+also known as a set-valued functor on $\mathcal C$ \citep{fong2019invitation}.
+These functors are important because, as we'll see further on this section,
+they model the actual data inside a database.
+
+\begin{definition}[Path Equivalence Declaration (PED) \citep{spivak2014category}]
+  For two paths $p,q \in Path_G$, a PED is an expression of the form
+  $p \simeq q$, where $\overline{src}(p) = \overline{src}(q)$ and $\overline {tgt}(p)=\overline {tgt}(q)$.
+  Moreover, a set of PED's form an equivalence relation in $Path_G$, such that
+  if $p \simeq q$ and $k \simeq l$ and the target of $p$ and $q$ is the same as the source
+  of $k$ and $l$, then $p ++ k \simeq q ++ l$.
+\end{definition}
+
+
+\begin{definition}[$\mathcal C$-Set]
+  Given a \textit{small} category\footnote{Remember, a small category is one where both
+  $Ob_\mathcal C$ and $Mor_\mathcal C$ are sets.} $\mathcal C$, a $\mathcal C$-set
+  is a functor $I:\mathcal C \to \mathbf{Set}$. Also, a finite $\mathcal C$-set
+  is a functor $I:\mathcal C \to \mathbf{FinSet}$.
+\end{definition}
+
+\begin{definition}[Schema \citep{spivak2014category}]
+  A database schema is a tuple $(G, \simeq)$ consisting of a graph $G$ and a set of PED's, also
+  called a congruence on $G$.
+\end{definition}
+
+5.2.2
+Database schemas present categories
+
+
+\subsection{Free Categories and Preorder Reflections}

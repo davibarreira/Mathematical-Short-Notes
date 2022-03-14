@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/Debian)  (format=lualatex 2021.12.23)  12 MAR 2022 14:40
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/Debian)  (format=lualatex 2021.12.23)  14 MAR 2022 20:26
  restricted system commands enabled.
  file:line:error style messages enabled.
 **main.tex
@@ -527,7 +527,14 @@ Package fontspec Info: Font family 'JuliaMono-Medium(0)' created for font
 (fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
 (fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
 
-) (./julia_listings.tex (./julia_listings_unicode.tex)) (./julia_listings.tex (./julia_listings_unicode.tex)) (./julia_listings_unicode.tex)
+) (./julia_listings.tex (./julia_listings_unicode.tex)) (./julia_listings.tex (./julia_listings_unicode.tex)) (./julia_listings_unicode.tex) (/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip62
+\fb@frw=\dimen183
+\fb@frh=\dimen184
+\FrameRule=\dimen185
+\FrameSep=\dimen186
+)
 \c@axiom=\count302
 \c@theorem=\count303
 \c@exer=\count304
@@ -538,34 +545,34 @@ Package: stmaryrd 1994/03/03 St Mary's Road symbol package
 \symstmry=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
 (Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
-) (./main.aux (./1-Category-Theory.aux) (./2-Category-Theory.aux) (./appendix.aux))
+) (./main.aux
+(./1-Category-Theory.aux) (./2-Category-Theory.aux) (./appendix.aux))
 \openout1 = main.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 62.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 62.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 66.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 66.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -605,13 +612,13 @@ LaTeX Font Info:    ... okay on input line 62.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count308
-\scratchdimen=\dimen183
+\scratchdimen=\dimen187
 \scratchbox=\box57
 \nofMPsegments=\count309
 \nofMParguments=\count310
 \everyMPshowfont=\toks41
 \MPscratchCnt=\count311
-\MPscratchDim=\dimen184
+\MPscratchDim=\dimen188
 \MPnumerator=\count312
 \makeMPintoPDFobject=\count313
 \everyMPtoPDFconversion=\toks42
@@ -627,7 +634,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-Package hyperref Info: Link coloring ON on input line 62.
+Package hyperref Info: Link coloring ON on input line 66.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -637,9 +644,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count314
 )
-LaTeX Info: Redefining \ref on input line 62.
-LaTeX Info: Redefining \pageref on input line 62.
-LaTeX Info: Redefining \nameref on input line 62.
+LaTeX Info: Redefining \ref on input line 66.
+LaTeX Info: Redefining \pageref on input line 66.
+LaTeX Info: Redefining \nameref on input line 66.
  (./main.out) (./main.out)
 \@outlinefile=\write3
 
@@ -650,65 +657,65 @@ Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 
 \symlegacymaths=\mathgroup10
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 62.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 62.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 62.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 62.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 62.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 62.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 62.
-LaTeX Font Info:    Redeclaring math accent \check on input line 62.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 62.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 62.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 62.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 62.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 62.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 62.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 62.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 62.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 62.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 62.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 62.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 62.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 62.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 62.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 62.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 62.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 66.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 66.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 66.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 66.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 66.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 66.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 66.
+LaTeX Font Info:    Redeclaring math accent \check on input line 66.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 66.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 66.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 66.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 66.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 66.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 66.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 66.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 66.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 66.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 66.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 66.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 66.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 66.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 66.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 66.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 66.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 62.
+(Font)              `operators' in the math version `normal' on input line 66.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 62.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 66.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 62.
+(Font)              `operators' in the math version `bold' on input line 66.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 62.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 66.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 62.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 62.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 62.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 62.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/JuliaMono-Medium(0)/m/n on input line 62.
+(Font)                  OT1/cmtt/m/n --> TU/JuliaMono-Medium(0)/m/n on input line 66.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 62.
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 62.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 62.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 66.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/JuliaMono-Medium(0)/b/n on input line 62.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 68.
+(Font)                  OT1/cmtt/m/n --> TU/JuliaMono-Medium(0)/b/n on input line 66.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 72.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 68.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 72.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 68.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 72.
  (/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./main.toc [2])
@@ -725,49 +732,49 @@ LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
  (./1-Category-Theory.tex [8
 
 ]
-Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 50.
-LaTeX Font Info:    Trying to load font information for U+euf on input line 51.
+Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 52.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 53.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 63.
-Package hyperref Info: bookmark level for unknown axiom defaults to 0 on input line 74.
+Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 65.
+Package hyperref Info: bookmark level for unknown axiom defaults to 0 on input line 76.
  [9] [10]
-Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 169.
-<./notebooks/1Cat.pdf, id=320, 80.3pt x 80.3pt>
+Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 171.
+<./notebooks/1Cat.pdf, id=382, 80.3pt x 80.3pt>
 File: ./notebooks/1Cat.pdf Graphic file (type pdf)
 <use ./notebooks/1Cat.pdf>
-Package luatex.def Info: ./notebooks/1Cat.pdf  used on input line 174.
+Package luatex.def Info: ./notebooks/1Cat.pdf  used on input line 176.
 (luatex.def)             Requested size: 80.29979pt x 80.29979pt.
-<./notebooks/2Cat.pdf, id=321, 160.6pt x 80.3pt>
+<./notebooks/2Cat.pdf, id=383, 160.6pt x 80.3pt>
 File: ./notebooks/2Cat.pdf Graphic file (type pdf)
 <use ./notebooks/2Cat.pdf>
-Package luatex.def Info: ./notebooks/2Cat.pdf  used on input line 187.
+Package luatex.def Info: ./notebooks/2Cat.pdf  used on input line 189.
 (luatex.def)             Requested size: 160.5996pt x 80.29979pt.
-<./notebooks/2Catsimple.pdf, id=323, 160.6pt x 40.15pt>
+<./notebooks/2Catsimple.pdf, id=385, 160.6pt x 40.15pt>
 File: ./notebooks/2Catsimple.pdf Graphic file (type pdf)
 <use ./notebooks/2Catsimple.pdf>
-Package luatex.def Info: ./notebooks/2Catsimple.pdf  used on input line 198.
+Package luatex.def Info: ./notebooks/2Catsimple.pdf  used on input line 200.
 (luatex.def)             Requested size: 160.5996pt x 40.14989pt.
  [11
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.1'
 
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.2'
 <./notebooks/1Cat.pdf><./notebooks/2Cat.pdf>]
-<./notebooks/3CatComplete.pdf, id=336, 240.9pt x 90.3375pt>
+<./notebooks/3CatComplete.pdf, id=397, 240.9pt x 90.3375pt>
 File: ./notebooks/3CatComplete.pdf Graphic file (type pdf)
 <use ./notebooks/3CatComplete.pdf>
-Package luatex.def Info: ./notebooks/3CatComplete.pdf  used on input line 210.
+Package luatex.def Info: ./notebooks/3CatComplete.pdf  used on input line 212.
 (luatex.def)             Requested size: 240.8994pt x 90.33727pt.
-<./notebooks/3Catsimple.pdf, id=338, 240.9pt x 40.15pt>
+<./notebooks/3Catsimple.pdf, id=399, 240.9pt x 40.15pt>
 File: ./notebooks/3Catsimple.pdf Graphic file (type pdf)
 <use ./notebooks/3Catsimple.pdf>
-Package luatex.def Info: ./notebooks/3Catsimple.pdf  used on input line 225.
+Package luatex.def Info: ./notebooks/3Catsimple.pdf  used on input line 227.
 (luatex.def)             Requested size: 240.8994pt x 40.14989pt.
-<./notebooks/NCat.pdf, id=339, 361.35pt x 40.15pt>
+<./notebooks/NCat.pdf, id=400, 361.35pt x 40.15pt>
 File: ./notebooks/NCat.pdf Graphic file (type pdf)
 <use ./notebooks/NCat.pdf>
-Package luatex.def Info: ./notebooks/NCat.pdf  used on input line 247.
+Package luatex.def Info: ./notebooks/NCat.pdf  used on input line 249.
 (luatex.def)             Requested size: 361.34912pt x 40.14989pt.
  [12
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.3'
@@ -776,97 +783,110 @@ warning  (pdf backend): ignoring duplicate destination with the name 'figure.4'
 
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.5'
 <./notebooks/2Catsimple.pdf><./notebooks/3CatComplete.pdf><./notebooks/3Catsimple.pdf>]
-<./notebooks/NMonoid.pdf, id=353, 100.375pt x 160.6pt>
+<./notebooks/NMonoid.pdf, id=414, 100.375pt x 160.6pt>
 File: ./notebooks/NMonoid.pdf Graphic file (type pdf)
 <use ./notebooks/NMonoid.pdf>
-Package luatex.def Info: ./notebooks/NMonoid.pdf  used on input line 279.
+Package luatex.def Info: ./notebooks/NMonoid.pdf  used on input line 281.
 (luatex.def)             Requested size: 100.37474pt x 160.5996pt.
  [13
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.6'
 
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.7'
 <./notebooks/NCat.pdf><./notebooks/NMonoid.pdf>] [14] [15] [16]
-Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 472.
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 475.
  [17] [18]
-<./notebooks/Span.pdf, id=421, 150.5625pt x 80.3pt>
+<./notebooks/Span.pdf, id=483, 150.5625pt x 80.3pt>
 File: ./notebooks/Span.pdf Graphic file (type pdf)
 <use ./notebooks/Span.pdf>
-Package luatex.def Info: ./notebooks/Span.pdf  used on input line 625.
+Package luatex.def Info: ./notebooks/Span.pdf  used on input line 628.
 (luatex.def)             Requested size: 150.56212pt x 80.29979pt.
  [19]
-<./notebooks/CategoricalProduct.pdf, id=435, 150.5625pt x 120.45pt>
+<./notebooks/CategoricalProduct.pdf, id=496, 150.5625pt x 120.45pt>
 File: ./notebooks/CategoricalProduct.pdf Graphic file (type pdf)
 <use ./notebooks/CategoricalProduct.pdf>
-Package luatex.def Info: ./notebooks/CategoricalProduct.pdf  used on input line 641.
+Package luatex.def Info: ./notebooks/CategoricalProduct.pdf  used on input line 644.
 (luatex.def)             Requested size: 150.56212pt x 120.44969pt.
  [20
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.8'
 
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.9'
 <./notebooks/Span.pdf><./notebooks/CategoricalProduct.pdf>]
-<./notebooks/Cospan.pdf, id=447, 150.5625pt x 80.3pt>
+<./notebooks/Cospan.pdf, id=508, 150.5625pt x 80.3pt>
 File: ./notebooks/Cospan.pdf Graphic file (type pdf)
 <use ./notebooks/Cospan.pdf>
-Package luatex.def Info: ./notebooks/Cospan.pdf  used on input line 699.
+Package luatex.def Info: ./notebooks/Cospan.pdf  used on input line 702.
 (luatex.def)             Requested size: 150.56212pt x 80.29979pt.
-<./notebooks/CategoricalCoproduct.pdf, id=449, 150.5625pt x 120.45pt>
+<./notebooks/CategoricalCoproduct.pdf, id=510, 150.5625pt x 120.45pt>
 File: ./notebooks/CategoricalCoproduct.pdf Graphic file (type pdf)
 <use ./notebooks/CategoricalCoproduct.pdf>
-Package luatex.def Info: ./notebooks/CategoricalCoproduct.pdf  used on input line 715.
+Package luatex.def Info: ./notebooks/CategoricalCoproduct.pdf  used on input line 718.
 (luatex.def)             Requested size: 150.56212pt x 120.44969pt.
  [21
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.10'
 
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.11'
-<./notebooks/Cospan.pdf><./notebooks/CategoricalCoproduct.pdf>] [22]
-<./notebooks/Functor.pdf, id=469, 602.25pt x 301.125pt>
+<./notebooks/Cospan.pdf><./notebooks/CategoricalCoproduct.pdf>]
+Overfull \hbox (0.27118pt too wide) in paragraph at lines 768--773
+\TU/lmr/bx/n/12 FUNC-TORS PRE-SERVE ISO-MOR-PHISMS? CHECK,WRITE ABOUT \TU/lmr/m/n/12 An-other
+ []
+
+[22]
+<./notebooks/Functor.pdf, id=529, 602.25pt x 301.125pt>
 File: ./notebooks/Functor.pdf Graphic file (type pdf)
 <use ./notebooks/Functor.pdf>
-Package luatex.def Info: ./notebooks/Functor.pdf  used on input line 826.
+Package luatex.def Info: ./notebooks/Functor.pdf  used on input line 833.
 (luatex.def)             Requested size: 516.73338pt x 258.39268pt.
 
-Overfull \hbox (46.97836pt too wide) in paragraph at lines 826--827
+Overfull \hbox (46.97836pt too wide) in paragraph at lines 833--834
  [] 
  []
 
 [23] [24
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.12'
-<./notebooks/Functor.pdf>] [25]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 950.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 950.
-
-[26]
-<./notebooks/NaturalTransformation.pdf, id=515, 160.6pt x 180.675pt>
+<./notebooks/Functor.pdf>] [25] [26]
+<./notebooks/NaturalTransformation.pdf, id=577, 160.6pt x 180.675pt>
 File: ./notebooks/NaturalTransformation.pdf Graphic file (type pdf)
 <use ./notebooks/NaturalTransformation.pdf>
-Package luatex.def Info: ./notebooks/NaturalTransformation.pdf  used on input line 991.
+Package luatex.def Info: ./notebooks/NaturalTransformation.pdf  used on input line 997.
 (luatex.def)             Requested size: 160.5996pt x 180.67455pt.
  [27
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.13'
-<./notebooks/NaturalTransformation.pdf>] [28]) [29]
+<./notebooks/NaturalTransformation.pdf>] [28] [29] [30] [31]
+<./notebooks/SquareGraph.pdf, id=621, 160.6pt x 120.45pt>
+File: ./notebooks/SquareGraph.pdf Graphic file (type pdf)
+<use ./notebooks/SquareGraph.pdf>
+Package luatex.def Info: ./notebooks/SquareGraph.pdf  used on input line 1310.
+(luatex.def)             Requested size: 160.5996pt x 120.44969pt.
+ [32
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.14'
+<./notebooks/SquareGraph.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1323.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1323.
+
+) [33]
 \openout2 = 2-Category-Theory.aux
  (./2-Category-Theory.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 21.
 
-[30
+[34
 
 
 
-] [31]
+] [35]
 Overfull \hbox (0.2735pt too wide) in paragraph at lines 133--138
-[][]\TU/lmr/bx/n/12 Def-i-ni-tion 6.10 (Nat-u-ral Num-ber Sys-tem). []\TU/lmr/m/n/12 A nat-u-ral num-ber sys-tem is a triple $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 N; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; s\OT1/cmr/m/n/12 )$
+[][]\TU/lmr/bx/n/12 Def-i-ni-tion 7.10 (Nat-u-ral Num-ber Sys-tem). []\TU/lmr/m/n/12 A nat-u-ral num-ber sys-tem is a triple $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 N; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; s\OT1/cmr/m/n/12 )$
  []
 
-[32]
+[36]
 Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 198.
-) [33] (./main.bbl) [34
+) [37] (./main.bbl) [38
 
 
 ]
@@ -881,23 +901,24 @@ No file appendix.tex.
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 91394B63A2F060D0515CED0186A20C97;4971.
+(rerunfilecheck)             Checksum: 6DED47D9489435827AEF1E3326302FE5;6593.
 )
 
 Here is how much of LuaTeX's memory you used:
- 18005 strings out of 478824
+ 18131 strings out of 478824
  100000,794899 words of node,token memory allocated
- 721 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 49 attribute, 60 glue_spec, 49 attribute_list, 4 write nodes
-   avail lists: 2:569,3:282,4:200,5:507,6:74,7:6606,8:57,9:536,10:10,11:384
- 36474 multiletter control sequences out of 65536+600000
+ 749 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 4 glue, 4 kern, 1 glyph, 53 attribute, 61 glue_spec, 53 attribute_list, 4 write nodes
+   avail lists: 2:597,3:282,4:208,5:507,6:75,7:6606,8:57,9:506,10:25,11:417
+ 36551 multiletter control sequences out of 65536+600000
  135 fonts using 33044631 bytes
  86i,12n,89p,9591b,612s stack positions out of 5000i,500n,10000p,200000b,200000s
-</usr/share/texmf/fonts/opentype/public/lm/lmroman8-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman7-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmromandemi10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman17-regular.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb>
-Output written on main.pdf (34 pages, 408639 bytes).
+</usr/share/texmf/fonts/opentype/public/lm/lmroman8-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman7-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmromandemi10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman17-regular.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/stmaryrd/stmary10.pfb>
+Output written on main.pdf (38 pages, 469663 bytes).
 
-PDF statistics: 709 PDF objects out of 1000 (max. 8388607)
- 610 compressed objects within 7 object streams
- 257 named destinations out of 1000 (max. 131072)
- 193 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 832 PDF objects out of 1000 (max. 8388607)
+ 723 compressed objects within 8 object streams
+ 291 named destinations out of 1000 (max. 131072)
+ 249 words of extra memory for PDF output out of 10000 (max. 100000000)
 

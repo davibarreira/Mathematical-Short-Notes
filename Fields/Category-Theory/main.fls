@@ -293,6 +293,9 @@ INPUT ./julia_listings_unicode.tex
 INPUT ./julia_listings_unicode.tex
 INPUT ./julia_listings_unicode.tex
 INPUT ./julia_listings_unicode.tex
+INPUT /usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
@@ -479,10 +482,13 @@ INPUT ./notebooks/Functor.pdf
 INPUT ./notebooks/Functor.pdf
 INPUT /home/davibarreira/.texlive2020/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-bold.luc
 INPUT /home/davibarreira/.texlive2020/texmf-var/luatex-cache/generic/fonts/otl/lmroman6-bold.luc
+INPUT ./notebooks/NaturalTransformation.pdf
+INPUT ./notebooks/NaturalTransformation.pdf
+INPUT ./notebooks/NaturalTransformation.pdf
+INPUT ./notebooks/SquareGraph.pdf
+INPUT ./notebooks/SquareGraph.pdf
+INPUT ./notebooks/SquareGraph.pdf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
-INPUT ./notebooks/NaturalTransformation.pdf
-INPUT ./notebooks/NaturalTransformation.pdf
-INPUT ./notebooks/NaturalTransformation.pdf
 OUTPUT 2-Category-Theory.aux
 INPUT ./2-Category-Theory.tex
 INPUT ./2-Category-Theory.tex
@@ -500,6 +506,8 @@ INPUT ./appendix.aux
 INPUT ./main.out
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
@@ -510,7 +518,9 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb

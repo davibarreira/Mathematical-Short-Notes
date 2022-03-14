@@ -8,17 +8,24 @@
 \contentsline {subsection}{\numberline {2.6}Zero, Initial and Terminal Objects}{16}{subsection.2.6}%
 \contentsline {subsection}{\numberline {2.7}Understanding Duality}{18}{subsection.2.7}%
 \contentsline {subsection}{\numberline {2.8}Categorical Product and Coproduct}{19}{subsection.2.8}%
-\contentsline {subsection}{\numberline {2.9}Pullback, Pushout and Equalizers}{22}{subsection.2.9}%
+\contentsline {subsection}{\numberline {2.9}Cartesian Categories}{22}{subsection.2.9}%
+\contentsline {subsection}{\numberline {2.10}Pullback, Pushout and Equalizers}{22}{subsection.2.10}%
 \contentsline {section}{\numberline {3}Functors}{22}{section.3}%
 \contentsline {subsection}{\numberline {3.1}What is a Functor?}{22}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Category of Small Categories}{24}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Types of Functors}{25}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Subcategories}{25}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}Relevant Examples of Functors}{26}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Free Categories and $\mathcal C$-Sets}{26}{subsection.3.6}%
 \contentsline {section}{\numberline {4}Natural Transformations}{26}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Defining Natural Transformations}{26}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}The Category of Functors}{27}{subsection.4.2}%
 \contentsline {section}{\numberline {5}Limits, Colimits and Adjoints}{29}{section.5}%
-\contentsline {section}{\numberline {6}What are Sets?}{30}{section.6}%
-\contentsline {subsubsection}{\numberline {6.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{30}{subsubsection.6.0.1}%
+\contentsline {section}{\numberline {6}Applied Category Theory}{29}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Formalizing Diagrams}{30}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Underlying Graphs}{30}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Generating Categories from Graphs}{31}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Generating Categories from Schemas}{33}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}$\mathcal C$-Sets, Schemas, Presentations and Instances}{33}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Free Categories and Preorder Reflections}{33}{subsection.6.6}%
+\contentsline {section}{\numberline {7}What are Sets?}{34}{section.7}%
+\contentsline {subsubsection}{\numberline {7.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{34}{subsubsection.7.0.1}%
