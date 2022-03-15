@@ -1209,17 +1209,19 @@ As we shall see, this can indeed be done, but will be left for the following sec
 
 Remember, a graph $G$ is an object of $\mathbf{Gr}$ and it
 consists of a quadruple $(V, A, src, tgt)$. In $\mathbf{Gr}$, morphisms
-between categories are graph homomorphisms.
+between categories are graph homomorphisms. You'll see that the
+definition of a graph homomorphism is actually very similar (same) to that of a functor.
 
 \begin{definition}[Graph Homomorphism \citep{spivak2014category}]
   For two graphs $G=(V, A, src, tgt)$ and $G' = (V', A', src', tgt')$,
   a graph homomorphism is a function
-  $f:G \to G'$
+  $f:G \to G'$ where $f$ consists in two functions $f_0:V\to V'$ and
+  $f_1:A \to A'$, such that
+  \begin{displaymath}
+    f_1 \fatsemi src' = src \fatsemi f_0, \quad
+    f_1 \fatsemi tgt' = tgt \fatsemi f_0.
+  \end{displaymath}
 \end{definition}
-
-Another important definition
-is the idea of paths.
-
 
 \begin{definition}[Underlying Graph of a Category]
   Every small category $\mathcal C$ has an underlying graph which consists of
@@ -1264,10 +1266,10 @@ and these are what we call a schema. We leave the discussion of schemas to the n
   which do the same thing that the source and target functions do in arrows,
   but applied to paths.
 
-  Lastly, one can concatenate paths via $++$, such that
+  Lastly, one can concatenate paths via $*$, such that
   for $p = (a_1,...,a_n)$ and $q = (b_1=a_n,...,b_m)$, then
   \begin{displaymath}
-    p ++ q = (a_1,...,a_n=b_1, b_2,...,b_m).
+    p * q = (a_1,...,a_n=b_1, b_2,...,b_m).
   \end{displaymath}
 \end{definition}
 
@@ -1279,10 +1281,14 @@ and these are what we call a schema. We leave the discussion of schemas to the n
   which we'll called the path graph version of $G$.
   Moreover, we can actually define a functor $Path : \mathbf{Gr} \to \mathbf{Gr}$,
   which takes graphs to their path graphs, i.e. $Path(G) \in \mathbf {Gr}$ and
-  graph homomorphisms $f:G \to G'$ to $Path(f):Path(G)\to Path(G')$.
+  graph homomorphisms $f:G \to G'$ to $Path(f):Path(G)\to Path(G')$, where
+  $P(f_0) = f_0$ and
+  \begin{displaymath}
+    P(f_1)(a_1*a_2*...*a_m) = f_1(a_1)*f_1(a_2)*...*f_1(a_m), \forall a_1,...,a_m \in A.
+  \end{displaymath}
 \end{definition}
 
-An example of a graph an it's path graph is again the graph in figure \ref{fig:2Catsimple}
+An example of a graph an it's path graph is the graph in figure \ref{fig:2Catsimple}
 and \ref{fig:2Cat}, respectively. As we can see, the path graph contains an arrow for each
 morphism in the $\mathbf{2}$ category, which is the one represented in these diagrams.
 Thus, for any path graph $Path(G) \in Ob_\mathbf{Gr}$, we can define a category
@@ -1304,15 +1310,16 @@ functor is what we call the \textit{free category functor}.
   $Mor_{\mathcal C(Path(G))}(v_1,v_2)$ equal to the set of paths such that
   $\overline{src}(Path(G)) = v_1$ and $\overline{tgt}(Path(G)) = v_2$, and sending
   the empty paths $()_v$ each to the identity morphism.
+  For graph homomorphisms $f:G\to G'$, send $F(f)$ to $Path(f)$.
 \end{definition}
 
-For example,
-consider the graph (diagram) in the figure \ref{fig:Square}. How can we complete this graph
-in order to make it a category?
-% First, we consider every vertex an object of the category and
-% every arrow a morphism. Next, we could add loops in all vertices in order to
-% define the identity morphisms. We are still missing the compositions $f \fatsemi h$
-% and $$
+We can now generate categories from graphs. But can this method generate
+every possible small category? The answer is no. Here is an example.
+Consider the graph (diagram) in the figure \ref{fig:Square}.
+If we apply the free functor to it, we come up with a category $\mathcal G$
+where $Ob_\mathcal G = \{A,B,C,D\}$ and $Mor_\mathcal G = \{id_A,id_B,id_C,id_D, f,g,h,i, f \fatsemi i, g \fatsemi h\}$.
+Thus, the free functor is not able to generate the category where $f \fatsemi i = g \fatsemi h$, i.e.
+where there is only one path of length 2 from $A$ to $D$.
 
 \begin{figure}[H]
   \begin{center}
@@ -1322,13 +1329,80 @@ in order to make it a category?
   \label{fig:Square}
 \end{figure}
 
-
-When drawing diagrams (graphs) to represent categories, we sometimes need to explicitly
-state that some composition of morphisms are equivalent. This can be formalized
-in what is called by \citet{spivak2014category} as \textit{path equivalence declaration}.
+Thus, the free functor cannot generate all categories.
 
 \subsection{Generating Categories from Schemas}
 
+As we saw in the previous section, the free functor is a way to construct a category
+from a graph, but it is not able to produce every possible category. This implies
+that a graph is not expressive enough to determine a unique category, i.e. from a simple
+drawing of a graph we can imply different categories. Thus, we need more information
+added to the graph in order to know exactly what category it generates. We already
+did this throughout the text by writing equations such as $f \fatsemi i = g \fatsemi h$
+at the bottom of the diagrams. This is the key to solve our problem. Instead of using
+only graphs, we need a graph plus a collection of equations, which \citet{spivak2014category}
+calls \textit{path equivalent declaration}. A graph together with such equations
+will determine what we call a \textit{schema}.
+
+\begin{definition}[Path Equivalence Declaration (PED) \citep{spivak2014category}]
+  For two paths $p,q \in Path_G$, a PED is an expression of the form
+  $p \simeq q$, where $\overline{src}(p) = \overline{src}(q)$ and $\overline {tgt}(p)=\overline {tgt}(q)$.
+  Moreover, a set of PED's form an equivalence relation in $Path_G$, such that
+  if $p \simeq q$ and $k \simeq l$ and the target of $p$ and $q$ is the same as the source
+  of $k$ and $l$, then $p * k \simeq q * l$.
+  The set of PED's on $G$ is also called a congruence on $G$.
+\end{definition}
+
+\begin{definition}[Schema \citep{spivak2014category}]
+  A schema is a tuple $(G, \simeq)$ consisting of a graph $G$ and a set of PED's.
+\end{definition}
+
+5.2.2
+Database schemas present categories
+
+
+In a  sense, the free
+functor generates categories from graphs with the highest number of different morphisms
+as possible. What about the other end of the spectrum? Can we generate categories from
+graphs with the least number of possible morphisms? Yes, and the key for this are
+preorders.
+
+First, let's present a somewhat related result, but that is not necessary for our
+goals.
+
+\begin{proposition}[Preorders to Graphs]
+  Let $\mathbf{Pr}$ be the category of preorders and $\mathbf{Gr}$ the category of graphs.
+  There exists a functor $P:\mathbf{Pr} \to \mathbf{Gr}$.
+\end{proposition}
+\begin{proof}
+  Define $P$ as the following. For any preorder $\mathcal X=(X,\leq_X) \in Ob_\mathbf{Pr}$,
+  $P(\mathcal X)$ is a graph with vertices equal to set $X$ and an arrow going from $a \in X$ to
+  $b \in X$ if $a \leq_X b$. Remember that $\leq_X$ is a binary relation $R_\mathcal X$, i.e. it's nothing
+  more than a subset of $X\times X$. Thus, $P(\mathcal X) = (X, R_\mathcal X, src_\mathcal X, tgt_\mathcal X)$
+  where the source and the target functions are just the projection functions $\pi_1(x,y)= x$ and $\pi_2(x,y)=y$,
+  respectively.
+
+  A morphism between preorders $(X,\leq_X)$ and $(Y,\leq_Y)$ is any monotone function
+  that $x \leq_X x' \implies f(x) \leq_Y f(x')$.
+  We need to take $f$ to a graph
+  homomorphism between graphs $P(\mathcal X)$ and $P(\mathcal Y)$. For that,
+  make $P(f)$ equal to a tuple $(f_0, f_1)$ where $f_0:X \to Y$ is equal to the
+  original $f$, and $f_1:R_\mathcal X \to R_\mathcal Y$ is just $(x_1,x_2)\mapsto (f(x_1), f(x_2))$.
+  Now, we need to check if this satisfies the graph homomorphism property.
+
+  \begin{displaymath}
+    (src_\mathcal Y \circ f_1)(x_1,x_2) = src_\mathcal Y (f(x_1),f(x_2)) = f(x_1) = f_0 (x_1) =
+    (f_0 \circ src_\mathcal Y)(x_1,x_2).
+  \end{displaymath}
+  The same argument works for the $tgt$, hence, $P(f)$ is indeed a graph homomorphism.
+\end{proof}
+
+Although the result above might be useful, our goal is to turn a graph
+
+% First, we consider every vertex an object of the category and
+% every arrow a morphism. Next, we could add loops in all vertices in order to
+% define the identity morphisms. We are still missing the compositions $f \fatsemi h$
+% and $$
 \subsection{$\mathcal C$-Sets, Schemas, Presentations and Instances}
 
 A very important tool for applications of Category Theory is the
@@ -1336,14 +1410,6 @@ concept of $\mathcal C$-Sets, which is a functor $I:\mathcal C \to \mathbf{Set}$
 also known as a set-valued functor on $\mathcal C$ \citep{fong2019invitation}.
 These functors are important because, as we'll see further on this section,
 they model the actual data inside a database.
-
-\begin{definition}[Path Equivalence Declaration (PED) \citep{spivak2014category}]
-  For two paths $p,q \in Path_G$, a PED is an expression of the form
-  $p \simeq q$, where $\overline{src}(p) = \overline{src}(q)$ and $\overline {tgt}(p)=\overline {tgt}(q)$.
-  Moreover, a set of PED's form an equivalence relation in $Path_G$, such that
-  if $p \simeq q$ and $k \simeq l$ and the target of $p$ and $q$ is the same as the source
-  of $k$ and $l$, then $p ++ k \simeq q ++ l$.
-\end{definition}
 
 
 \begin{definition}[$\mathcal C$-Set]
@@ -1353,13 +1419,9 @@ they model the actual data inside a database.
   is a functor $I:\mathcal C \to \mathbf{FinSet}$.
 \end{definition}
 
-\begin{definition}[Schema \citep{spivak2014category}]
-  A database schema is a tuple $(G, \simeq)$ consisting of a graph $G$ and a set of PED's, also
-  called a congruence on $G$.
-\end{definition}
+The category $\mathbf{Set}^{\mathcal C}$ is the category of $\mathcal C$-Sets. This category
+has useful mathematical properties for data structures.
 
-5.2.2
-Database schemas present categories
 
 
 \subsection{Free Categories and Preorder Reflections}

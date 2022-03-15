@@ -25,7 +25,7 @@
 \contentsline {subsection}{\numberline {6.2}Underlying Graphs}{30}{subsection.6.2}%
 \contentsline {subsection}{\numberline {6.3}Generating Categories from Graphs}{31}{subsection.6.3}%
 \contentsline {subsection}{\numberline {6.4}Generating Categories from Schemas}{33}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}$\mathcal C$-Sets, Schemas, Presentations and Instances}{33}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}Free Categories and Preorder Reflections}{33}{subsection.6.6}%
-\contentsline {section}{\numberline {7}What are Sets?}{34}{section.7}%
-\contentsline {subsubsection}{\numberline {7.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{34}{subsubsection.7.0.1}%
+\contentsline {subsection}{\numberline {6.5}$\mathcal C$-Sets, Schemas, Presentations and Instances}{34}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Free Categories and Preorder Reflections}{34}{subsection.6.6}%
+\contentsline {section}{\numberline {7}What are Sets?}{35}{section.7}%
+\contentsline {subsubsection}{\numberline {7.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{35}{subsubsection.7.0.1}%

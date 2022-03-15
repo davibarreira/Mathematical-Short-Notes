@@ -90,8 +90,10 @@ function morphism(dom::Point,cod::Point, morphismlabel=L"f"; pos=:N, linewidth=1
         α = 0.65
         pcurve = α*p1+(1-α)*p2 + curve*Point(sin(θ), cos(θ))
         pcurve2 = (1-α)*p1+α*p2 + curve*Point(sin(θ), cos(θ))
-        arrow(p1+Point(0,8),pcurve,pcurve2,p2+Point(0,8),linewidth=linewidth, arrowheadlength = 0,
+        arrow(p1,pcurve,pcurve2,p2,linewidth=linewidth, arrowheadlength = 0,
             arrowheadfunction = quiverarrow)
+        # arrow(p1+Point(0,8),pcurve,pcurve2,p2+Point(0,8),linewidth=linewidth, arrowheadlength = 0,
+        #     arrowheadfunction = quiverarrow)
     end
     
     if  -40 ≤ rad2deg(θ) ≤ 40 || 140 ≤ rad2deg(θ) ≤ 220 || -220 ≤ rad2deg(θ) ≤ -140
