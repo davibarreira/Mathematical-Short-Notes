@@ -1,4 +1,4 @@
-\begin{thebibliography}{8}
+\begin{thebibliography}{9}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -32,6 +32,12 @@ Tom Leinster.
 Bartosz Milewski.
 \newblock \emph{Category theory for programmers}.
 \newblock Blurb, 2018.
+
+\bibitem[Patterson et~al.(2021)Patterson, Lynch, and
+  Fairbanks]{patterson2021categorical}
+Evan Patterson, Owen Lynch, and James Fairbanks.
+\newblock Categorical data structures for technical computing.
+\newblock \emph{arXiv preprint arXiv:2106.04703}, 2021.
 
 \bibitem[Ribeiro(2020)]{maico2020categoria}
 Maico Ribeiro.

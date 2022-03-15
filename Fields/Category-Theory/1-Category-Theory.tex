@@ -238,8 +238,8 @@ Thus, the figure below represents the same diagram as Figure \ref{fig:3Catcomple
     \item For $a,b \in P$, if $a\leq b$ and $b \leq c$, then $a \leq c$;
     \item For every $a \in P$, $a \leq a$.
   \end{enumerate}
-  We can show that actually, this is a category, which we'll call $\mathfrak P$,
-  where $Ob_\mathfrak P = P$ and each morphism $f$ represents $a \leq b$, where
+  We can show that actually, this is a category, which we'll call $\mathcal P$,
+  where $Ob_\mathcal P = P$ and each morphism $f$ represents $a \leq b$, where
   $cod_f = a$ and $dom_f = b$.
   One example of preorder is the set of $\mathbb N$ equiped with the binary relation $\leq$
   which is shown in the diagram below.
@@ -1130,12 +1130,44 @@ With such definition, we can prove the following result.
   $I^{-1}(f) = \alpha_f$.
   Thus, $I$ defines an isomorphism between the two categories.
 
-  This is only a sketch proof, since we would still need to prove that such
-  functor $I$ exists and is well-defined.
-
 \end{example}
 
+\subsection{Equivalence Between Categories}
 
+We've used the existence of two functors $F:\mathcal C \to \mathcal D$ and $G:\mathcal D \to \mathcal C$,
+where $F \fatsemi G = id_\mathcal D$ and $G \fatsemi F = id_\mathcal C$,
+to define that two categories are equivalent up to an isomorphism.
+Note that in the category of small categories, besides morphisms and objects we also
+have natural transformations. Thus, we can make use of natural transformations to
+define a new notion of equivalence between categories that is less strict then 
+the existence of isomorphic functors.
+
+\begin{definition}[Equivalence of Categories]
+  We say that a functor $F:\mathcal C \to \mathcal D$ defines an equivalence of
+  categories if there exists another functor $G:\mathcal D \to \mathcal C$ and
+  two natural transformations
+  $\alpha: id_\mathcal C \to G \circ F$ and
+  $\beta: id_\mathcal D \to F \circ G$, where $\alpha$ and $\beta$ are natural isomorphisms,
+  i.e. for any $c \in \mathcal C$,
+  $\alpha_c:id_\mathcal C(c) \to (G \circ F)(c)$ is an
+  isomorphism in $\mathcal C$, and for any $d \in \mathcal D$, 
+  $\beta_d:id_\mathcal D(d) \to (F \circ G)(d)$ is an isomorphism in $\mathcal D$.
+
+  Moreover, we say that $F$ are $G$ are mutually inverse equivalences.
+\end{definition}
+
+The above definition is convoluted, so let's try to get some intuition.
+First, note that $id_\mathcal C(c) = c \in \mathcal C$, so the natural transformation
+$\alpha$ defines for each object $c \in \mathcal C$ a morphism $\alpha_c$ from $c$
+to $c' = G(F(c)) \in \mathcal C$, where $c$ and $c'$ are actually isomorphic.
+
+Now it's a bit clearer what is going on. The definition is stating that two
+categories are equivalent if there is a pair of functors which are almost the inverse
+of one another, but instead of $(F \circ G)(c) = c$ we have that
+$(F \circ G )(c) = c'$  where $c'$ is isomorphic to $c$.
+Thus, our functors are not inverses, because they scramble the objects, but in the end,
+they just exchange objects that are isomorphic to one another, hence, they ``keep everything
+almost the same''.
 
 
 \section{Limits, Colimits and Adjoints}
@@ -1420,8 +1452,7 @@ they model the actual data inside a database.
 \end{definition}
 
 The category $\mathbf{Set}^{\mathcal C}$ is the category of $\mathcal C$-Sets. This category
-has useful mathematical properties for data structures.
-
+has useful mathematical properties for data structures \citep{patterson2021categorical}.
 
 
 \subsection{Free Categories and Preorder Reflections}
