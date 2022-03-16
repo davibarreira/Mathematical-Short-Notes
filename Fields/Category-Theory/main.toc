@@ -24,9 +24,11 @@
 \contentsline {section}{\numberline {6}Applied Category Theory}{30}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Formalizing Diagrams}{30}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Underlying Graphs}{31}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Generating Categories from Graphs}{32}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Generating Categories from Schemas}{33}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}$\mathcal C$-Sets, Schemas, Presentations and Instances}{35}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}Free Categories and Preorder Reflections}{35}{subsection.6.6}%
-\contentsline {section}{\numberline {7}What are Sets?}{36}{section.7}%
-\contentsline {subsubsection}{\numberline {7.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{36}{subsubsection.7.0.1}%
+\contentsline {subsection}{\numberline {6.3}Generating Categories from Graphs via Free Functors}{32}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Categories from Preorders}{33}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Generating Categories from Schemas}{35}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}More on Generating Categories from Schemas *}{35}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}$\mathcal C$-Sets, Schemas, Presentations and Instances}{37}{subsection.6.7}%
+\contentsline {subsection}{\numberline {6.8}Free Categories and Preorder Reflections}{37}{subsection.6.8}%
+\contentsline {section}{\numberline {7}What are Sets?}{38}{section.7}%
+\contentsline {subsubsection}{\numberline {7.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{38}{subsubsection.7.0.1}%

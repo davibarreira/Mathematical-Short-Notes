@@ -1154,6 +1154,7 @@ the existence of isomorphic functors.
   $\beta_d:id_\mathcal D(d) \to (F \circ G)(d)$ is an isomorphism in $\mathcal D$.
 
   Moreover, we say that $F$ are $G$ are mutually inverse equivalences.
+  \label{def:EquivalenceCategories}
 \end{definition}
 
 The above definition is convoluted, so let's try to get some intuition.
@@ -1275,7 +1276,7 @@ definition of a graph homomorphism is actually very similar (same) to that of a 
 Note that we restricted our underlying graph to small categories so that
 the vertices and arrows in the graph are actually sets.
 
-\subsection{Generating Categories from Graphs}
+\subsection{Generating Categories from Graphs via Free Functors}
 
 We showed in the previous section how we can take a small category and turn it
 into a graph. But what about the other way around? Can we take a graph and turn it
@@ -1318,6 +1319,7 @@ and these are what we call a schema. We leave the discussion of schemas to the n
   \begin{displaymath}
     P(f_1)(a_1*a_2*...*a_m) = f_1(a_1)*f_1(a_2)*...*f_1(a_m), \forall a_1,...,a_m \in A.
   \end{displaymath}
+  \label{def:PathFunctor}
 \end{definition}
 
 An example of a graph an it's path graph is the graph in figure \ref{fig:2Catsimple}
@@ -1361,41 +1363,11 @@ where there is only one path of length 2 from $A$ to $D$.
   \label{fig:Square}
 \end{figure}
 
-Thus, the free functor cannot generate all categories.
+\subsection{Categories from Preorders}
 
-\subsection{Generating Categories from Schemas}
-
-As we saw in the previous section, the free functor is a way to construct a category
-from a graph, but it is not able to produce every possible category. This implies
-that a graph is not expressive enough to determine a unique category, i.e. from a simple
-drawing of a graph we can imply different categories. Thus, we need more information
-added to the graph in order to know exactly what category it generates. We already
-did this throughout the text by writing equations such as $f \fatsemi i = g \fatsemi h$
-at the bottom of the diagrams. This is the key to solve our problem. Instead of using
-only graphs, we need a graph plus a collection of equations, which \citet{spivak2014category}
-calls \textit{path equivalent declaration}. A graph together with such equations
-will determine what we call a \textit{schema}.
-
-\begin{definition}[Path Equivalence Declaration (PED) \citep{spivak2014category}]
-  For two paths $p,q \in Path_G$, a PED is an expression of the form
-  $p \simeq q$, where $\overline{src}(p) = \overline{src}(q)$ and $\overline {tgt}(p)=\overline {tgt}(q)$.
-  Moreover, a set of PED's form an equivalence relation in $Path_G$, such that
-  if $p \simeq q$ and $k \simeq l$ and the target of $p$ and $q$ is the same as the source
-  of $k$ and $l$, then $p * k \simeq q * l$.
-  The set of PED's on $G$ is also called a congruence on $G$.
-\end{definition}
-
-\begin{definition}[Schema \citep{spivak2014category}]
-  A schema is a tuple $(G, \simeq)$ consisting of a graph $G$ and a set of PED's.
-\end{definition}
-
-5.2.2
-Database schemas present categories
-
-
-In a  sense, the free
-functor generates categories from graphs with the highest number of different morphisms
-as possible. What about the other end of the spectrum? Can we generate categories from
+In a  sense, the free functor generates categories from graphs with the
+highest number of different morphisms as possible.
+What about the other end of the spectrum? Can we generate categories from
 graphs with the least number of possible morphisms? Yes, and the key for this are
 preorders.
 
@@ -1429,12 +1401,148 @@ goals.
   The same argument works for the $tgt$, hence, $P(f)$ is indeed a graph homomorphism.
 \end{proof}
 
-Although the result above might be useful, our goal is to turn a graph
+Although the result above might be useful, our goal is to generate categories from graphs
+with the least amount of morphisms. This can be done by turning graphs into preorders
+and then preorders into categories.
 
-% First, we consider every vertex an object of the category and
-% every arrow a morphism. Next, we could add loops in all vertices in order to
-% define the identity morphisms. We are still missing the compositions $f \fatsemi h$
-% and $$
+Let's turn a graph $G = (V,A,src, tg)$ into a preorder $\mathcal P = (P, \leq_P)$\footnote{Remember that
+$\leq_P \subset P \times P$}.
+First, make $P = V$. Secondly, collapse every parallel arrow into a single tuple, i.e. if $a_1,a_2 \in A$
+such that $src(a_1) = src(a_2)$ and $tgt(a_1) = tgt(a_2)$, collapse them into $(src(a_1), tgt(a_1)) \in \leq_P$.
+Hence, this generates a preorder. 
+
+To get a category from a preorder, just use the procedure we already explained, where $x \leq_P y$ defines
+a morphism from $x$ to $y$, and $P = Ob_\mathcal P$.
+
+Similarly to how we came up with an underlying graph from a category, we can come up with
+a preorder from a category. This is deemed a preorder reflection.
+
+\begin{definition}[Preorder Reflection]
+  Let $\mathcal C$ be a small category. We can obtain a preorder $(C, \leq_C)$ from $\mathcal C$
+  by making $Ob_\mathcal C = C$ and making $c_1 \leq_C c_2$ if $Mor_\mathcal C(c_1,c_2) \neq \emptyset$.
+  Such preorder is called the preorder reflection of $\mathcal C$.
+\end{definition}
+
+
+\subsection{Generating Categories from Schemas}
+
+As we saw in the previous section, the free functor is a way to construct a category
+from a graph, but it is not able to produce every possible category. This implies
+that a graph is not expressive enough to determine a unique category, i.e. from a simple
+drawing of a graph we can imply different categories. Thus, we need more information
+added to the graph in order to know exactly what category it generates.
+We saw that another way to generate a category from a graph is by turning a graph into a preorder
+and then a preorder into a category. But again, this method is limited.
+Actually, both methods live in a sense in opposite sides of a spectrum \citep{fong2019invitation}.
+So how can we generate the categories living in the center of the spectrum?
+
+Well, we already
+did this throughout the text by writing equations such as $f \fatsemi i = g \fatsemi h$
+at the bottom of the diagrams. This is the key to solve our problem. We
+can generate a free category from a graph, and then reduce the number of morphisms by
+equating them. If we put enough equations, we end up with the category generated via 
+the preorder.
+These equations are formalized
+by using what \citet{spivak2014category} calls a \textit{path equivalent declaration} (PED).
+A graph together with such equations will determine what we call a \textit{schema}.
+
+\begin{definition}[Path Equivalence Declaration (PED) \citep{spivak2014category}]
+  For two paths $p,q \in Path_G$, where $Path_G$ is the set of paths in $G$, a PED is an expression of the form
+  $p \simeq q$, where $\overline{src}(p) = \overline{src}(q)$ and $\overline {tgt}(p)=\overline {tgt}(q)$.
+  Moreover, a set of PED's form an equivalence relation in $Path_G$, such that
+  if $p \simeq q$, $k \simeq l$ and the target of $p$ and $q$ is the same as the source
+  of $k$ and $l$, then $p * k \simeq q * l$.
+  The set of PED's on $G$ is also called a congruence on $G$.
+\end{definition}
+
+\begin{definition}[Schema \citep{spivak2014category}]
+  A schema is a tuple $(G, \simeq)$ consisting of a graph $G$ and a set of PED's denoted by $\simeq$.
+\end{definition}
+
+The rest of this section is very convoluted, as it tries to define the morphisms between
+schemas in a way that is compatible with categories. The short version is that we indeed
+can define morphisms between categories and thus define a category $\mathbf{Sch}$ of schemas.
+It can then be proven that $\mathbf{Sch}$ is equivalent (see definition \ref{def:EquivalenceCategories}) to 
+$\mathbf{SmCat}$, meaning that we can indeed use schemas to represent every small category.
+
+\subsection{More on Generating Categories from Schemas *}
+
+This is more technical and tries to formalize how we define morphisms between schemas and
+the category $\mathbf{Sch}$.
+
+Since we are now dealing with schemas instead of graphs, we need to define what are morphisms
+between schemas. Unfortunately, this is not as straightforward as we might think. One of the reasons
+for this is that our PED is an equivalence between paths on a graph, and not the arrows.
+This means that a graph homomorphism that preserve the PEDs is not actually the ``correct''
+morphism between schemas.
+
+How do we go about defining this morphism? What is the guiding principle? To understand why
+we'll construct the morphism in the way that we will, one has to understand what is the goal in mind.
+Our goal is to define a category of schemas, and prove that it is equivalent to $\mathbf{SmCat}$.
+Thus, our morphism between schemas has to be ``functorial'', since functors are how we define
+morphisms in $\mathbf{SmCat}$. We know that graph homomorphisms are the equivalent definition
+for the category $\mathbf{Gr}$, so we want to find a similar way to relate schemas.
+Since schemas as graphs with congruence relations, a good start is to use graph homomorphisms.
+Yet, as we already stated, it's not so simple.
+
+To define a morphism between schemas, we actually first turn the graphs
+into the path graphs, and then we send vertices to vertices (these do no change), and
+paths to paths while maintaining the PED. This process can be ``simplified'' a bit
+by skipping the step of sending a graph to it's own path, and sending it
+directly to the paths in the target graph. These steps are delineated below.
+
+First, remember that $Path:\mathbf{Gr} \to \mathbf{Gr}$ is a functor that takes
+graphs to it's path graph, and a graph homomorphism $f:G\to H$ to $Path(f):Path(G) \to Path(H)$
+as described in \ref{def:PathFunctor}.
+For two schemas $\mathcal S = (G,\simeq_G)$ and $\mathcal S' = (G', \simeq_{G'})$,
+our goal is to define a graph homomorphism between $Path(G)$ and $Path(G')$,
+and then enforce the PEDs.
+
+For the two graphs $G, G'$, suppose that we have
+a graph homomorphism $f: G \to Path(G')$ (yes, between $G$ and the path graph of $G'$,
+not between $G$ and $G'$), which is valid, since $Path(G')$ is also a graph.
+We can then apply the $Path$ functor to $f$, which will give
+$Path(f):Path(G) \to Path(Path(G'))$. Note that $Path(Path(G'))$ is a graph where
+the arrows are paths of paths, e.g. if $G'$ has two arrows $f$ from $a$ to $b$ and
+$g$ from $b$ to $c$, then $Path(G')$ has six arrows, which are the paths
+then $Path(G')$ has six arrows, which are the paths
+$()_a, ()_b, ()_c, (f)_a, (g)_b, (f,g)_a$ and $Path(Path(G'))$ has
+$(()_a)_a, (()_a,(f)_a)_a, (()_b)_b, (()_b,(g)_b)_b ...$
+
+We can then define a function $\mu_{G'}:Path(Path(G'))\to Path(G')$ by concatenating
+the paths of paths, e.g. $\mu(((f)_a, (g)_b)_a) = \mu((f,g)_a)$.
+
+Putting everything together, if we have the graph homomorphism $f:G\to G'$,
+it induces $Path_f: Path(G) \to Path(G')$, where
+$Path_f = Path(f) \fatsemi \mu_{G'}$.
+
+
+\begin{definition}[Schema Morphism]
+  Let $G = (V,A,src,tgt)$ and $G'=(V',A',src',tgt')$ be two graphs, and
+  $\mathcal S = (G,\simeq_G)$ and $\mathcal S' = (G', \simeq_{G'})$ be two schemas.
+  A schema morphism $f:\mathcal S \to \mathcal S'$ is a map that sends
+  the paths in $G$ to paths in $G'$ preserving the path endpoints, path concatenations
+  and path equivalences (PED).
+  More specifically, $f$ is a graph homomorphism $f:G \to Path(G')$
+  such that for two paths $p,q \in Path_G$,
+  \begin{displaymath}
+    \text{if } p \simeq_G q, \ \text{then }  Path_f(p) \simeq_G' Path_f(q).
+  \end{displaymath}
+  Where $Path_f:Path(G) \to Path(G')$ is the induced function $Path_f = Path(f) \fatsemi \mu_{G'}$.
+
+  Check \citet{spivak2014category} section 5.4.1 for a more thorough exposition.
+\end{definition}
+
+\begin{definition}[Category $\mathbf{Sch}$]
+  The category $\mathbf{Sch}$ has schemas as objects, and schema morphisms as morphisms.
+  Again, check \citet{spivak2014category} for a more thorough explanation on how composition
+  and identity work for this category.
+\end{definition}
+
+Lastly, it can be shown that $\mathbf{Sch} \simeq \mathbf{SmCat}$, thus,
+every category generates a schema, and every schema generates a category.
+
+
 \subsection{$\mathcal C$-Sets, Schemas, Presentations and Instances}
 
 A very important tool for applications of Category Theory is the

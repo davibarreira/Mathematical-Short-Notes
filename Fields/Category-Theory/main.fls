@@ -416,11 +416,11 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 OUTPUT main.toc
 INPUT ./main.loe
 INPUT ./main.loe
-INPUT ./main.loe
-INPUT ./main.loe
-INPUT ./main.loe
-INPUT ./main.loe
 INPUT /home/davibarreira/.texlive2020/texmf-var/luatex-cache/generic/fonts/otl/lmromandemi10-regular.luc
+INPUT ./main.loe
+INPUT ./main.loe
+INPUT ./main.loe
+INPUT ./main.loe
 OUTPUT 1-Category-Theory.aux
 INPUT ./1-Category-Theory.tex
 INPUT ./1-Category-Theory.tex
@@ -510,6 +510,7 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb
