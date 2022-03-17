@@ -1,34 +1,38 @@
 \contentsline {section}{\numberline {1}Preface}{8}{section.1}%
-\contentsline {section}{\numberline {2}Categories}{8}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Universes, Sets and Classes}{8}{subsection.2.1}%
+\contentsline {section}{\numberline {2}Categories}{9}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Universes, Sets and Classes}{9}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}What is a Category?}{10}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Examples of Categories}{11}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Programming with Category Theory}{14}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Isomorphism, monomorphism and epimorphism}{14}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Zero, Initial and Terminal Objects}{16}{subsection.2.6}%
-\contentsline {subsection}{\numberline {2.7}Understanding Duality}{18}{subsection.2.7}%
-\contentsline {subsection}{\numberline {2.8}Categorical Product and Coproduct}{19}{subsection.2.8}%
-\contentsline {subsection}{\numberline {2.9}Cartesian Categories}{22}{subsection.2.9}%
-\contentsline {subsection}{\numberline {2.10}Pullback, Pushout and Equalizers}{22}{subsection.2.10}%
-\contentsline {section}{\numberline {3}Functors}{22}{section.3}%
-\contentsline {subsection}{\numberline {3.1}What is a Functor?}{22}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Category of Small Categories}{24}{subsection.3.2}%
+\contentsline {subsection}{\numberline {2.5}Isomorphism, monomorphism and epimorphism}{15}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Zero, Initial and Terminal Objects}{17}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Understanding Duality}{19}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Categorical Product and Coproduct}{20}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}Cartesian Categories}{23}{subsection.2.9}%
+\contentsline {subsection}{\numberline {2.10}Pullback, Pushout and Equalizers}{23}{subsection.2.10}%
+\contentsline {section}{\numberline {3}Functors}{23}{section.3}%
+\contentsline {subsection}{\numberline {3.1}What is a Functor?}{23}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Category of Small Categories}{25}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Types of Functors}{25}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Subcategories}{25}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.4}Subcategories}{26}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}Relevant Examples of Functors}{26}{subsection.3.5}%
-\contentsline {section}{\numberline {4}Natural Transformations}{26}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Defining Natural Transformations}{26}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}The Category of Functors}{27}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Equivalence Between Categories}{29}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Limits, Colimits and Adjoints}{30}{section.5}%
-\contentsline {section}{\numberline {6}Applied Category Theory}{30}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Formalizing Diagrams}{30}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Underlying Graphs}{31}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Generating Categories from Graphs via Free Functors}{32}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Categories from Preorders}{33}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Generating Categories from Schemas}{35}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}More on Generating Categories from Schemas *}{35}{subsection.6.6}%
-\contentsline {subsection}{\numberline {6.7}$\mathcal C$-Sets, Schemas, Presentations and Instances}{37}{subsection.6.7}%
-\contentsline {subsection}{\numberline {6.8}Free Categories and Preorder Reflections}{37}{subsection.6.8}%
-\contentsline {section}{\numberline {7}What are Sets?}{38}{section.7}%
-\contentsline {subsubsection}{\numberline {7.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{38}{subsubsection.7.0.1}%
+\contentsline {section}{\numberline {4}Natural Transformations}{27}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Defining Natural Transformations}{27}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}The Category of Functors}{28}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Equivalence Between Categories}{30}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Vertical vs Horizontal Compostion}{31}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Limits, Colimits}{31}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Cones and Cocones}{31}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Slice Categories}{31}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Defining Limits and Colimits}{31}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Adjoints}{31}{section.6}%
+\contentsline {section}{\numberline {7}Diagrams, Graphs and Schemas in Category Theory}{32}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Formalizing Diagrams}{32}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Underlying Graphs}{33}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Generating Categories from Graphs via Free Functors}{34}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Categories from Preorders}{35}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Generating Categories from Schemas}{37}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}More on Generating Categories from Schemas *}{38}{subsection.7.6}%
+\contentsline {subsection}{\numberline {7.7}$\mathcal C$-Sets and Instances}{39}{subsection.7.7}%
+\contentsline {section}{\numberline {8}What are Sets?}{41}{section.8}%
+\contentsline {subsubsection}{\numberline {8.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{41}{subsubsection.8.0.1}%
