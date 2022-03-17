@@ -17,6 +17,7 @@ we usually use a bold font with no italic, e.g. $\mathbf{Gr}, \mathbf{SmCat}, \m
   \item $\diamond$ - \textit{Whiskering, prewhiskering, postwhiskering}.
 \end{enumerate}
 
+\newpage
 \section{Preface}
 
 The study of Category Theory enables us to view Mathematics from a vantage
@@ -39,11 +40,12 @@ in applying Category Theory. Thus, instead of focusing on proving theorems
 or presenting a plethora of examples in mathematics, the goal is to rigorously
 (and quickly) introduce the field together with some intuition and useful examples.
 
-The notes start by introducing the \textbf{big 5} of Category Theory, namely,
+The notes start by introducing the \textbf{big 5} of Category Theory:
 categories, functors, natural transformations, limits/colimits and adjoints.
 After that, we focus on some applications of Category Theory,
-mainly it's application to data structures / data bases.
+mainly it's application to data structures/databases.
 
+\newpage
 \section{Categories}
 
 In this section, we formally define what a category is, and we provide
@@ -245,6 +247,20 @@ Thus, the figure below represents the same diagram as Figure \ref{fig:3Catcomple
   \label{fig:3Catsimple}
 \end{figure}
 
+\end{example}
+
+\begin{example}[Discrete Categories]
+  The discrete category $\mathbf{\underline{N}}$ is the category with $N$ objects
+  and $Mor_{\mathbf{\underline{N}}} := \{id_1,...,id_N\}$. An example of this category is
+  illustrated below.
+
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics{./notebooks/3Discrete.pdf}
+    \end{center}
+    \caption{Example of category $\mathbf{\underline{3}}$.}
+    \label{fig:3Discrete}
+  \end{figure}
 \end{example}
 
 \begin{example}[Preorders]
@@ -505,7 +521,7 @@ uniqueness of morphisms, which is known in category theory as \textbf{universal 
 \begin{example}[Terminal and Initial Objects in $\mathbf{Set}$]
 Without thinking too much, one might assumet that in the category $\mathbf{Set}$
 the empty set would be a zero object; but that's not true.
-In reality, the empty set is the initial object, since $f:\emptyset \to B$
+In reality, the empty set is the initial object, since $f:\varnothing \to B$
 is the only function from the empty set to any other set. Why is this valid?
 
 Remember that in set theory, a function from two sets is defined as a binary
@@ -513,21 +529,22 @@ relation such that for every $x \in dom_f$, there is a unique $y \in cod_f$, i.e
 $f$ is a triple $(A,B,G)$, where $A = dom_f$, $B = cod_f$ and $G \subset A \times B$
 such that $\forall x \in dom_f$, there exists a unique $y \in B$, such that $(x,y) \in G$.
 
-Since $dom_f = \emptyset$, we have that $G \subset \emptyset \times B$, but this
-is actually empty. Why? If $\emptyset \times B$ is not empty, then there exists
-$(a,b) \in \empty \times B$, which is false, since this would imply that
-$a \in \emptyset$, which contradicts the definition of the empty set that says
-that it can have no elements (note that $\emptyset \in \emptyset$ is actually false).
+Since $dom_f = \varnothing$, we have that $G \subset \varnothing \times B$, but this
+is actually empty. Why? If $\varnothing \times B$ is not empty, then there exists
+$(a,b) \in \varnothing \times B$, which is false, since this would imply that
+$a \in \varnothing$, which contradicts the definition of the empty set that says
+that it can have no elements (note that $\varnothing \in \varnothing$ is actually false).
 
-With this, we have that $G = \emptyset$, thus, the only possible function from
-$\emptyset$ to $B$ is $f = (\emptyset, \emptyset, B)$. Which proves that the
+With this, we have that $G = \varnothing$, thus, the only possible function from
+$\varnothing$ to $B$ is $f = (\varnothing, \varnothing, B)$. Which proves that the
 empty set is initial.
 
 But what about terminal? The empty set actually does not have any morphisms
-that arrives on it, since there is no function $f:A \to \emptyset$.
+that arrives on it, since there is no function $f:A \to \varnothing$.
 The terminal sets in $\mathbf{Set}$ are actually all the singletons (sets with only
 one element), since for any $\{a\}$, there will be only one function
 $g: A \to \{a\}$, which is $g(x) = a$.
+\label{ex:InitialTerminalSet}
 \end{example}
 
 Another definition we have is that of a \textit{zero} morphism. The idea here
@@ -1202,12 +1219,69 @@ the diagram below.
 \begin{definition}[Horizontal Composition/Whiskering of Natural Transformations]
 \end{definition}
 
+\newpage
 \section{Limits, Colimits}
 
+Limits and colimits are universal constructions that generalize some of the
+categorical concepts we already talked about, such as products,
+equalizers, pullbacks and pushouts.
 Limits have a terminal sort of universal properties.
 Colimits have an initial sort of universal properties.
 
+They are of interest, because whenever a category is complete with
+respect to limits or colimits, these end up corresponding to some
+classical concept.
+
 \subsection{Cones and Cocones}
+
+Before talking about limits, we need to introduce the notion of a cone and it's dual, the cocone.
+
+\begin{definition}[Cone]
+  Let $\mathcal C$ be a \textit{small} category. The (left) cone $\mathcal C^{\lhd}$ is a category constructed
+  by adding an object $LC$, called the cone point, into the set of objects of $\mathcal C$,
+  and making it an initial object by guaranteeing that there is only one morphism $l_A$ from $LC$ to each
+  $A \in Ob_\mathcal C$. In other words, $\mathcal C^{\lhd}$ is a category where:
+  \begin{align*}
+    Ob(\mathcal C^{\lhd}) &:= \{LC\} \sqcup Ob(\mathcal C),\\
+    Mor_{\mathcal C^{\lhd}}(A,B) &:=
+    \begin{cases}
+      Mor_\mathcal C (A,B)  \quad &\text{if } A,B \in Ob(\mathcal C), \\
+      \{l_A\}  \quad &\text{if } A = LC, B \in Ob(\mathcal C), \\
+      \{id_{LC}\}  \quad &\text{if } A = LC, B = LC, \\
+      \varnothing \quad &\text{if } A \in Ob(\mathcal C), B = LC.
+    \end{cases}
+  \end{align*}
+\end{definition}
+
+As we pointed out, the cocone is just the dual.
+
+\begin{definition}[Cocone (Right Rone)]
+  Let $\mathcal C$ be a \textit{small} category. The cocone $\mathcal C^{\rhd}$ is a category constructed
+  by adding an object $RC$, called the cone point, into the set of objects of $\mathcal C$,
+  and making it an initial object by guaranteeing that there is only one morphism $r_A$ from $A \in Ob_\mathcal C$ to each
+  $RC$. In other words, $\mathcal C^{\rhd}$ is a category where:
+  \begin{align*}
+    Ob(\mathcal C^{\rhd}) &:= \{RC\} \sqcup Ob(\mathcal C),\\
+    Mor_{\mathcal C^{\rhd}}(A,B) &:=
+    \begin{cases}
+      Mor_\mathcal C (A,B)  \quad &\text{if } A,B \in Ob(\mathcal C), \\
+      \{r_B\} \quad &\text{if } A = RC, B \in Ob(\mathcal C),\\
+      \{id_{RC}\}  \quad &\text{if } A = RC, B = RC, \\
+      \varnothing  \quad &\text{if } A = RC, B \in Ob(\mathcal C), \\
+    \end{cases}
+  \end{align*}
+\end{definition}
+
+\textbf{Caution!} When constructing, for example, the cone category, there can
+be only a single morphism leaving $LC$. One might be tempted to construct this
+category by drawing an arrow from the initial object $LC$ to every object
+in the category $\mathcal C$, but this might lead to more than one morphism
+from $LC$ to an object.
+
+\begin{example}[Cone in Discrete Categories]
+  Let $\mathbf{\underline{3}}$ be the discrete category with three objects.
+\end{example}
+
 
 \subsection{Slice Categories}
 

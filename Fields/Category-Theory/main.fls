@@ -461,6 +461,9 @@ INPUT ./notebooks/3CatComplete.pdf
 INPUT ./notebooks/3Catsimple.pdf
 INPUT ./notebooks/3Catsimple.pdf
 INPUT ./notebooks/3Catsimple.pdf
+INPUT ./notebooks/3Discrete.pdf
+INPUT ./notebooks/3Discrete.pdf
+INPUT ./notebooks/3Discrete.pdf
 INPUT ./notebooks/NCat.pdf
 INPUT ./notebooks/NCat.pdf
 INPUT ./notebooks/NCat.pdf
@@ -534,5 +537,6 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb
