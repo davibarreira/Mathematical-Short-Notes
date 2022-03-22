@@ -26,13 +26,14 @@
 \contentsline {subsection}{\numberline {5.2}Slice Categories}{34}{subsection.5.2}%
 \contentsline {subsection}{\numberline {5.3}Defining Limits and Colimits}{34}{subsection.5.3}%
 \contentsline {section}{\numberline {6}Adjoints}{34}{section.6}%
-\contentsline {section}{\numberline {7}Diagrams, Graphs and Schemas in Category Theory}{35}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Formalizing Diagrams}{35}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Underlying Graphs}{36}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Generating Categories from Graphs via Free Functors}{37}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Categories from Preorders}{38}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}Generating Categories from Schemas}{40}{subsection.7.5}%
-\contentsline {subsection}{\numberline {7.6}More on Generating Categories from Schemas *}{41}{subsection.7.6}%
-\contentsline {subsection}{\numberline {7.7}$\mathcal C$-Sets and Instances}{42}{subsection.7.7}%
-\contentsline {section}{\numberline {8}What are Sets?}{44}{section.8}%
-\contentsline {subsubsection}{\numberline {8.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{44}{subsubsection.8.0.1}%
+\contentsline {subsection}{\numberline {6.1}General Definitions}{34}{subsection.6.1}%
+\contentsline {section}{\numberline {7}Diagrams, Graphs and Schemas in Category Theory}{36}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Formalizing Diagrams}{36}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Underlying Graphs}{37}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Generating Categories from Graphs via Free Functors}{38}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Categories from Preorders}{39}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Generating Categories from Schemas}{41}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}More on Generating Categories from Schemas *}{42}{subsection.7.6}%
+\contentsline {subsection}{\numberline {7.7}$\mathcal C$-Sets and Instances}{43}{subsection.7.7}%
+\contentsline {section}{\numberline {8}What are Sets?}{45}{section.8}%
+\contentsline {subsubsection}{\numberline {8.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{45}{subsubsection.8.0.1}%

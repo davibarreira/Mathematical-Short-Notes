@@ -15,6 +15,8 @@ we usually use a bold font with no italic, e.g. $\mathbf{Gr}, \mathbf{SmCat}, \m
   \item $\circ$ - Used to symbolize composition of morphisms similar to how we compose functions.
   \item $\fatsemi$ - Represents composition, but with orders reversed, i.e. $g\circ f = f \fatsemi g$.
   \item $\diamond$ - \textit{Whiskering, prewhiskering, postwhiskering}.
+  \item $\cong$ - Isomorphism in the context applied (e.g. categorical, set theoretical, etc).
+  \item $\simeq$ - Equivalence of categories via natural transformations (weaker than isomorphism).
 \end{enumerate}
 
 \newpage
@@ -655,6 +657,7 @@ Category Theory. Here is how it's done.
   on $A$ and $B$ is a triple $(Z,f,g)$ where $f:Z\to A$ and
   $g:Z\to B$ are morphisms in $\mathcal C$. This is
   shown in figure \ref{fig:Span}.
+  \label{def:Span}
 \end{definition}
 
 \begin{figure}[H]
@@ -1282,10 +1285,75 @@ from $LC$ to an object.
   Let $\mathbf{\underline{3}}$ be the discrete category with three objects.
 \end{example}
 
+\begin{example}[Cone in $\mathbf{Gr}$]
+  Let $\mathbf{\underline{3}}$ be the discrete category with three objects.
+\end{example}
+
 
 \subsection{Slice Categories}
+
+A slice category is a way to define categories of certain diagrams (functors) inside another category.
+The definition by itself is very obscure, so we instead present how to construct the slice
+category for \textit{spans} (remember definition \ref{def:Span} and Figure \ref{fig:Span}).
+This example makes clear the motivation behind the slice category.
 
 \subsection{Defining Limits and Colimits}
 
 
 \section{Adjoints}
+
+Adjoints, or, adjunctions, are not easily understood from the definition alone. 
+A good reference for a more intuitive description is the blog Math3ma, where the
+intuition for adjoints were taken from.
+
+
+We already saw that when talking about categories, there is a weaker notion
+of equivalence \ref{def:EquivalenceCategories}, where instead of
+requiring the existence of an isomorphism given by
+$F \circ G = id_\mathcal D$ and $F \circ F = id_\mathcal C$, we only
+ask for $F \circ G \cong id_\mathcal D$ and $G \circ F \cong id_\mathcal C$.
+
+But can we make this even weaker? This is where adjunctions come in. Instead
+of isomorphism, we only ask for the existence of a morphism (which in the
+case of functor is a natural transformation) taking
+$F\circ G \to id_\mathcal D$ and
+$id_\mathcal C \to G\circ F $.
+
+
+
+\subsection{General Definitions}
+
+The definition we are going to present assumes that both categories are locally small. This will
+be enough for most applications. Yet, there are a more complicated definition that also takes into
+account categories that are not locally small. Remember that a category $\mathcal C$
+is locally small if for every pair of objects $A$ and $B$, then $Mor_\mathcal C (A,B)$ is a set.
+\begin{definition}
+  Let $\mathcal C$ and $\mathcal D$ be locally small categories. The adjoints (adjunction) between
+  $\mathcal C$ and $\mathcal D$ are the functors
+  \begin{displaymath}
+    L:\mathcal C \to \mathcal D, \quad R:\mathcal D \to \mathcal C,
+  \end{displaymath}
+  together with a natural transformation $\alpha$ such that for every
+  $A \in \mathcal C$ and $B, \in \mathcal D$,
+  \begin{displaymath}
+    \alpha_{A,B}: Mor_\mathcal D (L(A), B) \overset{\cong}{\longrightarrow} Mor_\mathcal C (A, R(B)),
+  \end{displaymath}
+  i.e. for every pair of objects $A \in \mathcal C$  and $B \in \mathcal D$, there is an isomorphism
+  between the sets $Mor_\mathcal D(L(A), B)$ and $Mor_\mathcal C (A, R(B))$.
+\end{definition}
+
+\begin{shaded}
+  \textbf{Adjoints in Category Theory vs. Linear Algebra.} Names are suggestive in Mathematics,
+  but even more so in Category Theory. Note that the definition above of an adjoint resembles
+  somewhat the idea of adjoint linear transformation in Linear Algebra. Remember:
+  \begin{displaymath}
+    \langle A x, y \rangle  = \langle x, A^* y \rangle, \quad \forall x,y \in X,
+  \end{displaymath}
+  where $X$ is our vector space and $A: X \to X$ is a linear transformation.
+\end{shaded}
+
+\begin{proposition}
+  Let $\mathcal C$ and $\mathcal D$ be two locally small categories, and $F:\mathcal C \to \mathcal D$
+  a functor. If both functors $G,G':\mathcal D \to \mathcal C$ are right (or left) adjoints
+  to $F$, then there exists a natural isomorphism between $G$ and $G'$.
+\end{proposition}
