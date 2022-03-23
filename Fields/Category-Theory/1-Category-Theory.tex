@@ -1219,7 +1219,48 @@ called \textit{Whiskering}, also referred as \textit{horizontal composition}
 by \citet{spivak2014category}. This time, the name is inspired by
 the diagram below.
 
+\begin{definition}[Prewhiskering]
+  Let $\mathcal B, \mathcal C, \mathcal D$ be categories, and define
+  the following functors $G_1,G_2:\mathcal C \to \mathcal D$,
+  $F:\mathcal B \to \mathcal C$ and the natural transformation
+  $\alpha: G_1 \to G_2$.
+  A \textit{postwhiskering}
+  of $\alpha$ by $\mathcal G$ is denoted by $\alpha \diamond G:G_1 \circ F \to G_2 \circ F$,
+  where for every $b \in Ob_\mathcal B$, $(\alpha \diamond F)_b:(G_1 \circ F)(b) \to (G_2 \circ F)(b)$
+  is defined to be $\alpha_{F(b)}$ 
+\end{definition}
+
+\begin{definition}[Postwhiskering]
+  Let $\mathcal B, \mathcal C, \mathcal D$ be categories, and define
+  the following functors $F_1,F_2:\mathcal B \to \mathcal C$,
+  $G:\mathcal C \to \mathcal D$ and the natural transformation
+  $\beta F_1 \to F_2$.
+  A \textit{postwhiskering}
+  of $\beta$ by $\mathcal G$ is denoted by $G \diamond \beta:G \circ F_1 \to G \circ F_2$,
+  where for every $c \in Ob_\mathcal C$, $(\beta \diamond G)_b:(G \circ F_1)(c) \to (G \circ F_2)(c)$
+  is defined to be $G(\beta_c)$ .
+\end{definition}
+
+
 \begin{definition}[Horizontal Composition/Whiskering of Natural Transformations]
+  Let $\mathcal B, \mathcal C, \mathcal D$ be categories, and define
+  the following functors $F_1,F_2:\mathcal B \to \mathcal C$,
+  $G_1, G_2 :\mathcal C \to \mathcal D$ and the natural transformations
+  $\alpha: F_1 \to F_2$, $\beta: G_1 \to G_2$.
+
+  A \textit{postwhiskering}
+  of $\alpha$ by $\mathcal F$ is denoted by $\alpha \diamond F:G_1 \circ F_1 \to G_2 \circ F$,
+  where for every $b \in Ob_\mathcal B$, $(\alpha \diamond F)_b:G_1 \circ F(b) \to G_2 \circ F(b)$
+  is defined to be $\alpha_{F(b)}$ 
+
+  A \textit{prewhiskering}
+  of $\beta$ by $\mathcal H$ is denoted by $H \diamond \beta\circ G_1 \to H \circ G_2$,
+  where for every $c \in Ob_\mathcal C$, $(H \diamond \beta)_c: H \circ G_1(c) \to H \circ G_2(c)$
+  is defined to be $H(\beta_c)$ .
+
+  A \textit{whiskering} (horizontal composition) between two natural transformations
+  $\alpha: F_1 \to F_2$ and $\beta:G_1\to G_2$, denoted by
+  $\alpha \diamond \beta: $
 \end{definition}
 
 \newpage
@@ -1296,6 +1337,10 @@ A slice category is a way to define categories of certain diagrams (functors) in
 The definition by itself is very obscure, so we instead present how to construct the slice
 category for \textit{spans} (remember definition \ref{def:Span} and Figure \ref{fig:Span}).
 This example makes clear the motivation behind the slice category.
+
+\begin{example}[Category of Spans in $\mathcal C$]
+
+\end{example}
 
 \subsection{Defining Limits and Colimits}
 
