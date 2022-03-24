@@ -1,4 +1,4 @@
-\section{Diagrams, Graphs and Schemas in Category Theory}
+\section{Graphs and Schemas in Category Theory}
 
 IMPROVE THIS SECTION! IT'S ALL OVER THE PLACE.
 A schema is a tuple $(G,R)$ where $G$ is a graph and
@@ -43,41 +43,6 @@ The rest of the section focuses on showing how these concepts are used to
 model data structures/databases, which can very
 elegantly be understood in Category Theory, and which help us deal with the very
 common issue of data migration.
-
-\subsection{Formalizing Diagrams}
-
-We've drawn many diagrams representing either categories or portions of categories. Up
-until now, this has been done in a informal way. Yet, it's possible to define such diagrams rigorously.
-One of the reasons that formal diagrams are useful is that they allow us to talk about portions
-of some category $\mathcal C$ in a rigorous manner.
-
-\begin{definition}[Diagram]
-  An $\mathcal I$-diagram (or just diagram) $D$ of a category $\mathcal C$ is a functor
-  $D: \mathcal I \Rightarrow \mathcal C$, where $\mathcal I$ is called the index category.
-\end{definition}
-
-The definition above is pretty much a ``placeholder'', i.e. any functor can be seen as
-a diagram since there is no conditions placed on the index category.
-
-\begin{definition}[Commutative Diagram]
-  A diagram $D:\mathcal I \to \mathcal C$ is said to be commutative if 
-  for every path starting at $D(A)$ and ending at $D(B)$, the result is the same,
-  where $A, B \in Ob_\mathcal I$. Here, a path is 
-\end{definition}
-
-\begin{shaded}
-  \textbf{Aesthetic differences when drawing diagrams.}
-  If you've picked up any book on Category Theory, you'll note that almost every
-  drawing of a diagram uses the label of a node instead of the black circle
-  as we've done here. This is just a matter of aesthetics, yet, authors
-  sometimes draw the black circles when they want to emphasize the
-  ``directed graph'' nature of the diagram, i.e. they want to highlight
-  that this diagram can be seen as a directed graph.
-
-  Therefore, the choice of how to draw these diagram comes down to
-  aesthetic preferences. In these notes, we've opted for drawing the
-  black dots.
-\end{shaded}
 
 \subsection{Underlying Graphs}
 

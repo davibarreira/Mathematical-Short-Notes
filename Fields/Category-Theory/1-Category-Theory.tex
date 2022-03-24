@@ -991,6 +991,59 @@ that might be useful to someone applying Category Theory to another field.
   $I_\mathcal C (f \in Mor_\mathcal S) = f \in Mor_\mathcal C$.
 \end{example}
 
+\subsection{Formalizing Diagrams}
+
+We've drawn many diagrams representing either categories or portions of categories. Up
+until now, this has been done in a informal way. Yet, it's possible to define such diagrams rigorously.
+One of the reasons that formal diagrams are useful is that they allow us to talk about portions
+of some category $\mathcal C$ in a rigorous manner.
+
+\begin{definition}[Diagram]
+  A $\mathcal I$-diagram (or just diagram) $D$ of a category $\mathcal C$ is a functor
+  $D: \mathcal I \to \mathcal C$, where $\mathcal I$ is called the index category.
+\end{definition}
+
+The definition above is pretty much a ``placeholder'', i.e. any functor can be seen as
+a diagram since there is no conditions placed on the index category. It's common to
+say that $D$ is an $I$-shaped diagram. The reason for this is that the functor
+$D$ maps the objects and morphisms of $\mathcal C$ in the $I$ category. This
+can be better understood from the figure below.
+
+(Figure here of I shaped)
+
+We define a \textit{path} in $D$ to be an $n$-tuple of morphisms in $D$ where
+the codomain of the morphism matches the domain following morphism, e.g.
+for $f,g,h \in Mor_\mathcal I$, we have a path $(Df, Dg, Dh)$ if
+the codomain of $Df$ mathces the domain of $Dg$ and the codomain of $Dg$ matches
+the domain of $Dh$.
+The length of a path is equal to the number of morphisms. For a path
+$(Df_1, Df_2,...,Df_n)$, the composition along such path is a morphism $Df_1\fatsemi ...\fatsemi Df_n$.
+
+We can now formally define a commutative diagram.
+
+\begin{definition}[Commutative Diagram]
+  A diagram $D:\mathcal I \to \mathcal C$ is said to be commutative if 
+  for every pair of objects $D(A), D(B) \in Ob_\mathcal C$,
+  every composition along paths from $D(A)$ to $D(B)$ are equal.
+\end{definition}
+
+From the definition above, we say that the diagram shown below commutes
+if $h = f \fatsemi g$.
+
+\begin{shaded}
+  \textbf{Aesthetic differences when drawing diagrams.}
+  If you've picked up any book on Category Theory, you'll note that almost every
+  drawing of a diagram uses the label of a node instead of the black circle
+  as we've done here. This is just a matter of aesthetics, yet, authors
+  sometimes draw the black circles when they want to emphasize the
+  ``directed graph'' nature of the diagram, i.e. they want to highlight
+  that this diagram can be seen as a directed graph.
+
+  Therefore, the choice of how to draw these diagram comes down to
+  aesthetic preferences. In these notes, we've opted for drawing the
+  black dots.
+\end{shaded}
+
 
 \section{Natural Transformations}
 
@@ -1221,47 +1274,58 @@ the diagram below.
 
 \begin{definition}[Prewhiskering]
   Let $\mathcal B, \mathcal C, \mathcal D$ be categories, and define
-  the following functors $G_1,G_2:\mathcal C \to \mathcal D$,
+  functors $G_1,G_2:\mathcal C \to \mathcal D$,
   $F:\mathcal B \to \mathcal C$ and the natural transformation
   $\alpha: G_1 \to G_2$.
   A \textit{postwhiskering}
   of $\alpha$ by $\mathcal G$ is denoted by $\alpha \diamond G:G_1 \circ F \to G_2 \circ F$,
   where for every $b \in Ob_\mathcal B$, $(\alpha \diamond F)_b:(G_1 \circ F)(b) \to (G_2 \circ F)(b)$
   is defined to be $\alpha_{F(b)}$ 
+  \label{def:prewhiskering}
 \end{definition}
 
 \begin{definition}[Postwhiskering]
   Let $\mathcal B, \mathcal C, \mathcal D$ be categories, and define
-  the following functors $F_1,F_2:\mathcal B \to \mathcal C$,
+  functors $F_1,F_2:\mathcal B \to \mathcal C$,
   $G:\mathcal C \to \mathcal D$ and the natural transformation
   $\beta F_1 \to F_2$.
   A \textit{postwhiskering}
   of $\beta$ by $\mathcal G$ is denoted by $G \diamond \beta:G \circ F_1 \to G \circ F_2$,
   where for every $c \in Ob_\mathcal C$, $(\beta \diamond G)_b:(G \circ F_1)(c) \to (G \circ F_2)(c)$
   is defined to be $G(\beta_c)$ .
+  \label{def:postwhiskering}
 \end{definition}
 
+From these definitions of prewhiskering and postwhiskering, we construct the Whiskering,
+which is just the composition of a prewhiskering with a postwhiskering.
 
 \begin{definition}[Horizontal Composition/Whiskering of Natural Transformations]
   Let $\mathcal B, \mathcal C, \mathcal D$ be categories, and define
-  the following functors $F_1,F_2:\mathcal B \to \mathcal C$,
-  $G_1, G_2 :\mathcal C \to \mathcal D$ and the natural transformations
-  $\alpha: F_1 \to F_2$, $\beta: G_1 \to G_2$.
-
-  A \textit{postwhiskering}
-  of $\alpha$ by $\mathcal F$ is denoted by $\alpha \diamond F:G_1 \circ F_1 \to G_2 \circ F$,
-  where for every $b \in Ob_\mathcal B$, $(\alpha \diamond F)_b:G_1 \circ F(b) \to G_2 \circ F(b)$
-  is defined to be $\alpha_{F(b)}$ 
-
-  A \textit{prewhiskering}
-  of $\beta$ by $\mathcal H$ is denoted by $H \diamond \beta\circ G_1 \to H \circ G_2$,
-  where for every $c \in Ob_\mathcal C$, $(H \diamond \beta)_c: H \circ G_1(c) \to H \circ G_2(c)$
-  is defined to be $H(\beta_c)$ .
-
-  A \textit{whiskering} (horizontal composition) between two natural transformations
-  $\alpha: F_1 \to F_2$ and $\beta:G_1\to G_2$, denoted by
-  $\alpha \diamond \beta: $
+  functors $F_1,F_2:\mathcal B \to \mathcal C$ and
+  $G_1, G_2 :\mathcal C \to \mathcal D$. For two natural transformations
+  $\alpha: G_1 \to G_2$ and $\beta: F_1 \to F_2$,
+  a \textit{whiskering} (horizontal composition)
+  is denoted by
+  $\alpha \diamond \beta: G_1\circ F_1 \rightarrow G_2 \circ F_2$
+  where:
+  \begin{displaymath}
+  \alpha \diamond \beta
+  = (\alpha \diamond F_1) \circ (G_2 \diamond \beta)
+  = (G_1 \diamond \beta) \circ (\alpha \diamond G_2).
+  \end{displaymath}
+  \label{def:Whiskering}
 \end{definition}
+
+\begin{theorem}[Interchange for Whiskering]
+  (image here)
+
+  Given the setup above, then we have
+  \begin{displaymath}
+    (\beta_2 \circ \beta_1) \diamond (\alpha_2 \circ \alpha_1) =
+    (\beta_2 \diamond \alpha_2) \circ (\beta_1 \diamond \alpha_1).
+  \end{displaymath}
+  
+\end{theorem}
 
 \newpage
 \section{Limits, Colimits}
@@ -1339,6 +1403,56 @@ category for \textit{spans} (remember definition \ref{def:Span} and Figure \ref{
 This example makes clear the motivation behind the slice category.
 
 \begin{example}[Category of Spans in $\mathcal C$]
+  Consider a diagram $D:\underline{2}\to \mathcal C$. Note that
+  the cone $\underline{2}^{\lhd}$ is a span as shown in the Figure below.
+
+  (Figure of span from $\underline{2}^{\lhd}$)
+
+  Now, consider the category $\mathcal C^{\underline{2}^{\lhd}}$, i.e.
+  the category of functors $F:\underline{2}^{\lhd} \to \mathcal C$,
+  where the morphisms are natural transformations.
+  Each functor $F \in Ob_{\mathcal C^{\underline{2}^{\lhd}}}$
+  is a span inside category $\mathcal F$, as shown in the Figure below.
+
+  (Figure here)
+
+  The next step is to formally define the category of spans between two given objects,
+  e.g. we want to formally define a category of spans in $A, B \in Ob_\mathcal C$,
+  where each object is a functor $F:\underline{2}^{\lhd}\to \mathcal C$,
+  such that $F(1) = A$ and $F(2) = B$.
+
+  The caveat here is that we have to do this in a categorical way, without actually applying restrictions
+  to the object specifications. To do this, we define a functor
+  $X_{A,B}:\underline{2} \to \mathcal C$, where $X_{A,B}(1) = A$ and $X_{A,B}(2)= B$.
+
+  Next, we define an inclusion functor $i: \underline{2} \to \underline{2}^{\lhd}$ which sends
+  everything in $\underline{2}$ to the same point, but in the bigger category $\underline{2}^{\lhd}$
+  (similar to how we can define $i: \mathbb N \to \mathbb R$ where $i(1) = 1.0$).
+
+  We can now construct the following diagram:
+  
+  Thus, if $F\circ i = X_{A,B}$, then the diagram above commutes and $F(1) = A, F(2) = B$, which means
+  that $F$ is a span of $A$ and $B$. This is the categorical way to restrict our permissible functors
+  to spans of $A,B$. Therefore, we define the category of spans between $A,B$ as
+  $\mathcal C_{\setminus X}$, where
+  \begin{displaymath}
+    Ob_{\mathcal C_{/ X}}:=\{
+      F: \underline{2}^\lhd \to \mathcal C \ | \ F \circ i = X_{A,B}
+    \}.
+  \end{displaymath}
+  \begin{displaymath}
+    Mor_{\mathcal C_{/X}}(F,G):=\{
+      \alpha: F \Rightarrow G \ | \ \alpha \diamond i = id_{X_{A,B}}
+    \}.
+  \end{displaymath}
+  Note that $\alpha$ is a natural transformation, and $\alpha \diamond i$ is the \textit{prewhiskering}
+  operation \ref{def:prewhiskering}. The composition between morphisms is defined as in the category of functors.
+
+  We already explained the motivation for why the definition of $Ob_{\mathcal C_{/X}}$
+  is restricted to $F\circ i = X_{A,B}$,
+  but not why $\alpha \diamond i = id_{X_{A,B}}$ in the morphisms.
+  
+  
 
 \end{example}
 

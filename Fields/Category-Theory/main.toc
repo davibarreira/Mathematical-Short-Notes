@@ -16,24 +16,24 @@
 \contentsline {subsection}{\numberline {3.3}Types of Functors}{27}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Subcategories}{28}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}Relevant Examples of Functors}{28}{subsection.3.5}%
-\contentsline {section}{\numberline {4}Natural Transformations}{29}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Defining Natural Transformations}{29}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}The Category of Functors}{30}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Equivalence Between Categories}{32}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Vertical vs Horizontal Compostion}{33}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Limits, Colimits}{34}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Cones and Cocones}{34}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Slice Categories}{35}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Defining Limits and Colimits}{35}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Adjoints}{35}{section.6}%
-\contentsline {subsection}{\numberline {6.1}General Definitions}{35}{subsection.6.1}%
-\contentsline {section}{\numberline {7}Diagrams, Graphs and Schemas in Category Theory}{37}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Formalizing Diagrams}{37}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Underlying Graphs}{38}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Generating Categories from Graphs via Free Functors}{39}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Categories from Preorders}{40}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}Generating Categories from Schemas}{42}{subsection.7.5}%
-\contentsline {subsection}{\numberline {7.6}More on Generating Categories from Schemas *}{43}{subsection.7.6}%
-\contentsline {subsection}{\numberline {7.7}$\mathcal C$-Sets and Instances}{44}{subsection.7.7}%
-\contentsline {section}{\numberline {8}What are Sets?}{46}{section.8}%
-\contentsline {subsubsection}{\numberline {8.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{46}{subsubsection.8.0.1}%
+\contentsline {subsection}{\numberline {3.6}Formalizing Diagrams}{29}{subsection.3.6}%
+\contentsline {section}{\numberline {4}Natural Transformations}{30}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Defining Natural Transformations}{30}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}The Category of Functors}{31}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Equivalence Between Categories}{33}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Vertical vs Horizontal Compostion}{34}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Limits, Colimits}{35}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Cones and Cocones}{35}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Slice Categories}{36}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Defining Limits and Colimits}{37}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Adjoints}{37}{section.6}%
+\contentsline {subsection}{\numberline {6.1}General Definitions}{37}{subsection.6.1}%
+\contentsline {section}{\numberline {7}Graphs and Schemas in Category Theory}{39}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Underlying Graphs}{39}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Generating Categories from Graphs via Free Functors}{40}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Categories from Preorders}{42}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Generating Categories from Schemas}{43}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}More on Generating Categories from Schemas *}{44}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}$\mathcal C$-Sets and Instances}{45}{subsection.7.6}%
+\contentsline {section}{\numberline {8}What are Sets?}{47}{section.8}%
+\contentsline {subsubsection}{\numberline {8.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{47}{subsubsection.8.0.1}%
