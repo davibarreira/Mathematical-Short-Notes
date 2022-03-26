@@ -1423,7 +1423,7 @@ This example makes clear the motivation behind the slice category.
 
   The caveat here is that we have to do this in a categorical way, without actually applying restrictions
   to the object specifications. To do this, we define a functor
-  $X_{A,B}:\underline{2} \to \mathcal C$, where $X_{A,B}(1) = A$ and $X_{A,B}(2)= B$.
+  $X:\underline{2} \to \mathcal C$, where $X(1) = A$ and $X(2)= B$.
 
   Next, we define an inclusion functor $i: \underline{2} \to \underline{2}^{\lhd}$ which sends
   everything in $\underline{2}$ to the same point, but in the bigger category $\underline{2}^{\lhd}$
@@ -1431,61 +1431,196 @@ This example makes clear the motivation behind the slice category.
 
   We can now construct the following diagram:
   
-  Thus, if $F\circ i = X_{A,B}$, then the diagram above commutes and $F(1) = A, F(2) = B$, which means
+  Thus, if $F\circ i = X$, then the diagram above commutes and $F(1) = A, F(2) = B$, which means
   that $F$ is a span of $A$ and $B$. This is the categorical way to restrict our permissible functors
   to spans of $A,B$. Therefore, we define the category of spans between $A,B$ as
   $\mathcal C_{\setminus X}$, where
   \begin{displaymath}
     Ob_{\mathcal C_{/ X}}:=\{
-      F: \underline{2}^\lhd \to \mathcal C \ | \ F \circ i = X_{A,B}
+      F: \underline{2}^\lhd \to \mathcal C \ | \ F \circ i = X
     \}.
   \end{displaymath}
   \begin{displaymath}
     Mor_{\mathcal C_{/X}}(F,G):=\{
-      \alpha: F \Rightarrow G \ | \ \alpha \diamond i = id_{X_{A,B}}
+      \alpha: F \Rightarrow G \ | \ \alpha \diamond i = id_{X}
     \}.
   \end{displaymath}
   Note that $\alpha$ is a natural transformation, and $\alpha \diamond i$ is the \textit{prewhiskering}
   operation \ref{def:prewhiskering}. The composition between morphisms is defined as in the category of functors.
 
   We already explained the motivation for why the definition of $Ob_{\mathcal C_{/X}}$
-  is restricted to $F\circ i = X_{A,B}$,
-  but not why $\alpha \diamond i = id_{X_{A,B}}$ in the morphisms.
-  
-  
+  is restricted to $F\circ i = X$,
+  but not why $\alpha \diamond i = id_{X}$ in the morphisms. This comes from the fact
+  that for $\alpha:F \Rightarrow G$, then
+  $\alpha \diamond i: F \circ i \to G \circ i$. Since
+  $F$ and $G$ are objects in $\mathcal C_{/X}$, we have
+  $F \circ i = X$ and $G \circ i = X$, implying that
+  $\alpha \diamond i: X \to X$, i.e. $\alpha \diamond i = 1_{X}$.
 
+  This proves that indeed such restriction is what we want for morphisms. The intuition
+  is just that we want a natural transformation between spans $A, B$ to exists
+  only if $\alpha$ sends $A$ to $A$ and $B$ to $B$, as shown in the figure below.
+
+  Surprisingly, the product $(A\times B, \pi_1, \pi_2)$ is the terminal object
+  of the category of spans between $A$ and $B$, and, as we'll see, this means
+  that the product is the limit of $X:\underline{2} \to \mathcal C$.
 \end{example}
 
+So, in the example above, we've constructed the category of spans between $A,B$,
+which consisted the category of functors $S:\underline{2}^\lhd \to C$, restricted
+to $S \circ i = X$, where $X: \underline{2}\to \mathcal C$ is a diagram
+on the discrete category of two elements with $X(1) = A, X(2) = B$.
+We can therefore generalize this construction
+by considering an arbitrary category $I$ instead of $\underline{2}$,
+and any functor ($I$-shaped diagram) $X:I\to \mathcal C$.
+
+\begin{definition}[Slice Category]
+  Let $\mathcal C$ and $\mathcal I$ be two categories, and $i:I \to I^{\lhd}$ the
+  inclusion functor. For a given functor $X:I \to \mathcal C$, the slice category
+  of $\mathcal C$ over $X$ is denoted $\mathcal C_{/X}$, where:
+
+  \begin{displaymath}
+    Ob_{\mathcal C_{/ X}}:=\{
+      F: I^\lhd \to \mathcal C \ | \ F \circ i = X
+    \}.
+  \end{displaymath}
+  \begin{displaymath}
+    Mor_{\mathcal C_{/X}}(F,G):=\{
+      \alpha: F \Rightarrow G \ | \ \alpha \diamond i = id_{X}
+    \}.
+  \end{displaymath}
+\end{definition}
+
+By taking the dual definition, we can define the \textit{coslice}.
+
+\begin{definition}[Coslice Category]
+  Let $\mathcal C$ and $\mathcal I$ be two categories, and $i:I \to I^{\rhd}$ the
+  inclusion functor. For a given functor $X:I \to \mathcal C$, the coslice category
+  of $\mathcal C$ over $X$ is denoted $\mathcal C_{X/}$, where:
+
+  \begin{displaymath}
+    Ob_{\mathcal C_{X/}}:=\{
+      F: I^\rhd \to \mathcal C \ | \ F \circ i = X
+    \}.
+  \end{displaymath}
+  \begin{displaymath}
+    Mor_{\mathcal C_{X/}}(F,G):=\{
+      \alpha: F \Rightarrow G \ | \ \alpha \diamond i = id_{X}
+    \}.
+  \end{displaymath}
+\end{definition}
+
 \subsection{Defining Limits and Colimits}
+
+With the definition of slices and coslices, the definition of a limit and
+colimit is immediate.
+\begin{definition}[Limit]
+  Let $\mathcal C$ and $\mathcal I$ be two categories, and $X:I \to \mathcal C$
+  a functor. The limit of $X$ is a terminal object in the slice category
+  $\mathcal C_{/X}$, which is denoted by $\lim X$ or $\lim_I X$.
+\end{definition}
+
+Remember that a category can have several terminal objects, but they will all
+be isomorphic, with a unique isomorphism between them. Thus, in a sense, a limit
+will always be unique up to an isomorphism.
+
+Again, we can easily define a dual definition.
+
+\begin{definition}[Colimit]
+  Let $\mathcal C$ and $\mathcal I$ be two categories, and $X:I \to \mathcal C$
+  a functor. The limit of $X$ is a initial object in the coslice category
+  $\mathcal C_{X/}$, which is denoted by $\text{colim} X$ or $\text{colim}_I X$.
+\end{definition}
 
 
 \section{Adjoints}
 
 Adjoints, or, adjunctions, are not easily understood from the definition alone. 
 A good reference for a more intuitive description is the blog Math3ma, where the
-intuition for adjoints were taken from.
+intuition for adjoints was taken from.
 
+\subsection{Intuitive Explanation for Adjoints}
 
-We already saw that when talking about categories, there is a weaker notion
-of equivalence \ref{def:EquivalenceCategories}, where instead of
+Consider two functors $F:\mathcal C \to \mathcal D$ and $G:\mathcal D \to \mathcal C$.
+We already saw that there is a weaker notion
+of equivalence between categories(\ref{def:EquivalenceCategories}), where instead of
 requiring the existence of an isomorphism given by
-$F \circ G = id_\mathcal D$ and $F \circ F = id_\mathcal C$, we only
+$F \circ G = id_\mathcal D$ and $F \circ G = id_\mathcal C$, we only
 ask for $F \circ G \cong id_\mathcal D$ and $G \circ F \cong id_\mathcal C$.
 
-But can we make this even weaker? This is where adjunctions come in. Instead
-of isomorphism, we only ask for the existence of a morphism (which in the
-case of functor is a natural transformation) taking
-$F\circ G \to id_\mathcal D$ and
-$id_\mathcal C \to G\circ F $.
+We can go further and devise an even weaker notion of 
+This is where adjunctions come in. Instead
+of isomorphisms, we can ask for the existence of two morphisms
+(which in this context will be natural transformations),
+where one morphism is $\varepsilon:F\circ G \to id_\mathcal D$ (called counit) and another morphism
+is $\eta:id_\mathcal C \to G\circ F $ (called unit), and they are somehow related. The question is
+then, what such relation should be?
 
+Note that for $c \in Ob_\mathcal C$, then $\eta_c: c \to G(F(c))$ is $c \mapsto G(F(c))$. Similarly,
+$\varepsilon_{F(c)}: F(G(F(c))) \to F(c)$ is $F \circ G \circ F(c) \mapsto F(c)$.
+
+Now, there is a reason that our adjoints are either left or right. The adjunction
+is how we can ``translate'' between categories where one is not as ``expressive''
+as the other. How so? Consider for example the case of Linear Algebra, where
+for a given matrix $F \in \mathbb R^{n\times m}$ such that $n > m$. Now, suppose
+that there exists a matrix $G \in \mathbb R^{m \times n}$ such that
+$G$ is the pseudoinverse of $F$ and $G F = I_m$, i.e. the \textit{left inverse}.
+Since $G$ is the pseudoinverse, we have that $F G F = F$ and
+$G F G = G$.
+
+The pseudoinverse captures exactly the relation we were looking for. If $F$ and $G$
+are functors, we want to categorically specify that for them to be adjoints, it's
+required that $F \circ G \circ F = F$ and $G \circ F \circ G = G$.
+This can be done using the natural transformations. Note that we want to make
+\begin{align*}
+  F \circ G \circ F(c) &= F \circ \eta_c(c) = F(c) = \varepsilon_c(c), \\
+  G \circ F \circ G(F(c)) &= G\circ \varepsilon_{F(c)}(F(c)) = G(F(c)) = \eta_c(c),
+\end{align*}
+where we considered $\eta_c$ as a function, and $\eta_c(c) = G(F(c))$.
+Thus, the restriction we want to impose is that
+\begin{align*}
+  F \circ \eta_c(c) = \varepsilon_c(c), \quad
+  G\circ \varepsilon_{F(c)}(F(c)) = \eta_c(c).
+\end{align*}
+
+
+In this example, the category of vector spaces in $\mathbb R^m$ is ``smaller''
+than $\mathbb R^n$, yet, we want to somehow translate between them. The idea
+of how to properly translate between vector spaces is captured
+by inverse matrices. When it's not possible to find inverse, the \textit{best translation}
+is captured by the pseudoinverse, which is what the adjoint is trying to capture.
+The pseudoinverse $G$ is the left ajoint of $F$.
+
+Hopefully, this motivates the idea of adjoints. In a sense, one wishes to
+formalize this types of operations in which there is some sort of translation
+between categories with different expressiveness. We've shown how this is somehow
+related to weakening the requirement for the existence of isomorphisms.
+Now, let's indeed formalize a definition.
+
+% But what this relation should be? Here an analogy from Linear Algebra might help.
+
+% Remember the notion of a pseudoinverse of a matrix $A \in \mathbb R^{n\times m}$,
+% denoted by $A^{\dagger} \in \mathbb R^{m \times n}$.
+% We have that $A A^{\dagger}A = A$, and $A^{\dagger} A A^{\dagger} = A^{\dagger}$.
+% How does this relate to our case? Note that $F\circ id_\mathcal C = F$, hence
+% for $c \in Ob_\mathcal C$, we have $F(c) \in Ob_\mathcal D$, thus
+% \begin{align*}
+%   \varepsilon_{F(c)}:(F\circ G)(F(c))\to id_\mathcal D (F(c))\\
+%   \varepsilon_{F(c)}:(F\circ G)(F(c))\to F(c).
+% \end{align*}
+
+% In the example of the pseudoinverse, the matrices are functors between
+% vector spaces, 
+% This means that somehow, via $\varepsilon$, we have $F G F = F$
 
 
 \subsection{General Definitions}
 
 The definition we are going to present assumes that both categories are locally small. This will
-be enough for most applications. Yet, there are a more complicated definition that also takes into
+be enough for most applications. Yet, there are a more complicated definitions that also takes into
 account categories that are not locally small. Remember that a category $\mathcal C$
 is locally small if for every pair of objects $A$ and $B$, then $Mor_\mathcal C (A,B)$ is a set.
+
 \begin{definition}
   Let $\mathcal C$ and $\mathcal D$ be locally small categories. The adjoints (adjunction) between
   $\mathcal C$ and $\mathcal D$ are the functors

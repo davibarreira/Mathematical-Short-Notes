@@ -26,14 +26,15 @@
 \contentsline {subsection}{\numberline {5.1}Cones and Cocones}{35}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Slice Categories}{36}{subsection.5.2}%
 \contentsline {subsection}{\numberline {5.3}Defining Limits and Colimits}{37}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Adjoints}{37}{section.6}%
-\contentsline {subsection}{\numberline {6.1}General Definitions}{37}{subsection.6.1}%
-\contentsline {section}{\numberline {7}Graphs and Schemas in Category Theory}{39}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Underlying Graphs}{39}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Generating Categories from Graphs via Free Functors}{40}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Categories from Preorders}{42}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Generating Categories from Schemas}{43}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}More on Generating Categories from Schemas *}{44}{subsection.7.5}%
-\contentsline {subsection}{\numberline {7.6}$\mathcal C$-Sets and Instances}{45}{subsection.7.6}%
-\contentsline {section}{\numberline {8}What are Sets?}{47}{section.8}%
-\contentsline {subsubsection}{\numberline {8.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{47}{subsubsection.8.0.1}%
+\contentsline {section}{\numberline {6}Adjoints}{38}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Intuitive Explanation for Adjoints}{38}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}General Definitions}{39}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Graphs and Schemas in Category Theory}{41}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Underlying Graphs}{41}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Generating Categories from Graphs via Free Functors}{42}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Categories from Preorders}{44}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Generating Categories from Schemas}{45}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}More on Generating Categories from Schemas *}{46}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}$\mathcal C$-Sets and Instances}{47}{subsection.7.6}%
+\contentsline {section}{\numberline {8}What are Sets?}{49}{section.8}%
+\contentsline {subsubsection}{\numberline {8.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{49}{subsubsection.8.0.1}%
