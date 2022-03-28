@@ -17,17 +17,18 @@
 \contentsline {subsection}{\numberline {3.4}Subcategories}{28}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}Relevant Examples of Functors}{28}{subsection.3.5}%
 \contentsline {subsection}{\numberline {3.6}Formalizing Diagrams}{29}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Yoneda Lemma}{29}{subsection.3.7}%
 \contentsline {section}{\numberline {4}Natural Transformations}{30}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Defining Natural Transformations}{30}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}The Category of Functors}{31}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Equivalence Between Categories}{33}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Vertical vs Horizontal Compostion}{34}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Limits, Colimits}{35}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Cones and Cocones}{35}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Slice Categories}{36}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Defining Limits and Colimits}{37}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Adjoints}{38}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Intuitive Explanation for Adjoints}{38}{subsection.6.1}%
+\contentsline {section}{\numberline {5}Limits, Colimits}{36}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Cones and Cocones}{36}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Slice Categories}{37}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Defining Limits and Colimits}{38}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Adjoints}{39}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Intuitive Explanation for Adjoints}{39}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}General Definitions}{39}{subsection.6.2}%
 \contentsline {section}{\numberline {7}Graphs and Schemas in Category Theory}{41}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Underlying Graphs}{41}{subsection.7.1}%

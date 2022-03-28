@@ -1044,6 +1044,40 @@ if $h = f \fatsemi g$.
   black dots.
 \end{shaded}
 
+\subsection{Yoneda Lemma}
+
+One of the most important results in Category Theory is the so called Yoneda Lemma.
+In this section, we present and prove this lemma.
+
+Before proving the Yoneda Lemma, we need to present some more definitions.
+
+\begin{definition}[Representable Functor]
+  Let $\mathcal C$ be a category and $C \in Ob_\mathcal c$.
+  Define a functor $Mor_\mathcal C(C,-): \mathcal C \to \mathbf{Set}$,
+  where $Mor_\mathcal C (C,-)(A) \equiv Mor_\mathcal C (C,A)$, and
+  for $ f \in Mor_\mathcal C (A,B)$,
+  $Mor_\mathcal C (C, -)(f) \equiv Mor_\mathcal C(C,f) : Mor_\mathcal C(C,A) \to Mor_\mathcal C(C,B)$.
+  Lastly, for $g \in Mor_\mathcal (C, B)$, define $Mor_\mathcal C(C,f) (g) := f \circ g$.
+
+  It's clear that $Mor_\mathcal C(C,-)$ is a functor, and we say that this is the functor
+  \textit{represented} by $\mathcal C$.
+\end{definition}
+
+\begin{lemma}[Yoneda Lemma]
+  Let $\mathcal C$ be a category, and $F:\mathcal C \to \mathbf{Set}$ a functor.
+  Therefore, for every $A \in \mathcal C$, there exists
+  \begin{displaymath}
+    \theta_{F,A}: \text{Nat}(Mor_\mathcal C (A, -), F) \to FA,
+  \end{displaymath}
+  where $\theta_{F,A}$ is a bijetive function from the natural transformations
+  between the functors $Mor_\mathcal C (A, -)$ and $F$, and the set of elements of the set $FA$
+  \footnote{Note that it's implicit here the fact that the class of natural transformation between
+  these two functors is actually a set.}.
+  Moreover, the bijections $(\theta_{F,A})_{A \in Ob_\mathcal C}$ constitute a natural transformation
+  in the variable $A$; and when $\mathcal C$ is a small category,
+  then $(\theta_{F,A})_{F \in Fun(\mathcal C, \mathbf{Set})}$
+  consitutes a natural transformation in the variable $F$.
+\end{lemma}
 
 \section{Natural Transformations}
 
@@ -1556,46 +1590,46 @@ where one morphism is $\varepsilon:F\circ G \to id_\mathcal D$ (called counit) a
 is $\eta:id_\mathcal C \to G\circ F $ (called unit), and they are somehow related. The question is
 then, what such relation should be?
 
-Note that for $c \in Ob_\mathcal C$, then $\eta_c: c \to G(F(c))$ is $c \mapsto G(F(c))$. Similarly,
-$\varepsilon_{F(c)}: F(G(F(c))) \to F(c)$ is $F \circ G \circ F(c) \mapsto F(c)$.
+% Note that for $c \in Ob_\mathcal C$, then $\eta_c: c \to G(F(c))$ is $c \mapsto G(F(c))$. Similarly,
+% $\varepsilon_{F(c)}: F(G(F(c))) \to F(c)$ is $F \circ G \circ F(c) \mapsto F(c)$.
 
-Now, there is a reason that our adjoints are either left or right. The adjunction
-is how we can ``translate'' between categories where one is not as ``expressive''
-as the other. How so? Consider for example the case of Linear Algebra, where
-for a given matrix $F \in \mathbb R^{n\times m}$ such that $n > m$. Now, suppose
-that there exists a matrix $G \in \mathbb R^{m \times n}$ such that
-$G$ is the pseudoinverse of $F$ and $G F = I_m$, i.e. the \textit{left inverse}.
-Since $G$ is the pseudoinverse, we have that $F G F = F$ and
-$G F G = G$.
+% Now, there is a reason that our adjoints are either left or right. The adjunction
+% is how we can ``translate'' between categories where one is not as ``expressive''
+% as the other. How so? Consider for example the case of Linear Algebra, where
+% for a given matrix $F \in \mathbb R^{n\times m}$ such that $n > m$. Now, suppose
+% that there exists a matrix $G \in \mathbb R^{m \times n}$ such that
+% $G$ is the pseudoinverse of $F$ and $G F = I_m$, i.e. the \textit{left inverse}.
+% Since $G$ is the pseudoinverse, we have that $F G F = F$ and
+% $G F G = G$.
 
-The pseudoinverse captures exactly the relation we were looking for. If $F$ and $G$
-are functors, we want to categorically specify that for them to be adjoints, it's
-required that $F \circ G \circ F = F$ and $G \circ F \circ G = G$.
-This can be done using the natural transformations. Note that we want to make
-\begin{align*}
-  F \circ G \circ F(c) &= F \circ \eta_c(c) = F(c) = \varepsilon_c(c), \\
-  G \circ F \circ G(F(c)) &= G\circ \varepsilon_{F(c)}(F(c)) = G(F(c)) = \eta_c(c),
-\end{align*}
-where we considered $\eta_c$ as a function, and $\eta_c(c) = G(F(c))$.
-Thus, the restriction we want to impose is that
-\begin{align*}
-  F \circ \eta_c(c) = \varepsilon_c(c), \quad
-  G\circ \varepsilon_{F(c)}(F(c)) = \eta_c(c).
-\end{align*}
+% The pseudoinverse captures exactly the relation we were looking for. If $F$ and $G$
+% are functors, we want to categorically specify that for them to be adjoints, it's
+% required that $F \circ G \circ F = F$ and $G \circ F \circ G = G$.
+% This can be done using the natural transformations. Note that we want to make
+% \begin{align*}
+%   F \circ G \circ F(c) &= F \circ \eta_c(c) = F(c) = \varepsilon_c(c), \\
+%   G \circ F \circ G(F(c)) &= G\circ \varepsilon_{F(c)}(F(c)) = G(F(c)) = \eta_c(c),
+% \end{align*}
+% where we considered $\eta_c$ as a function, and $\eta_c(c) = G(F(c))$.
+% Thus, the restriction we want to impose is that
+% \begin{align*}
+%   F \circ \eta_c(c) = \varepsilon_c(c), \quad
+%   G\circ \varepsilon_{F(c)}(F(c)) = \eta_c(c).
+% \end{align*}
 
 
-In this example, the category of vector spaces in $\mathbb R^m$ is ``smaller''
-than $\mathbb R^n$, yet, we want to somehow translate between them. The idea
-of how to properly translate between vector spaces is captured
-by inverse matrices. When it's not possible to find inverse, the \textit{best translation}
-is captured by the pseudoinverse, which is what the adjoint is trying to capture.
-The pseudoinverse $G$ is the left ajoint of $F$.
+% In this example, the category of vector spaces in $\mathbb R^m$ is ``smaller''
+% than $\mathbb R^n$, yet, we want to somehow translate between them. The idea
+% of how to properly translate between vector spaces is captured
+% by inverse matrices. When it's not possible to find inverse, the \textit{best translation}
+% is captured by the pseudoinverse, which is what the adjoint is trying to capture.
+% The pseudoinverse $G$ is the left ajoint of $F$.
 
-Hopefully, this motivates the idea of adjoints. In a sense, one wishes to
-formalize this types of operations in which there is some sort of translation
-between categories with different expressiveness. We've shown how this is somehow
-related to weakening the requirement for the existence of isomorphisms.
-Now, let's indeed formalize a definition.
+% Hopefully, this motivates the idea of adjoints. In a sense, one wishes to
+% formalize this types of operations in which there is some sort of translation
+% between categories with different expressiveness. We've shown how this is somehow
+% related to weakening the requirement for the existence of isomorphisms.
+% Now, let's indeed formalize a definition.
 
 % But what this relation should be? Here an analogy from Linear Algebra might help.
 
@@ -1621,7 +1655,45 @@ be enough for most applications. Yet, there are a more complicated definitions t
 account categories that are not locally small. Remember that a category $\mathcal C$
 is locally small if for every pair of objects $A$ and $B$, then $Mor_\mathcal C (A,B)$ is a set.
 
-\begin{definition}
+Before formalizing adjoints, let's present some helpful definitions. This is mostly based
+on \citet{borceux1994handbook}.
+
+\begin{definition}[Reflection]
+  Let $F:\mathcal C \to \mathcal D$ be a functor and $d \in Ob_\mathcal D$.
+  A reflection of $d$ along $F$ is a pair $(R_d, \eta_d)$ where
+  \begin{enumerate}[(i)]
+    \item $R_d \in Ob_\mathcal C$ and $\eta_d \in Mor_{\mathcal D}(d, F(R_d))$;
+    \item if $c \in Ob_\mathcal C$ and $f \in Mor_{\mathcal D}(d,F(c))$, there exists
+      a unique morphism $g:R_d \to c$ such that
+      $F(g) \circ \eta_d = f$.
+  \end{enumerate}
+\end{definition}
+
+\begin{proposition}
+  Let $F:\mathcal C \to \mathcal D$ be a functor and $d \in Ob_\mathcal D$.
+  When the reflection of $d$ along $F$ exists, it is unique up to an isomorphism.
+\end{proposition}
+
+\begin{proposition}
+  Let $F:\mathcal C \to \mathcal D$ be a functor and assume that for every
+  $d \in Ob_\mathcal D$, the reflection of $d$ along $F$ exists. Thus, there
+  exists a functor $R:\mathcal D \to \mathcal C$ such that
+  \begin{enumerate}[(i)]
+    \item $\forall d \in Ob_\mathcal D, \ R(d) = R_d$;
+    \item $(\eta_d:d \to FRd)_{d \in Ob_\mathcal D}$ is a natural transformation.
+  \end{enumerate}
+\end{proposition}
+
+Now we can present the first definition of adjoint.
+\begin{definition}[Adjoint]
+  A functor $L:\mathcal D \to \mathcal C$ is a left adjoint to the functor
+  $F:\mathcal C \to \mathcal D$ if there exists a natural transformation
+  $\eta:id_{\mathcal D} \Rightarrow F \circ L$ such that for every
+  $d \in \mathcal D$, the tuple $(Ld, \eta_d)$ is a reflection of $d$
+  along $F$.
+\end{definition}
+
+\begin{definition}[Ajdoint]
   Let $\mathcal C$ and $\mathcal D$ be locally small categories. The adjoints (adjunction) between
   $\mathcal C$ and $\mathcal D$ are the functors
   \begin{displaymath}
@@ -1634,6 +1706,7 @@ is locally small if for every pair of objects $A$ and $B$, then $Mor_\mathcal C 
   \end{displaymath}
   i.e. for every pair of objects $A \in \mathcal C$  and $B \in \mathcal D$, there is an isomorphism
   between the sets $Mor_\mathcal D(L(A), B)$ and $Mor_\mathcal C (A, R(B))$.
+  Also, 
 \end{definition}
 
 \begin{shaded}

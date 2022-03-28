@@ -1,0 +1,95 @@
+%! TeX program = lualatex
+\documentclass[12pt]{article}
+
+\usepackage[margin=3cm]{geometry}
+\parindent 0in
+\parskip 12pt
+\geometry{margin=1in, headsep=0.25in}
+
+\usepackage{listings}
+
+\pagestyle{plain}
+\usepackage{pdfpages}
+
+\usepackage[square,numbers]{natbib}
+\usepackage[pdftex,bookmarks=true,bookmarksopen=false,bookmarksnumbered=true,colorlinks=true,linkcolor=blue]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{enumerate}
+
+%%%% MATH PACKAGES %%%%
+
+\usepackage{amsfonts, amsthm,amsmath,amssymb,mathtools}
+\usepackage{bbm}
+\usepackage{bm}
+\usepackage{mathtools}
+\usepackage{thmtools} % List of Theorems
+
+%%%%%%% JULIA %%%%%%%%%%
+\input{julia_font}
+\input{julia_listings}
+\input{julia_listings}
+\input{julia_listings_unicode}
+
+\lstdefinelanguage{JuliaLocal}{
+    language = Julia, % inherit Julia lang. to add keywords
+}
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%% Set \begin{shaded} %%%%%%%%
+\usepackage{framed}
+\colorlet{shadecolor}{gray!15}
+
+%%%%%%%%%%%% MATH STYLE  %%%%%%%%%%%%%
+\newtheoremstyle{bfnote}%
+  {}{}
+  {}{}
+  {\bfseries}{.}
+  { }{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}
+\theoremstyle{bfnote}
+\newenvironment{prf}[1][Proof]{\textbf{#1.} }{\qed}
+\newtheorem{axiom}{Axiom}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{exer}{Exercise}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\newtheorem{note}{Note}[section]
+\newtheorem{example}{Example}[section]
+
+% This package is to use \fatsemi
+\usepackage{stmaryrd}
+
+
+\begin{document}
+
+\title{Causal Inference}
+\author{Davi Sales Barreira}
+
+\maketitle
+
+\newpage
+\tableofcontents
+
+\newpage
+\listoftheorems[ignoreall,onlynamed={definition},title={List of Definitions}]
+\newpage
+\listoftheorems[ignoreall,onlynamed={theorem,lemma,corollary,proposition},title={List of Theorems}]
+\newpage
+\listoftheorems[ignoreall,onlynamed={example},title={List of Examples}]
+
+\newpage
+% INCLUDE NOTEBOOKS HERE %
+\include{1-Causal-Inference}
+% \include{./notebooks/Catlab}
+
+
+\bibliography{ref}
+
+\bibliographystyle{plainnat}
+
+\include{appendix}
+
+\end{document}
