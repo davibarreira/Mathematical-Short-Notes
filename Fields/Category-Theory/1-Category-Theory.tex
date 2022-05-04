@@ -848,11 +848,11 @@ Let's formally define a Functor.
 		      \begin{enumerate}
 			      \item For a \textbf{Covariant Functor},
 			            \begin{displaymath}
-				            F(f \circ g) = F(f) \circ F(g).
+				            F(g \circ f) = F(g) \circ F(f).
 			            \end{displaymath}
 			      \item For a \textbf{Contravariant Functor},
 			            \begin{displaymath}
-				            F(f \circ g) = F(g) \circ F(f).
+				            F(g \circ f) = F(f) \circ F(g).
 			            \end{displaymath}
 		      \end{enumerate}
 	\end{enumerate}
@@ -860,25 +860,32 @@ Let's formally define a Functor.
 	whenever someone say that $F$ is a functor, it might be implied that it's a covariant functor.
 	We'll also use this convention whenever it's not ambiguous, and we'll always.
 	Also, we'll sometimes use $FA$ to mean $F(A)$.
+	\label{def:functor}
 \end{definition}
 
 \begin{lemma}[Contravariant Functor]
-	$F$ is a contravariant functor from $\mathcal C$ to $\mathcal D$ if and only if
-	$F$ is a covariant functor from $\mathcal C^{\text{op}}$ to $\mathcal D$.
+	The definition \ref{def:functor} of covariant functor is equivalent to
+	saying that	$F$ is a (covariant) functor from $\mathcal C^{\text{op}}$ to $\mathcal D$.
+	\label{lemma:contravariant}
 \end{lemma}
 \begin{proof}
-	First, note if $f \in Mor_\mathcal C (A,B)$, then $f^{op} \in Mor_{\mathcal C^{op}}(B,A)$.
-	Thus, $Ff:FB \to FA$ implies that for $g \in Mor_\mathcal C (B,C)$, then
-	\begin{displaymath}
-		F(g \circ f) =  F f \circ F g.
-	\end{displaymath}
+	To prove this, we need to show that for any contravariant functor $F:\mathcal C \to \mathcal D$
+	defined as in \ref{def:functor}, there is an equivalent functor $F':\mathcal C^{op}\to \mathcal D$,
+	and vice-versa.
 
-	Note that $g^{op} \in Mor_{\mathcal C^{op}}(C,B)$, thus $f^{op}\circ g^{op}$ is well defined
-	and also
-	\begin{displaymath}
-		F(g^{op} \circ f^{op}) =  F g^{op} \circ F f^{op}.
-	\end{displaymath}
+	For every $A \in Ob_\mathcal C$, make $F(A) = F'(A)$. This is fine, since
+	$A \in Ob_\mathcal C \iff A \in Ob_{\mathcal C^{op}}$.
+	Next, for $f \in Mor_\mathcal C (A,B)$, make
+	$F f = F' f^{op}$, where $f^{op}$ is the reversed morphism $f$. Again, this is well defined since
+	$f \in Mor_\mathcal C(A,B) \iff f^{op} \in Mor_{\mathcal C^{op}}(B,A)$.
 
+	Lastly, note that
+	\begin{displaymath}
+		F(g \circ f) =  F f \circ F g \iff F' f^{op} \circ F' g^{op} = F'(f^{op}\circ g^{op}).
+	\end{displaymath}
+	Thus, we showed that $F$ is a contravariant functor according to \ref{def:functor}
+	if and only if $F'$ is a covariant functor from $\mathcal C^{\text{op}}$ to $\mathcal D$, where
+	$F$ and $F'$ are the same up to an isomorphism from $\mathcal C$ to $\mathcal C^{op}$.
 \end{proof}
 
 Again, the use of diagrams may help understand what is going on. The figure below
@@ -1265,7 +1272,8 @@ instead of trying to work with \eqref{eq:relationdef}. The way to do this is
 by noting that we can actually turn this into a functor, which is
 a functorial representation of an object.
 
-Before proving the Yoneda Lemma, we need to introduce some more definitions.
+This representation is not that straight forward, and will require
+some more definitions along the way.
 
 \begin{definition}[Representable Functor]
 	Let $\mathcal C$ be a locally small category and $A \in Ob_\mathcal C$.
@@ -1281,10 +1289,31 @@ Before proving the Yoneda Lemma, we need to introduce some more definitions.
 		\forall g \in Mor_\mathcal C(A,B) , \ H^A f (g) = f \circ g.
 	\end{gather*}
 
-	It's clear that $Mor_\mathcal C(A,-)$ is a functor, and we say that this is the functor
-	\textit{represented} by the object $C$.
+	It's clear that $H^A$ is a functor. If a functor $F:\mathcal C \to \mathbf{Set}$
+	is naturally isomorphic to $H^A$ for some $A \in \mathcal C$, then we say that
+	$F$ is \textbf{representable}. Note that only functors with $\mathbf{Set}$
+	as codomain are possible to be representable.
 \end{definition}
 Note that the definition requires $\mathcal C$ to be locally small in order to $Mor_\mathcal C (A,B) \in Ob_{\mathbf{Set}}$.
+
+Let's now look to the family of representable functors in a category $\mathcal C$, i.e.
+$(H^A)_{A \in Ob_\mathcal C}$. We can define a \textit{contravariant} functor
+$H^\bullet$ that takes an object $A \in Ob_\mathcal C$ to $H^A$, and for
+a morphism $f \in Mor_\mathcal C (A,B)$, $H^\bullet f \equiv H^f : H^B \to H^A$ is a natural
+transformation where
+\begin{gather*}
+	H^f(D):
+	\underbrace{H^B(D)}_{Mor_\mathcal C(B,D)} \to
+	\underbrace{H^A(D)}_{Mor_\mathcal C(A,D)}, \\
+	\text{such that }\forall p \in Mor_\mathcal C (B,D), \ H^f (D) (p) = p \circ f.
+\end{gather*}
+
+Thus, note that the contravariant functor $H^\bullet$ has domain $\mathcal C$
+and the codomain is the category of functors from $\mathcal C$ to $\mathbf{Set}$.
+Instead of working with the contravariant functor, we can use lemma
+\ref{lemma:contravariant}, and instead use the equivalent version where
+$H^\bullet$ is a covariant functor, thus concluding that
+$H^\bullet: \mathcal C^{op} \to \mathbf{Set}^\mathcal C$.
 
 \begin{lemma}[Yoneda Lemma]
 	Let $\mathcal C$ be a category, and $F:\mathcal C \to \mathbf{Set}$ a functor.

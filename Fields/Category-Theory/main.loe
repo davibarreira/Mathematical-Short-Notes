@@ -50,50 +50,50 @@
 \contentsline {example}{\ifthmt@listswap Example\nobreakspace {}4.1\else \numberline {4.1}Example\fi \thmtformatoptarg {Natural Transformations in Sets}}{32}{example.4.1}%
 \contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}4.5\else \numberline {4.5}Definition\fi \thmtformatoptarg {Representable Functor}}{34}{definition.4.5}%
 \contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}4.6\else \numberline {4.6}Lemma\fi \thmtformatoptarg {Yoneda Lemma}}{34}{lemma.4.6}%
-\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}4.7\else \numberline {4.7}Proposition\fi }{34}{proposition.4.7}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}4.8\else \numberline {4.8}Definition\fi \thmtformatoptarg {Equivalence of Categories}}{35}{definition.4.8}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}4.7\else \numberline {4.7}Proposition\fi }{35}{proposition.4.7}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}4.8\else \numberline {4.8}Definition\fi \thmtformatoptarg {Equivalence of Categories}}{36}{definition.4.8}%
 \contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}4.9\else \numberline {4.9}Definition\fi \thmtformatoptarg {Prewhiskering}}{36}{definition.4.9}%
 \contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}4.10\else \numberline {4.10}Definition\fi \thmtformatoptarg {Postwhiskering}}{36}{definition.4.10}%
 \contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}4.11\else \numberline {4.11}Definition\fi \thmtformatoptarg {Horizontal Composition/Whiskering of Natural Transformations}}{36}{definition.4.11}%
-\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}4.12\else \numberline {4.12}Theorem\fi \thmtformatoptarg {Interchange for Whiskering}}{36}{theorem.4.12}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.1\else \numberline {5.1}Definition\fi \thmtformatoptarg {Cone}}{37}{definition.5.1}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.2\else \numberline {5.2}Definition\fi \thmtformatoptarg {Cocone (Right Rone)}}{37}{definition.5.2}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.1\else \numberline {5.1}Example\fi \thmtformatoptarg {Cone in Discrete Categories}}{38}{example.5.1}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.2\else \numberline {5.2}Example\fi \thmtformatoptarg {Cone in $\mathbf {Gr}$}}{38}{example.5.2}%
-\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.3\else \numberline {5.3}Example\fi \thmtformatoptarg {Category of Spans in $\mathcal C$}}{38}{example.5.3}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.3\else \numberline {5.3}Definition\fi \thmtformatoptarg {Slice Category}}{39}{definition.5.3}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.4\else \numberline {5.4}Definition\fi \thmtformatoptarg {Coslice Category}}{39}{definition.5.4}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.5\else \numberline {5.5}Definition\fi \thmtformatoptarg {Limit}}{40}{definition.5.5}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.6\else \numberline {5.6}Definition\fi \thmtformatoptarg {Colimit}}{40}{definition.5.6}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}6.1\else \numberline {6.1}Definition\fi \thmtformatoptarg {Reflection}}{41}{definition.6.1}%
-\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}6.2\else \numberline {6.2}Proposition\fi }{41}{proposition.6.2}%
-\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}6.3\else \numberline {6.3}Proposition\fi }{41}{proposition.6.3}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}6.4\else \numberline {6.4}Definition\fi \thmtformatoptarg {Adjoint}}{41}{definition.6.4}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}6.5\else \numberline {6.5}Definition\fi \thmtformatoptarg {Ajdoint}}{41}{definition.6.5}%
-\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}6.6\else \numberline {6.6}Proposition\fi }{41}{proposition.6.6}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}7.1\else \numberline {7.1}Definition\fi \thmtformatoptarg {Graph Homomorphism \citep {spivak2014category}}}{43}{definition.7.1}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}7.2\else \numberline {7.2}Definition\fi \thmtformatoptarg {Underlying Graph of a Category}}{43}{definition.7.2}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}7.3\else \numberline {7.3}Definition\fi \thmtformatoptarg {Paths \citep {spivak2014category}}}{43}{definition.7.3}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}7.4\else \numberline {7.4}Definition\fi \thmtformatoptarg {Path Functor}}{44}{definition.7.4}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}7.5\else \numberline {7.5}Definition\fi \thmtformatoptarg {Free Category}}{44}{definition.7.5}%
-\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}7.6\else \numberline {7.6}Proposition\fi \thmtformatoptarg {Preorders to Graphs}}{45}{proposition.7.6}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}7.7\else \numberline {7.7}Definition\fi \thmtformatoptarg {Preorder Reflection}}{46}{definition.7.7}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}7.8\else \numberline {7.8}Definition\fi \thmtformatoptarg {Path Equivalence Declaration (PED) \citep {spivak2014category}}}{46}{definition.7.8}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}7.9\else \numberline {7.9}Definition\fi \thmtformatoptarg {Schema \citep {spivak2014category}}}{46}{definition.7.9}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}7.10\else \numberline {7.10}Definition\fi \thmtformatoptarg {Presentation of a Category}}{47}{definition.7.10}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}7.11\else \numberline {7.11}Definition\fi \thmtformatoptarg {Schema Morphism}}{48}{definition.7.11}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}7.12\else \numberline {7.12}Definition\fi \thmtformatoptarg {Category $\mathbf {Sch}$}}{48}{definition.7.12}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}7.13\else \numberline {7.13}Definition\fi \thmtformatoptarg {$\mathcal C$-Set}}{48}{definition.7.13}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.1\else \numberline {8.1}Definition\fi \thmtformatoptarg {Terminal Set}}{50}{definition.8.1}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.2\else \numberline {8.2}Definition\fi \thmtformatoptarg {Element of a Set}}{51}{definition.8.2}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.3\else \numberline {8.3}Definition\fi \thmtformatoptarg {Cartesian Product}}{51}{definition.8.3}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.4\else \numberline {8.4}Definition\fi \thmtformatoptarg {Function set}}{51}{definition.8.4}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.5\else \numberline {8.5}Definition\fi \thmtformatoptarg {Inverse Image}}{51}{definition.8.5}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.6\else \numberline {8.6}Definition\fi \thmtformatoptarg {Injection}}{51}{definition.8.6}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.7\else \numberline {8.7}Definition\fi \thmtformatoptarg {Surjection}}{51}{definition.8.7}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.8\else \numberline {8.8}Definition\fi \thmtformatoptarg {Right inverse}}{52}{definition.8.8}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.9\else \numberline {8.9}Definition\fi \thmtformatoptarg {Subset Classifier}}{52}{definition.8.9}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.10\else \numberline {8.10}Definition\fi \thmtformatoptarg {Natural Number System}}{52}{definition.8.10}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.11\else \numberline {8.11}Definition\fi \thmtformatoptarg {ETCS}}{52}{definition.8.11}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.12\else \numberline {8.12}Definition\fi \thmtformatoptarg {Subset}}{53}{definition.8.12}%
-\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}8.13\else \numberline {8.13}Corollary\fi }{53}{corollary.8.13}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}4.12\else \numberline {4.12}Theorem\fi \thmtformatoptarg {Interchange for Whiskering}}{37}{theorem.4.12}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.1\else \numberline {5.1}Definition\fi \thmtformatoptarg {Cone}}{38}{definition.5.1}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.2\else \numberline {5.2}Definition\fi \thmtformatoptarg {Cocone (Right Rone)}}{38}{definition.5.2}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.1\else \numberline {5.1}Example\fi \thmtformatoptarg {Cone in Discrete Categories}}{39}{example.5.1}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.2\else \numberline {5.2}Example\fi \thmtformatoptarg {Cone in $\mathbf {Gr}$}}{39}{example.5.2}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}5.3\else \numberline {5.3}Example\fi \thmtformatoptarg {Category of Spans in $\mathcal C$}}{39}{example.5.3}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.3\else \numberline {5.3}Definition\fi \thmtformatoptarg {Slice Category}}{40}{definition.5.3}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.4\else \numberline {5.4}Definition\fi \thmtformatoptarg {Coslice Category}}{40}{definition.5.4}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.5\else \numberline {5.5}Definition\fi \thmtformatoptarg {Limit}}{41}{definition.5.5}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.6\else \numberline {5.6}Definition\fi \thmtformatoptarg {Colimit}}{41}{definition.5.6}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}6.1\else \numberline {6.1}Definition\fi \thmtformatoptarg {Reflection}}{42}{definition.6.1}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}6.2\else \numberline {6.2}Proposition\fi }{42}{proposition.6.2}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}6.3\else \numberline {6.3}Proposition\fi }{42}{proposition.6.3}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}6.4\else \numberline {6.4}Definition\fi \thmtformatoptarg {Adjoint}}{42}{definition.6.4}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}6.5\else \numberline {6.5}Definition\fi \thmtformatoptarg {Ajdoint}}{42}{definition.6.5}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}6.6\else \numberline {6.6}Proposition\fi }{42}{proposition.6.6}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}7.1\else \numberline {7.1}Definition\fi \thmtformatoptarg {Graph Homomorphism \citep {spivak2014category}}}{44}{definition.7.1}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}7.2\else \numberline {7.2}Definition\fi \thmtformatoptarg {Underlying Graph of a Category}}{44}{definition.7.2}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}7.3\else \numberline {7.3}Definition\fi \thmtformatoptarg {Paths \citep {spivak2014category}}}{44}{definition.7.3}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}7.4\else \numberline {7.4}Definition\fi \thmtformatoptarg {Path Functor}}{45}{definition.7.4}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}7.5\else \numberline {7.5}Definition\fi \thmtformatoptarg {Free Category}}{45}{definition.7.5}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}7.6\else \numberline {7.6}Proposition\fi \thmtformatoptarg {Preorders to Graphs}}{46}{proposition.7.6}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}7.7\else \numberline {7.7}Definition\fi \thmtformatoptarg {Preorder Reflection}}{47}{definition.7.7}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}7.8\else \numberline {7.8}Definition\fi \thmtformatoptarg {Path Equivalence Declaration (PED) \citep {spivak2014category}}}{47}{definition.7.8}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}7.9\else \numberline {7.9}Definition\fi \thmtformatoptarg {Schema \citep {spivak2014category}}}{47}{definition.7.9}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}7.10\else \numberline {7.10}Definition\fi \thmtformatoptarg {Presentation of a Category}}{48}{definition.7.10}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}7.11\else \numberline {7.11}Definition\fi \thmtformatoptarg {Schema Morphism}}{49}{definition.7.11}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}7.12\else \numberline {7.12}Definition\fi \thmtformatoptarg {Category $\mathbf {Sch}$}}{49}{definition.7.12}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}7.13\else \numberline {7.13}Definition\fi \thmtformatoptarg {$\mathcal C$-Set}}{49}{definition.7.13}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.1\else \numberline {8.1}Definition\fi \thmtformatoptarg {Terminal Set}}{51}{definition.8.1}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.2\else \numberline {8.2}Definition\fi \thmtformatoptarg {Element of a Set}}{52}{definition.8.2}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.3\else \numberline {8.3}Definition\fi \thmtformatoptarg {Cartesian Product}}{52}{definition.8.3}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.4\else \numberline {8.4}Definition\fi \thmtformatoptarg {Function set}}{52}{definition.8.4}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.5\else \numberline {8.5}Definition\fi \thmtformatoptarg {Inverse Image}}{52}{definition.8.5}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.6\else \numberline {8.6}Definition\fi \thmtformatoptarg {Injection}}{52}{definition.8.6}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.7\else \numberline {8.7}Definition\fi \thmtformatoptarg {Surjection}}{52}{definition.8.7}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.8\else \numberline {8.8}Definition\fi \thmtformatoptarg {Right inverse}}{53}{definition.8.8}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.9\else \numberline {8.9}Definition\fi \thmtformatoptarg {Subset Classifier}}{53}{definition.8.9}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.10\else \numberline {8.10}Definition\fi \thmtformatoptarg {Natural Number System}}{53}{definition.8.10}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.11\else \numberline {8.11}Definition\fi \thmtformatoptarg {ETCS}}{53}{definition.8.11}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}8.12\else \numberline {8.12}Definition\fi \thmtformatoptarg {Subset}}{54}{definition.8.12}%
+\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}8.13\else \numberline {8.13}Corollary\fi }{54}{corollary.8.13}%
