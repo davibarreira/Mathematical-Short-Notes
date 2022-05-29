@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: chapter.aux
+The style file: plainnat.bst
+Database file #1: ref.bib
+Warning--empty publisher in gentle2020
+You've used 4 entries,
+            2773 wiz_defined-function locations,
+            620 strings with 5313 characters,
+and the built_in function-call counts, 1362 in all, are:
+= -- 118
+> -- 40
+< -- 4
++ -- 16
+- -- 12
+* -- 86
+:= -- 225
+add.period$ -- 16
+call.type$ -- 4
+change.case$ -- 14
+chr.to.int$ -- 4
+cite$ -- 9
+duplicate$ -- 80
+empty$ -- 137
+format.name$ -- 16
+if$ -- 280
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 7
+newline$ -- 31
+num.names$ -- 16
+pop$ -- 38
+preamble$ -- 1
+purify$ -- 12
+quote$ -- 0
+skip$ -- 50
+stack$ -- 0
+substring$ -- 33
+swap$ -- 4
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 29
+warning$ -- 1
+while$ -- 14
+width$ -- 0
+write$ -- 63
+(There was 1 warning)

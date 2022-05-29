@@ -174,7 +174,7 @@ to use the operator $\fatsemi$, which is equivalent to the composition $\circ$,
 but with the inverted order, i.e. $f \fatsemi g = g \circ f$. The convinience
 will become clearer once we introduce Hasse diagrams as a way to represent categories.
 
-When the class of morphism $Mor_\mathcal C(A,B)$ for every pair or objects is a set,
+When the class of morphism $Mor_\mathcal C(A,B)$ for every pair of objects is a set,
 the category $\mathcal C$ is called a \textit{locally small category}\footnote{Note
 	that $Mor_\mathcal C$ can be a class while each $Mor_\mathcal C(A,B)$ is a set}.
 If both $Ob_\mathcal C$ and $Mor_\mathcal C$ are sets, we then have a \textit{small category}.
@@ -993,7 +993,7 @@ a way to classify different functors.
 	is a subcategory of $\mathcal D$ if $Ob_\mathcal C \subset Ob_\mathcal D$ and
 	$Mor_\mathcal C \subset Mor_\mathcal D$, such that $\mathcal C$ is a category.
 
-	If for every $A, B \in Ob_\mathcal D$, we have that $Mor_\mathcal D (A,B) = Mor_\mathcal C(A,B)$,
+	If for every $A, B \in Ob_\mathcal C$, we have that $Mor_\mathcal D (A,B) = Mor_\mathcal C(A,B)$,
 	then $\mathcal C$ is a \textit{full subcategory}.
 \end{definition}
 
@@ -1263,7 +1263,11 @@ set of $X$ and it's relationships can actually be written as
 Let's now give an example of what we are trying to show. Consider the category $\mathbf{Set}$
 and two objects $X:=\{1,2\}$ and $Y :=\{a,b\}$. Note that we are introducing these objects
 by presenting their definitions, e.g. $X:=\{1,2\}$ is the same as saying
-$(X,\text{X is a set with the elements 1 and 2})$. Our question is if instead of
+``$\text{X is a set with the elements 1 and 2}$'', which is the same as:
+\begin{displaymath}
+	(X, \{\text{set with elements 1 and 2}\}).
+\end{displaymath}
+Our question is if instead of
 defining $X$ and $Y$ by describing what they are ``made of'', we could just
 define them by describing the many ways they relate to other sets, i.e. by describing their relations.
 
@@ -1553,11 +1557,11 @@ from $LC$ to an object.
 \end{example}
 
 
-\subsection{Slice Categories}
+\subsection{Category of Cones}
 
-A slice category is a way to define categories of certain diagrams (functors) inside another category.
-The definition by itself is very obscure, so we instead present how to construct the slice
-category for \textit{spans} (remember definition \ref{def:Span} and Figure \ref{fig:Span}).
+A category of cones is a way to define categories of certain diagrams (functors) inside another category.
+The definition by itself is very obscure, so we instead present how to construct the category of
+cones for \textit{spans} (remember definition \ref{def:Span} and Figure \ref{fig:Span}).
 This example makes clear the motivation behind the slice category.
 
 \begin{example}[Category of Spans in $\mathcal C$]

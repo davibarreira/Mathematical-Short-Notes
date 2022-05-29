@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2022.4.28)  26 MAY 2022 11:01
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2022.4.28)  26 MAY 2022 11:19
  restricted system commands enabled.
  file:line:error style messages enabled.
 **chapter.tex
@@ -533,11 +533,7 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 File: l3backend-luatex.def 2022-01-12 L3 backend support: PDF output (LuaTeX)
 \l__color_backend_stack_int=\count301
 \l__pdf_internal_box=\box60
-) (./chapter.aux (./1-Probability.aux) (./2-Probability.aux
-
-LaTeX Warning: Label `eq:gaussian' multiply defined.
-
-) (./3-Probability.aux) (./Extra-Probability.aux))
+) (./chapter.aux)
 \openout1 = chapter.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
@@ -675,115 +671,70 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 \tf@toc=\write4
 
 \openout4 = chapter.toc
- [2] (./chapter.loe) [3] (./chapter.loe) [4] (./Probability.tex
-\openout2 = 1-Probability.aux
- (./1-Probability.tex
-Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 12.
- [5
-
-]
-Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 70.
-
-Overfull \hbox (19.60774pt too wide) in paragraph at lines 71--72
-[][]\TU/lmr/bx/n/12 Propo-si-tion 1.8 (Ba-sic prop-er-ties of prob-a-bil-ity mea-sures). []\TU/lmr/m/n/12 Let $\U/euf/m/n/12 (\U/eur/m/n/12 
-; \OMS/cmsy/m/n/12 F\U/eur/m/n/12 ; P\U/euf/m/n/12 )$
- []
-
-
-Overfull \hbox (83.29153pt too wide) detected at line 95
-\U/eur/m/n/12 B \OMS/cmsy/m/n/12 \ \U/eur/m/n/12 A \U/euf/m/n/12 = \U/eur/m/n/12 A;  B \U/euf/m/n/12 = (\U/eur/m/n/12 B \U/eus/m/n/12 n \U/eur/m/n/12 A\U/euf/m/n/12 ) + (\U/eur/m/n/12 B \OMS/cmsy/m/n/12 \ \U/eur/m/n/12 A\U/euf/m/n/12 ) = (\U/eur/m/n/12 B \U/eus/m/n/12 n \U/eur/m/n/12 A\U/euf/m/n/12 ) + \U/eur/m/n/12 A  \U/euf/m/n/12 =[]\U/euex/m/n/12 )  \U/eur/m/n/12 P\U/euf/m/n/12 (\U/eur/m/n/12 B\U/euf/m/n/12 ) = \U/eur/m/n/12 P\U/euf/m/n/12 (\U/eur/m/n/12 B \U/eus/m/n/12 n \U/eur/m/n/12 A\U/euf/m/n/12 ) + \U/eur/m/n/12 P\U/euf/m/n/12 (\U/eur/m/n/12 A\U/euf/m/n/12 )  =[]\U/euex/m/n/12 )  \U/eur/m/n/12 P\U/euf/m/n/12 (\U/eur/m/n/12 B\U/euf/m/n/12 ) \OMS/cmsy/m/n/12  \U/eur/m/n/12 P\U/euf/m/n/12 (\U/eur/m/n/12 A\U/euf/m/n/12 )\U/eur/m/n/12 :
- []
-
-[6] [7]
-Overfull \hbox (0.84377pt too wide) in paragraph at lines 168--171
-[][]\TU/lmr/bx/n/12 Def-i-ni-tion 1.10 (Ran-dom Vari-able). []\TU/lmr/m/n/12 Let $\U/euf/m/n/12 (\U/eur/m/n/12 
-; \OMS/cmsy/m/n/12 F\U/eur/m/n/12 ; P\U/euf/m/n/12 )$ \TU/lmr/m/n/12 be a prob-a-bil-ity space,
- []
-
-Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 194.
-LaTeX Font Info:    Trying to load font information for U+bbm on input line 222.
-(/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/ubbm.fd
+ [2] (./chapter.loe) [3] (./chapter.loe) [4] (./Mathematical-Statistics.tex
+Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 31.
+LaTeX Font Info:    Trying to load font information for U+bbm on input line 36.
+ (/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
-) [8] [9]
-Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 325.
- [10] [11] [12]
-Overfull \hbox (10.69373pt too wide) in paragraph at lines 517--522
-[][]\TU/lmr/bx/n/12 The-o-rem 1.21 (Con-ti-nu-ity of Push-for-ward). []\TU/lmr/m/n/12 Let $\U/euf/m/n/12 (\U/eur/m/n/12 E; \OMS/cmsy/m/n/12 B\U/euf/m/n/12 (\U/eur/m/n/12 E\U/euf/m/n/12 ))$ \TU/lmr/m/n/12 and $\U/euf/m/n/12 (\U/eur/m/n/12 E[]; \OMS/cmsy/m/n/12 B\U/euf/m/n/12 (\U/eur/m/n/12 E[]\U/euf/m/n/12 ))$
+) [5] [6] [7] [8]
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 239.
+ [9]
+Overfull \hbox (15.456pt too wide) in paragraph at lines 277--282
+\TU/lmr/m/n/12 ($\U/eur/m/n/12 $\TU/lmr/m/n/12 ), but ac-tu-ally the squared mean ($\U/eur/m/n/12 []$\TU/lmr/m/n/12 ). In this case, the func-tion $\U/eur/m/n/12 \U/euf/m/n/12 (\U/eur/m/n/12 X[]; :::; X[]\U/euf/m/n/12 ) =
  []
 
-[13]
-Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 561.
- [14]
-Package hyperref Info: bookmark level for unknown note defaults to 0 on input line 614.
- [15] [16]) [17] [18]
-\openout2 = 2-Probability.aux
- (./2-Probability.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
-
-Overfull \hbox (20.90923pt too wide) detected at line 59
-[][] \U/euf/m/n/12 = [][] [][] \U/eur/m/n/12 e[]dxdy \U/euf/m/n/12 = [][] [][] \U/eur/m/n/12 e[]rddrd \U/euf/m/n/12 = []\U/eur/m/n/12 2\U/euf/m/n/12 )\U/eur/m/n/12 :
- []
-
-[19
-
-
-
-]) [20]
-\openout2 = 3-Probability.aux
- (./3-Probability.tex
-Overfull \hbox (0.16522pt too wide) detected at line 58
+[10]
+Package hyperref Info: bookmark level for unknown proposition defaults to 0 on input line 360.
+ [11]
+Overfull \hbox (28.14882pt too wide) detected at line 410
 []
  []
 
-[21
+[12]
+Package hyperref Info: bookmark level for unknown corollary defaults to 0 on input line 448.
+ [13] [14] [15] [16]
+Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 711.
+ [17] [18]
+<./figures/randomfunction.pdf, id=413, 451.88567pt x 155.48775pt>
+File: ./figures/randomfunction.pdf Graphic file (type pdf)
+<use ./figures/randomfunction.pdf>
+Package luatex.def Info: ./figures/randomfunction.pdf  used on input line 812.
+(luatex.def)             Requested size: 312.00119pt x 107.35545pt.
+ [19]
+Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input line 827.
+ [20
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.1'
+<./figures/randomfunction.pdf>]
+Overfull \hbox (23.64607pt too wide) in paragraph at lines 875--877
+[]\TU/lmr/m/n/12 For ev-ery $\U/eur/m/n/12 $ \TU/lmr/m/n/12 in the in-te-rior of $\U/eur/m/n/12 $\TU/lmr/m/n/12 , there ex-ists $\U/eur/m/n/12 " > 0$ \TU/lmr/m/n/12 such that $\U/eur/m/n/12 E[]\U/eus/m/n/12 jj\U/bbm/m/n/12 1[]\U/eus/m/n/12 jj[] \U/eur/m/n/12 <
+ []
 
-
-
-]) [22]
-\openout2 = Extra-Probability.aux
- (./Extra-Probability.tex) [23
-
-
-
-]) (./chapter.bbl)
+[21] [22] [23] [24]) (./chapter.bbl [25])
 \tf@loe=\write5
 
 \openout5 = chapter.loe
- [24
-
-
-] (./chapter.aux (./1-Probability.aux) (./2-Probability.aux) (./3-Probability.aux) (./Extra-Probability.aux))
+ [26] (./chapter.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `chapter.out' has not changed.
-(rerunfilecheck)             Checksum: 57432544640DB4367EFEF270E44FA748;2335.
+(rerunfilecheck)             Checksum: 5C56BC174C09B81F136DA440F2DDD2EE;3839.
 )
 
 Here is how much of LuaTeX's memory you used:
- 15661 strings out of 477805
+ 15591 strings out of 477805
  100000,662416 words of node,token memory allocated
- 829 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 4 glue, 4 kern, 1 glyph, 74 attribute, 62 glue_spec, 74 attribute_list, 1 write nodes
-   avail lists: 2:493,3:233,4:148,5:479,6:53,7:4299,8:75,9:596,10:10,11:233
- 35356 multiletter control sequences out of 65536+600000
- 152 fonts using 9538231 bytes
- 70i,12n,72p,333b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf/fonts/opentype/public/lm/lmroman6-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf>{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}<</home/davibarreira/.texlive2021/texmf-var/fonts/pk/ljfour/public/bbm/bbm12.600pk>></usr/share/texmf/fonts/opentype/public/lm/lmroman12-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman17-regular.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/euex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/euex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on chapter.pdf (24 pages, 247921 bytes).
+ 1118 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 5 glue, 4 kern, 1 glyph, 143 attribute, 62 glue_spec, 143 attribute_list, 1 write, 1 pdf_action nodes
+   avail lists: 2:443,3:278,4:232,5:350,6:81,7:6599,8:88,9:885,10:21,11:502
+ 35285 multiletter control sequences out of 65536+600000
+ 138 fonts using 8852415 bytes
+ 70i,11n,72p,354b,498s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf/fonts/opentype/public/lm/lmmono12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf>{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}<</home/davibarreira/.texlive2021/texmf-var/fonts/pk/ljfour/public/bbm/bbm12.600pk>></usr/share/texmf/fonts/opentype/public/lm/lmroman12-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman17-regular.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/euex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/euex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on chapter.pdf (26 pages, 293489 bytes).
 
-PDF statistics: 456 PDF objects out of 1000 (max. 8388607)
- 391 compressed objects within 4 object streams
- 151 named destinations out of 1000 (max. 131072)
- 105 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 620 PDF objects out of 1000 (max. 8388607)
+ 546 compressed objects within 6 object streams
+ 238 named destinations out of 1000 (max. 131072)
+ 153 words of extra memory for PDF output out of 10000 (max. 100000000)
 

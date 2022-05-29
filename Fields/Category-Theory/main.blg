@@ -3,6 +3,8 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 A level-1 auxiliary file: 1-Category-Theory.aux
 A level-1 auxiliary file: 2-Category-Theory.aux
+A level-1 auxiliary file: 3-Category-Theory.aux
+A level-1 auxiliary file: Programming-Category-Theory.aux
 A level-1 auxiliary file: Set-as-Category-Theory.aux
 The style file: plainnat.bst
 A level-1 auxiliary file: appendix.aux
@@ -10,7 +12,7 @@ Database file #1: ref.bib
 Warning--empty publisher in maico2020categoria
 You've used 9 entries,
             2773 wiz_defined-function locations,
-            643 strings with 5925 characters,
+            645 strings with 5977 characters,
 and the built_in function-call counts, 3152 in all, are:
 = -- 249
 > -- 151

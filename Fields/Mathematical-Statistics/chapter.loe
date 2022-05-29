@@ -1,0 +1,57 @@
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.1\else \numberline {1.1}Definition\fi \thmtformatoptarg {$\circledast $ Sampling Process}}{5}{definition.1.1}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.2\else \numberline {1.2}Definition\fi \thmtformatoptarg {$\circledast $ Independent Sampling Process}}{6}{definition.1.2}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.3\else \numberline {1.3}Definition\fi \thmtformatoptarg {Statistic - \citet {Shao_2003_book} pg 100}}{7}{definition.1.3}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.4\else \numberline {1.4}Definition\fi \thmtformatoptarg {Parametric Family}}{8}{definition.1.4}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.5\else \numberline {1.5}Definition\fi \thmtformatoptarg {Risk}}{8}{definition.1.5}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.6\else \numberline {1.6}Definition\fi \thmtformatoptarg {Exponential Family}}{8}{definition.1.6}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.7\else \numberline {1.7}Definition\fi \thmtformatoptarg {Full rank - \citet {Shao_2003_book}}}{9}{definition.1.7}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.8\else \numberline {1.8}Definition\fi \thmtformatoptarg {Sufficient Statistic}}{9}{definition.1.8}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.9\else \numberline {1.9}Definition\fi \thmtformatoptarg {Factorization Theorem}}{9}{definition.1.9}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.10\else \numberline {1.10}Definition\fi \thmtformatoptarg {Minimal Sufficient}}{9}{definition.1.10}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.11\else \numberline {1.11}Definition\fi \thmtformatoptarg {Completeness}}{9}{definition.1.11}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}1.12\else \numberline {1.12}Theorem\fi }{10}{theorem.1.12}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}1.13\else \numberline {1.13}Theorem\fi }{10}{theorem.1.13}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.14\else \numberline {1.14}Definition\fi \thmtformatoptarg {Ancillary}}{10}{definition.1.14}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}1.15\else \numberline {1.15}Theorem\fi \thmtformatoptarg {Basu}}{10}{theorem.1.15}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}1.16\else \numberline {1.16}Theorem\fi \thmtformatoptarg {Rao-Blackwell}}{10}{theorem.1.16}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.17\else \numberline {1.17}Definition\fi \thmtformatoptarg {Unbiased Estimator}}{11}{definition.1.17}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.18\else \numberline {1.18}Definition\fi \thmtformatoptarg {UMVU}}{11}{definition.1.18}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.19\else \numberline {1.19}Definition\fi \thmtformatoptarg {Fisher Information}}{11}{definition.1.19}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}1.20\else \numberline {1.20}Proposition\fi \thmtformatoptarg {Fisher Information Equivalent Form}}{12}{proposition.1.20}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}1.21\else \numberline {1.21}Theorem\fi }{13}{theorem.1.21}%
+\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}1.22\else \numberline {1.22}Corollary\fi }{13}{corollary.1.22}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}2.1\else \numberline {2.1}Definition\fi \thmtformatoptarg {Almost Sure Convergence}}{14}{definition.2.1}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}2.2\else \numberline {2.2}Theorem\fi \thmtformatoptarg {Convergence $L^p$ implies $L^q$ in finite space}}{14}{theorem.2.2}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}2.3\else \numberline {2.3}Definition\fi \thmtformatoptarg {Convergence in Probability}}{14}{definition.2.3}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}2.4\else \numberline {2.4}Proposition\fi }{15}{proposition.2.4}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}2.5\else \numberline {2.5}Theorem\fi \thmtformatoptarg {Weak Law of Large Numbers}}{15}{theorem.2.5}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}2.6\else \numberline {2.6}Proposition\fi }{15}{proposition.2.6}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}2.7\else \numberline {2.7}Theorem\fi \thmtformatoptarg {Strong Law of Large Numbers}}{15}{theorem.2.7}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}2.8\else \numberline {2.8}Definition\fi \thmtformatoptarg {Weak convergence or Convergence in distribution}}{15}{definition.2.8}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}2.9\else \numberline {2.9}Theorem\fi \thmtformatoptarg {Convergence in distribution alternative definition}}{16}{theorem.2.9}%
+\contentsline {corollary}{\ifthmt@listswap Corollary\nobreakspace {}2.10\else \numberline {2.10}Corollary\fi }{16}{corollary.2.10}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}2.11\else \numberline {2.11}Theorem\fi \thmtformatoptarg {Central Limit Theorem}}{16}{theorem.2.11}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}2.12\else \numberline {2.12}Theorem\fi \thmtformatoptarg {Berry-Esseen}}{16}{theorem.2.12}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}2.13\else \numberline {2.13}Theorem\fi \thmtformatoptarg {Delta Method}}{16}{theorem.2.13}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}2.14\else \numberline {2.14}Theorem\fi \thmtformatoptarg {Convergence Hierarchy}}{17}{theorem.2.14}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}2.15\else \numberline {2.15}Proposition\fi }{17}{proposition.2.15}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}2.16\else \numberline {2.16}Theorem\fi \thmtformatoptarg {Continuous Mapping Theorem}}{17}{theorem.2.16}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}2.17\else \numberline {2.17}Theorem\fi \thmtformatoptarg {Slutsky's Theorem}}{17}{theorem.2.17}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}2.1\else \numberline {2.1}Example\fi }{18}{example.2.1}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.1\else \numberline {3.1}Definition\fi \thmtformatoptarg {Likelihood}}{18}{definition.3.1}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.2\else \numberline {3.2}Definition\fi \thmtformatoptarg {Maximum Likelihood Estimator}}{18}{definition.3.2}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.3\else \numberline {3.3}Definition\fi \thmtformatoptarg {Kullback-Leibler Divergence}}{19}{definition.3.3}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.4\else \numberline {3.4}Definition\fi \thmtformatoptarg {Consistent Estimators}}{19}{definition.3.4}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.5\else \numberline {3.5}Definition\fi \thmtformatoptarg {Continuous Random Function Indexed on $X$}}{19}{definition.3.5}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.6\else \numberline {3.6}Definition\fi \thmtformatoptarg {Mean of Random Function}}{20}{definition.3.6}%
+\contentsline {lemma}{\ifthmt@listswap Lemma\nobreakspace {}3.7\else \numberline {3.7}Lemma\fi }{20}{lemma.3.7}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}3.8\else \numberline {3.8}Theorem\fi \thmtformatoptarg {Compact MLE consistency}}{20}{theorem.3.8}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}3.9\else \numberline {3.9}Theorem\fi \thmtformatoptarg {MLE consistency}}{21}{theorem.3.9}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}3.10\else \numberline {3.10}Theorem\fi \thmtformatoptarg {Rate of Convergence MLE}}{21}{theorem.3.10}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.11\else \numberline {3.11}Definition\fi \thmtformatoptarg {Confidence Interval}}{21}{definition.3.11}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}3.12\else \numberline {3.12}Definition\fi \thmtformatoptarg {Pivots}}{22}{definition.3.12}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}3.1\else \numberline {3.1}Example\fi }{22}{example.3.1}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}6.1\else \numberline {6.1}Theorem\fi \thmtformatoptarg {Jensen's Inequality}}{23}{theorem.6.1}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}6.2\else \numberline {6.2}Theorem\fi \thmtformatoptarg {Cauchy-Schwarz}}{23}{theorem.6.2}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}6.3\else \numberline {6.3}Theorem\fi \thmtformatoptarg {Covariance Inequality}}{24}{theorem.6.3}%
+\contentsline {theorem}{\ifthmt@listswap Theorem\nobreakspace {}6.4\else \numberline {6.4}Theorem\fi \thmtformatoptarg {General form of Chebyshev's Inequality}}{24}{theorem.6.4}%

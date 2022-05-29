@@ -1,0 +1,32 @@
+\begin{thebibliography}{4}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Gentle(2020)]{gentle2020}
+James Gentle.
+\newblock \emph{Theory of Statistics}.
+\newblock 2020.
+\newblock URL \url{https://mason.gmu.edu/~jgentle/books/MathStat.pdf}.
+
+\bibitem[Keener(2010)]{keener2010theoretical}
+R.W. Keener.
+\newblock \emph{Theoretical Statistics: Topics for a Core Course}.
+\newblock Springer Texts in Statistics. Springer New York, 2010.
+\newblock ISBN 9780387938394.
+\newblock URL \url{https://books.google.com.br/books?id=aVJmcega44cC}.
+
+\bibitem[Martin-L{\"o}f(1966)]{martin1966}
+Per Martin-L{\"o}f.
+\newblock The definition of random sequences.
+\newblock \emph{Information and control}, 9\penalty0 (6):\penalty0 602--619,
+  1966.
+
+\bibitem[Shao(2003)]{Shao_2003_book}
+Jun Shao.
+\newblock \emph{Mathematical Statistics}.
+\newblock Springer-Verlag New York Inc, 2nd edition, 2003.
+
+\end{thebibliography}
