@@ -881,7 +881,11 @@ Let's formally define a Functor.
 
 	Lastly, note that
 	\begin{displaymath}
-		F(g \circ f) =  F f \circ F g \iff F' f^{op} \circ F' g^{op} = F'(f^{op}\circ g^{op}).
+		(g \circ f)^{op} = f^{op} \circ g^{op},
+	\end{displaymath}
+	hence:
+	\begin{displaymath}
+		F(g \circ f) = F'(f^{op}\circ g^{op})  \iff F f \circ F g  = F' f^{op} \circ F' g^{op}.
 	\end{displaymath}
 	Thus, we showed that $F$ is a contravariant functor according to \ref{def:functor}
 	if and only if $F'$ is a covariant functor from $\mathcal C^{\text{op}}$ to $\mathcal D$, where
