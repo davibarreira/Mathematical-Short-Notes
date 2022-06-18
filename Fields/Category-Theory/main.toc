@@ -29,16 +29,16 @@
 \contentsline {subsection}{\numberline {5.3}Defining Limits and Colimits}{40}{subsection.5.3}%
 \contentsline {section}{\numberline {6}Adjoints}{41}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Intuitive Explanation for Adjoints}{41}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}General Definitions}{41}{subsection.6.2}%
-\contentsline {section}{\numberline {7}Graphs and Schemas in Category Theory}{43}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Underlying Graphs}{43}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Generating Categories from Graphs via Free Functors}{44}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Categories from Preorders}{46}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Generating Categories from Schemas}{47}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}More on Generating Categories from Schemas *}{48}{subsection.7.5}%
-\contentsline {subsection}{\numberline {7.6}$\mathcal C$-Sets and Instances}{49}{subsection.7.6}%
-\contentsline {section}{\numberline {8}$\mathbf {Poly}$ Category}{51}{section.8}%
-\contentsline {section}{\numberline {9}Programming with Category Theory}{52}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Setting Up Haskell}{52}{subsection.9.1}%
-\contentsline {section}{\numberline {10}What are Sets?}{53}{section.10}%
-\contentsline {subsubsection}{\numberline {10.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{53}{subsubsection.10.0.1}%
+\contentsline {subsection}{\numberline {6.2}General Definitions}{42}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Graphs and Schemas in Category Theory}{44}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Underlying Graphs}{44}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Generating Categories from Graphs via Free Functors}{45}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Categories from Preorders}{47}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Generating Categories from Schemas}{48}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}More on Generating Categories from Schemas *}{49}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}$\mathcal C$-Sets and Instances}{50}{subsection.7.6}%
+\contentsline {section}{\numberline {8}$\mathbf {Poly}$ Category}{52}{section.8}%
+\contentsline {section}{\numberline {9}Programming with Category Theory}{53}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Setting Up Haskell}{53}{subsection.9.1}%
+\contentsline {section}{\numberline {10}What are Sets?}{54}{section.10}%
+\contentsline {subsubsection}{\numberline {10.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{54}{subsubsection.10.0.1}%

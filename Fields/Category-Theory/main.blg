@@ -10,45 +10,45 @@ The style file: plainnat.bst
 A level-1 auxiliary file: appendix.aux
 Database file #1: ref.bib
 Warning--empty publisher in maico2020categoria
-You've used 9 entries,
+You've used 10 entries,
             2773 wiz_defined-function locations,
-            645 strings with 5977 characters,
-and the built_in function-call counts, 3152 in all, are:
-= -- 249
-> -- 151
-< -- 9
-+ -- 54
-- -- 45
-* -- 213
-:= -- 512
-add.period$ -- 28
-call.type$ -- 9
-change.case$ -- 34
+            648 strings with 6018 characters,
+and the built_in function-call counts, 3459 in all, are:
+= -- 272
+> -- 161
+< -- 11
++ -- 59
+- -- 48
+* -- 235
+:= -- 561
+add.period$ -- 31
+call.type$ -- 10
+change.case$ -- 37
 chr.to.int$ -- 9
-cite$ -- 19
-duplicate$ -- 181
-empty$ -- 297
-format.name$ -- 57
-if$ -- 648
-int.to.chr$ -- 1
+cite$ -- 21
+duplicate$ -- 201
+empty$ -- 329
+format.name$ -- 61
+if$ -- 711
+int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 16
-newline$ -- 54
-num.names$ -- 36
-pop$ -- 105
+missing$ -- 18
+newline$ -- 59
+num.names$ -- 40
+pop$ -- 116
 preamble$ -- 1
-purify$ -- 32
+purify$ -- 35
 quote$ -- 0
-skip$ -- 121
+skip$ -- 131
 stack$ -- 0
-substring$ -- 43
-swap$ -- 12
-text.length$ -- 2
+substring$ -- 45
+swap$ -- 16
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 64
+type$ -- 70
 warning$ -- 1
-while$ -- 29
+while$ -- 32
 width$ -- 0
-write$ -- 119
+write$ -- 132
 (There was 1 warning)

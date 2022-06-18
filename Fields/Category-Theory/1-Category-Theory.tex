@@ -1702,8 +1702,11 @@ Again, we can easily define a dual definition.
 \section{Adjoints}
 
 Adjoints, or, adjunctions, are not easily understood from the definition alone.
-A good reference for a more intuitive description is the blog Math3ma, where the
-intuition for adjoints was taken from.
+A good reference for a more intuitive description is the blog Math3ma, where some of the
+intuition for adjoints was taken from. \citet{leinster2014basic} also gives a nice description.
+There are several equivalent ways of defining adjunctions, and some are easier to grasp
+than others. Before diving into rigorous definitions, we'll present some of the
+intution behind.
 
 \subsection{Intuitive Explanation for Adjoints}
 
@@ -1714,13 +1717,18 @@ requiring the existence of an isomorphism given by
 $F \circ G = id_\mathcal D$ and $F \circ G = id_\mathcal C$, we only
 ask for $F \circ G \cong id_\mathcal D$ and $G \circ F \cong id_\mathcal C$.
 
-We can go further and devise an even weaker notion of
+We can go further and devise an even weaker notion of ``equality''
+between categories.
 This is where adjunctions come in. Instead
 of isomorphisms, we can ask for the existence of two morphisms
 (which in this context will be natural transformations),
 where one morphism is $\varepsilon:F\circ G \to id_\mathcal D$ (called counit) and another morphism
-is $\eta:id_\mathcal C \to G\circ F $ (called unit), and they are somehow related. The question is
-then, what such relation should be?
+is $\eta:id_\mathcal C \to G\circ F $ (called unit), and they are somehow related.
+
+Another way to view adjunctions is the following. Given two functors $F:\mathcal C \to \mathcal D$
+and $G:\mathcal D \to \mathcal C$. We say that $F$ is the left adjoint of $G$, which we write as $F \dashv G$,
+if for every $C \in Ob_\mathcal C$ and every $D \in Ob_\mathcal D$, a morphism from $F(C)$ to $D$
+is essentially the same as a morphism from $C$ to $G(D)$.
 
 % Note that for $c \in Ob_\mathcal C$, then $\eta_c: c \to G(F(c))$ is $c \mapsto G(F(c))$. Similarly,
 % $\varepsilon_{F(c)}: F(G(F(c))) \to F(c)$ is $F \circ G \circ F(c) \mapsto F(c)$.
