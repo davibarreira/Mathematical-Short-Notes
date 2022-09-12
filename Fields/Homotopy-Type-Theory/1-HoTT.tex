@@ -1,0 +1,35 @@
+\section*{Notation}
+
+Perhaps to my own detriment, I'll deviate from the common
+notation from HoTT and use something more in line with
+programming. More specifically, Julia programming.
+
+\section{Introduction}
+Type theory has many relations to the foundations of mathematics,
+and hence, to logic.
+
+First, in type theory, every \textit{type} corresponds
+to a \textit{proposition}. The basic \textit{judgment}
+of type theory is written as $a::A$, and it represents
+``$A$ has a proof''. The $a$ in $a::A$ is called a \textit{witness}.
+
+But what are propositions and judgements? Think of a proposition
+as a statement which can be proven, disproven, assumed, and so on.
+A judgement is a statement about a proposition, e.g.
+``proposition $A$ has a proof''.
+
+Another important aspect to note is the notion of equalities.
+The proposition of an equality is similar to the $==$
+in programming, meaning, we are ``testing'' whether two
+variables are the same. While the judgement is akin to
+assigning (defining) an equality:
+
+\hspace{100mm}
+\begin{lstlisting}[language=JuliaLocal, style=julia]
+x = 10 # judgment
+y = 10 # judgment
+x == y # proposition
+\end{lstlisting}
+
+Since $x==y$ is a proposition, it also means that, in type theory,
+this is a type. Thus, we can have $a:(x==y)$.

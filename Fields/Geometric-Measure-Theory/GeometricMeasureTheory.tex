@@ -1,0 +1,224 @@
+The notes are based on \citet{evans2018measure}. Note that in Geometric Measure Theory
+there are different standards that might be confusing to someone that has
+taken an introductory course in Measure Theory.
+For example, it is common to refer to ``outer measures'' as ``measures'',
+and thus, define them in the power set instead of $\sigma$-algebra.
+I'll try to keep the distinction clear.
+
+\section{Classical Measure Theory, briefly}
+Before going into Geometric Measure Theory, I'll present the
+construction of measures with the ``classical'' approach
+of using Caratheodory's Extension Theorem.
+
+\subsection{Constructing Measures}
+This is based on the lectures from the Master's course of
+Measure and Integration at IMPA 2015.
+
+\begin{definition}[Semi-Algebra]
+	Consider a space $\Omega$, and $\mathcal S \subset 2^\Omega$.
+	We say that $\mathcal S$ is a semi-algebra if
+	\begin{enumerate}[(i)]
+		\item $\Omega \in \mathcal S$;
+		\item $A, B \in \mathcal S \implies A \cap B \in \mathcal S$;
+		\item $A \in \mathcal S \implies A^c = B_1\cup B_2 \cup...\cup B_n$
+		      where $B_i \cap B_j = \varnothing \forall i \neq j$.
+	\end{enumerate}
+\end{definition}
+\begin{example}
+	The set of $(a,b]$, $(a,+\infty)$ and $(-\infty,a)$ for
+	$a,b \in \mathbb R$, is a semi-algebra.
+\end{example}
+
+\begin{definition}[Algebra]
+	Consider a space $\Omega$, and $\mathcal A \subset 2^\Omega$.
+	We say that $\mathcal A$ is an algebra if
+	\begin{enumerate}[(i)]
+		\item $\Omega \in \mathcal S$;
+		\item $A, B \in \mathcal S \implies A \cap B \in \mathcal S$;
+		\item $A \in \mathcal A \implies A^c \in \mathcal A$.
+	\end{enumerate}
+	Note that since $A^c \cap B^c = A \cup B$, then the
+	algebra is closed under finite unions.
+\end{definition}
+
+\begin{proposition}
+	If $\mathcal S$ is a semi-algebra, then
+	\begin{displaymath}
+		\mathcal A(\mathcal S):=
+		\{
+		\cup^n_{j=1} E_j : \
+		E_j \in \mathcal S, E_j \cap E_i = \varnothing \text{ for }
+		i\neq j
+		\},
+	\end{displaymath}
+	is an algebra.
+	Moreover, $\mathcal A(\mathcal S)$ is the smallest algebra containing $\mathcal S$,
+	i.e. $\mathcal A(\mathcal S)=\cap_{\alpha \in I} \mathcal A_\alpha$, where
+	$\mathcal A_\alpha \supset \mathcal S$.
+\end{proposition}
+\begin{proof}
+
+	Let's prove the three properties of an algebra.
+
+	\begin{enumerate}[(i)]
+		\item $\Omega \in \mathcal A(\mathcal S)$.
+		\item $A= \cup^n_{j=1} E_j, B= \cup^m_{k=1} F_k \implies A\cap B = cup_{j,k} (E_j \cap F_k) \in \mathcal A(S)$,
+		      since $E_j \cap F_k \in \mathcal S$;
+		\item $A \in \mathcal A(S)\implies A^c =
+			      \cap^n_{j=1}(E_j^c) =
+			      \cap^n_{j=1}(\cup^{m_j}_{k=1}F_{j,k}) =
+			      \cup^{n_1}_{k_1=1}...\cup^{m_n}_{k_n=1} F_{1,k_1} \cap ... \cap F_{n,k_n} \in \mathcal A(\mathcal S)$.
+	\end{enumerate}
+	We proved that $\mathcal A(\mathcal S)$ is an algebra. Also, since every element of
+	$\mathcal S$ is in $\mathcal A(\mathcal S)$, then
+	$\mathcal A(\mathcal S) \supset \cap_{\alpha \in I} \mathcal A_\alpha$.
+
+	But, we can show that $\cap_{\alpha \in I} \mathcal A_\alpha$ defines an algebra that contains $S$,
+	hence, it contains $E_j \in \mathcal S$ and it's closed under finite unions,
+	hence $\cup^n_{i=1}E_i \in \cap_{\alpha \in I} \mathcal A_\alpha$. Thus,
+	$\mathcal A(\mathcal S) \subset \cap_{\alpha \in I} \mathcal A_\alpha$.
+
+\end{proof}
+
+\begin{proposition}[Extending measures in semi-algebras to algebras]
+	Let $\mu: \mathcal S \to [0,+\infty]$ where $\mathcal S$ is a semi-algebra,
+	and $\mu(\cup_{i=1}^n A_i) = \sum_{i=1}^n \mu(A_i)$ if $A_i \cap A_j = \varnothing$
+	for $i \neq j$ and any $A_1,..., A_n \in \mathcal S$.
+	We can then extend $\mu$ to $\bar \mu :\mathcal A(\mathcal S) \to [0,+\infty]$,
+	such extension is unique and is still additive, i.e.
+	$\bar \mu(\cup_{i=1}^n B_i) = \sum_{i=1}^n \bar\mu(A_i)$ if $B_i \cap B_j = \varnothing$
+	for $i\neq j$ and every $B_1,...,B_n \in \mathcal A(\mathcal S)$.
+\end{proposition}
+\begin{proof}
+	Consider $\mathcal A(\mathcal S):=
+		\{
+		\cup^n_{j=1} E_j : \
+		E_j \in \mathcal S, E_j \cap E_i = \varnothing \text{ for }
+		i\neq j
+		\}$ and define $\bar\mu = \sum^n_{i=1}\mu(E_i)$.
+
+	Note that this is well defined. Take $A \in \mathcal A(\mathcal S)$,
+	and suppose that $A = \cup^n_{i=1} A_i = \cup^m_{j=1}B_j$.
+	\begin{displaymath}
+		A = \cup^n_{i=1} A_i = \cup^m_{j=1}B_j \implies
+		B_j = \cup_{i=1}^n A_i \cap B_j, A_i =\cup_{j=1}^m A_i\cap B_j.
+	\end{displaymath}
+	Using the fact that above, we have that
+	\begin{displaymath}
+		\bar \mu(A) = \sum^n_{i=1}\mu(A_i)=
+		\sum_{i,j} \bar \mu(A_i \cap B_j) =
+		\sum^m_{j=1}\mu(B_j).
+	\end{displaymath}
+
+	Moreover, $\bar\mu$ is additive by it's construction.
+	Also, $\bar \mu(S) = \mu(S)$, if $\mathcal S$, again by the definition of $\bar \mu$.
+
+	Finally, it's unique, since if $\bar \mu_1 (S) = \bar \mu_2(S)$ for every $S \in \mathcal S$.
+	Then, for any $A \in \mathcal A(\mathcal S)$, we have
+	\begin{displaymath}
+		A = \sum^n_{i=1} S_i \implies
+		\sum^n_{i=1}\bar \mu_1 (S_i) =  \sum^n_{i=1}\bar \mu_2(S_i).
+	\end{displaymath}
+\end{proof}
+
+\begin{definition}
+	A function $\mu:\mathcal A \to [0,+\infty]$ is $\sigma$-additive
+	if for every enumerable disjoint collection $A_1,...,A_n,... \in \mathcal A$,
+	\begin{displaymath}
+		\mu(\cup^\infty_{i=1}A_i)=
+		\sum^\infty_{i=1}\mu(A_i).
+	\end{displaymath}
+\end{definition}
+\begin{lemma}
+	Let $\mu:\mathcal A \to [0,+\infty]$, where $\mathcal A$ is an algebra.
+	Then, $\mu$ is $\sigma$-additive if and only if $\mu$ is continuous from
+	below, i.e. $A_n \supset A_{n+1}$ with $A_n \downarrow \varnothing$, then
+	$\mu(A_n) \to 0$.
+\end{lemma}
+
+\begin{lemma}
+	Let $\mathcal S$ be a semi-algebra on $2^\Omega$.
+	If $\mu:S \to [0,+\infty]$ is $\sigma$-additive
+	then the extension $\bar \mu : \mathcal A(\mathcal S)\to [0,+\infty]$
+	is also $\sigma$-additive.
+\end{lemma}
+
+\begin{definition}[$\sigma$-Algebra]
+	Consider a space $\Omega$, and $\mathcal F \subset 2^\Omega$.
+	We say that $\mathcal F$ is a $\sigma$-algebra if
+	\begin{enumerate}[(i)]
+		\item $X \in \mathcal F$;
+		\item If $A \in \mathcal F$ then $A^c \in \mathcal F$;
+		\item If $A_n \in \mathcal F \ \forall n \in \mathbb N$ then $\cup_{n \in \mathbb N} A_n \in \mathcal F$;
+	\end{enumerate}
+\end{definition}
+
+\section{Basics of Geometric Measure Theory}
+
+
+\subsection{Measures and Outer Measures}
+
+\begin{definition}[Outer Measure]
+	A mapping $\mu:2^X\to [0,+\infty]$ is called an \textit{outer measure}
+	on $X$ if
+	\begin{enumerate}
+		\item $\mu(\varnothing) = 0$;
+		\item [Subadditive]: $\mu(\cup_{i=1}^\infty A_i) \leq \sum_{i=1}^\infty \mu(A_i)$;
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}
+	An outer measure $\mu$ on $X$ restricted to a set $C \subset X$ is
+	\begin{displaymath}
+		(\mu \mres C) (A) := \mu(C \cap A).
+	\end{displaymath}
+\end{definition}
+
+\begin{definition}[$\mu$-Measurability]
+	A set $A \subseteq X$ is said to be $\mu$-measurable if for each
+	$B \subseteq X$, we have
+	\begin{displaymath}
+		\mu(B) = \mu(B\cap A) + \mu(B \cap A^c).
+	\end{displaymath}
+\end{definition}
+
+This concept of $\mu$-measurability is a very telling difference when compared to how we talk
+in measurability in ``regular'' measure theory. Here a set is measurable in relation
+to a the measure, and not to the $\sigma$-algebra considered.
+
+\begin{theorem}[Properties of Outer Measures]
+	Let $\mu$ be an outer measure on $X$. Then,
+	\begin{enumerate}[(i)]
+		\item If $A\subset B \subset X \implies \mu(A) \leq \mu(B)$;
+		\item $A$ is $\mu$-measurable if and only if $X\setminus A$ is $\mu$-measurable;
+		\item $\varnothing$ and $X$ are $\mu$-measurable and every null set is $\mu$-measurable;
+		\item Let $C \subset X$, then if $A$ is $\mu$-measurable then it is also $\mu \mres C$-measurable.
+	\end{enumerate}
+	Note that this definition of measurability again shows some benefits. For example,
+	we don't need to worry about null sets not in the $\sigma$-algebra.
+\end{theorem}
+\begin{proof}
+	(i) is clearly true. Now, if $A$ is $\mu$-measurable then
+
+\end{proof}
+
+% \begin{definition}[Measurable Space]
+% 	$(X,\mathcal F)$ is a measurable space where $\mathcal F$ is a $\sigma$-algebra in $X$.
+% 	A $\sigma$-algebra is defined such that:
+% 	\begin{enumerate}[(i)]
+% 		\item $X \in \mathcal F$;
+% 		\item If $A \in \mathcal F$ then $A^c \in \mathcal F$;
+% 		\item If $A_n \in \mathcal F \ \forall n \in \mathbb N$ then $\cup_{n \in \mathbb N} A_n \in \mathcal F$;
+% 	\end{enumerate}
+% \end{definition}
+
+% \begin{definition}[Continuous Function]
+% 	For $(X,\tau)$ and $(Y,\tau')$ topological spaces, we say $f:X \to Y$ is continuous if for every open set
+% 	$V \subset Y$ we have that $f^{-1}(V) \subset X$ is open.
+% \end{definition}
+
+% \begin{definition}[Measurable Function]
+% 	For $(X,\mathcal F)$ a measurable space and $(Y,\tau')$ a topological space, we say $f:X \to Y$ is
+% 	$\mathcal F$-measurable if for every open set
+% 	$V \subset Y$ we have that $f^{-1}(V) \in \mathcal F$.
+% \end{definition}

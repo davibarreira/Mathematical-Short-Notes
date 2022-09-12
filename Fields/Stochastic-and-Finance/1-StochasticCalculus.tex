@@ -1,0 +1,261 @@
+These notes are based on the lecture notes for the PhD course of
+Quantitative Finance at EMAp by David Evangelista, and on \citet{baldi2017introduction}.
+
+\section{Stochastic Processes}
+
+\subsection{Initial Definitions}
+
+We start by formalizing the notion of Stochastic Processes and filtration.
+
+\begin{definition}[Filtration]
+	Let $\mathcal F$ be a $\sigma$-algebra and $T \subset \mathbb R_+$. We say
+	that $(\mathcal F_t)_{t \in T}$ is a filtration, if it is an increasing family
+	of sub-$\sigma$-algebras
+	of $\mathcal F$ such that $\mathcal F_s \subset \mathcal F_t$ whenever $s\leq t$ for $s,t \in T$.
+\end{definition}
+
+\begin{definition}[Adaptation]
+	A family $(X_t)_{t \in T}$ of random variables on $(\Omega, \mathcal F)$ and
+	taking value on $(E, \mathcal E)$ is called adapted to the filtration $(\mathcal F_t)_{t\in T}$
+	if, for every $t \in T$, $X_t$ is $\mathcal F_t$ measurable, i.e. for every $t \in T$,
+	$X_t^{-1}(A) \in \mathcal F_t$ for any $A \in \mathcal E$.
+\end{definition}
+
+\begin{definition}[Natural Filtration]
+	The natural filtration is $(\mathcal G_t)_t$ where $\mathcal G_t = \sigma(X_s, s\leq t)$, i.e.
+	the filtration of the smallest $\sigma$-algebras such that $X$ is adapted.
+\end{definition}
+
+\begin{definition}[Augumented Natural Filtration]
+	The augumented natural filtration is $(\overline{\mathcal G}_t)_t$ where
+	$\overline{\mathcal G}_t = \sigma(\mathcal G_t, \mathcal N)$, i.e.
+	the smallest $\sigma$-algebra containing the natural filtration
+	and all null sets of $\mathcal F$.
+\end{definition}
+
+\begin{definition}[Stochastic Process]
+	An Stochastic Process is a quintuple
+	\begin{displaymath}
+		(\Omega, \mathcal F, P, (X_t)_{t \in T}, (\mathcal F_t)_{t\in T}),
+	\end{displaymath}
+	where $(\Omega, \mathcal F, P)$ is a probability space, $T \subset \mathbb R_+$, $(\mathcal F_t)_{t \in T}$
+	is a filtration of $\mathcal F$ and $(X_t)_{t \in T}$ is a family of random variables adapted to $(\mathcal F_t)_{t \in T}$.
+
+	Note that for brevity we usually say that $X =
+		(\Omega, \mathcal F, P, (X_t)_{t \in T}, (\mathcal F_t)_{t\in T})$
+	is the process, instead of writing down the whole quintuple.
+\end{definition}
+
+\begin{definition}[Continuous Process]
+	We say that a process is continuous (or almost surely continuous)
+	if for every $\omega$ (or almost every $\omega$) we have that
+	if $t_n \to t$, then $X_{t_n}(\omega) \to X_{t}(\omega)$.
+\end{definition}
+
+\begin{definition}[Finite-dimensional distributions]
+	Consider the stochastic process
+	$X = (\Omega, \mathcal F, (\mathcal F_t)_{t \in T}, (X_t)_{t \in T}, P)$
+	defined on $(E,\mathcal B(E))$. The family of probability measures
+	\begin{displaymath}
+		\{
+		\mu_{(t_1,...,t_k)}(\cdot) := P((X_{t_1},...,X_{t_k})\in \cdot) : \
+		(t_1,...,t_k) \in T^k, k \in \mathbb N
+		\}
+	\end{displaymath}
+	is called the \textit{finite-dimensional distribution family}.
+\end{definition}
+
+\begin{definition}[Equivalent Processes]
+	Two stochastic processes
+	\begin{displaymath}
+		(\Omega, \mathcal F, P, (X_t)_{t \in T}, (\mathcal F_t)_{t\in T}),\quad
+		(\Omega, \mathcal F, P, (X'_t)_{t \in T}, (\mathcal F_t)_{t\in T})
+	\end{displaymath}
+	are said to be equivalent if they have the same finite-dimensional distribution family,
+	i.e.,
+	for any finite set of $\{t_1,...,t_n\} \subset T$,
+	$(X_{t_1},...,X_{t_n})$ and
+	$(X'_{t_1},...,X'_{t_n})$ have the same law, i.e.
+	\begin{displaymath}
+		P((X_{t_1},...,X_{t_n})^{-1}(B)) =
+		P((X'_{t_1},...,X'_{t_n})^{-1}(B)), \quad \forall B \in \mathcal E,
+	\end{displaymath}
+	where we assumed that both $X_t$ and $X'_t$ take values on $(E,\mathcal E)$.
+	\label{def:equivalent}
+\end{definition}
+
+\begin{definition}[Modification]
+	We say that a process is a \textit{modification} of another if
+	\begin{displaymath}
+		(\Omega, \mathcal F, P, (\mathcal F_t)_{t\in T})
+		= (\Omega, \mathcal F, P, (\mathcal F_t)_{t\in T})
+	\end{displaymath}
+	and, for every
+	$t \in T$, we have that $X_t = X'_t$ $P$-a.s.
+\end{definition}
+
+\begin{definition}[Indistinguishable]
+	Two stochastic processes
+	\begin{displaymath}
+		(\Omega, \mathcal F, P, (X_t)_{t \in T}, (\mathcal F_t)_{t\in T}), \quad
+		(\Omega, \mathcal F, P, (X'_t)_{t \in T}, (\mathcal F_t)_{t\in T})
+	\end{displaymath}
+	are said to be indistinguishable if
+	$(\Omega, \mathcal F, P, (\mathcal F_t)_{t\in T})
+		= (\Omega, \mathcal F, P, (\mathcal F_t)_{t\in T})$ and
+	\begin{displaymath}
+		P(X_t = X'_t, \forall t \in T) = 1.
+	\end{displaymath}
+\end{definition}
+
+\begin{proposition}[Indistinguishable $\subset$ Modification $\subset$ Equivalent]
+	Let
+	$(\Omega, \mathcal F, P, (X_t)_{t \in T}, (\mathcal F_t)_{t\in T})$,
+	$(\Omega, \mathcal F, P, (X'_t)_{t \in T}, (\mathcal F_t)_{t\in T})$
+	be two stochastic processes with $X_t:(\Omega, \mathcal F) \to (E,\mathcal E)$,
+	$X'_t:(\Omega, \mathcal F) \to (E,\mathcal E)$. Then
+	Indistinguishable $\implies$ Modification $\implies$ Equivalent,
+	but the converse is not true.
+\end{proposition}
+
+\begin{proof}
+	\textbf{(i)} Consider that the processes $X$ and $X'$ are indistinguishable.
+	To prove that they are modifications, we need to prove that for each $t\in T$,
+	there exists a set $A_t$ such that $X_t(\omega) = X'_t(\omega)$ for every $\omega \in A_t$.
+	But, since they are indistinguishable, then just take the set
+	$\{\omega \in \Omega : X_t = X'_t \forall t \in T\}$, thus, it's proved.
+
+	Now, assume that they are modifications. Take $t_1,...,t_n \in T$.
+	We know that $\exists A_1,...,A_n$ such that $P(A_1)=...=P(A_n) = 1$
+	and $X_{t_i}(\omega) = X'_{t_i}(\omega)$ for every $\omega \in A_i$.
+	Also, since every $P(A_i)=1$, then $P(A_1 \cap ... \cap A_n) = 1$,
+	and for every $B \in \mathcal E$,
+	\begin{align*}
+		P((X_{t_1},...,X_{t_n})^{-1}(B)) & =
+		P(A_1 \cap ... \cap A_n \cap (X_{t_1},...,X_{t_n})^{-1}(B))   \\ &=
+		P(A_1 \cap ... \cap A_n \cap (X'_{t_1},...,X'_{t_n})^{-1}(B)) \\
+		                                 & =
+		P((X'_{t_1},...,X'_{t_n})^{-1}(B))
+	\end{align*}
+	which is true since both processes are equal in
+	$A_1\cap...\cap A_n$.
+
+	Next, let's show that the converse is not true. For equivalent
+	processes, just take $X_t(\cdot) \sim N(0,1)$ and
+	$X'_t = - X_t$. Thus, $X'_t(\cdot) \sim N(0,1)$, which means that
+	they are equivalent, but $P(X_t = X'_t) = P(X_t = 0) = 0$.
+	Hence, equivalent $\ \not\!\!\!\implies$ modification.
+
+	Finally, consider $\Omega = [0,1]$, $\mathcal F = \mathcal B([0,1])$ and
+	$P = \lambda$ (Lebesgue measure). Then, let
+	\begin{displaymath}
+		X_t(\omega) = \mathbbm 1_{\{\omega\}}(t), \quad X_t'(\omega) = 0.
+	\end{displaymath}
+	This processes are modificationsl, since
+	for a $t \in T$, we have
+	\begin{displaymath}
+		P(X_t(\omega) = 0) = 1 = P(X'_t = 0).
+	\end{displaymath}
+	But, they are not Indistinguishable, since
+	\begin{displaymath}
+		P(X_t = X'_t \forall t \in T) = 0,
+	\end{displaymath}
+	because for every $\omega \in \Omega$, there exists
+	one $t \in T$ such that $\omega = t$ implying $X_t(t) = 1$.
+
+\end{proof}
+
+\begin{proposition}
+	Let
+	$(\Omega, \mathcal F, P, (X_t)_{t \in T}, (\mathcal F_t)_{t\in T})$,
+	$(\Omega, \mathcal F, P, (X'_t)_{t \in T}, (\mathcal F_t)_{t\in T})$
+	be two stochastic processes with $X_t:(\Omega, \mathcal F) \to (E,\mathcal E)$,
+	$X'_t:(\Omega, \mathcal F) \to (E,\mathcal E)$, and $T$ is an interval of $\mathbb R_+$.
+	Then if the processes are (a.s) continuous and modifications of one another,
+	then they are indistinguishable.
+\end{proposition}
+\begin{proof}
+	Let $D = \mathbb Q \cap T$. This set is dense in $T$ and for each $t_k \in D$,
+	there exists an $A_k \subset \Omega$ such that $P(A_k) = 1$ and $X_{t_k}(\omega) =X'_{t_k}(\omega)$
+	for $\omega \in D$. Since $X_{\cdot}(\omega)$  is continuous a.s, then there
+	exists a set $F\subset \Omega$ such that $P(F)=1$ and for $t_n \to t$
+	we have $X_{t_n}(\omega) \to X_{t}(\omega)$.
+
+	Now, for a $t \in T$, there exists a sequence $(t_n) \subset D$ such that
+	$t_n \to t$. Note that for each $t_n$ there is a sequence of $A_n$ with
+	$X_{t_n} = X'_{t_n}$ in each $A_n$. Consider the set
+	\begin{displaymath}
+		A := \lim \sup A_n = \cap^\infty_{k=1} \cup_{n\geq k} A_n.
+	\end{displaymath}
+	If $\omega \in A$, then there exists a subsequence $t_{n_k} \to t$
+	such that $X'_{t_{n_k}}(\omega) = X_{t_{n_k}}(\omega)\to X_t(\omega) = X'_t(\omega)$.
+
+	If $\omega \notin A$, then $\exists N \in \mathbb N$ such that $n \geq N \implies
+		\omega \notin A_n$, which means that $\omega \in \cap_{n \geq N}A_n^c$.
+	Since $P(A_n) = 1 \forall n \in N$, then $P(A_n^c) = 0 \implies P(\cap_{n\geq N} A_n^c) = 0$.
+	Therefore, we conclude that $P(X_t(\omega) \neq X'_t(\omega)) = 0$
+\end{proof}
+
+\subsection{Measurability}
+
+\begin{definition}[Measurable Process]
+	We say that a process $X$ is measurable if $X: T \times \Omega \to E$ is
+	measurable with respect to $(T \times \Omega, \mathcal B(T) \otimes \mathcal F) \to (E, \mathcal B(E))$.
+	We are implicitly assuming the Borel $\sigma$-algebra. Also, note that
+	the domain is defined in the product measure space $(T \times \Omega, \mathcal B(T) \otimes \mathcal F)$.
+\end{definition}
+
+\begin{definition}[Progressively Measurable]
+	We say that a process $X$ is \textit{progressively measurable} if
+	for every $u \in T$ we have that $X:[0,u] \times \Omega \to E$ is
+	measurable with respect to $([0,u]\times \Omega, \mathcal B([0,u])\otimes \mathcal F)
+		\to (E, \mathcal \mathcal B(E))$.
+\end{definition}
+
+\begin{theorem}
+	If a process $X$ is right-continuous, then it is progressively measurable.
+\end{theorem}
+\begin{proof}
+	Just note that for every $u \in T$, the process $X$ restricted to $[0,u]$ can be approximated
+	by a sequence of piece-wise processes $X^{(n)}$ that are progressively
+	measurable. Also, since $X$ is right-continuous, then for $s_n \downarrow s$,
+	we have $X^{(n)}_{s_n} \to X_s$ (here a sort of diagonal argument is used,
+	where the limit is taken at the sequence of times and the sequence of approximation jointly).
+	Since $X$ is the limit of a progressively measurable proces,
+	it will also be progressively measurable.
+	Look \citet{baldi2017introduction} Proposition 2.1 for a more detailed proof.
+\end{proof}
+
+\begin{proposition}
+	Let $X = (\Omega, \mathcal F, P, (X_t)_{t \in T}, (\mathcal F_t)_{t\in T})$ be right-continuous process.
+	Then, $X$ is progressively measurable.
+\end{proposition}
+
+\begin{proof}
+	\textit{Sketch}. For every $u \in T$ and $s \in [0,u]$, construct a sequence of piece-wise processes $X^n_s$
+	converging to $X_s$ from the right. Since for each $n$, the process $X^n_s$ is measurable
+	$([0,u]\times \Omega,\mathcal B([0,u])\otimes \mathcal F_u)$, we know that the limit of piece-wise (``simple'')
+	processes will also be, hence $X_s$ is measurable for any $u$ and thus progressively measurable.
+
+	For complete proof, look \citet{baldi2017introduction} Proposition 2.1.
+\end{proof}
+
+\begin{definition}[Right-continuous Filtration]
+	Let $(\mathcal F_t)_t$ be a filtration, with
+	$\mathcal F_{t+} = \cap_{\varepsilon >0} \mathcal F_{t+\varepsilon}$.
+	It's clear that $\mathcal F_t \subset \mathcal F_{t+}$
+	and that $\mathcal F_{t+}$ is a $\sigma$-algebra.
+
+	We say that $(\mathcal F_t)_t$ is right-continuous if
+	$\mathcal F_{t+} = \mathcal F_t$ for every $t$.
+\end{definition}
+
+
+\begin{definition}[Standard Process]
+	A process $(\Omega, \mathcal F, P, (X_t)_{t \in T}, (\mathcal F_t)_{t\in T})$
+	is called \textit{standard} if
+	\begin{enumerate}
+		\item the filtration is right-continuous;
+		\item for every $t$, $\mathcal F_t$ contains all negligible sets of $\mathcal F$.
+	\end{enumerate}
+\end{definition}

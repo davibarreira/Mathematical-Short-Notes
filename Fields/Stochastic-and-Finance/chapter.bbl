@@ -1,0 +1,39 @@
+\begin{thebibliography}{6}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Athreya and Lahiri(2006)]{athreya2006measure}
+Krishna~B Athreya and Soumendra~N Lahiri.
+\newblock \emph{Measure theory and probability theory}, volume~19.
+\newblock Springer, 2006.
+
+\bibitem[Baldi(2017)]{baldi2017introduction}
+P~Baldi.
+\newblock An introduction through theory and exercises. stochastic calculus.
+  universitext, 2017.
+
+\bibitem[Billingsley(2008)]{billingsley2008probability}
+Patrick Billingsley.
+\newblock \emph{Probability and measure}.
+\newblock John Wiley \& Sons, 2008.
+
+\bibitem[Cartea et~al.(2015)Cartea, Jaimungal, and
+  Penalva]{cartea2015algorithmic}
+{\'A}lvaro Cartea, Sebastian Jaimungal, and Jos{\'e} Penalva.
+\newblock \emph{Algorithmic and high-frequency trading}.
+\newblock Cambridge University Press, 2015.
+
+\bibitem[Oksendal(2013)]{oksendal2013stochastic}
+Bernt Oksendal.
+\newblock \emph{Stochastic differential equations: an introduction with
+  applications}.
+\newblock Springer Science \& Business Media, 2013.
+
+\bibitem[Peters and Adamou(2018)]{ole2018ee}
+Ole Peters and Alexander Adamou.
+\newblock Ergodicity economics, 2018.
+
+\end{thebibliography}

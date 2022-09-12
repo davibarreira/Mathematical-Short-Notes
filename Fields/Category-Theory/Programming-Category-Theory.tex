@@ -1,10 +1,37 @@
 \newpage
 \section{Programming with Category Theory}
 
-This section is mainly based on \citet{milewski2018category}.
-Here, we'll try to give examples both on Haskell (the original language for \citet{milewski2018category})
+This section is mainly based on \citet{milewski2018category},
+Programming With Categories by Brendan Fong et. al.
+
+Here, we'll try to give examples both on Haskell
+(the original language for \citet{milewski2018category})
 and Julia.
 
+\subsection{Comments on Yoneda Lemma}
+
+Note that a every element in a set $X$ is isomorphic to
+a morphism (i.e. function) $f: 1 \to X$
+\footnote{Remember, the set $1$ is the set
+containing one object and the identity morphism.}
+This means that a set $X$ is entirely determined by
+the morphisms from object $1$, which is the initial
+object of category $\mathbf{Set}$.
+
+
+\textbf{CHECAR INFO ABAIXO}.
+The fact that the $1$ object is enough to characterize the
+objects of $\mathbf{Set}$ is not true for every other category.
+Yet, for every other locally small category
+(i.e. every class of morphisms from one object to another is a set),
+an object is completely defined by the set of all morphisms arriving at it,
+in other words, $Hom(-, A) \cong A$.
+
+More than that, the Yoneda Lemma tells us that for
+two objects $A$ and $B$, and a morphism $f:A\to B$, there
+is a way 
+
 \subsection{Setting Up Haskell}
+
 
 

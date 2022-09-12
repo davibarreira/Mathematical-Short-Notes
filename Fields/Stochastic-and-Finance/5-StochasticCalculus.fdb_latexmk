@@ -1,0 +1,11 @@
+# Fdb version 3
+["pdflatex"] 1637715311 "5-StochasticCalculus.tex" "5-StochasticCalculus.pdf" "5-StochasticCalculus" 1637715311
+  "/etc/texmf/web2c/texmf.cnf" 1625484325 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1613593815 38841 799d1dd9682a55ce442e10c99777ecc1 ""
+  "/usr/share/texmf/web2c/texmf.cnf" 1613593815 38841 799d1dd9682a55ce442e10c99777ecc1 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1625484556 1314330 ab4d0d532d08b2ee0d8c7b7ce380d213 ""
+  "5-StochasticCalculus.aux" 1637715309 1011 27e2c9d31a798fefd10d9344565125d6 ""
+  "5-StochasticCalculus.tex" 1637715259 91 f646e0c6245a03041f83cf0cb44ee990 ""
+  (generated)
+  "5-StochasticCalculus.pdf"
+  "5-StochasticCalculus.log"

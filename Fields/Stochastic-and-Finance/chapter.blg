@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2020/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: chapter.aux
+A level-1 auxiliary file: 1-StochasticCalculus.aux
+A level-1 auxiliary file: 2-StochasticCalculus.aux
+A level-1 auxiliary file: 3-StochasticCalculus.aux
+A level-1 auxiliary file: QuantitativeFinance.aux
+A level-1 auxiliary file: 4-StochasticCalculus.aux
+A level-1 auxiliary file: 5-StochasticCalculus.aux
+The style file: plainnat.bst
+Database file #1: ref.bib
+You've used 6 entries,
+            2773 wiz_defined-function locations,
+            628 strings with 5686 characters,
+and the built_in function-call counts, 2023 in all, are:
+= -- 155
+> -- 102
+< -- 6
++ -- 36
+- -- 30
+* -- 126
+:= -- 323
+add.period$ -- 16
+call.type$ -- 6
+change.case$ -- 24
+chr.to.int$ -- 6
+cite$ -- 12
+duplicate$ -- 111
+empty$ -- 194
+format.name$ -- 40
+if$ -- 419
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 8
+newline$ -- 36
+num.names$ -- 24
+pop$ -- 78
+preamble$ -- 1
+purify$ -- 22
+quote$ -- 0
+skip$ -- 86
+stack$ -- 0
+substring$ -- 12
+swap$ -- 7
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 46
+warning$ -- 0
+while$ -- 18
+width$ -- 0
+write$ -- 76

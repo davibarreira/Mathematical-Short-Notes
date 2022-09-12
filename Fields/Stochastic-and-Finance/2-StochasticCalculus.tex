@@ -1,0 +1,304 @@
+\subsection{Constructing Stochastic Processes}
+
+In this section we present two important results for the construction
+of stochastic processes, Kolmogorov's extension theorem
+\footnote{This theorem is sometimes called Kolmogorov's existence theorem or consistency theorem.}, and
+Kolmogorov's continuity theorem. With these two theorems, we'll be able to construct the continuous Brownian Motion.
+
+To prove Kolmogorov's theorems, we'll need to remember some results from Measure Theory.
+
+\begin{shaded}
+	\begin{definition}[Algebra]
+		A family $\mathcal G \subset 2^{\Omega}$ is an algebra if
+		\begin{enumerate}[(i)]
+			\item $\Omega \in \mathcal G$;
+			\item If $ A \in \mathcal G \implies A^c \in \mathcal G$;
+			\item If $A_1,..., A_n \in \mathcal F \implies \cup^n_{i=1} A_i \in \mathcal G$.
+		\end{enumerate}
+	\end{definition}
+
+	\begin{theorem}[Caratheodory's Extension Theorem]
+		Let $\mathcal G \subset \mathcal 2^\Omega$ be an algebra in $\Omega$,
+		and $\mu :\mathcal G \to \mathbb R_+$.
+		If for $A_1,...,A_n,... \in \mathcal G$ such that
+		$A_i\cap A_j = \varnothing \forall i\neq j$, we have
+		$\mu(\cup_{i \in \mathbb N}A_i) = \sum_{i\in\mathbb N} \mu(A_i)$, i.e.
+		$\mu$ is $\sigma$-additive. Then, there exists an extension
+		$\bar\mu:\sigma(\mathcal G)\to \mathbb R_+$ such that $\bar\mu(A)=\mu(A)$
+		for every $A \in \mathcal G$.
+		Moreover, if $\mu$ is $\sigma$-finite, then $\bar \mu$ is unique.
+		\label{thm:caratheodoryextension}
+	\end{theorem}
+	Hence, when talking about probability measures, the Caratheodory Extension
+	Theorem gives us a unique way to extend measures from algebras to $\sigma$-algebras.
+	Also, if $\mu_1$ and $\mu_2$ are finite measures on $(E,\mathcal E)$. If they
+	agree on $\mathcal G \subset \mathcal E$ where $\mathcal G$ is an algebra,
+	then by Caratheodory's Extension Theorem, $\mu_1 = \mu_2$ on $\mathcal E$.
+	% \citet{baldi2017introduction} refers to this as Caratheodory's criterion.
+\end{shaded}
+
+Let $X:\Omega \to \mathbb R$ be a random variable with a given distribution $\mu$.
+Remember that in order for $\mu$ to be the distribution of $X$, we assume
+that there exists a probability space $(\Omega, \mathcal  F, P)$, such
+that $\mu(A) = P(\{\omega \in \Omega : X(\omega) \in A)$. The question is
+if this probability space indeed exists. It could be the case that for a given
+distribution $\mu$ (e.g. a Normal distribution), no possible probability
+measure $P$ existed.
+
+For the example above, it's easy to prove that for any distribution r.v $X \sim \mu$,
+we do have the existance of an underlying probability space. Just consider
+$\Omega = \mathbb R$, with $\mathcal F = \mathcal B(\mathbb R)$ and $P = \mu$, with
+$X(\omega)= \omega$. In other words, we just defined the probability space
+to be the same space where the distribution is defined.
+
+Now, when talking about stochastic processes, the answer is not that simple.
+Consider $(X_t)_{t \in T}$ (e.g. $T = \mathbb R$, or $T = \mathbb N$, etc) and
+each $X_t :\Omega \to \mathbb R$ is a random variable (i.e. Borel measurable function) with
+distribution $\mu_t$.
+In this case, what would be the underlying $(\Omega, \mathcal F, P)$? Does it exist?
+
+Well, note that we didn't define how the $X_t$ random variables relate to each other. Thus,
+we actually have many possible non-equivalent (\ref{def:equivalent}) stochastic process.
+For example, we could have one possible process where $X_t$ are independent, and another
+where they have some sort of dependence. Hence, consider this following problem instead.
+
+Let $(X_t)_{t \in T}$, where each $X_t :\Omega \to \mathbb R$ is a random variable with
+distribution $\mu_t$, and for any $(t_1,...,t_n) \in T^n$, the random vector
+$(X_{t_1},...,X_{t_n})$ has distribution $\mu_{(t_1,...,t_n)}$.
+Again we ask, what would be the underlying $(\Omega, \mathcal F, P)$?
+
+For this case, we can do the following. Make
+\begin{displaymath}
+	\Omega = \mathbb R^T := \{f:T \to \mathbb R\},
+\end{displaymath}
+i.e. $\mathbb R^T$ is the space of functions from $T$ to $\mathbb R$.
+Hence, $\omega \in \Omega$ is a function $\omega:T \to \mathbb R$.
+
+Again we consider $X(\omega) = \omega$ with $X_t(\omega)=\omega(t)$
+\footnote{We would need to prove that this function is indeed measurable. But this is indeed true,
+	and the proof can be found in Proposition 6.3.3 from \citet{athreya2006measure}}.
+Thus, $X_t$ are the \textit{canonical projections} onto $t$.
+For the $\sigma$-algebra, consider
+\begin{displaymath}
+	\mathcal F = \mathcal B^T(\mathbb R) := \sigma \left(X_t : t \in T\right),
+\end{displaymath}
+i.e. $\mathcal F$ is the smallest $\sigma$-algebra where every canonical projection
+is measurable.
+
+Finally, there are only two things left to do: construct a probability measure $P$
+on $(\Omega, \mathcal F)$, and show that it matches the finite-dimensional
+distribution family, i.e.
+for any $A \in \mathcal B(\mathbb R^n)$ and $t_1,...,t_n \in T$,
+\begin{displaymath}
+	P((X_{t_1},...,X_{t_n})^{-1}(A)) = P(\omega : (\omega(t_1),...,\omega(t_n)) \in A) = \mu_{(t_1,...,t_n)}(A).
+\end{displaymath}
+
+Unfortunately, we cannot always construct such probability measure.
+We can only construct such probability on $(\Omega,\mathcal F)$ is the
+underlying space $E$ has some regularity, which will appear in Kolmogorov's Existence Theorem.
+Secondly, suppose that a probability $P$ does exist. For it to
+match the finite-dimensional distributions, it is required that the finite-dimensional
+family be consistent, i.e. that it doesn't break the ``laws of probability''. We'll formalize
+this idea further. But first, let's exemplify how family of finite-dimensional distributions
+can be inconsistent, and thus impossible to have any probability measure matching it.
+
+\begin{example}[Non-Consistent Probability Family]
+
+	Consider $T = \mathbb N$, $X_n \sim U[0,n]$,
+	and the finite-dimensional distribution for $n_1,...,n_k$
+	as
+	\begin{displaymath}
+		\mu_(n_1,...,n_k) \sim U([0,n_k]^k).
+	\end{displaymath}
+
+	Make $ \Omega = \mathbb R^\mathbb N$ and
+	$\mathcal F = \mathcal B^\mathbb N(\mathbb R)$, with
+	$X_n(\omega)=\omega(n)$.
+	Note that since $T = \mathbb N$, then we can identify each
+	function $f:\mathbb N \to \mathbb R$ with an infinite sequence $(f(1),f(2),...)$.
+	Thus, $\Omega$ is the space of infinite sequences, such that
+	\begin{displaymath}
+		X_n(\omega) = X_n(\omega_1,\omega_2,...,\omega_n,...) = \omega_n.
+	\end{displaymath}
+
+	Let's now show that no probability measure satisfies the condition that
+	\begin{displaymath}
+		P((X_{n_1},...,X_{n_k})^{-1}(A)) = \mu_{n_1,...,n_k}(A).
+	\end{displaymath}
+
+	For this, take the event $A = A_1 \times \mathbb R$, where $A_1 = [0,1]$. Hence,
+	\begin{align*}
+		P((X_1, X_2)^{-1}(A)) & = P(\{\omega: \omega_1 \in A_1, \omega_2 \in \mathbb R\}) \\
+		                      & = P(\{\omega_1 \in [0,1]\}) \sim U[0,1]\implies
+		P((X_1, X_2)^{-1}(A)) = 1.
+	\end{align*}
+	But,
+	\begin{align*}
+		\mu_{(1,2)}\sim U([0,2] \times [0,2]) \implies  \mu_{(1,2)}(A) =
+		\mu_{(1,2)}([0,1]\times \mathbb R) = 1/2.
+	\end{align*}
+
+	Therefore, $P((X_1, X_2)) \neq \mu_{(1,2)}$, showing that no possible $P$ exists.
+
+\end{example}
+
+We can see that in this example the ``past distribution'' changed with future observations.
+Thus, for such odd processes, we cannot always guarantee existence.
+% But, if we ask our processes to be ``consistent'', the Kolmogorov's existence theorem
+% will ensure that not only $P$ exists, but also that it's unique.
+
+\begin{definition}[Rectangular and Cylindrical Events]
+	When extending a measure, sometimes it's better to prove results
+	in a smaller subset of events that generates the full $\sigma$-algebra.
+	Two common examples are the family of rectangular events, and cylindrical events.
+	Consider $\Omega = \mathbb R^T$ and $\mathcal F = \mathcal B^T(\mathbb R)$. Then,
+	\begin{enumerate}[(i)]
+		\item Cylindrical events:
+		      \begin{displaymath}
+			      C := \{f:T \to \mathbb R : \ (f(t_1),...,f(t_k)) \in \mathcal B(\mathbb R^k) \}
+		      \end{displaymath}
+		\item Rectangular events:
+		      \begin{displaymath}
+			      R := \{f:T \to \mathbb R : \ f(t_1) \in B_1, ..., f(t_k) \in B_k, \ B_i \in \mathcal B(\mathbb B), \forall i =1,...,k\}
+		      \end{displaymath}
+	\end{enumerate}
+\end{definition}
+
+\begin{example}
+	Example from \citet{athreya2006measure}.
+	Let $T = {1,2,3}$ and $\Omega = \mathbb R^T = \mathbb R^3$, i.e.
+	the set of all functions $f:\{1,2,3\} \to \mathbb R$ is equivalent to the set of all triples $(x_1,x_2,x_3)$.
+	To show that this is true, just note that every function is equivalent to the triple of it's
+	values at 1,2 and 3, i.e. $(f(1), f(2), f(3)) = (x_1,x_2,x_3)$.
+
+	With that said, the set $C:= \{(x_1,x_2,x_3) : x_1^2 + x_2^2 \leq 1 \}$ is a cylindrical
+	event (and also a cylinder) in $\mathbb R^3$.
+
+	Similarly, the set $R:=\{x_1,x_2,x_3 : x_1 \in [0,1], x_2 \in [0,1]\}$ is a rectangular event.
+\end{example}
+
+As we pointed out, the existence of the stochastic process requires
+that there exists a probability measure $P$ such that
+for any $n \in \mathbb N$, $A\in \mathcal B(\mathbb R^n)$ and $t_1,...,t_n \in T$, then
+\begin{equation}
+	P((X_{t_1},...,X_{t_n})^{-1}(A)) = \mu_{(t_1,...,t_n)}(A).
+	\label{eq:fidimatch}
+\end{equation}
+
+We can show that if we assume that a probability $P$ exists, then
+for it to match the finite-dimensional distribution family \refeq{eq:fidimatch},
+it requires that for any $A = A_1 \times ... \times A_n \in \mathcal B(\mathbb R^n)$,
+the following two conditions are true:
+\begin{itemize}
+	\item (C1) For a permutation $\pi$,
+	      \begin{equation}
+		      \mu_{(t_1,...,t_n)}(A_1\times...\times A_n) =
+		      \mu_{(t_{\pi 1},...,t_{\pi n})}(A_{\pi 1}\times...\times A_{\pi n}),
+		      \label{eq:consitency1}
+	      \end{equation}
+	\item (C2)
+	      \begin{equation}
+		      \mu_{(t_1,...,t_n)}(A_1\times...\times A_n) =
+		      \mu_{(t_1,...,t_n, t_{n+1})}(A_1\times...\times A_n \times \mathbb R).
+		      \label{eq:consitency2}
+	      \end{equation}
+\end{itemize}
+
+\begin{proposition}
+	Let $P$ be a probability measure and $X_t$ the coordinate projection random variables (i.e. $X_t(\omega) = \omega(t))$.
+	If for any $n \in \mathbb N$, $A \in \mathcal B(\mathbb R^n)$ and $t_1,...,t_n \in T$, we have
+	\begin{displaymath}
+		P((X_{t_1},...,X_{t_n})^{-1}(A)) = \mu_{(t_1,...,t_n)}(A).
+	\end{displaymath}
+	Then, (C1) and (C2) are true.
+\end{proposition}
+\begin{proof}
+	For (C1), note that for $A = A_1 \times ... \times A_n \in \mathcal B(\mathbb R^n)$, then
+	\begin{align*}
+		\mu_{(t_1,...,t_n)}(A_1\times...\times A_n) & =
+		P((X_{t_1},...,X_{t_n})^{-1}(A_1\times ...\times A_n))                                                      \\
+		                                            & =
+		P(X_{t_1}^{-1}(A_1),...,X_{t_n}^{-1}(A_n))                                                                  \\
+		                                            & =P(X_{t_{\pi 1}}^{-1}(A_{\pi 1}),...,X_{t_n}^{-1}(A_{\pi n})) \\
+		                                            & =
+		\mu_{(t_{\pi 1},...,t_{\pi n})}(A_{\pi 1}\times...\times A_{\pi n}).
+	\end{align*}
+	For (C2), note that
+	\begin{align*}
+		\mu_{(t_1,...,t_n,t_{n+1})}(A_1\times...\times A_n \times \mathbb R)
+		 & = P((X_{t_1},...,X_{t_n}, X_{t_{n+1}})^{-1}(A_1\times ...\times A_n \times \mathbb R)) \\
+		 & = P(X_{t_1}^{-1}(A_1),...,X_{t_n}^{-1}(A_n), X_{t_{n+1}}^{-1}(\mathbb R))              \\
+		 & = P(X_{t_1}^{-1}(A_1),...,X_{t_n}^{-1}(A_n))                                           \\
+		 & = \mu_{(t_1,...,t_n)}(A_1\times...\times A_n).
+	\end{align*}
+\end{proof}
+
+Conditions (C1) and (C2) are known as the consistency conditions for Kolmogorov's Existence Theorem.
+Yet, some books such as \citet{baldi2017introduction} use a different consistency condition, but
+which we can show to be equivalent to (C1) and (C2).
+
+\begin{itemize}
+	\item (C3) For any $n \in \mathbb N$, and any $t_1<...<t_n \in \mathbb T$
+	      \begin{align}
+		      \nonumber & \mu_{(t_1,...,t_{i-1},t_{i+1},...t_n)}(A_1 \times ... \times A_{i-1} \times A_{i+1} \times .. \times A_n)
+		      \\
+		                & = \mu_{(t_1,...,t_{i-1}, t_i,t_{i+1},...t_n)}(A_1 \times ... \times A_{i-1} \times \mathbb R \times A_{i+1} \times .. \times A_n)
+		      \label{eq:consistency3}
+	      \end{align}
+\end{itemize}
+Note that the significant difference between (C1)-(C2) to (C3) is the assumption
+that the $t_1,...,t_n$ are ordered, which is assumed in (C3), but not in (C1)-(C2).
+
+Although we stated this conditions using $\mathbb R$, they could have been postulated for any
+generic space $E$.
+
+\begin{proposition}
+	Let $P$ be a probability measure and $X_t$ the coordinate projection random variables
+	(i.e. $X_t(\omega) = \omega(t))$.
+	Conditions (C1) and (C2) are true if and only if condition (C3) is true.
+\end{proposition}
+\begin{proof}
+	$\implies)$ For (C1) and (C2) true, just note that for $t_1<...<t_n$,
+	\begin{align*}
+		\mu_{(t_1,...,t_{i-1},t_{i+1},...,t_{n})}(A_1\times...\times A_n)
+		 & \underset{C2}{=}
+		\mu_{(t_1,...,t_{i-1},t_{i+1},...,t_n, t_{i})}(A_1\times...\times A_n \times \mathbb R)                             \\
+		 & \underset{C1}{=} \mu_{(t_1,...,t_{i-1},t_i,t_{i+1},...,t_n)}(A_1\times...\times \mathbb R \times ... \times A_n) \\
+	\end{align*}
+	$\impliedby)$ This implication is trickier
+	\footnote{This is answer is adapted from \citet{billingsley2008probability}, Example 36.4}.
+	Note that if we restrict the construction
+	of our finite-dimensional distribution to ordered sets $t_1< ... < t_n \in T$,
+	i.e., for any ordered set $t_1<...<t_n$, $\mu_{(t_1,...,t_n)}(A) = P((X_{t_1},...,X_{t_n}) \in A)$.
+	then if $s_1,...,s_n$ is a permutation of $t_1,...,t_n$, it's not clear what
+	\begin{align*}
+		\mu_{(t_1,...,t_n)}(A_1\times ... \times A_n)
+		 & = P((X_{t_1}, ...,  X_{t_n})\in (A_1 \times...\times A_n)) \\
+		 & = P(X_{t_1} \in A_1 ..., X_{t_n} \in A_n).
+	\end{align*}
+	Since we are constructing our finite-dimensional dimensional
+	distribution
+
+
+	and thus, for any permutation $\pi$ such that $s_1 = t_{\pi 1},..., s_n = t_{\pi n}$, we have
+	\begin{displaymath}
+		\mu_{(s_1,...,s_n)}(A_{\pi 1}\times ... \times A_{\pi n}) =
+		P(X_{s_1} \in A_{\pi 1} ... X_{s_n} \in A_{\pi n}).
+	\end{displaymath}
+	Which we already proved that will imply both (C1) and (C2).
+
+\end{proof}
+
+
+\begin{theorem}[Kolmogorov's Existence Theorem)]
+	Let $E$ be a Polish space (complete and separable metric space),
+	with $(\mu_\pi)_\pi$ a family of
+	finite-dimensional distributions on $E$ satisfying the consistency condition (C3).
+	Make $\Omega = E^T$ (the set of all continuous functions $f:T \to E$)
+	and define $X_t(\omega) = \omega(t)$, with $\mathcal F = \sigma (X_t, t \in T)$
+	and natural filtration. Then, there exists on $(\Omega, \mathcal F)$ a unique
+	probability $P$ such that the finite-dimensional distributions
+	coincide with $(\mu_\pi)_\pi$.
+
+\end{theorem}
+

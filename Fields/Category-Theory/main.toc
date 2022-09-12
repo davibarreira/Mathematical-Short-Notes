@@ -1,44 +1,45 @@
-\contentsline {section}{\numberline {1}Preface}{10}{section.1}%
-\contentsline {section}{\numberline {2}Categories}{11}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Universes, Sets and Classes}{11}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}What is a Category?}{12}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Examples of Categories}{13}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Programming with Category Theory}{17}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Isomorphism, monomorphism and epimorphism}{17}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Zero, Initial and Terminal Objects}{19}{subsection.2.6}%
-\contentsline {subsection}{\numberline {2.7}Understanding Duality}{21}{subsection.2.7}%
-\contentsline {subsection}{\numberline {2.8}Categorical Product and Coproduct}{22}{subsection.2.8}%
-\contentsline {subsection}{\numberline {2.9}Cartesian Categories}{25}{subsection.2.9}%
-\contentsline {subsection}{\numberline {2.10}Pullback, Pushout and Equalizers}{25}{subsection.2.10}%
-\contentsline {section}{\numberline {3}Functors}{25}{section.3}%
-\contentsline {subsection}{\numberline {3.1}What is a Functor?}{25}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Category of Small Categories}{27}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Types of Functors}{28}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Subcategories}{29}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Relevant Examples of Functors}{29}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Formalizing Diagrams}{29}{subsection.3.6}%
-\contentsline {section}{\numberline {4}Natural Transformations}{30}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Defining Natural Transformations}{31}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}The Category of Functors}{32}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Yoneda Lemma}{33}{subsubsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.3}Equivalence Between Categories}{35}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Vertical vs Horizontal Compostion}{36}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Limits, Colimits}{38}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Cones and Cocones}{38}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Category of Cones}{39}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Defining Limits and Colimits}{40}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Adjoints}{41}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Intuitive Explanation for Adjoints}{41}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}General Definitions}{42}{subsection.6.2}%
-\contentsline {section}{\numberline {7}Graphs and Schemas in Category Theory}{44}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Underlying Graphs}{44}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Generating Categories from Graphs via Free Functors}{45}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Categories from Preorders}{47}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Generating Categories from Schemas}{48}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}More on Generating Categories from Schemas *}{49}{subsection.7.5}%
-\contentsline {subsection}{\numberline {7.6}$\mathcal C$-Sets and Instances}{50}{subsection.7.6}%
-\contentsline {section}{\numberline {8}$\mathbf {Poly}$ Category}{52}{section.8}%
-\contentsline {section}{\numberline {9}Programming with Category Theory}{53}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Setting Up Haskell}{53}{subsection.9.1}%
-\contentsline {section}{\numberline {10}What are Sets?}{54}{section.10}%
-\contentsline {subsubsection}{\numberline {10.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{54}{subsubsection.10.0.1}%
+\contentsline {section}{\numberline {1}Preface}{11}{section.1}%
+\contentsline {section}{\numberline {2}Categories}{12}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Universes, Sets and Classes}{12}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}What is a Category?}{13}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Examples of Categories}{14}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Programming with Category Theory}{18}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Isomorphism, monomorphism and epimorphism}{18}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Zero, Initial and Terminal Objects}{20}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Understanding Duality}{22}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Categorical Product and Coproduct}{23}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}Cartesian Categories}{26}{subsection.2.9}%
+\contentsline {subsection}{\numberline {2.10}Pullback, Pushout and Equalizers}{26}{subsection.2.10}%
+\contentsline {section}{\numberline {3}Functors}{26}{section.3}%
+\contentsline {subsection}{\numberline {3.1}What is a Functor?}{26}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Category of Small Categories}{28}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Types of Functors}{29}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Subcategories}{30}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Relevant Examples of Functors}{30}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Formalizing Diagrams}{30}{subsection.3.6}%
+\contentsline {section}{\numberline {4}Natural Transformations}{31}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Defining Natural Transformations}{32}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}The Category of Functors}{33}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Yoneda Lemma}{34}{subsubsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.3}Equivalence Between Categories}{36}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Vertical vs Horizontal Compostion}{37}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Limits, Colimits}{39}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Cones and Cocones}{39}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Category of Cones}{40}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Defining Limits and Colimits}{41}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Adjoints}{42}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Intuitive Explanation for Adjoints}{42}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}General Definitions}{43}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Graphs and Schemas in Category Theory}{45}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Underlying Graphs}{45}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Generating Categories from Graphs via Free Functors}{46}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Categories from Preorders}{48}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Generating Categories from Schemas}{49}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}More on Generating Categories from Schemas *}{50}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}$\mathcal C$-Sets and Instances}{51}{subsection.7.6}%
+\contentsline {section}{\numberline {8}$\mathbf {Poly}$ Category}{53}{section.8}%
+\contentsline {section}{\numberline {9}Programming with Category Theory}{54}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Comments on Yoneda Lemma}{54}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Setting Up Haskell}{54}{subsection.9.2}%
+\contentsline {section}{\numberline {10}What are Sets?}{55}{section.10}%
+\contentsline {subsubsection}{\numberline {10.0.1}Lawvere's Elementary Theory of the Category of Sets (ETCS)}{55}{subsubsection.10.0.1}%
