@@ -4,7 +4,8 @@ Let's start by presenting some definitions from Algebra.
 
 \begin{definition}[Groups]
 	Consider the triple $(G, \odot, e)$, where $G$ is a set,
-	$\odot : G \times G \to G$ is the product mapping and $e \in G$ is the identity element.
+	$\odot : G \times G \to G$ is the product mapping
+	and $e \in G$ is the identity element.
 	This triple is a group if:
 	\begin{enumerate}
 		\item (Associativity): $a \odot (b \odot c) = (a \odot b) \odot c$ for every $a,b,c \in G$;
@@ -12,20 +13,28 @@ Let's start by presenting some definitions from Algebra.
 		\item (Inverse): For every $a \in G$ there exists $a^{-1} \in G$ such that
 		      $a\odot a^{-1} = a^{-1}\odot a = a$;
 	\end{enumerate}
+
+	When there is no ambiguity, we call the set $G$ a group omitting
+	the product and neutral element.
 \end{definition}
 
 \begin{definition}[Abelian Group]
-	A group $(G, \odot, e)$ is \textit{Abelian} if besides the group properties (i.e. associativity, identity and inverse)
+	A group $(G, \odot, e)$ is \textit{Abelian} if besides the group properties
+	(i.e. associativity, identity and inverse)
 	it's also commutative, i.e. $a \odot b = b \odot a$ for every $a,b \in G$.
 \end{definition}
 
 \begin{example}
-	Note that $(\mathbb R, +, 0)$ is an Abelian Group. In this case, $a^{-1}$ is usally denoted as $-a$.
+	Note that $(\mathbb R, +, 0)$ is an Abelian Group.
+	In this case, $a^{-1}$ is usally denoted as $-a$.
 	The triple $(\mathbb R \setminus \{0\}, \cdot, 1)$ is also an Abelian Group.
 
-	An example of non-Abelian group would be the set of invertible matrices from $\mathbb R^n$ to $\mathbb R^n$,
-	with $\odot$ as matrix composition, e.g. $A \odot B = A B$. Since every matrix considered is invertible
-	and we have the identity matrix as our identity element, then we indeed have a non-Abelian group,
+	An example of non-Abelian group would be the set of invertible
+	matrices from $\mathbb R^n$ to $\mathbb R^n$,
+	with $\odot$ as matrix composition, e.g.
+	$A \odot B = A B$. Since every matrix considered is invertible
+	and we have the identity matrix as our identity element,
+	then we indeed have a non-Abelian group,
 	since the matrix product is not commutative.
 \end{example}
 
@@ -37,4 +46,28 @@ Let's start by presenting some definitions from Algebra.
 	$\cap_{\alpha \in \Gamma} S_\alpha$ where $\{S_\alpha\}_{\alpha \in \Gamma}$ are
 	all the sets that are subgroups of $G$.
 	It's easy to prove that such set is indeed a subgroup.
+
+	For a singleton $\{g\}$, we define
+	$\text{Gr}(g) := \{g^n \ : \ n \in \mathbb Z\}$, where
+	$g^0 = e$, and $g^n$ is the product of $n$ copies of $g$,
+	while $g^{-n}$ is the product of $n$ copies of $-g$.
+\end{definition}
+
+\begin{definition}[Cyclic Group]
+	If a group $G$ is equal to $\text{Gr}(g)$ for some $g \in G$,
+	then we say that $G$ is cyclic.
+\end{definition}
+
+\begin{definition}[Order of Group]
+	The order of a group $G$ is the number of elements of $G$.
+\end{definition}
+
+\begin{definition}[Homomorphism and Isomorphism]
+	Let $(G, \odot_G, e_G)$ and $(H, \odot_H, e_H)$ be two groups. A function
+	$\theta:G \to H$ is a homomorphism between $G$ and $H$ if
+	$\theta(g_1 \odot_G g_2) = \theta(g_1) \odot_H \theta(g_2)$
+	for every $g_1, g_2 \in G$.
+
+	If $\theta$ is bijective, then we say that $\theta$
+	is an isomorphism.
 \end{definition}
