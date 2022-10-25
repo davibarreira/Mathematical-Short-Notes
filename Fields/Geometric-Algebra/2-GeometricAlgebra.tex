@@ -1,0 +1,56 @@
+\section{Geometric Algebra}
+
+Let's start the formal definition of Geometric Algebra, which is also known as
+Clifford Algebra.
+
+\begin{definition}[Quadratic Form and Quadratic Space]
+	Let $E$ be a real vector space. A quadratic
+	form on $E$ is a function $q:E \to \mathbb R$
+	such that $q(x) = b(x,x)$ for all $x \in E$,
+	where $b$ is a symmetric bilinear form on $E$.
+	We say that $b$ is the associated bilinear form.
+
+	We call the tuple $(E,q)$ a quadratic space.
+	The set $Q(E)$ is composed by all quadratic forms on $E$
+	and it's a linear subspace of the space of linear real-valued
+	functions on $E$.
+\end{definition}
+
+\begin{proposition}
+	Given two different bilinear forms $b_1, b_2$, they induce
+	different quadratic forms.
+\end{proposition}
+\begin{proof}
+	For $q(x) = b(x,x)$, then
+	\begin{displaymath}
+		q(x+y) = b(x+y,x+y) = q(x) + q(y) + 2b(x,y).
+	\end{displaymath}
+
+	Thus, we have
+	\begin{align*}
+		b(x,y) & = \frac{1}{2} \left(
+		q(x+y) - q(x) - q(y)
+		\right).
+	\end{align*}
+
+	Note that
+	\begin{align*}
+		q(x-y) & = b(x-y,x-y) = q(x) + q(y) - 2b(x,y) \\
+		b(x,y) & = \frac{1}{2} \left(
+		-q(x-y) + q(x) + q(y)
+		\right)
+	\end{align*}
+
+	Hence, summing both equations we get
+	$b(x,y) = \frac{1}{4}(q(x+y) - q(x-y))$.
+	If there $c$ is another bilinear form such that
+	$c(x,y) \neq b(x,y)$ for some $x$ and $y$, then
+	the quadratic form induced by $c$ is different than $q$, i.e.
+	$q_c(x+y) - q_c(x-y) \neq q(x+y) - q(x-y) \implies q_c \neq q$.
+\end{proof}
+
+\begin{definition}[Regular Quadratic Space]
+	Given a quadratic space $(E, q)$, we say that this space
+	is regular if $q$ is regular, i.e. if the associated bilinear form $b$
+	is invertible (non-singular).
+\end{definition}

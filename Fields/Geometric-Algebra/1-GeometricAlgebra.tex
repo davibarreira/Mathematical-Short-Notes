@@ -1,6 +1,12 @@
-\section{Brief Note on Algebra}
+\section{Brief Note on Algebra with Category Theory}
 
+This is based partially on \citet{garling2011clifford}
+and \citet{aluffi2021algebra} (for the Category Theory).
 Let's start by presenting some definitions from Algebra.
+
+For an introduction to Category Theory, check the other notes.
+
+\subsection{Initial Definitions for Groups}
 
 \begin{definition}[Groups]
 	Consider the triple $(G, \odot, e)$, where $G$ is a set,
@@ -17,6 +23,9 @@ Let's start by presenting some definitions from Algebra.
 	When there is no ambiguity, we call the set $G$ a group omitting
 	the product and neutral element.
 \end{definition}
+
+Whenever it's note ambiguous, we omit the product operator,
+thus, $g\odot h \equiv g h$.
 
 \begin{definition}[Abelian Group]
 	A group $(G, \odot, e)$ is \textit{Abelian} if besides the group properties
@@ -71,3 +80,22 @@ Let's start by presenting some definitions from Algebra.
 	If $\theta$ is bijective, then we say that $\theta$
 	is an isomorphism.
 \end{definition}
+
+\subsection{Groups in Category Theory}
+
+Remember that in category theory we have a notion of isomorphism
+that generalizes set isomorphism (i.e. bijective function between sets).
+
+\begin{definition}[Grupoid and Groups]
+	A groupoid is a category where every morphism is an isomorphism.
+	Hence, a group is a groupoid category with a single object $G$.
+\end{definition}
+
+Note that this definition is equivalent to our definition of
+a group in algebraic terms. Why? Because every morphism
+is equivalent to an element of $G$, and the morphism composition
+does the part of the product operator. Also, note that
+every category has an identity morphism, thus,
+$id_G \equiv e$ our neutral element. Since every morphism
+is an isomorphism, this means that for every $g \in Hom(G,G)$,
+there is a $g^{-1} \in Hom(G,G)$ such that $g \circ g^{-1} = id_G = e$.

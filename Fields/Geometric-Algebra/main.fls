@@ -304,6 +304,8 @@ INPUT ./main.aux
 INPUT ./main.aux
 INPUT ./1-GeometricAlgebra.aux
 INPUT ./1-GeometricAlgebra.aux
+INPUT ./2-GeometricAlgebra.aux
+INPUT ./2-GeometricAlgebra.aux
 INPUT ./appendix.aux
 INPUT ./appendix.aux
 OUTPUT main.aux
@@ -380,9 +382,6 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr7.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT ./main.toc
 INPUT ./main.toc
-OUTPUT main.toc
-INPUT ./main.loe
-INPUT ./main.loe
 INPUT /home/davibarreira/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-regular.luc
 INPUT /home/davibarreira/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman6-regular.luc
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
@@ -415,6 +414,9 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/stmaryrd/stmary6.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+OUTPUT main.toc
+INPUT ./main.loe
+INPUT ./main.loe
 INPUT ./main.loe
 INPUT ./main.loe
 INPUT ./main.loe
@@ -423,6 +425,9 @@ OUTPUT 1-GeometricAlgebra.aux
 INPUT ./1-GeometricAlgebra.tex
 INPUT ./1-GeometricAlgebra.tex
 INPUT /home/davibarreira/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-italic.luc
+OUTPUT 2-GeometricAlgebra.aux
+INPUT ./2-GeometricAlgebra.tex
+INPUT ./2-GeometricAlgebra.tex
 INPUT ./main.bbl
 INPUT ./main.bbl
 OUTPUT appendix.aux
@@ -430,6 +435,8 @@ OUTPUT main.loe
 INPUT ./main.aux
 INPUT ./1-GeometricAlgebra.aux
 INPUT ./1-GeometricAlgebra.aux
+INPUT ./2-GeometricAlgebra.aux
+INPUT ./2-GeometricAlgebra.aux
 INPUT ./appendix.aux
 INPUT ./appendix.aux
 INPUT ./main.out
