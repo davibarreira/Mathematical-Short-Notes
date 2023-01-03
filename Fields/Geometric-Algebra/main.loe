@@ -1,10 +1,24 @@
 \contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.1\else \numberline {1.1}Definition\fi \thmtformatoptarg {Groups}}{6}{definition.1.1}%
 \contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.2\else \numberline {1.2}Definition\fi \thmtformatoptarg {Abelian Group}}{6}{definition.1.2}%
 \contentsline {example}{\ifthmt@listswap Example\nobreakspace {}1.1\else \numberline {1.1}Example\fi }{6}{example.1.1}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.3\else \numberline {1.3}Definition\fi \thmtformatoptarg {Subgroup Generated}}{6}{definition.1.3}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.4\else \numberline {1.4}Definition\fi \thmtformatoptarg {Cyclic Group}}{6}{definition.1.4}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.5\else \numberline {1.5}Definition\fi \thmtformatoptarg {Order of Group}}{7}{definition.1.5}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.6\else \numberline {1.6}Definition\fi \thmtformatoptarg {Homomorphism and Isomorphism}}{7}{definition.1.6}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.7\else \numberline {1.7}Definition\fi \thmtformatoptarg {Grupoid and Groups}}{7}{definition.1.7}%
-\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}2.1\else \numberline {2.1}Definition\fi \thmtformatoptarg {Quadratic Form and Quadratic Space}}{8}{definition.2.1}%
-\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}2.2\else \numberline {2.2}Proposition\fi }{8}{proposition.2.2}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}1.3\else \numberline {1.3}Proposition\fi \thmtformatoptarg {Group Cancellation}}{6}{proposition.1.3}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.4\else \numberline {1.4}Definition\fi \thmtformatoptarg {Subgroup Generated}}{6}{definition.1.4}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.5\else \numberline {1.5}Definition\fi \thmtformatoptarg {Cyclic Group}}{7}{definition.1.5}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.6\else \numberline {1.6}Definition\fi \thmtformatoptarg {Order of Groups}}{7}{definition.1.6}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.7\else \numberline {1.7}Definition\fi \thmtformatoptarg {Homomorphism and Isomorphism}}{7}{definition.1.7}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.8\else \numberline {1.8}Definition\fi \thmtformatoptarg {Normal / Self-conjugate}}{7}{definition.1.8}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.9\else \numberline {1.9}Definition\fi \thmtformatoptarg {Automorphism}}{7}{definition.1.9}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.10\else \numberline {1.10}Definition\fi \thmtformatoptarg {Grupoid and Groups}}{7}{definition.1.10}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.11\else \numberline {1.11}Definition\fi \thmtformatoptarg {Ring}}{8}{definition.1.11}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}1.12\else \numberline {1.12}Proposition\fi }{8}{proposition.1.12}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.13\else \numberline {1.13}Definition\fi \thmtformatoptarg {Commutative Ring}}{8}{definition.1.13}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.14\else \numberline {1.14}Definition\fi \thmtformatoptarg {Zero-Divisor}}{8}{definition.1.14}%
+\contentsline {example}{\ifthmt@listswap Example\nobreakspace {}1.2\else \numberline {1.2}Example\fi \thmtformatoptarg {$\mathbb Z \setminus n \mathbb Z$}}{8}{example.1.2}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.15\else \numberline {1.15}Definition\fi \thmtformatoptarg {$R$-Module}}{8}{definition.1.15}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}1.16\else \numberline {1.16}Definition\fi \thmtformatoptarg {$R$-Algebra}}{9}{definition.1.16}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}2.1\else \numberline {2.1}Definition\fi \thmtformatoptarg {Vector Space}}{10}{definition.2.1}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}4.1\else \numberline {4.1}Definition\fi \thmtformatoptarg {Quadratic Form and Quadratic Space}}{12}{definition.4.1}%
+\contentsline {proposition}{\ifthmt@listswap Proposition\nobreakspace {}4.2\else \numberline {4.2}Proposition\fi }{12}{proposition.4.2}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}4.3\else \numberline {4.3}Definition\fi \thmtformatoptarg {Regular Quadratic Space}}{12}{definition.4.3}%
+\contentsline {definition}{\ifthmt@listswap Definition\nobreakspace {}5.1\else \numberline {5.1}Definition\fi \thmtformatoptarg {Versor}}{13}{definition.5.1}%
+\contentsline {note}{\ifthmt@listswap Note\nobreakspace {}5.1\else \numberline {5.1}Note\fi \thmtformatoptarg {Composable Operations}}{13}{note.5.1}%

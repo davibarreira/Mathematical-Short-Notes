@@ -1,56 +1,118 @@
-\section{Geometric Algebra}
+\section{Tensors and Vectors}
 
-Let's start the formal definition of Geometric Algebra, which is also known as
-Clifford Algebra.
-
-\begin{definition}[Quadratic Form and Quadratic Space]
-	Let $E$ be a real vector space. A quadratic
-	form on $E$ is a function $q:E \to \mathbb R$
-	such that $q(x) = b(x,x)$ for all $x \in E$,
-	where $b$ is a symmetric bilinear form on $E$.
-	We say that $b$ is the associated bilinear form.
-
-	We call the tuple $(E,q)$ a quadratic space.
-	The set $Q(E)$ is composed by all quadratic forms on $E$
-	and it's a linear subspace of the space of linear real-valued
-	functions on $E$.
+\begin{definition}[Vector Space]
+	A vector space is a module over a field $R$, i.e. an $R$-module
+	where $R$ is a field.
+	Note, for an abelian group $(\mathbf V, \oplus)$
+	and a field $R$, we have the vector space $(\mathbf V, R)$.
+	In order to reduce the amount of writing, we call $\mathbf V$ the
+	vector space, which implies that there is an underlying field $R$
+	and the existence of an scalar product.
 \end{definition}
 
-\begin{proposition}
-	Given two different bilinear forms $b_1, b_2$, they induce
-	different quadratic forms.
-\end{proposition}
-\begin{proof}
-	For $q(x) = b(x,x)$, then
-	\begin{displaymath}
-		q(x+y) = b(x+y,x+y) = q(x) + q(y) + 2b(x,y).
-	\end{displaymath}
+The tensor product of a vector
 
-	Thus, we have
-	\begin{align*}
-		b(x,y) & = \frac{1}{2} \left(
-		q(x+y) - q(x) - q(y)
-		\right).
-	\end{align*}
+\section{On How to Construct Different Algebras}
 
-	Note that
-	\begin{align*}
-		q(x-y) & = b(x-y,x-y) = q(x) + q(y) - 2b(x,y) \\
-		b(x,y) & = \frac{1}{2} \left(
-		-q(x-y) + q(x) + q(y)
-		\right)
-	\end{align*}
+This section is more informal, and is used to give
+a better intution of how to construct differnt algebras.
+This is mainly based on \citet{vaz2016introduction}.
 
-	Hence, summing both equations we get
-	$b(x,y) = \frac{1}{4}(q(x+y) - q(x-y))$.
-	If there $c$ is another bilinear form such that
-	$c(x,y) \neq b(x,y)$ for some $x$ and $y$, then
-	the quadratic form induced by $c$ is different than $q$, i.e.
-	$q_c(x+y) - q_c(x-y) \neq q(x+y) - q(x-y) \implies q_c \neq q$.
-\end{proof}
+Consider a vector space $\mathbf V$.
+To define an algebra in a vector space, we have to define a bilinear product
+between the vectors. A possible product is the inner product. Yet,
+there are many other possibilities. One of them is the tensor
+product.
 
-\begin{definition}[Regular Quadratic Space]
-	Given a quadratic space $(E, q)$, we say that this space
-	is regular if $q$ is regular, i.e. if the associated bilinear form $b$
-	is invertible (non-singular).
-\end{definition}
+The tensor algebra $T(\mathbf V)$ is the vector space $\mathbf V$
+together with the tensor product
+$\otimes:\mathbf V \times \mathbf V \to \mathbf V$.
+The tensor algebra has the ``free'' algebra flavor,
+meaning, it's ``largest'' algebra one can construct from $\mathbf V$.
+Thus, all other algebras on $\mathbf V$ are quotients of $T(\mathbf V)$,
+i.e. we can construct the other bilinear products by introducing equivalence
+relations.
+
+Thus, the tensor algebra $T(\mathbf V)$ basis consists of all possible
+finite combinations of $\mathbf u$ and $\mathbf v$,
+where the tensor product of $k$ vectors defines a $k$-vector
+in a vector space $T^k$.
+\begin{displaymath}
+	T = \bigoplus^{\infty}_{k=0} T^k.
+\end{displaymath}
+
+For example, suppose that $\mathbf V$ has basis $\{\mathbf u, \mathbf v\}$.
+\begin{enumerate}
+	\item $T^0 := \{\mathbf 1\}$;
+	\item $T^1 := \{\mathbf u, \mathbf v\}$
+	\item $T^2 := \{\mathbf u \otimes \mathbf u,
+		      \mathbf v \otimes \mathbf v,
+		      \mathbf u \otimes \mathbf v,
+		      \mathbf v \otimes \mathbf u
+		      \}$
+	\item $T^3 := \{
+		      \mathbf u \otimes \mathbf u \otimes \mathbf u,
+		      \mathbf u \otimes \mathbf u \otimes \mathbf v,
+		      \mathbf u \otimes \mathbf v \otimes \mathbf u,
+		      \mathbf v \otimes \mathbf u \otimes \mathbf u,
+		      \mathbf u \otimes \mathbf v \otimes \mathbf v,
+		      \mathbf v \otimes \mathbf v \otimes \mathbf u,
+		      \mathbf v \otimes \mathbf u \otimes \mathbf v,
+		      \mathbf v \otimes \mathbf v \otimes \mathbf v
+		      \}$
+	\item etc.
+\end{enumerate}
+
+As we've said, the other algebras on $\mathbf V$ can be constructed
+from $T(\mathbf V)$. One example is the exterior algebra.
+To construct it, just impose the following equivalence relation,
+for every $\mathbf v \in \mathbf V$,
+\begin{displaymath}
+	\mathbf{v} \otimes \mathbf{v} \cong 0.
+\end{displaymath}
+Note that this condition implies that
+$\mathbf {v} \otimes \mathbf {u} = - \mathbf{u} \otimes \mathbf{v}$. This follows
+from
+\begin{displaymath}
+	(\mathbf u + \mathbf v) \otimes
+	(\mathbf u + \mathbf v) =
+	\mathbf u \otimes \mathbf u
+	+
+	\mathbf v \otimes \mathbf v
+	+
+	\mathbf u \otimes \mathbf v
+	+
+	\mathbf v \otimes \mathbf u \cong 0.
+\end{displaymath}
+
+When considering the exterior algebra, we change the product
+notation from $\otimes$ to $\wedge$. In the exterior algebra,
+the number of possible combinations of the basis vectors is finite.
+For example, for a vector space of dimension 2, i.e. basis
+$\{\mathbf u, \mathbf v\}$, we have
+\begin{enumerate}
+	\item $\bigwedge^0 : \{\mathbf 1\}$;
+	\item $\bigwedge^1 : \{\mathbf u, \mathbf v\}$;
+	\item $\bigwedge^2 : \{\mathbf u \wedge \mathbf v\}$.
+\end{enumerate}
+
+Using a similar idea, we arrive at the Geometric (Clifford) Algebra.
+Instead of the equality to zero as in the exterior algebra,
+we use:
+
+\begin{displaymath}
+	\mathbf{v} \otimes \mathbf{v} - B(\mathbf v, \mathbf v) \cong 0,
+\end{displaymath}
+where $B$ is a symmetric bilinear form.
+Note that, this definition actually defines a family of algebras (one
+for each possible $B$), where the exterior algebra is one of them (just
+use $B(x,x) = 0$).
+
+A real symmetric bilinear form can be completely characterized by
+what is called a signature.
+For a vector space of dimension $n$,
+the signature of $B$ is a triple $(p,q,z)$, where $p$ is the number
+of positive eigenvalues, $q$ is the number of negative eigenvalues and
+$z$ is the number of eigenvalues equal to zero. Thus, $p+q+z = n$.
+Remember that eigenvalues are a ``fundamental way'' of characterizing
+a transformation.

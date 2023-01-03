@@ -3,47 +3,49 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 A level-1 auxiliary file: 1-GeometricAlgebra.aux
 A level-1 auxiliary file: 2-GeometricAlgebra.aux
+A level-1 auxiliary file: 3-GeometricAlgebra.aux
+A level-1 auxiliary file: 4-GeometricAlgebra.aux
 The style file: plainnat.bst
 A level-1 auxiliary file: appendix.aux
 Database file #1: ref.bib
-You've used 2 entries,
+You've used 1 entry,
             2773 wiz_defined-function locations,
-            607 strings with 5062 characters,
-and the built_in function-call counts, 639 in all, are:
-= -- 46
-> -- 20
-< -- 4
-+ -- 8
+            602 strings with 5058 characters,
+and the built_in function-call counts, 390 in all, are:
+= -- 28
+> -- 21
+< -- 1
++ -- 7
 - -- 6
-* -- 38
-:= -- 108
-add.period$ -- 6
-call.type$ -- 2
-change.case$ -- 6
-chr.to.int$ -- 2
-cite$ -- 4
-duplicate$ -- 40
-empty$ -- 65
-format.name$ -- 8
-if$ -- 127
+* -- 25
+:= -- 67
+add.period$ -- 3
+call.type$ -- 1
+change.case$ -- 4
+chr.to.int$ -- 1
+cite$ -- 2
+duplicate$ -- 20
+empty$ -- 33
+format.name$ -- 9
+if$ -- 76
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 4
-newline$ -- 18
-num.names$ -- 8
-pop$ -- 22
+missing$ -- 2
+newline$ -- 13
+num.names$ -- 4
+pop$ -- 13
 preamble$ -- 1
-purify$ -- 6
+purify$ -- 4
 quote$ -- 0
-skip$ -- 27
+skip$ -- 16
 stack$ -- 0
-substring$ -- 4
-swap$ -- 4
-text.length$ -- 2
+substring$ -- 2
+swap$ -- 1
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 12
+type$ -- 6
 warning$ -- 0
-while$ -- 6
+while$ -- 3
 width$ -- 0
-write$ -- 33
+write$ -- 19

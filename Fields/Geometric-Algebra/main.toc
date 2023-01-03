@@ -1,4 +1,8 @@
 \contentsline {section}{\numberline {1}Brief Note on Algebra with Category Theory}{6}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Initial Definitions for Groups}{6}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Groups in Category Theory}{7}{subsection.1.2}%
-\contentsline {section}{\numberline {2}Geometric Algebra}{8}{section.2}%
+\contentsline {subsection}{\numberline {1.2}Groups and Category Theory}{7}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Rings and Modules}{8}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Tensors and Vectors}{10}{section.2}%
+\contentsline {section}{\numberline {3}On How to Construct Different Algebras}{10}{section.3}%
+\contentsline {section}{\numberline {4}Quadratic Forms}{12}{section.4}%
+\contentsline {section}{\numberline {5}Geometric Algebra}{13}{section.5}%

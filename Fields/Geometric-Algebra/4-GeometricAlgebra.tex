@@ -1,0 +1,38 @@
+\section{Geometric Algebra}
+
+As we've already pointed out, the Geometric Algebra
+over a vector space $\mathbf V$ is defined the tensor
+algebra $T(\mathbf V)$ with the equivalence relation:
+\begin{displaymath}
+	\mathbf{v} \otimes \mathbf{v} - B(\mathbf v, \mathbf v) \cong 0,
+\end{displaymath}
+where $B$ is a symmetric bilinear form.
+This bilinear form represents the metric of the geometric space,
+and is fully characterized by what we called a signature.
+The famous Euclidean space of $\mathbb R^n$ is the vector
+space with the inner product
+$\langle \mathbf u, \mathbf v \rangle = \mathbf u I \mathbf v$
+where $I$ is the identity matrix.
+Thus, the signature of the Euclidean space is $(3,0,0)$.
+
+
+\begin{definition}[Versor]
+	A $k$-versor is the geometric product of $k$ invertible
+	1-vectors, e.g. $\mathcal V = v_k ... v_2 v_1$, where
+	$v^{-1}_i$ is defined for every $i \in \{1,...,k\}$.
+\end{definition}
+
+\begin{note}[Composable Operations]
+	Orthogonal transformations, which are defined by versors,
+	preserve the structures under the geometric product.
+	This means that we can easily compose them.
+	Note, for two multivectors $A$ and $B$, and a versor $\mathcal V$,
+	\begin{displaymath}
+		\mathcal V(A \circ B) \mathcal V^{-1} =
+		\mathcal V A \mathcal V^{-1} \circ
+		\mathcal V B \mathcal V^{-1},
+	\end{displaymath}
+	where $\circ$ represents any product of the Geometric Algebra
+	(e.g. the geometric product, duality, inversion, projection).
+
+\end{note}

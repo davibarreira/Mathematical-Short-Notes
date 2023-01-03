@@ -1,18 +1,13 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{1}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Aluffi(2021)]{aluffi2021algebra}
-Paolo Aluffi.
-\newblock \emph{Algebra: chapter 0}, volume 104.
-\newblock American Mathematical Soc., 2021.
-
-\bibitem[Garling(2011)]{garling2011clifford}
-David~JH Garling.
-\newblock \emph{Clifford algebras: an introduction}, volume~78.
-\newblock Cambridge University Press, 2011.
+\bibitem[Vaz~Jr and da~Rocha~Jr(2016)]{vaz2016introduction}
+Jayme Vaz~Jr and Rold{\~a}o da~Rocha~Jr.
+\newblock \emph{An introduction to Clifford algebras and spinors}.
+\newblock Oxford University Press, 2016.
 
 \end{thebibliography}
