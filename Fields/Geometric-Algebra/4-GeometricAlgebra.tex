@@ -15,24 +15,227 @@ $\langle \mathbf u, \mathbf v \rangle = \mathbf u I \mathbf v$
 where $I$ is the identity matrix.
 Thus, the signature of the Euclidean space is $(3,0,0)$.
 
+Geometric Algebra is about working with "vector spaces" together with a special
+product operator, called geometric product.
 
-\begin{definition}[Versor]
-	A $k$-versor is the geometric product of $k$ invertible
-	1-vectors, e.g. $\mathcal V = v_k ... v_2 v_1$, where
-	$v^{-1}_i$ is defined for every $i \in \{1,...,k\}$.
+While Linear Algebra deals with vectors, Geometric Algebra deals with multivectors.
+A multivector is a generalization of a vector. While vectors are only "arrows", a multivector
+can be an arrow, but it can also be a plane, a volume, etc.
+
+\subsection{Outer (Exterior) Product}
+
+Let $V$ be a vector space. Then, a blade $\mathbf B$ is just a vector subspace of $V$, i.e. 
+if $\mathbf v_1, \mathbf v_2 \in B$, then for any scalars $\alpha, \beta$,
+we have $\alpha \mathbf v_1 + \beta \mathbf v_2 \in B$, which implies that
+$\mathbf B$ is also a vector space.
+
+We want to somehow manipulate these blades (subspaces), and do algebra with them,
+similar to how we do algebra with vectors (e.g. we can sum vectors
+and so on). One way to do this is to describe how these subspaces are generated.
+Hence, we introduce the \textbf{outer (exterior) product}.
+This product is denoted by the wedge operator $\wedge$.
+
+The idea behind the outer product is that for two vectors $\mathbf v, \mathbf u \in V$, $\mathbf v \wedge \mathbf u$ represents the weighted subspace generated
+by these two vectors. These subspaces are "weighted" because $\alpha \mathbf v \wedge \mathbf u$ generates the same subspace, where
+$\alpha$ is a scalar.
+
+Since the outer product defines vector subspaces, it must be:
+
+\begin{itemize}
+    \item Associative: $\mathbf v \wedge (\mathbf u \wedge \mathbf w) = (\mathbf v \wedge \mathbf u) \wedge \mathbf w)$,
+    \item Commutative with the scalars: $\mathbf v \wedge \alpha \mathbf u = \alpha (\mathbf v \wedge \mathbf u)$,
+    \item Distributive: $v \wedge (\mathbf u + \mathbf w) = \mathbf v \wedge \mathbf u  + \mathbf v \wedge \mathbf w$.
+\end{itemize}
+
+Lastly, if we want to somehow encode the orientation of the subspace (e.g. the orientation of a plane),
+we have to add one last property:
+\begin{itemize}
+    \item Antisymmetry: $\mathbf v \wedge \mathbf u = - \mathbf u \wedge \mathbf v$, which implies $\mathbf v \wedge \mathbf v = 0$.
+\end{itemize}
+
+
+Hence, if these vectors are colinear (i.e. $\mathbf u = \alpha \mathbf v$ for some scalar $\alpha$), we want
+the outer product to be zero.
+
+We can use this outer product to generalize the idea of a vector, and define $k$-vectors.
+The $k$ represents the "grade"of the multivector, which is the same as the dimension of the spanned subspace.
+A $k$-vector is the linear combination of \textit{simple} $k$-vectors, also known as $k$-blades.
+A $k$-blade is a $k$-vector that can be written as the outer product of $1$-vectors.
+
+For example, consider a 4 dimensional vector space $V$. In this vector space, we define the base vectors
+to be $\mathbf e_1,...,\mathbf e_4$. Thus, an example of a $2$-blade would be $2 \mathbf e_1 \wedge \mathbf e_2$, and an example
+of a $2$-vector (bivector) would be $1 \mathbf e_3 \wedge \mathbf e_4 + 2 \mathbf e_1 \wedge \mathbf e_2$.
+Note that our bivector cannot be factored in terms of a wedge product. To see that,
+consider instead the following bivcecto $\mathbf e_1 \wedge \mathbf e_2 + \mathbf e_2 \wedge \mathbf e_3$. This one
+can be written as $(\mathbf e_1 - \mathbf e_3) \wedge \mathbf e_2$, thus, it's a $2$-blade.
+
+Once we've defined what a blade and a multivector is, we can define the multivector space.
+Let $V$ be a finite dimensional vector space with base $\{\mathbf e_1,\mathbf e_2,...,\mathbf e_n\}$. The multivector space
+of this vector space is denoted by $\bigwedge V$, and connsists of the linear combination
+of all multivectors. The \textbf{base blades} of this space are
+$$
+\bigcup_{k=0}^n \{\mathbf e_{i_1}\wedge ...\wedge \mathbf e_{i_k} \ : \ 1 \leq i_1 \leq... \leq i_k\}
+$$
+
+Consider the case of the vector space of 3 dimensions. We have:
+
+\begin{align}
+    \bigwedge^0 V &= 1 \\
+    \bigwedge^1 V &= \mathbf e_1, \mathbf e_2, \mathbf e_3\\
+    \bigwedge^2 V &= \mathbf e_1\wedge \mathbf e_2, \mathbf e_1 \wedge \mathbf e_3, \mathbf e_2 \wedge \mathbf e_3 \\
+    \bigwedge^3 V &= \mathbf e_1\wedge \mathbf e_2 \wedge \mathbf e_3,
+\end{align}
+where $\bigwedge^k V$ is the $k$-blade space. Note that a multivector is any linear combination of such elements multiplied by a scalar, e.g.
+$\alpha + \beta \mathbf e_1 + \gamma \mathbf e_2 \wedge \mathbf e_3$.
+
+The $0$-blade is called scalar, and the k-th blade is called pseudo-scalar.
+
+Finally, we can define the outer product as:
+$$
+\wedge : \bigwedge^r V \times \bigwedge^s V \to \bigwedge^{r + s} V,
+$$
+such that the properties we've listed before hold (associativity, commutativity, distributivity).
+
+\begin{definition}[Grade]
+    Given a blade $B \in \bigwedge^k V$, the grade of $B$ is equal to $k$.
 \end{definition}
 
-\begin{note}[Composable Operations]
-	Orthogonal transformations, which are defined by versors,
-	preserve the structures under the geometric product.
-	This means that we can easily compose them.
-	Note, for two multivectors $A$ and $B$, and a versor $\mathcal V$,
-	\begin{displaymath}
-		\mathcal V(A \circ B) \mathcal V^{-1} =
-		\mathcal V A \mathcal V^{-1} \circ
-		\mathcal V B \mathcal V^{-1},
-	\end{displaymath}
-	where $\circ$ represents any product of the Geometric Algebra
-	(e.g. the geometric product, duality, inversion, projection).
+Note that every blade has a grade, yet, an arbitrary multivector might have many grades, e.g. $1 + e_1 + e_1\wedge e_3$.
 
-\end{note}
+\subsection{Geometric Product}
+
+We've introduced the outer product, but we still haven't talked about the Geometric Product, which is the real star of the show.
+Consider a vector space $V$ with an inner product.
+Let $\mathbf a$ be a known vector and $\alpha$ a known scalar such that $\mathbf v \cdot \mathbf a = \alpha$. Can we obtain
+$\mathbf v$ from this equation? The answer is no, as there are many possible $\mathbf v$ that satisfy this condition. This
+means that the inner product is not invertible, and a similar exercise can be done to show that the outer product
+is also not invertible.
+
+Thus comes the geometric product. Let's denote the geometric product by just justaposing
+symbols, e.g $\mathbf a \mathbf b$ is the geometric product of $\mathbf a$ with $\mathbf b$.
+The idea here is to define a product that is invertible, i.e.
+$\mathbf a  \mathbf v = \alpha \implies \mathbf v = \alpha  \mathbf a^{-1}$, where $\exists! \mathbf a^{-1} \ : \ \mathbf a  \mathbf a^{-1} = \mathbf 1$.
+
+So what is this product like? For vectors it's actually quite simple,
+\begin{displaymath}    
+    \mathbf a  \mathbf v = \mathbf a \cdot \mathbf v + \mathbf a \wedge \mathbf v
+\end{displaymath}
+
+Note that the result of the geometric product is a multivector with a scalar $\mathbf a \cdot \mathbf v$
+and a bivector $\mathbf a \wedge \mathbf v$.
+It can then be shown that this product is associative, distributive, linear, invertible, but  **not commutative**.
+
+Consider the two dimensional Euclidean space. Note that $\mathbf e_1 \mathbf e_2 = \mathbf e_1 \wedge \mathbf e_2$,
+and that
+\begin{displaymath}
+(\mathbf e_1 \mathbf e_2) (\mathbf e_1 \mathbf e_2) =
+- \mathbf e_1 \mathbf e_1 \mathbf e_2 \mathbf e_2 = - 1.
+\end{displaymath}
+
+This fact shows how the imaginary number appears in geometry. The square of our blade base $\mathbf e_1 \mathbf e_2$
+is negative under the geometric product.
+
+What about the inverse? It's clear from the defintion that the inverse of a vector $\mathbf v$
+is just $\frac{\mathbf v}{\mathbf v \cdot \mathbf v}$, hence
+\begin{displaymath}
+    \mathbf v \mathbf v^{-1} = \mathbf v \left(\frac{\mathbf v}{\mathbf v \cdot \mathbf v}\right) = 
+    \frac{\mathbf v \mathbf v}{\mathbf v \cdot \mathbf v} =
+    \frac{\mathbf v \cdot \mathbf v + \mathbf v \wedge \mathbf v}{\mathbf v \cdot \mathbf v} = 
+    \frac{\mathbf v \cdot \mathbf v}{\mathbf v \cdot \mathbf v} =  1.
+\end{displaymath}
+Note that the inverse of a vector only exists if it's norm is non-null.
+
+Our definition of the Geomtric Product was done only for vectors. We want to extend
+it to multivectors. Thus, our product must be defined on
+$\bigwedge V \times \bigwedge V \to \bigwedge V$.
+
+Although our original construction gave an explicit formula for the geomtric product, the strategy
+to define it in multivector space is different. Instead of a formula, we postulate the desired properties, which are:
+\begin{itemize}
+    \item Scalars are commutative, and their geometric product is equal to their prdocut;
+    \item Vector Square is just $\mathbf v^2 = \mathbf v \mathbf v = \mathbf v \cdot \mathbf v$;
+    \item Distributive and Linear for multivectors, i.e. $A(B + C) = AB + C$ and $(B+C)A = BA + CA$;
+    \item Associative for multivectors, i.e. $A(BC) = (AB)C$.
+\end{itemize}
+Note that we do note enforce commutativeness.
+
+From these properties, we can prove, for example, that for base vectors $\mathbf e_1$ and $\mathbf e_2$ we have
+$\mathbf e_i \mathbf e_j = - \mathbf e_j \mathbf e_i$.
+
+\subsection{More Operators on Multivectors}
+
+We've introduced the geometric product, which is the king of Geometric Algebra.
+From this product we can construct other operators which can be very useful. For example,
+we can define the left contraction, which can be seen as a generalization of the inner product
+for multivectors.
+
+\begin{definition}[Left Contraction - according to Dorst]
+    The left contraction is a bilinear operator
+    \begin{displaymath}
+        \rfloor : \bigwedge^k V \times \bigwedge^l V \to \bigwedge^{k-l} V,
+    \end{displaymath}
+    with the following properties:
+    \begin{itemize}
+        \item $\alpha \rfloor \mathbf B  = \alpha \mathbf B$;
+        \item $\mathbf B \rfloor \alpha = 0$ if $\text{grade}(\mathbf B) > 0 > 0 > 0 > 0$;
+        \item $\mathbf a \rfloor \mathbf b = \mathbf a \cdot \mathbf b$;
+        \item $\mathbf a \rfloor (\mathbf B \wedge \mathbf C) = \mathbf (a \rfloor \mathbf B)\wedge \mathbf C + (-1)^{\text{grade}(\mathbf B)} \mathbf B \wedge (\mathbf a \rfloor \mathbf C)$;
+        \item $(\mathbf A \wedge \mathbf B) \rfloor \mathbf C = \mathbf A \rfloor (\mathbf B \rfloor \mathbf C)$.
+    \end{itemize}
+\end{definition}
+Where $\alpha$ is a scalar, $\mathbf a, \mathbf b$ are vectors, and $\mathbf A, \mathbf B, \mathbf C$ are blades.
+
+In an analogous way, we have the right contraction.
+
+
+\begin{definition}[Grade Involution - Dorst]
+    \begin{displaymath}
+        \hat{\mathbf B} = (-1) ^{\text{grade}(\mathbf B)} \mathbf B.
+    \end{displaymath}
+\end{definition}
+
+
+One can show that:
+\begin{displaymath}
+    \mathbf{a B} = \mathbf a \rfloor \mathbf B + \mathbf a \wedge \mathbf B,
+\end{displaymath}
+where $\mathbf a$ is a vector and $\mathbf B$ is a blade.
+
+
+\begin{definition}[Reversion - Dorst]
+    \begin{displaymath}
+        \tilde{\mathbf B} = (-1) ^{\text{grade}(\mathbf B)(\text{grade}(\mathbf B)-1)/2} \mathbf B.
+    \end{displaymath}
+\end{definition}
+Here is an example, let $\mathbf B = \mathbf e_1 \wedge \mathbf e_2 \wedge \mathbf e_3$. Then,
+$\tilde{\mathbf B} = \mathbf e_3 \wedge \mathbf e_2 \wedge \mathbf e_1 = -\mathbf B$.
+Both the \textbf{reverse} and \textbf{involution} can be extended to any multivector by applying them to each grade. For example:
+
+\begin{align}
+    X = \mathbf e_1 + \mathbf e_1 \wedge \mathbf e_2 & \implies
+    \hat{X} = (-1)^1 \mathbf e_1 + (-1)^{2} \mathbf e_1 \wedge \mathbf e_2 = -1 \mathbf e_1 +  \mathbf e_1 \wedge \mathbf e_2
+    \\
+    & \implies
+    \tilde{X} = \mathbf e_1 + \mathbf e_2 \wedge \mathbf e_1 = \mathbf e_1 - \mathbf e_2 \wedge \mathbf e_1.
+\end{align}
+
+% % % \begin{definition}[Versor]
+% % 	A $k$-versor is the geometric product of $k$ invertible
+% % 	1-vectors, e.g. $\mathcal V = v_k ... v_2 v_1$, where
+% % 	$v^{-1}_i$ is defined for every $i \in \{1,...,k\}$.
+% % \end{definition}
+
+% % \begin{note}[Composable Operations]
+% % 	Orthogonal transformations, which are defined by versors,
+% % 	preserve the structures under the geometric product.
+% % 	This means that we can easily compose them.
+% % 	Note, for two multivectors $A$ and $B$, and a versor $\mathcal V$,
+% % 	\begin{displaymath}
+% % 		\mathcal V(A \circ B) \mathcal V^{-1} =
+% % 		\mathcal V A \mathcal V^{-1} \circ
+% % 		\mathcal V B \mathcal V^{-1},
+% % 	\end{displaymath}
+% % 	where $\circ$ represents any product of the Geometric Algebra
+% % 	(e.g. the geometric product, duality, inversion, projection).
+
+% % \end{note}
