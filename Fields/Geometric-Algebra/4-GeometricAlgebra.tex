@@ -79,12 +79,12 @@ $$
 
 Consider the case of the vector space of 3 dimensions. We have:
 
-\begin{align}
+\begin{align*}
     \bigwedge^0 V &= 1 \\
     \bigwedge^1 V &= \mathbf e_1, \mathbf e_2, \mathbf e_3\\
     \bigwedge^2 V &= \mathbf e_1\wedge \mathbf e_2, \mathbf e_1 \wedge \mathbf e_3, \mathbf e_2 \wedge \mathbf e_3 \\
     \bigwedge^3 V &= \mathbf e_1\wedge \mathbf e_2 \wedge \mathbf e_3,
-\end{align}
+\end{align*}
 where $\bigwedge^k V$ is the $k$-blade space. Note that a multivector is any linear combination of such elements multiplied by a scalar, e.g.
 $\alpha + \beta \mathbf e_1 + \gamma \mathbf e_2 \wedge \mathbf e_3$.
 
@@ -211,13 +211,95 @@ Here is an example, let $\mathbf B = \mathbf e_1 \wedge \mathbf e_2 \wedge \math
 $\tilde{\mathbf B} = \mathbf e_3 \wedge \mathbf e_2 \wedge \mathbf e_1 = -\mathbf B$.
 Both the \textbf{reverse} and \textbf{involution} can be extended to any multivector by applying them to each grade. For example:
 
-\begin{align}
+\begin{align*}
     X = \mathbf e_1 + \mathbf e_1 \wedge \mathbf e_2 & \implies
     \hat{X} = (-1)^1 \mathbf e_1 + (-1)^{2} \mathbf e_1 \wedge \mathbf e_2 = -1 \mathbf e_1 +  \mathbf e_1 \wedge \mathbf e_2
     \\
     & \implies
     \tilde{X} = \mathbf e_1 + \mathbf e_2 \wedge \mathbf e_1 = \mathbf e_1 - \mathbf e_2 \wedge \mathbf e_1.
-\end{align}
+\end{align*}
+
+Another clever way of obtaining these operators is by simply using the grade selection $\langle \rangle_k$. This
+operation consists of spitting out the corresponding value of the $k$-th grade of a multivector. For example,
+let $x = 1 + 2 \mathbf e_1 + 3 \mathbf e_2 + 4 \mathbf e_1 \wedge \mathbf e_2$, then
+\begin{align*}
+    \langle x \rangle_0 &= 1 \\
+    \langle x \rangle_1 &= 2 \mathbf e_1 + 3 \mathbf e_2 \\
+    \langle x \rangle_2 &= 3 \mathbf e_1 \wedge \mathbf e_2.
+\end{align*}  
+
+Using this operation, we have:
+\begin{align*}
+    \mathbf A_k \wedge \mathbf B_l  &\equiv \langle \mathbf A_k \mathbf B_l \rangle_{k+l}\\
+    \mathbf A_k \rfloor \mathbf B_l &\equiv \langle \mathbf A_k \mathbf B_l \rangle_{l-k}\\
+    \mathbf A_k \lfloor \mathbf B_l &\equiv \langle \mathbf A_k \mathbf B_l \rangle_{k-l}\\
+    \mathbf A_k * \mathbf B_l       &\equiv \langle \mathbf A_k \mathbf B_l \rangle_{0}
+\end{align*}
+
+The last operation is called \textbf{scalar product}.
+
+Another operation that comes often is dualization, which is defined
+as an mapping  $^*: \bigwedge^k V \to \bigwedge^{\text{dim}(V) - k}V$.
+We can compute dualization with the following formula:
+
+\begin{displaymath}
+    \mathbf A^* = \mathbf A \rfloor \mathbf I^{-1},
+\end{displaymath}
+where $\mathbf A$ is a blade, and $\mathbf I$ is the pseudo-vector of the multivector space.
+
+The norm squared of a vector is simply $\mathbf a \cdot \mathbf a$, where the inner product is a property of the underlying vector space.
+For a blade, this norm can be computed as:
+$$
+\mathbf ||\mathbf B||^2 = \mathbf B * \tilde{\mathbf B}.
+$$
+One can check that this satisfies the properties of a norm.
+
+\subsection{Inverting Multivectors}
+
+We've shown how to invert a vector. This operation can be useful in different situation. For example, if
+a vector $\mathbf a$ is proportional to $\mathbf b$, what is the vector $\mathbf x$ that is proportional
+in the same way to a vector $\mathbf c$? This is just:
+\begin{displaymath}
+    \frac{\mathbf a}{\mathbf b} =
+    \frac{\mathbf x}{\mathbf c} \implies
+    \mathbf x = \frac{\mathbf a}{\mathbf b} \mathbf c =  \mathbf a \mathbf b^{-1} \mathbf c 
+\end{displaymath}
+
+We know how to find $\mathbf b^{-1}$, but what about a more generic multivector? Again, the inverse
+only exists for multivector with $x^2 \neq 0$.
+
+For blades, the formula for the inverse is almost the same as for vectors:
+\begin{displaymath}
+    \mathbf B^{-1} = \frac{\mathbf B}{\mathbf B * \mathbf B} = 
+    \frac{\tilde{\mathbf B}}{\mathbf B * \tilde{\mathbf B}} = 
+    \frac{\tilde{\mathbf B}}{||\mathbf B ||^2}.
+\end{displaymath}
+The last point we make is that division is not commutative. Consider for example:
+\begin{displaymath}
+    \mathbf x \mathbf a \mathbf a^{-1}
+    = (\mathbf x \cdot \mathbf a + \mathbf x \wedge \mathbf a) \mathbf a^{-1}
+    = (\mathbf x \cdot \mathbf a) \mathbf a^{-1} + (\mathbf x \wedge \mathbf a) \mathbf a^{-1}.
+\end{displaymath}
+
+If we change the order we have:
+\begin{displaymath}
+    \mathbf a^{-1} \mathbf x \mathbf a = 
+    \frac{1}{\mathbf a \mathbf a}\mathbf a \mathbf x \mathbf a = 
+    \mathbf a\mathbf x \mathbf a \frac{1}{\mathbf a \mathbf a}
+    = (\mathbf a \cdot \mathbf x) \mathbf a^{-1} + (\mathbf a \wedge \mathbf x) \mathbf a^{-1}
+    = (\mathbf x \cdot \mathbf a) \mathbf a^{-1} - (\mathbf x \wedge \mathbf a) \mathbf a^{-1}.
+\end{displaymath}
+
+Note that this sandwishing of $\mathbf a$ and $\mathbf a^{-1}$ results in a reflection of 
+$\mathbf x $ around the vector $\mathbf a$. In the next section we explore more how these
+transformations are done in Geometric Algebra.
+
+\subsection{Clifford Algebra versus Geometric Algebra}
+
+The distinction between Clifford Algebra and Geometric Algebra is not generally accepted, yet, it's posed by
+Leo Dorst. The ideas is that, while Clifford Algebra considers all possible multivectors of a multivector space $\bigwedge V$,
+the Geometric Algebra only allows objects that are constructed via either geometric product of scalars, vectors, dual scalars and dual vectors.
+Hence, there might exist multivectors in a Clifford Algebra that cannot be constructed in Geometric Algebra.
 
 % % % \begin{definition}[Versor]
 % % 	A $k$-versor is the geometric product of $k$ invertible

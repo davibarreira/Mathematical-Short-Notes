@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2022.9.14)  6 JAN 2023 22:22
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2022.9.14)  7 JAN 2023 08:58
  restricted system commands enabled.
  file:line:error style messages enabled.
 **main.tex
@@ -752,7 +752,7 @@ Package hyperref Info: bookmark level for unknown proposition defaults to 0 on i
 
 
 
-] [14] [15] [16]) [17] (./main.bbl) [18
+] [14] [15] [16] [17]) [18] (./main.bbl) [19
 
 
 ]
@@ -764,23 +764,23 @@ No file appendix.tex.
 \openout5 = main.loe
 (./main.aux (./1-GeometricAlgebra.aux) (./2-GeometricAlgebra.aux) (./3-GeometricAlgebra.aux) (./4-GeometricAlgebra.aux) (./appendix.aux))
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 5DD796C74E5A93B1ED7E438914C4A561;2230.
+(rerunfilecheck)             Checksum: C0519DC34614D06FE84C5C379827BF53;2722.
 )
 
 Here is how much of LuaTeX's memory you used:
- 18241 strings out of 477805
+ 18240 strings out of 477805
  100000,794899 words of node,token memory allocated
- 646 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 29 attribute, 61 glue_spec, 29 attribute_list, 4 write nodes
-   avail lists: 2:518,3:243,4:180,5:357,6:65,7:5792,8:62,9:434,10:7,11:363
- 37914 multiletter control sequences out of 65536+600000
- 116 fonts using 30947559 bytes
+ 670 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 35 attribute, 61 glue_spec, 35 attribute_list, 4 write nodes
+   avail lists: 2:528,3:243,4:180,5:342,6:65,7:5792,8:62,9:525,10:7,11:363
+ 37916 multiletter control sequences out of 65536+600000
+ 116 fonts using 31982439 bytes
  73i,9n,90p,9591b,599s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf/fonts/opentype/public/lm/lmromandemi10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman7-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman17-regular.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (18 pages, 188476 bytes).
+Output written on main.pdf (19 pages, 194899 bytes).
 
-PDF statistics: 362 PDF objects out of 1000 (max. 8388607)
- 302 compressed objects within 4 object streams
- 111 named destinations out of 1000 (max. 131072)
- 89 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 370 PDF objects out of 1000 (max. 8388607)
+ 309 compressed objects within 4 object streams
+ 108 named destinations out of 1000 (max. 131072)
+ 105 words of extra memory for PDF output out of 10000 (max. 100000000)
 
