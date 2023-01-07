@@ -5,9 +5,16 @@
 \contentsline {section}{\numberline {2}Tensors and Vectors}{10}{section.2}%
 \contentsline {section}{\numberline {3}On How to Construct Different Algebras}{10}{section.3}%
 \contentsline {section}{\numberline {4}Quadratic Forms}{12}{section.4}%
-\contentsline {section}{\numberline {5}Geometric Algebra}{13}{section.5}%
+\contentsline {section}{\numberline {5}First Concepts in Geometric Algebra}{13}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Outer (Exterior) Product}{13}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Geometric Product}{15}{subsection.5.2}%
 \contentsline {subsection}{\numberline {5.3}More Operators on Multivectors}{16}{subsection.5.3}%
 \contentsline {subsection}{\numberline {5.4}Inverting Multivectors}{18}{subsection.5.4}%
 \contentsline {subsection}{\numberline {5.5}Clifford Algebra versus Geometric Algebra}{18}{subsection.5.5}%
+\contentsline {section}{\numberline {6}Transformations and Versors}{19}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Reflections}{19}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Rotations}{20}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Projection}{21}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Rotors}{22}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Versors}{22}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Blade Exponentiation}{23}{subsection.6.6}%

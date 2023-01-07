@@ -310,6 +310,8 @@ INPUT ./3-GeometricAlgebra.aux
 INPUT ./3-GeometricAlgebra.aux
 INPUT ./4-GeometricAlgebra.aux
 INPUT ./4-GeometricAlgebra.aux
+INPUT ./5-GeometricAlgebra.aux
+INPUT ./5-GeometricAlgebra.aux
 INPUT ./appendix.aux
 INPUT ./appendix.aux
 OUTPUT main.aux
@@ -452,6 +454,12 @@ INPUT ./3-GeometricAlgebra.tex
 OUTPUT 4-GeometricAlgebra.aux
 INPUT ./4-GeometricAlgebra.tex
 INPUT ./4-GeometricAlgebra.tex
+OUTPUT 5-GeometricAlgebra.aux
+INPUT ./5-GeometricAlgebra.tex
+INPUT ./5-GeometricAlgebra.tex
+INPUT ./figures/bladeprojection.png
+INPUT ./figures/bladeprojection.png
+INPUT ./figures/bladeprojection.png
 INPUT ./main.bbl
 INPUT ./main.bbl
 OUTPUT appendix.aux
@@ -465,6 +473,8 @@ INPUT ./3-GeometricAlgebra.aux
 INPUT ./3-GeometricAlgebra.aux
 INPUT ./4-GeometricAlgebra.aux
 INPUT ./4-GeometricAlgebra.aux
+INPUT ./5-GeometricAlgebra.aux
+INPUT ./5-GeometricAlgebra.aux
 INPUT ./appendix.aux
 INPUT ./appendix.aux
 INPUT ./main.out
