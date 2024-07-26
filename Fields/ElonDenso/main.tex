@@ -1,0 +1,300 @@
+\documentclass[journal, letterpaper]{IEEEtran}
+\usepackage{graphicx}
+\usepackage{url}        
+\usepackage{amsmath}    
+\usepackage{textgreek}	% Greek to me, dawg
+\usepackage{listings}
+\usepackage{csvsimple}
+\usepackage{longtable}
+
+% \documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[OT1]{fontenc}
+\usepackage{amsfonts, amsmath, amsthm, amssymb}
+\usepackage{bbm}
+\usepackage{mathtools}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
+\usepackage{bigints}
+\usepackage{glossaries}
+\usepackage{graphicx}
+\usepackage{enumerate}
+% \graphicspath{ {./images/} }
+
+\theoremstyle{definition}
+\newtheorem{definition}{Def}[section]
+
+\newtheorem{theorem}{Teo}
+\newtheorem{proposition}{Prop}
+\newtheorem{example}{Ex}
+
+\newcounter{countCode}
+\lstnewenvironment{code} [1][caption=Ponme caption, label=default]{%
+	\renewcommand*{\lstlistingname}{Listado} 
+	\setcounter{lstlisting}{\value{countCode}} 
+	\lstset{ %
+	language=java,
+	basicstyle=\ttfamily\footnotesize,       % the size of the fonts that are used for the code
+	numbers=left,                   % where to put the line-numbers
+	numberstyle=\sc,      % the size of the fonts that are used for the line-numbers
+	stepnumber=1,                   % the step between two line-numbers. 
+	numbersep=5pt,                 % how far the line-numbers are from the code
+	numberstyle=\color{red!50!blue},
+    	backgroundcolor=\color{lightgray!20},
+	rulecolor=\color{blue},
+	keywordstyle=\color{red}\bfseries,
+	showspaces=false,               % show spaces adding particular underscores
+	showstringspaces=false,         % underline spaces within strings
+	showtabs=false,                 % show tabs within strings adding particular underscores
+	frame=single,                   % adds a frame around the code
+	framexleftmargin=0mm,
+	numberblanklines=false,
+	xleftmargin=5pt,
+	breaklines=true,
+	breakatwhitespace=true,
+	breakautoindent=true,
+	captionpos=t,
+	texcl=true,
+	tabsize=2,                      % sets default tabsize to 3 spaces
+	extendedchars=true,
+	inputencoding=utf8, 
+	escapechar=\%,
+	morekeywords={print, println, size, background, strokeWeight, fill, line, rect, ellipse, triangle, arc, save, PI, HALF_PI, QUARTER_PI, TAU, TWO_PI, width, height,},
+	emph=[1]{print,println,}, emphstyle=[1]{\color{blue}}, % Mis palabras clave.
+	emph=[2]{width,height,}, emphstyle=[2]{\bf\color{violet}}, % Mis palabras clave.
+	emph=[3]{PI, HALF_PI, QUARTER_PI, TAU, TWO_PI}, emphstyle=[3]\color{orange!50!violet}, % Mis palabras clave.
+	emph=[4]{line, rect, ellipse, triangle, arc,}, emphstyle=[4]\color{green!70!black}, % Mis palabras clave.
+	%emph=[5]{size, background, strokeWeight, fill,}, emphstyle=[5]{\tt \color{red!30!blue}}, % Mis palabras clave.
+	%emph={[2]sqrt,baset}, emphstyle={[2]\color{blue}}, % f(sqrt(2)), sqrt a nivel 2 se pondrá azul
+	#1}}{\addtocounter{countCode}{1}}
+
+
+
+\title{Elon Denso}
+\author{Davi Sales Barreira}
+\date{\today}
+\begin{document}
+\maketitle
+\begin{abstract}
+	Este texto é um resumo condensado do livro ``Análise Real - Volume 1''
+	\citep{lima2004analise}. Todas as sequências, definições, teoremas e proposições
+	supõe que estamos nos reais. Assim, quando se afirma que $(x_n)$ é uma sequência,
+	está implícito que $(x_n) \subset \mathbb R$.
+\end{abstract}
+% \tableofcontents 
+
+\section{Sequências} % (fold)
+\label{sec:Sequências}
+
+% section Sequências (end)
+\begin{definition}[Supremo]
+	Seja $X \subset \mathbb R$ um conjunto não vazio. Dizemos que
+	$b$ é o supremo de $X$, i.e. $\sup X = b$ se:
+	\begin{enumerate}
+		\item Para todo $x \in X$, tem-se $x \leq b$;
+		\item Se $c<b$ então existe $x \in X$ tal que $c<x$.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}[Ínfimo]
+	Seja $X \subset \mathbb R$ um conjunto não vazio. Dizemos que
+	$a$ é o ínfimo de $X$, i.e. $\inf X = a$ se:
+	\begin{enumerate}
+		\item Para todo $x \in X$, tem-se $x \geq a$;
+		\item Se $c>a$ então existe $x \in X$ tal que $x<c$.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}[\textbf{Axioma da Completude}]
+	Todo conjunto não-vazio $X \in \mathbb R$ limitado superiormente possui
+	supremo $b = \sup X \in \mathbb R$.
+\end{definition}
+
+\begin{definition}[Sequência]
+	Uma sequência de números reais é uma função $x: \mathbb N \to \mathbb R$,
+	onde cada $n \in \mathbb N$ associa $x_n$ a um número real. Escreve-se
+	$(x_n)$ para representar a sequência $(x_1,x_2,...)$.
+\end{definition}
+
+\begin{definition}[Subsequência]
+	Uma subsequência de $(x_n)$ é denotada por $(x_{n_k})$, onde
+	$(x_{n_k}) = (x_{n_1},x_{n_2},...)$, com $n_1 > n_2 > n_3 ... \in \mathbb N$.
+	Dado $k \in \mathbb N$, temos que $n_k = n$ implica $x_{n_k} = x_n$.
+\end{definition}
+
+\begin{definition}[Limite]
+	$L$ é o limite de $(x_n)$ se para todo $\varepsilon > 0$ existir um
+	$n_o \in \mathbb N$ tal que $n>n_o \implies |x_n - x| < \varepsilon$.
+	Assim, escreve-se $\lim_{n\to +\infty} x_n = L$, onde dizemos que
+	$(x_n)$ é convergente.
+\end{definition}
+
+\begin{definition}
+	Dizemos que $\lim_{n \to +\infty} x_n = +\infty$ se
+	para todo $M > 0$ existir um $n_o \in \mathbb N$ tal que
+	$n > n_o \implies x_n > M$.
+\end{definition}
+
+\begin{definition}[Limite Superior e Inferior]
+	O Limite Superior de uma sequência $(x_n)$ é
+	\begin{equation}
+	\limsup_{n\to +\infty} x_n= \lim_{k\to +\infty} \sup_{n\geq k} x_n = \inf_k \sup_{n \geq k} x_n.
+	\end{equation}
+
+	O Limite Inferior de uma sequência $(x_n)$ é
+	\begin{equation}
+	\liminf_{n\to +\infty} x_n= \lim_{k\to +\infty} \inf_{n\geq k} x_n = \sup_k \inf_{n \geq k} x_n.
+	\end{equation}
+\end{definition}
+
+% \textbf{Propriedades dos Limites}
+\begin{theorem}[Unicidade]
+	Seja $L$ limite da sequência $(x_n)$. Logo, $L$ é único.
+\end{theorem}
+\begin{proof}
+	Sejam $L_1$ e $L_2$ limites de $(x_n)$. Tome $\varepsilon = \frac{|L_1-L_2|}{2}$.
+	Logo, existe $n_o$ tal que $n>n_o$ implica $|x_n - L_1|<\varepsilon$ e
+	$|x_n - L_2|<\varepsilon$. Porém
+	\begin{equation}
+		|L_1-L_2|\leq |L_1 - x_n| + |x_n - L_2| < 2\varepsilon = |L_1 - L_2|
+	\end{equation}
+\end{proof}
+\begin{theorem}
+	Toda sequência convergente é limitada.	
+\end{theorem}
+\begin{proof}
+	Seja $L$ o limite de $(x_n)$. Logo, para $\varepsilon = 1$ existe
+	$n_o$ tal que para todo $n > n_o$ temos $x_n \in (L-1,L+1)$.
+	Assim, $\{x_1,...,x_{n_o},(L-1,L+1)\}$ contém $(x_n)$.
+\end{proof}
+\begin{theorem}
+	Se $\lim_n x_n = L$, então toda subsequência $(x_{n_k})$ converge para $L$.
+\end{theorem}
+\begin{proof}
+	Dado $\varepsilon > 0$, existe $n_o$ tal que $n>n_o \implies
+	|x_n - L| < \varepsilon$. Para $k>n_o$, $n_k > n_o$, logo
+	$|x_{n_k} - L| < \varepsilon$.
+\end{proof}
+
+\begin{theorem}
+	Toda sequência monótona e limitada é convergente.
+\end{theorem}
+\begin{proof}
+	Seja $a = \sup (x_n)$. Para $\varepsilon > 0$, pela definição de supremo,
+	existe $x_{n_o} - \varepsilon \leq a$. Como a sequência é monótona, então
+	para $n>n_o$, temos $x_n - \varepsilon \leq a$.
+\end{proof}
+\begin{theorem}[Intervalos Encaixados]
+	Seja $I_1 \supseteq I_2 \supseteq ... \supseteq I_n \subseteq ...$ de intervalos limitados e fechados,
+	tal que $I_n = [a_n,b_n]$. Existe pelo menos um número real $c \in I_n$ para todo $n \in \mathbb N$.
+\end{theorem}
+\begin{proof}
+	Tome o supremo das cotas inferiores de cada intervalo. 
+\end{proof}
+
+
+\begin{theorem}[Bolzano-Weierstrass]
+	Toda sequência de limitada de reais possui subsequência convergente.
+\end{theorem}
+\begin{proof}
+	Dem 1: Seja $D:=\{k \in \mathbb N \ : \ x_k \geq x_p \ \forall k \geq p \in \mathbb N \}$. Ou seja, $(x_k)_{k\in D}$ é
+	uma sequência crescente. Se $D$ for infinito, então $(x_k)$ é uma subsequência limitada e monótona.
+	Se $D$ for finito, então para $i > \max D$, para cada $x_i$ existe $x_p$ com $p > i$ tal que
+	$x_i < x_p$. Constrói-se assim uma subsequência monótona descrescente e limitada. Pelo teorema anterior, qualquer
+	uma dessas subsequências converge.
+
+	Dem 2: Como $(x_n)$ é limitado, então faça $\{x_1,...\} \in [a,b]$. Divida em dois intervalos,
+	$[\frac{a+b}{2},b]$ e $[a,\frac{a+b}{2}]$. Pelo menos um intervalo vai ter infinitos elementos da sequência.
+	Suponha que seja o primeiro. Agora repita o processo. Logo, criou-se uma sequência de intervalos
+	encaixados que contém $(x_n)$. Usando o teorema dos intervalos encaixados, existe um $c$ que pertence
+	a todos os intervalos. Tome $(x_{n_k})$ para cada passo da construção dos intervalos, logo
+	$\lim_n x_{n_k} = c$.
+\end{proof}
+
+\begin{proposition}[Propriedades dos Limites]
+	As seguintes propriedades são válidas para limites:
+	\begin{itemize}
+		\item Seja $\lim_n x_n = a$. Se $a<b$, então existe $n_o$ tal que $n>n_o \implies x_n < b$;
+		\item Se $x_n \leq b$ para todo $n \in \mathbb N$, então $\lim_n x_n \leq b$;
+		\item Se $x_n \leq y_n$ para todo $n \in \mathbb N$, então $\lim_n x_n \leq \lim_n y_n$;
+		\item Se $\lim_n x_n = 0$ e $(y_n)$ é limitada, então $\lim_n x_n y_n =0 $;
+		\item Se $x_n>0$ e $\lim_n \frac{x_{n+1}}{x_n} = L < 1$, então $\lim x_n = 0$;
+		\item Se $x_n \to +\infty$ e $(y_n)$ é limitado, então $\lim_n x_n + y_n = +\infty$;
+		\item Se $x_n \to +\infty$ e $y_n > c > 0$, então $\lim_n x_n y_n = +\infty$;
+		\item Se $x_n > c >0$ e $y_n >0$ com $\lim_n y_n = 0$, então $\lim_n \frac{x_n}{y_n}= +\infty$;
+		\item Se $(x_n)$ limitado e $y_n \to +\infty$, então $\lim_n \frac{x_n}{y_n} = 0$.
+	\end{itemize}
+\end{proposition}
+
+\begin{theorem}[Sanduíche]
+	Seja $\lim_n x_n = \lim_n y_n = L$ e $x_n \leq z_n \leq y_n$ para todo $n \in \mathbb N$. Então
+	$\lim_n z_n = L$.
+\end{theorem}
+\begin{proof}
+	Para $\varepsilon > 0$, existe $n_o$ tal que $n>n_o$ implica que
+	$|x_n - L| < \varepsilon$,
+	$|y_n - L| < \varepsilon$. Logo, $L - \varepsilon < x_n \leq z_n \leq y_n < L + \varepsilon$.
+\end{proof}
+
+\begin{definition}[Sequência de Cauchy]
+	$(x_n)$ é de Cauchy se para todo $\varepsilon >0$ existe $n_o \in \mathbb N$ tal que
+	$n,m > n_o \implies |x_n - x_m|<\varepsilon$.
+\end{definition}
+\begin{theorem}[Convergência de Cauchy]
+	$(x_n)$ é de Cauchy, se, e somente se, $(x_n)$ é convergente.
+\end{theorem}
+\begin{proof}
+	$\impliedby)$ Seja $\lim_n (x_n) = L$, assim, para $\varepsilon$ existe $n_o$ tal que $n> n_o$ implica
+	$|x_n - L| < \varepsilon/2$. Logo, para $n,m > n_o$, temos $|x_n - x_m| \leq |x_n - L| + |L - x_m| < \varepsilon$.
+
+	$\implies)$ Seja $(x_n)$ de Cauchy, então para $\varepsilon > 0$, existe $n_o$ tal que
+	$n,m > n_o \implies |x_n - x_m| < \varepsilon/2$. Logo, pra um $n_1>n_o$ fixo, temos $|x_{n_1} - x_m| < \varepsilon/2$
+	assim, $(x_n) \subset \{x_1,...,x_{n_1}, (x_{n_1}-\varepsilon/2,x_{n_1}+\varepsilon/2)\}$. Portanto, $(x_n)$ é limitada.
+	Por Bolzano-Weierstrass, existe $(x_{n_k})$ que converge, chamemos $\lim_k x_{n_k} = L$.
+	Para $n_{k_o}$, $n_k > n_{k_o} \implies |x_{n_k} - L| < \varepsilon/2$.
+	Para $n,n_k >\max \{n_o, n_{k_o}\}$,
+	Finalmente,$|x_n - L| \leq |x_n - x_{n_k}| + |x_{n_k} - L| < \varepsilon$.
+\end{proof}
+
+Os números reais podem ser construídos de diferentes formas. Começamos supondo o Axioma da Completude
+onde todo conjunto superiormente limitado possui um supremo. Esse Axioma é equivalente ao Teorema de 
+Convergência de Cauchy. Assim, poderíamos ter começado supondo que o Axioma era que toda sequência de Cauchy converge
+para algum limite $L$ e então provar que todo conjunto limitado superiormente possuía um supremo.
+O mesmo é verdade para o teorema de Bolzano-Weierstrass e para a dupla Intervalos Encaixados + Teorema da
+Convergência Monótona. Em resumo:
+\begin{equation*}
+	\mathrm{AC} \iff \{\mathrm {IE, TCM}\} \iff \mathrm{BW} \iff \mathrm{CC}
+\end{equation*}
+
+\section{Séries} % (fold)
+\label{sec:Séries}
+
+\begin{definition}[Somas parciais e totais]
+    $$S_n := \sum^n_{k=1} a_k$$
+    $$\lim_{n\to \infty} S_n := \sum^\infty_{k=1} a_k$$
+\end{definition}
+\begin{proposition}
+    $\sum a_n$ converge, se e só se, $\forall \epsilon >0
+    \ \exists N_o : n > m \geq N_o \implies |a_{m+1} + ... + a_n| < \epsilon$ .
+\end{proposition}
+\begin{proof}
+    Usar Cauchy.
+\end{proof}
+
+\begin{proposition}
+    Se $\sum a_n$ converge, então $\lim a_n = 0$.
+\end{proposition}
+\begin{proof}
+    Note $S_{n+1} - S_n = a_{n+1}$, logo
+    $$
+    \lim (S_{n+1} - S_n) = L - L = 0 = \lim a_{n+1}.
+    $$
+\end{proof}
+
+  \bibliography{ref}
+  \bibliographystyle{plainnat}
+\end{document}
+
